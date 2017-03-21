@@ -32,7 +32,7 @@ a:hover {
 
 .tab-group {
   list-style: none;
-  padding: 0;
+  //padding: 0;
 
 }
 .tab-group:after {
