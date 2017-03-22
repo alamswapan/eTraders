@@ -14,6 +14,7 @@ namespace LILI_CRM.Web.Areas.PCV.ViewModel
         public SupplierInfoModel()
         { 
             SupplierContactPerson =new List < SupplierContactPerson>();
+            ContactPersonList = new List<ContactViewModel>();
         }
 
         [DisplayName("Supplier Id")]
@@ -70,7 +71,7 @@ namespace LILI_CRM.Web.Areas.PCV.ViewModel
         //public IEnumerable<SelectListItem> ddlCountry { get; set; }
 
         public List<SupplierContactPerson> SupplierContactPerson { get; set; }
-
+        public List<ContactViewModel> ContactPersonList { get; set; }
        
 
     }
@@ -108,5 +109,15 @@ namespace LILI_CRM.Web.Areas.PCV.ViewModel
         public long CountryId { get; set; }
         public string CountryName { get; set; }
     }
+
+    public class ContactViewModel : BaseViewModel
+    {
+        public long Id { get; set; }
+        public long SupplierId { get; set; }
+        public string ContactName { get; set; }
+        public string Designation { get; set; }
+        public string Phone { get; set; }
+    }
+
 
 }

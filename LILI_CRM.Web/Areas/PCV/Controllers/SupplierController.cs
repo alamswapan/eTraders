@@ -112,24 +112,53 @@ namespace LILI_CRM.Web.Areas.PCV.Controllers
                 var strMessage = string.Empty;
                 try
                 {
-                    if (ModelState.IsValid)
+                    if (Session["lstContactDetails"] != null)
                     {
-                        #region Current User
+                        if (ModelState.IsValid)
+                        {
+                            #region Current User
 
-                        var userName = HttpContext.User.Identity.Name;
-                        viewModel.IUser = userName;
-                        viewModel.IDate = DateTime.Now;
-                        viewModel.EDate = DateTime.Now;
+                            var userName = HttpContext.User.Identity.Name;
+                            viewModel.IUser = userName;
+                            viewModel.IDate = DateTime.Now;
+                            viewModel.EDate = DateTime.Now;
+                            #endregion
 
-                        #endregion
+                            List<ContactViewModel> list = new List<ContactViewModel>();
+                            if (Session["lstContactDetails"] != null)
+                            {
+                                list = (List<ContactViewModel>)Session["lstContactDetails"];
+                            }
 
-                        var entity = viewModel.ToEntity();
-                        _SupplierInfoService.BMSUnit.SupplierRepository.Add(entity);
-                        _SupplierInfoService.BMSUnit.SupplierRepository.SaveChanges();
+                            var entity = viewModel.ToEntity();
+                            _SupplierInfoService.BMSUnit.SupplierRepository.Add(entity);
+                            _SupplierInfoService.BMSUnit.SupplierRepository.SaveChanges();
 
-                        return Content(Boolean.TrueString);
-                        //return Content("Information has been saved successfully");
-                    }
+                            Session["SupplierId"] = entity.Id;
+
+                            #region Save Contact Detail
+
+                            if (list != null && list.Count > 0)
+                            {
+                                foreach (ContactViewModel detail in list)
+                                {
+
+                                    detail.SupplierId = Convert.ToInt64(entity.Id);
+                                    var detailEntity = detail.ToEntity();
+                                    _SupplierInfoService.BMSUnit.SupplierContactRepository.Add(detailEntity);
+                                    _SupplierInfoService.BMSUnit.SupplierContactRepository.SaveChanges();
+                                }
+                            }
+
+                            Session["lstContactDetails"] = null;
+
+                            #endregion
+
+                            return Content(Boolean.TrueString);
+                            //return Content("Information has been saved successfully");
+                        }
+
+                    }                    
 
                     strMessage = Common.GetModelStateErrorMessage(ModelState);
                 }
@@ -148,6 +177,8 @@ namespace LILI_CRM.Web.Areas.PCV.Controllers
                 try
                 {
                     var model = _SupplierInfoService.BMSUnit.SupplierRepository.GetByID(id);
+
+                    Session["ContactId"] = model.Id;
 
                     if (model != null)
                     {
@@ -205,10 +236,40 @@ namespace LILI_CRM.Web.Areas.PCV.Controllers
 
                         #endregion
 
+                        List<ContactViewModel> list = new List<ContactViewModel>();
+                        if (Session["lstContactDetails"] != null)
+                        {
+                            list = (List<ContactViewModel>)Session["lstContactDetails"];
+                        }
+
                         var entity = viewModel.ToEntity();
+                        // Get previous detail list
+                        var lst = _SupplierInfoService.BMSUnit.SupplierContactRepository.GetAll().Where(
+                                    q => q.SupplierId == entity.Id);
+
+                        foreach (var dt in lst)
+                        {
+                            _SupplierInfoService.BMSUnit.SupplierContactRepository.Delete_64Bit(Convert.ToInt64(dt.Id));
+                        }                        
 
                         _SupplierInfoService.BMSUnit.SupplierRepository.Update(entity);
                         _SupplierInfoService.BMSUnit.SupplierRepository.SaveChanges();
+
+                        #region Save SampleRequest Detail
+
+                        if (list != null && list.Count > 0)
+                        {
+                            foreach (ContactViewModel detail in list)
+                            {
+                                detail.SupplierId = Convert.ToInt64(entity.Id);
+                                var detailEntity = detail.ToEntity();
+                                _SupplierInfoService.BMSUnit.SupplierContactRepository.Add(detailEntity);
+                                _SupplierInfoService.BMSUnit.SupplierContactRepository.SaveChanges();
+                            }
+                        }
+                        #endregion
+
+                        Session["lstContactDetails"] = null;
 
                         return Content(Boolean.TrueString);
                     }
@@ -335,5 +396,79 @@ namespace LILI_CRM.Web.Areas.PCV.Controllers
                 return Json(GetCountryList, JsonRequestBehavior.AllowGet);
             }
 
+        
+            //Contact List save
+            public JsonResult ContactDetailsListForSave(List<ContactViewModel> lstRequestContactDetails)
+            {
+                var strMessage = string.Empty;
+
+                // Clear detail list
+                Session["lstContactDetails"] = null;
+
+                try
+                {
+
+                    List<ContactViewModel> list = new List<ContactViewModel>();
+                    var _SampleContactModel = new SupplierInfoModel();
+
+                    // Add new detail information
+                    foreach (var item in lstRequestContactDetails)
+                    {
+                        ContactViewModel entityModel = new ContactViewModel();
+
+                        entityModel.Id = item.Id;
+                        entityModel.ContactName = item.ContactName;
+                        entityModel.Designation = item.Designation;
+                        entityModel.Phone = item.Phone;
+                        list.Add(entityModel);
+                    }
+
+                    Session["lstContactDetails"] = list;
+                    return Json(_SampleContactModel, JsonRequestBehavior.AllowGet);
+                    //strMessage = Boolean.TrueString;
+                }
+                catch (Exception ex)
+                {
+                    strMessage = CommonExceptionMessage.GetExceptionMessage(ex, CommonAction.Save);
+                }
+
+                return Json(new { strMessage = strMessage });
+            }
+
+
+            public JsonResult GetContactDetails()
+            {
+                long requestId = Convert.ToInt64(Session["ContactId"]);
+
+                var contactDetailsModel = from sampleRequestDetail in _SupplierInfoService.BMSUnit.SupplierContactRepository.GetAll().Where(q => q.SupplierId == requestId)
+                                                select new ContactViewModel()
+                                                {
+                                                    Id = Convert.ToInt64(sampleRequestDetail.Id),
+                                                    ContactName = sampleRequestDetail.ContactName,                                                    
+                                                    Designation = sampleRequestDetail.Designation,
+                                                    Phone = sampleRequestDetail.Phone
+                                                };
+
+                var modelList = contactDetailsModel.OrderBy(x => x.Id).ToList();
+
+                //List<ContactViewModel> list = new List<ContactViewModel>();
+
+                //// Add new detail information
+                //foreach (var item in modelList)
+                //{
+                //    ContactViewModel entityModel = new ContactViewModel();
+
+                //    entityModel.Id = item.Id;
+                //    entityModel.ContactName = item.ContactName;
+                //    entityModel.Designation = item.Designation;
+                //    entityModel.Phone = item.Phone;
+                //    list.Add(entityModel);
+                //}
+
+                Session["lstContactDetails"] = modelList;
+
+                return Json(modelList, JsonRequestBehavior.AllowGet);
+
+            }
     }
 }

@@ -78,3 +78,13 @@ E:\eTraders\LILI_CRM.Domain.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
 E:\eTraders\LILI_CRM.Domain.CRM\obj\Debug\ResolveAssemblyReference.cache
 E:\eTraders\LILI_CRM.Domain.CRM\obj\Debug\LILI_CRM.Domain.CRM.dll
 E:\eTraders\LILI_CRM.Domain.CRM\obj\Debug\LILI_CRM.Domain.CRM.pdb
+D:\ASP\eTraders\LILI_CRM.Domain.CRM\bin\Debug\LILI_CRM.Domain.CRM.dll
+D:\ASP\eTraders\LILI_CRM.Domain.CRM\bin\Debug\LILI_CRM.Domain.CRM.pdb
+D:\ASP\eTraders\LILI_CRM.Domain.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll
+D:\ASP\eTraders\LILI_CRM.Domain.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+D:\ASP\eTraders\LILI_CRM.Domain.CRM\bin\Debug\LinqKit.dll
+D:\ASP\eTraders\LILI_CRM.Domain.CRM\bin\Debug\LILI_CRM.DAL.CRM.pdb
+D:\ASP\eTraders\LILI_CRM.Domain.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+D:\ASP\eTraders\LILI_CRM.Domain.CRM\obj\Debug\ResolveAssemblyReference.cache
+D:\ASP\eTraders\LILI_CRM.Domain.CRM\obj\Debug\LILI_CRM.Domain.CRM.dll
+D:\ASP\eTraders\LILI_CRM.Domain.CRM\obj\Debug\LILI_CRM.Domain.CRM.pdb

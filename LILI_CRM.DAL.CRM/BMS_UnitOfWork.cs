@@ -136,6 +136,12 @@ namespace LILI_CRM.DAL.CRM
         //userinfoforsales
         BMS_GenericRepository<BMS_tblUserInfo> _UserInfoNameRepository;
 
+
+        //New Add By Alam
+        BMS_GenericRepository<tblSupplierContact> _SupplierContactRepository;
+
+        
+
         //End
 
 
@@ -211,6 +217,9 @@ namespace LILI_CRM.DAL.CRM
             BMS_GenericRepository<tblPriceRequest> PriceRequestRepository,
             BMS_GenericRepository<tblPriceRequestDetail> PriceRequestDetailRepository,
             BMS_GenericRepository<BMS_tblUserInfo> UserInfoNameRepository,
+
+            //new add by Alam
+            BMS_GenericRepository<tblSupplierContact> SupplierContactRepository,
             //End
 
             BMS_GenericRepository<tblBank> BankRepository
@@ -314,6 +323,9 @@ namespace LILI_CRM.DAL.CRM
             this._PriceRequestRepository = PriceRequestRepository;
             this._PriceRequestDetailRepository = PriceRequestDetailRepository;
             this._UserInfoNameRepository = UserInfoNameRepository;
+            
+            //New Added By alam 
+            this._SupplierContactRepository = SupplierContactRepository;
 
             //end ALam
 
@@ -596,10 +608,15 @@ namespace LILI_CRM.DAL.CRM
             get { return _PriceRequestDetailRepository; }
         }
 
-         public BMS_GenericRepository<BMS_tblUserInfo> UserInfoNameRepository
+        public BMS_GenericRepository<BMS_tblUserInfo> UserInfoNameRepository
         {
             get { return _UserInfoNameRepository; }
         }
+
+        public BMS_GenericRepository<tblSupplierContact> SupplierContactRepository
+         {
+             get { return _SupplierContactRepository; }
+         }
         
 
 

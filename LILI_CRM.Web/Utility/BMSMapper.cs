@@ -140,6 +140,11 @@ namespace LILI_CRM.Web.Utility
             Mapper.CreateMap<PriceRequestDetailViewModel, tblPriceRequestDetail>();
             Mapper.CreateMap<tblPriceRequestDetail, PriceRequestDetailViewModel>();
 
+            //Supplier Contact
+
+            Mapper.CreateMap<ContactViewModel, tblSupplierContact>();
+            Mapper.CreateMap<tblSupplierContact, ContactViewModel>();
+
             //End Alam
 
             //Debit Note

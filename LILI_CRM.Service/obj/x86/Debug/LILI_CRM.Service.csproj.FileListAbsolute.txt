@@ -110,3 +110,17 @@ E:\eTraders\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
 E:\eTraders\LILI_CRM.Service\obj\x86\Debug\ResolveAssemblyReference.cache
 E:\eTraders\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.exe
 E:\eTraders\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.pdb
+D:\ASP\eTraders\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe.config
+D:\ASP\eTraders\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe
+D:\ASP\eTraders\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.pdb
+D:\ASP\eTraders\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.dll
+D:\ASP\eTraders\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\ASP\eTraders\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\ASP\eTraders\LILI_CRM.Service\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\ASP\eTraders\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+D:\ASP\eTraders\LILI_CRM.Service\bin\Debug\LinqKit.dll
+D:\ASP\eTraders\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.pdb
+D:\ASP\eTraders\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+D:\ASP\eTraders\LILI_CRM.Service\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\ASP\eTraders\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.exe
+D:\ASP\eTraders\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.pdb

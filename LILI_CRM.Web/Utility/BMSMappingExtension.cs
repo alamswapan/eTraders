@@ -367,7 +367,20 @@ namespace LILI_CRM.Web.Utility
         public static tblDebitNoteDetail ToEntity(this DebitNoteDetailModel model)
         {
             return Mapper.Map<DebitNoteDetailModel, tblDebitNoteDetail>(model);
-        }    
+        }
+
+
+        //Added By alam
+
+        public static ContactViewModel ToModel(this tblSupplierContact entity)
+        {
+            return Mapper.Map<tblSupplierContact, ContactViewModel>(entity);
+        }
+
+        public static tblSupplierContact ToEntity(this ContactViewModel model)
+        {
+            return Mapper.Map<ContactViewModel, tblSupplierContact>(model);
+        }
     
     }
 }

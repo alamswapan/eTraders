@@ -129,9 +129,7 @@ $(document).ready(function () {
                         SupplierName: { type: "string" },
                         Address: { type: "string" },
                         Country: { type: "string" },
-                        Phone: { type: "string" },
-                        Fax: { type: "string" },
-                        Mobile: { type: "string" },
+                        Phone: { type: "string" }, 
                         Email: { type: "string" },
                         WebAddress: { type: "string" },
                         ActionLink: { type: "string" }
@@ -158,8 +156,6 @@ $(document).ready(function () {
                 { field: "Address", title: "Address", width: "25%" },
                 { field: "Country", title: "Country", width: "25%"},
                 { field: "Phone", title: "Phone", width: "25%" },
-                { field: "Fax", title: "Fax", width: "25%" },
-                { field: "Mobile", title: "Mobile", width: "25%" },
                 { field: "Email", title: "Email", width: "25%" },
                 { field: "WebAddress", title: "Web Address", width: "25%" },
                 { field: "ActionLink", title: "Actions", width: "14%", filterable: false, sortable: false, template: "#= ActionLink #" }

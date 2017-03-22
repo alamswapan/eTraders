@@ -42,3 +42,9 @@ E:\eTraders\LILI_CRM.DAL.infrastructure\bin\Debug\LinqKit.dll
 E:\eTraders\LILI_CRM.DAL.infrastructure\obj\Debug\ResolveAssemblyReference.cache
 E:\eTraders\LILI_CRM.DAL.infrastructure\obj\Debug\LILI_CRM.DAL.infrastructure.dll
 E:\eTraders\LILI_CRM.DAL.infrastructure\obj\Debug\LILI_CRM.DAL.infrastructure.pdb
+D:\ASP\eTraders\LILI_CRM.DAL.infrastructure\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+D:\ASP\eTraders\LILI_CRM.DAL.infrastructure\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+D:\ASP\eTraders\LILI_CRM.DAL.infrastructure\bin\Debug\LinqKit.dll
+D:\ASP\eTraders\LILI_CRM.DAL.infrastructure\obj\Debug\ResolveAssemblyReference.cache
+D:\ASP\eTraders\LILI_CRM.DAL.infrastructure\obj\Debug\LILI_CRM.DAL.infrastructure.dll
+D:\ASP\eTraders\LILI_CRM.DAL.infrastructure\obj\Debug\LILI_CRM.DAL.infrastructure.pdb

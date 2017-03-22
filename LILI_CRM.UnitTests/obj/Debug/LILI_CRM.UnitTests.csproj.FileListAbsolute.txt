@@ -50,3 +50,10 @@ E:\eTraders\LILI_CRM.UnitTests\bin\Debug\Moq.dll
 E:\eTraders\LILI_CRM.UnitTests\obj\Debug\ResolveAssemblyReference.cache
 E:\eTraders\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.dll
 E:\eTraders\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.pdb
+D:\ASP\eTraders\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll.config
+D:\ASP\eTraders\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll
+D:\ASP\eTraders\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.pdb
+D:\ASP\eTraders\LILI_CRM.UnitTests\bin\Debug\Moq.dll
+D:\ASP\eTraders\LILI_CRM.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+D:\ASP\eTraders\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.dll
+D:\ASP\eTraders\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.pdb

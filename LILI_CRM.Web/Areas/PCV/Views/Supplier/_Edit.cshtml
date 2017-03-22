@@ -51,7 +51,7 @@
                     @Html.LabelFor(model => model.Country)
                 </span>
                 <div class="controls">
-                    @Html.TextBoxFor(model => model.Country)
+                    @Html.TextBoxFor(model => model.Country, new {@class="js_country"})
                     @Html.ValidationMessageFor(model => model.Country)
                 </div>
             </div>
@@ -98,8 +98,32 @@
             </div>
 
 
-            <div class="hr">
+            
+            <div class="hr"></div>
+
+            <div class="row-fluid">
+			    <span class="span5 pull-left">
+                    @*<div id="ContactAddItemButtonZone" class="row-fluid">*@
+                        <button type="button" class="btn btn-mini btn-primary" id="btnAddContact" name="btnAddContact"
+                        value="Cancel" onclick="AddRow()">
+                        <i class="icon-edit bigger-125"></i>Add Contact to List</button>
+                    @*</div>*@
+                </span>
+		    </div>
+
+            <div class="row-fluid">
+                <div id="ContactDetailsGridZone">
+                    <div id="ContactDetailsEditKendoGrid">
+                    </div>
+                </div>
             </div>
+
+            <div class="hr"></div>
+
+            <button type="button" class="btn btn-mini btn-info" id="btnPrepsreContactList" name="btnContactDetailList"
+                onclick="PreSaveContacts()">
+            <i class="icon-save bigger-125"></i>Prepare Contact List</button>
+
             <div class="content pull-right">
                 <button type="submit" class="btn btn-mini btn-primary" id="btnEditSupplier" name="btnEditSupplier">
                     <i class="icon-save bigger-125"></i>Edit</button>
@@ -117,8 +141,10 @@
 <script type="text/javascript">
     $(document).ready(function () {
 
-        $("#Country").kendoAutoComplete({
+        $(".js_country").kendoAutoComplete({
             dataTextField: "CountryName",
+            filter: "startswith",
+            placeholder: "Select country...",
             dataSource: {
                 transport: {
                     read: {
@@ -136,3 +162,129 @@
 });
 
 </script>
+
+<script type="text/javascript">
+
+    var dataSource = new kendo.data.DataSource({
+        pageSize: 20,
+        height: 400,
+        update: function (e) { return true; },
+        type: "json",
+        transport: {
+            read: "/PCV/Supplier/GetContactDetails"
+        },
+
+        schema: {
+            model: {
+                id: "Id",
+                fields: {
+                    Id: { type: "number", editable: false },
+                    ContactName: { type: "string", editable: true },
+                    Designation: { type: "string", editable: true },
+                    Phone: { type: "string", editable: true }
+                    //ActionLink: { type: "string" }
+                }
+            }
+        }
+    });
+
+
+    $("#ContactDetailsEditKendoGrid").kendoGrid({
+        dataSource: dataSource,
+        resizable: true,
+        height: 350,
+        scrollable: true,
+        filterable: false,
+        groupable: true,
+        sortable: true,
+        resizable: true,
+        height: 350,
+        editable: "incell",
+        columnMenu: false,
+        scrollable: true,
+        columns: [
+                { field: "Id", title: "Id", width: 100, hidden: true, filterable: false, sortable: false, locked: true },
+                { field: "ContactName", title: "Contact Name", width: 100, filterable: false, sortable: false, locked: true },
+                { field: "Designation", title: "Designation", width: 100, filterable: false, sortable: false, locked: true },
+                { field: "Phone", title: "Phone", width: 100, filterable: false, sortable: false, locked: true },
+                { command: "destroy", title: " ", width: 100}],
+        navigatable: false,
+        editable: true
+    });
+
+
+
+    //Add Row to contact
+    function AddRow() {
+        var sampleRequestDetGrid = $('#ContactDetailsEditKendoGrid').data('kendoGrid');
+        var dataSource = sampleRequestDetGrid.dataSource;
+
+        var articleCode = 'addrow';
+        if (articleCode != '') {
+            dataSource.add({
+                ContactName: "Name",
+                Designation: "Designation",
+                Phone: "Phone"
+            });
+        }
+        else {
+            $("#message").show();
+            $('#message').text(data).css({ 'color': 'red' });
+            $("#message").delay(3000).hide();
+        }
+    }
+</script>
+
+
+@*Save Grid Data*@
+<script type="text/javascript">
+
+    function SaveContactsDetails() {
+        //getting json data from kendo Grid
+        var gridData = $("#ContactDetailsEditKendoGrid").data("kendoGrid").dataSource.data();
+        var ReqContactDetailList = [];
+        //loop through each json data from kendo Grid
+        for (var i = 0; i < gridData.length; i++) {
+
+            var currentDataItem = gridData[i];
+
+            var contactDetailViewModel = {};
+            contactDetailViewModel.Id = currentDataItem.Id;
+            contactDetailViewModel.ContactName = currentDataItem.ContactName;
+            contactDetailViewModel.Designation = currentDataItem.Designation;
+            contactDetailViewModel.Phone = currentDataItem.Phone;
+            ReqContactDetailList.push(contactDetailViewModel);
+        }
+
+        var postUrl = '@Url.Content("~/PCV/Supplier/ContactDetailsListForSave")';
+        var paramValue = JSON.stringify({ lstRequestContactDetails: ReqContactDetailList });
+
+        //Post json data from kendo Grid to Controller
+        $.ajax({
+            url: postUrl,
+            type: 'POST',
+            dataType: 'json',
+            data: paramValue,
+            contentType: 'application/json; charset=utf-8',
+            success: function (result) {
+                console.log(result);
+            },
+            error: function (objAjaxRequest, strError) {
+                var respText = objAjaxRequest.responseText;
+                console.log(respText);
+            }
+        });
+    }
+
+    function PreSaveContacts() {
+
+        SaveContactsDetails();
+
+    }
+</script>
+
+<style type="text/css">
+    .k-autocomplete.k-header {
+    width: 100%;
+    }
+</style>

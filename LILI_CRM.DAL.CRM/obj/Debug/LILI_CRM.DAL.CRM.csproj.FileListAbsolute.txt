@@ -70,3 +70,12 @@ E:\eTraders\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
 E:\eTraders\LILI_CRM.DAL.CRM\obj\Debug\ResolveAssemblyReference.cache
 E:\eTraders\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.dll
 E:\eTraders\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.pdb
+D:\ASP\eTraders\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll.config
+D:\ASP\eTraders\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll
+D:\ASP\eTraders\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.pdb
+D:\ASP\eTraders\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+D:\ASP\eTraders\LILI_CRM.DAL.CRM\bin\Debug\LinqKit.dll
+D:\ASP\eTraders\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+D:\ASP\eTraders\LILI_CRM.DAL.CRM\obj\Debug\ResolveAssemblyReference.cache
+D:\ASP\eTraders\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.dll
+D:\ASP\eTraders\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.pdb
