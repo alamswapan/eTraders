@@ -61,3 +61,12 @@ E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.DAL.CRM\bin\Debug
 E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.csprojResolveAssemblyReference.cache
 E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.dll
 E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.pdb
+E:\eTraders\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll.config
+E:\eTraders\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll
+E:\eTraders\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.pdb
+E:\eTraders\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+E:\eTraders\LILI_CRM.DAL.CRM\bin\Debug\LinqKit.dll
+E:\eTraders\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+E:\eTraders\LILI_CRM.DAL.CRM\obj\Debug\ResolveAssemblyReference.cache
+E:\eTraders\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.dll
+E:\eTraders\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.pdb

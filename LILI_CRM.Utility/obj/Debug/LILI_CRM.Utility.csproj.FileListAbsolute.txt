@@ -27,3 +27,8 @@ E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Utility\bin\Debug
 E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.pdb
 E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.dll
 E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.pdb
+E:\eTraders\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.dll
+E:\eTraders\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.pdb
+E:\eTraders\LILI_CRM.Utility\obj\Debug\ResolveAssemblyReference.cache
+E:\eTraders\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.dll
+E:\eTraders\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.pdb

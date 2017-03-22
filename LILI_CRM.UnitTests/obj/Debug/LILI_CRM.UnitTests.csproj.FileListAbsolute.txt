@@ -43,3 +43,10 @@ E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.UnitTests\bin\Deb
 E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.UnitTests\bin\Debug\Moq.dll
 E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.dll
 E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.pdb
+E:\eTraders\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll.config
+E:\eTraders\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll
+E:\eTraders\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.pdb
+E:\eTraders\LILI_CRM.UnitTests\bin\Debug\Moq.dll
+E:\eTraders\LILI_CRM.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+E:\eTraders\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.dll
+E:\eTraders\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.pdb

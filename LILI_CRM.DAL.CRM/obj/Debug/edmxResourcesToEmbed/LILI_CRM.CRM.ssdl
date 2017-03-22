@@ -795,11 +795,13 @@
     <Property Name="CurrencyId" Type="int" />
     <Property Name="ValidityDate" Type="datetime" />
     <Property Name="UnitPrice" Type="numeric" Nullable="false" Scale="2" />
-    <Property Name="PriceTermId" Type="int" />
-    <Property Name="PaymentTermId" Type="int" />
+    <Property Name="PriceTermId" Type="bigint" />
+    <Property Name="PaymentTermId" Type="bigint" />
     <Property Name="SupplierId" Type="bigint" Nullable="false" />
     <Property Name="ApproveState" Type="varchar" MaxLength="50" />
     <Property Name="DetailText" Type="varchar" MaxLength="50" />
+    <Property Name="ShipmentCountryId" Type="bigint" />
+    <Property Name="ShipmentLeadTime" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tblQuoteDocument">
     <Key>

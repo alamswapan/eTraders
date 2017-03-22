@@ -4,8 +4,55 @@
     <EntitySet Name="BMS_tblMenuList" EntityType="LILI_CRMModel.BMS_tblMenuList" />
     <EntitySet Name="BMS_tblUserInfo" EntityType="LILI_CRMModel.BMS_tblUserInfo" />
     <EntitySet Name="BMS_tblUserWiseMenuAssign" EntityType="LILI_CRMModel.BMS_tblUserWiseMenuAssign" />
+    <EntitySet Name="tblBank" EntityType="LILI_CRMModel.tblBank" />
     <EntitySet Name="tblBusiness" EntityType="LILI_CRMModel.tblBusiness" />
+    <EntitySet Name="tblCallReportProject" EntityType="LILI_CRMModel.tblCallReportProject" />
+    <EntitySet Name="tblCallReportProjectMember" EntityType="LILI_CRMModel.tblCallReportProjectMember" />
+    <EntitySet Name="tblCallReportSalesCallInquiry" EntityType="LILI_CRMModel.tblCallReportSalesCallInquiry" />
+    <EntitySet Name="tblCallReportSalesCallInquiryDetail" EntityType="LILI_CRMModel.tblCallReportSalesCallInquiryDetail" />
+    <EntitySet Name="tblCommCalculationType" EntityType="LILI_CRMModel.tblCommCalculationType" />
     <EntitySet Name="tblCommonConfigType" EntityType="LILI_CRMModel.tblCommonConfigType" />
+    <EntitySet Name="tblCommunicationChannel" EntityType="LILI_CRMModel.tblCommunicationChannel" />
+    <EntitySet Name="tblCountry" EntityType="LILI_CRMModel.tblCountry" />
+    <EntitySet Name="tblCurrency" EntityType="LILI_CRMModel.tblCurrency" />
+    <EntitySet Name="tblCurrentStage" EntityType="LILI_CRMModel.tblCurrentStage" />
+    <EntitySet Name="tblCustomer" EntityType="LILI_CRMModel.tblCustomer" />
+    <EntitySet Name="tblCustomerAddress" EntityType="LILI_CRMModel.tblCustomerAddress" />
+    <EntitySet Name="tblCustomerContact" EntityType="LILI_CRMModel.tblCustomerContact" />
+    <EntitySet Name="tblDebitNote" EntityType="LILI_CRMModel.tblDebitNote" />
+    <EntitySet Name="tblDebitNoteDetail" EntityType="LILI_CRMModel.tblDebitNoteDetail" />
+    <EntitySet Name="tblDivision" EntityType="LILI_CRMModel.tblDivision" />
+    <EntitySet Name="tblExpenseBudget" EntityType="LILI_CRMModel.tblExpenseBudget" />
+    <EntitySet Name="tblExpenseBudgetDetail" EntityType="LILI_CRMModel.tblExpenseBudgetDetail" />
+    <EntitySet Name="tblInvoice" EntityType="LILI_CRMModel.tblInvoice" />
+    <EntitySet Name="tblInvoiceDetails" EntityType="LILI_CRMModel.tblInvoiceDetails" />
+    <EntitySet Name="tblOrganization" EntityType="LILI_CRMModel.tblOrganization" />
+    <EntitySet Name="tblParticular" EntityType="LILI_CRMModel.tblParticular" />
+    <EntitySet Name="tblPort" EntityType="LILI_CRMModel.tblPort" />
+    <EntitySet Name="tblPriceRequest" EntityType="LILI_CRMModel.tblPriceRequest" />
+    <EntitySet Name="tblPriceRequestDetail" EntityType="LILI_CRMModel.tblPriceRequestDetail" />
+    <EntitySet Name="tblPriceTerm" EntityType="LILI_CRMModel.tblPriceTerm" />
+    <EntitySet Name="tblProduct" EntityType="LILI_CRMModel.tblProduct" />
+    <EntitySet Name="tblQuote" EntityType="LILI_CRMModel.tblQuote" />
+    <EntitySet Name="tblQuoteDetails" EntityType="LILI_CRMModel.tblQuoteDetails" />
+    <EntitySet Name="tblQuoteDocument" EntityType="LILI_CRMModel.tblQuoteDocument" />
+    <EntitySet Name="tblSalesBudget" EntityType="LILI_CRMModel.tblSalesBudget" />
+    <EntitySet Name="tblSalesBudgetDetail" EntityType="LILI_CRMModel.tblSalesBudgetDetail" />
+    <EntitySet Name="tblSalesPerson" EntityType="LILI_CRMModel.tblSalesPerson" />
+    <EntitySet Name="tblSampleDocumentRequired" EntityType="LILI_CRMModel.tblSampleDocumentRequired" />
+    <EntitySet Name="tblSampleRequest" EntityType="LILI_CRMModel.tblSampleRequest" />
+    <EntitySet Name="tblSampleRequestDetails" EntityType="LILI_CRMModel.tblSampleRequestDetails" />
+    <EntitySet Name="tblSampleRequestDocument" EntityType="LILI_CRMModel.tblSampleRequestDocument" />
+    <EntitySet Name="tblSampleSubmission" EntityType="LILI_CRMModel.tblSampleSubmission" />
+    <EntitySet Name="tblSampleSubmissionDet" EntityType="LILI_CRMModel.tblSampleSubmissionDet" />
+    <EntitySet Name="tblSampleSubmissionDocument" EntityType="LILI_CRMModel.tblSampleSubmissionDocument" />
+    <EntitySet Name="tblSBU" EntityType="LILI_CRMModel.tblSBU" />
+    <EntitySet Name="tblSupplier" EntityType="LILI_CRMModel.tblSupplier" />
+    <EntitySet Name="tblSupplierAddress" EntityType="LILI_CRMModel.tblSupplierAddress" />
+    <EntitySet Name="tblSupplierContact" EntityType="LILI_CRMModel.tblSupplierContact" />
+    <EntitySet Name="tblTermsCondition" EntityType="LILI_CRMModel.tblTermsCondition" />
+    <EntitySet Name="tblTransporter" EntityType="LILI_CRMModel.tblTransporter" />
+    <EntitySet Name="tblVisitInformation" EntityType="LILI_CRMModel.tblVisitInformation" />
     <EntitySet Name="viewWebACMaster" EntityType="LILI_CRMModel.viewWebACMaster" />
     <EntitySet Name="vwWebPettyCashVoucher" EntityType="LILI_CRMModel.vwWebPettyCashVoucher" />
     <EntitySet Name="WebApproval" EntityType="LILI_CRMModel.WebApproval" />
@@ -20,60 +67,10 @@
       <End Role="BMS_tblUserInfo" EntitySet="BMS_tblUserInfo" />
       <End Role="BMS_tblUserWiseMenuAssign" EntitySet="BMS_tblUserWiseMenuAssign" />
     </AssociationSet>
-    <EntitySet Name="tblTransporter" EntityType="LILI_CRMModel.tblTransporter" />
-    <EntitySet Name="tblOrganization" EntityType="LILI_CRMModel.tblOrganization" />
-    <EntitySet Name="tblSampleSubmission" EntityType="LILI_CRMModel.tblSampleSubmission" />
-    <EntitySet Name="tblSampleDocumentRequired" EntityType="LILI_CRMModel.tblSampleDocumentRequired" />
-    <EntitySet Name="tblSampleRequestDocument" EntityType="LILI_CRMModel.tblSampleRequestDocument" />
-    <EntitySet Name="tblQuoteDocument" EntityType="LILI_CRMModel.tblQuoteDocument" />
-    <EntitySet Name="tblSampleSubmissionDocument" EntityType="LILI_CRMModel.tblSampleSubmissionDocument" />
-    <EntitySet Name="tblQuote" EntityType="LILI_CRMModel.tblQuote" />
-    <EntitySet Name="tblQuoteDetails" EntityType="LILI_CRMModel.tblQuoteDetails" />
-    <AssociationSet Name="FK_tblQuote_tblQuote" Association="LILI_CRMModel.FK_tblQuote_tblQuote">
-      <End Role="tblQuote" EntitySet="tblQuote" />
-      <End Role="tblQuote1" EntitySet="tblQuote" />
+    <AssociationSet Name="FK_tblDebitNote_tblBank" Association="LILI_CRMModel.FK_tblDebitNote_tblBank">
+      <End Role="tblBank" EntitySet="tblBank" />
+      <End Role="tblDebitNote" EntitySet="tblDebitNote" />
     </AssociationSet>
-    <AssociationSet Name="FK_tblQuoteDetails_tblQuote" Association="LILI_CRMModel.FK_tblQuoteDetails_tblQuote">
-      <End Role="tblQuote" EntitySet="tblQuote" />
-      <End Role="tblQuoteDetails" EntitySet="tblQuoteDetails" />
-    </AssociationSet>
-    <EntitySet Name="tblSupplier" EntityType="LILI_CRMModel.tblSupplier" />
-    <EntitySet Name="tblDivision" EntityType="LILI_CRMModel.tblDivision" />
-    <EntitySet Name="tblSalesBudget" EntityType="LILI_CRMModel.tblSalesBudget" />
-    <EntitySet Name="tblSalesBudgetDetail" EntityType="LILI_CRMModel.tblSalesBudgetDetail" />
-    <EntitySet Name="tblSalesPerson" EntityType="LILI_CRMModel.tblSalesPerson" />
-    <EntitySet Name="tblSBU" EntityType="LILI_CRMModel.tblSBU" />
-    <EntitySet Name="tblSupplierAddress" EntityType="LILI_CRMModel.tblSupplierAddress" />
-    <EntitySet Name="tblSupplierContact" EntityType="LILI_CRMModel.tblSupplierContact" />
-    <AssociationSet Name="FK_tblSalesPerson_tblSalesPerson" Association="LILI_CRMModel.FK_tblSalesPerson_tblSalesPerson">
-      <End Role="tblDivision" EntitySet="tblDivision" />
-      <End Role="tblSalesPerson" EntitySet="tblSalesPerson" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblSalesBudgetDetail_tblSalesBudgetDetail" Association="LILI_CRMModel.FK_tblSalesBudgetDetail_tblSalesBudgetDetail">
-      <End Role="tblSalesBudget" EntitySet="tblSalesBudget" />
-      <End Role="tblSalesBudgetDetail" EntitySet="tblSalesBudgetDetail" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblSalesBudgetDetail_tblSupplier" Association="LILI_CRMModel.FK_tblSalesBudgetDetail_tblSupplier">
-      <End Role="tblSupplier" EntitySet="tblSupplier" />
-      <End Role="tblSalesBudgetDetail" EntitySet="tblSalesBudgetDetail" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblSupplierAddress_tblSupplier" Association="LILI_CRMModel.FK_tblSupplierAddress_tblSupplier">
-      <End Role="tblSupplier" EntitySet="tblSupplier" />
-      <End Role="tblSupplierAddress" EntitySet="tblSupplierAddress" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblSupplierContact_tblSupplier" Association="LILI_CRMModel.FK_tblSupplierContact_tblSupplier">
-      <End Role="tblSupplier" EntitySet="tblSupplier" />
-      <End Role="tblSupplierContact" EntitySet="tblSupplierContact" />
-    </AssociationSet>
-    <EntitySet Name="tblCallReportProject" EntityType="LILI_CRMModel.tblCallReportProject" />
-    <EntitySet Name="tblCallReportProjectMember" EntityType="LILI_CRMModel.tblCallReportProjectMember" />
-    <EntitySet Name="tblCallReportSalesCallInquiry" EntityType="LILI_CRMModel.tblCallReportSalesCallInquiry" />
-    <EntitySet Name="tblCallReportSalesCallInquiryDetail" EntityType="LILI_CRMModel.tblCallReportSalesCallInquiryDetail" />
-    <EntitySet Name="tblCommunicationChannel" EntityType="LILI_CRMModel.tblCommunicationChannel" />
-    <EntitySet Name="tblCurrentStage" EntityType="LILI_CRMModel.tblCurrentStage" />
-    <EntitySet Name="tblExpenseBudget" EntityType="LILI_CRMModel.tblExpenseBudget" />
-    <EntitySet Name="tblExpenseBudgetDetail" EntityType="LILI_CRMModel.tblExpenseBudgetDetail" />
-    <EntitySet Name="tblParticular" EntityType="LILI_CRMModel.tblParticular" />
     <AssociationSet Name="FK_tblCallReportProject_tblCommunicationChannel" Association="LILI_CRMModel.FK_tblCallReportProject_tblCommunicationChannel">
       <End Role="tblCommunicationChannel" EntitySet="tblCommunicationChannel" />
       <End Role="tblCallReportProject" EntitySet="tblCallReportProject" />
@@ -82,9 +79,17 @@
       <End Role="tblCurrentStage" EntitySet="tblCurrentStage" />
       <End Role="tblCallReportProject" EntitySet="tblCallReportProject" />
     </AssociationSet>
+    <AssociationSet Name="FK_tblCallReportProject_tblCustomer" Association="LILI_CRMModel.FK_tblCallReportProject_tblCustomer">
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+      <End Role="tblCallReportProject" EntitySet="tblCallReportProject" />
+    </AssociationSet>
     <AssociationSet Name="FK_tblCallReportProject_tblSupplier" Association="LILI_CRMModel.FK_tblCallReportProject_tblSupplier">
       <End Role="tblSupplier" EntitySet="tblSupplier" />
       <End Role="tblCallReportProject" EntitySet="tblCallReportProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCallReportSalesCallInquiry_tblCustomer" Association="LILI_CRMModel.FK_tblCallReportSalesCallInquiry_tblCustomer">
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+      <End Role="tblCallReportSalesCallInquiry" EntitySet="tblCallReportSalesCallInquiry" />
     </AssociationSet>
     <AssociationSet Name="FK_tblCallReportSalesCallInquiry_tblSupplier" Association="LILI_CRMModel.FK_tblCallReportSalesCallInquiry_tblSupplier">
       <End Role="tblSupplier" EntitySet="tblSupplier" />
@@ -94,60 +99,10 @@
       <End Role="tblCallReportSalesCallInquiry" EntitySet="tblCallReportSalesCallInquiry" />
       <End Role="tblCallReportSalesCallInquiryDetail" EntitySet="tblCallReportSalesCallInquiryDetail" />
     </AssociationSet>
-    <AssociationSet Name="FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail" Association="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail">
-      <End Role="tblExpenseBudget" EntitySet="tblExpenseBudget" />
-      <End Role="tblExpenseBudgetDetail" EntitySet="tblExpenseBudgetDetail" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail1" Association="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail1">
-      <End Role="tblExpenseBudgetDetail" EntitySet="tblExpenseBudgetDetail" />
-      <End Role="tblExpenseBudgetDetail1" EntitySet="tblExpenseBudgetDetail" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblExpenseBudgetDetail_tblParticular" Association="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblParticular">
-      <End Role="tblParticular" EntitySet="tblParticular" />
-      <End Role="tblExpenseBudgetDetail" EntitySet="tblExpenseBudgetDetail" />
-    </AssociationSet>
-    <EntitySet Name="tblCommCalculationType" EntityType="LILI_CRMModel.tblCommCalculationType" />
-    <EntitySet Name="tblCountry" EntityType="LILI_CRMModel.tblCountry" />
-    <EntitySet Name="tblCurrency" EntityType="LILI_CRMModel.tblCurrency" />
-    <EntitySet Name="tblCustomer" EntityType="LILI_CRMModel.tblCustomer" />
-    <EntitySet Name="tblCustomerAddress" EntityType="LILI_CRMModel.tblCustomerAddress" />
-    <EntitySet Name="tblCustomerContact" EntityType="LILI_CRMModel.tblCustomerContact" />
-    <EntitySet Name="tblInvoiceDetails" EntityType="LILI_CRMModel.tblInvoiceDetails" />
-    <EntitySet Name="tblPort" EntityType="LILI_CRMModel.tblPort" />
-    <EntitySet Name="tblPriceTerm" EntityType="LILI_CRMModel.tblPriceTerm" />
-    <EntitySet Name="tblProduct" EntityType="LILI_CRMModel.tblProduct" />
-    <EntitySet Name="tblTermsCondition" EntityType="LILI_CRMModel.tblTermsCondition" />
-    <AssociationSet Name="FK_tblCallReportProject_tblCustomer" Association="LILI_CRMModel.FK_tblCallReportProject_tblCustomer">
-      <End Role="tblCustomer" EntitySet="tblCustomer" />
-      <End Role="tblCallReportProject" EntitySet="tblCallReportProject" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblCallReportSalesCallInquiry_tblCustomer" Association="LILI_CRMModel.FK_tblCallReportSalesCallInquiry_tblCustomer">
-      <End Role="tblCustomer" EntitySet="tblCustomer" />
-      <End Role="tblCallReportSalesCallInquiry" EntitySet="tblCallReportSalesCallInquiry" />
-    </AssociationSet>
     <AssociationSet Name="FK_tblCallReportSalesCallInquiryDetail_tblProduct" Association="LILI_CRMModel.FK_tblCallReportSalesCallInquiryDetail_tblProduct">
       <End Role="tblProduct" EntitySet="tblProduct" />
       <End Role="tblCallReportSalesCallInquiryDetail" EntitySet="tblCallReportSalesCallInquiryDetail" />
     </AssociationSet>
-    <AssociationSet Name="FK_tblCustomerAddress_tblCustomer" Association="LILI_CRMModel.FK_tblCustomerAddress_tblCustomer">
-      <End Role="tblCustomer" EntitySet="tblCustomer" />
-      <End Role="tblCustomerAddress" EntitySet="tblCustomerAddress" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblCustomerContact_tblCustomer" Association="LILI_CRMModel.FK_tblCustomerContact_tblCustomer">
-      <End Role="tblCustomer" EntitySet="tblCustomer" />
-      <End Role="tblCustomerContact" EntitySet="tblCustomerContact" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblSalesBudgetDetail_tblCustomer" Association="LILI_CRMModel.FK_tblSalesBudgetDetail_tblCustomer">
-      <End Role="tblCustomer" EntitySet="tblCustomer" />
-      <End Role="tblSalesBudgetDetail" EntitySet="tblSalesBudgetDetail" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblInvoiceDetails_tblProduct" Association="LILI_CRMModel.FK_tblInvoiceDetails_tblProduct">
-      <End Role="tblProduct" EntitySet="tblProduct" />
-      <End Role="tblInvoiceDetails" EntitySet="tblInvoiceDetails" />
-    </AssociationSet>
-    <EntitySet Name="tblInvoice" EntityType="LILI_CRMModel.tblInvoice" />
-    <EntitySet Name="tblPriceRequest" EntityType="LILI_CRMModel.tblPriceRequest" />
-    <EntitySet Name="tblPriceRequestDetail" EntityType="LILI_CRMModel.tblPriceRequestDetail" />
     <AssociationSet Name="FK_tblInvoice_tblCommCalculationType" Association="LILI_CRMModel.FK_tblInvoice_tblCommCalculationType">
       <End Role="tblCommCalculationType" EntitySet="tblCommCalculationType" />
       <End Role="tblInvoice" EntitySet="tblInvoice" />
@@ -164,6 +119,14 @@
       <End Role="tblCurrency" EntitySet="tblCurrency" />
       <End Role="tblInvoice" EntitySet="tblInvoice" />
     </AssociationSet>
+    <AssociationSet Name="FK_tblCustomerAddress_tblCustomer" Association="LILI_CRMModel.FK_tblCustomerAddress_tblCustomer">
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+      <End Role="tblCustomerAddress" EntitySet="tblCustomerAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCustomerContact_tblCustomer" Association="LILI_CRMModel.FK_tblCustomerContact_tblCustomer">
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+      <End Role="tblCustomerContact" EntitySet="tblCustomerContact" />
+    </AssociationSet>
     <AssociationSet Name="FK_tblInvoice_tblCustomer" Association="LILI_CRMModel.FK_tblInvoice_tblCustomer">
       <End Role="tblCustomer" EntitySet="tblCustomer" />
       <End Role="tblInvoice" EntitySet="tblInvoice" />
@@ -171,6 +134,42 @@
     <AssociationSet Name="FK_tblPriceRequest_tblCustomer" Association="LILI_CRMModel.FK_tblPriceRequest_tblCustomer">
       <End Role="tblCustomer" EntitySet="tblCustomer" />
       <End Role="tblPriceRequest" EntitySet="tblPriceRequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSalesBudgetDetail_tblCustomer" Association="LILI_CRMModel.FK_tblSalesBudgetDetail_tblCustomer">
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+      <End Role="tblSalesBudgetDetail" EntitySet="tblSalesBudgetDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDebitNote_tblOrganization" Association="LILI_CRMModel.FK_tblDebitNote_tblOrganization">
+      <End Role="tblOrganization" EntitySet="tblOrganization" />
+      <End Role="tblDebitNote" EntitySet="tblDebitNote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDebitNote_tblSupplier" Association="LILI_CRMModel.FK_tblDebitNote_tblSupplier">
+      <End Role="tblSupplier" EntitySet="tblSupplier" />
+      <End Role="tblDebitNote" EntitySet="tblDebitNote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDebitNoteDetail_tblDebitNote" Association="LILI_CRMModel.FK_tblDebitNoteDetail_tblDebitNote">
+      <End Role="tblDebitNote" EntitySet="tblDebitNote" />
+      <End Role="tblDebitNoteDetail" EntitySet="tblDebitNoteDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDebitNoteDetail_tblInvoice" Association="LILI_CRMModel.FK_tblDebitNoteDetail_tblInvoice">
+      <End Role="tblInvoice" EntitySet="tblInvoice" />
+      <End Role="tblDebitNoteDetail" EntitySet="tblDebitNoteDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSalesPerson_tblSalesPerson" Association="LILI_CRMModel.FK_tblSalesPerson_tblSalesPerson">
+      <End Role="tblDivision" EntitySet="tblDivision" />
+      <End Role="tblSalesPerson" EntitySet="tblSalesPerson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail" Association="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail">
+      <End Role="tblExpenseBudget" EntitySet="tblExpenseBudget" />
+      <End Role="tblExpenseBudgetDetail" EntitySet="tblExpenseBudgetDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail1" Association="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail1">
+      <End Role="tblExpenseBudgetDetail" EntitySet="tblExpenseBudgetDetail" />
+      <End Role="tblExpenseBudgetDetail1" EntitySet="tblExpenseBudgetDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblExpenseBudgetDetail_tblParticular" Association="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblParticular">
+      <End Role="tblParticular" EntitySet="tblParticular" />
+      <End Role="tblExpenseBudgetDetail" EntitySet="tblExpenseBudgetDetail" />
     </AssociationSet>
     <AssociationSet Name="FK_tblInvoice_tblInvoice" Association="LILI_CRMModel.FK_tblInvoice_tblInvoice">
       <End Role="tblInvoice" EntitySet="tblInvoice" />
@@ -186,6 +185,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_tblInvoiceDetails_tblInvoice" Association="LILI_CRMModel.FK_tblInvoiceDetails_tblInvoice">
       <End Role="tblInvoice" EntitySet="tblInvoice" />
+      <End Role="tblInvoiceDetails" EntitySet="tblInvoiceDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblInvoiceDetails_tblProduct" Association="LILI_CRMModel.FK_tblInvoiceDetails_tblProduct">
+      <End Role="tblProduct" EntitySet="tblProduct" />
       <End Role="tblInvoiceDetails" EntitySet="tblInvoiceDetails" />
     </AssociationSet>
     <AssociationSet Name="FK_tblPriceRequest_tblSupplier" Association="LILI_CRMModel.FK_tblPriceRequest_tblSupplier">
@@ -204,40 +207,37 @@
       <End Role="tblProduct" EntitySet="tblProduct" />
       <End Role="tblPriceRequestDetail" EntitySet="tblPriceRequestDetail" />
     </AssociationSet>
-    <EntitySet Name="tblSampleRequest" EntityType="LILI_CRMModel.tblSampleRequest" />
-    <EntitySet Name="tblSampleRequestDetails" EntityType="LILI_CRMModel.tblSampleRequestDetails" />
+    <AssociationSet Name="FK_tblQuote_tblQuote" Association="LILI_CRMModel.FK_tblQuote_tblQuote">
+      <End Role="tblQuote" EntitySet="tblQuote" />
+      <End Role="tblQuote1" EntitySet="tblQuote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblQuoteDetails_tblQuote" Association="LILI_CRMModel.FK_tblQuoteDetails_tblQuote">
+      <End Role="tblQuote" EntitySet="tblQuote" />
+      <End Role="tblQuoteDetails" EntitySet="tblQuoteDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSalesBudgetDetail_tblSalesBudgetDetail" Association="LILI_CRMModel.FK_tblSalesBudgetDetail_tblSalesBudgetDetail">
+      <End Role="tblSalesBudget" EntitySet="tblSalesBudget" />
+      <End Role="tblSalesBudgetDetail" EntitySet="tblSalesBudgetDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSalesBudgetDetail_tblSupplier" Association="LILI_CRMModel.FK_tblSalesBudgetDetail_tblSupplier">
+      <End Role="tblSupplier" EntitySet="tblSupplier" />
+      <End Role="tblSalesBudgetDetail" EntitySet="tblSalesBudgetDetail" />
+    </AssociationSet>
     <AssociationSet Name="FK_tblSampleRequestDetails_tblSampleRequest" Association="LILI_CRMModel.FK_tblSampleRequestDetails_tblSampleRequest">
       <End Role="tblSampleRequest" EntitySet="tblSampleRequest" />
       <End Role="tblSampleRequestDetails" EntitySet="tblSampleRequestDetails" />
     </AssociationSet>
-    <EntitySet Name="tblSampleSubmissionDet" EntityType="LILI_CRMModel.tblSampleSubmissionDet" />
     <AssociationSet Name="FK_tblSampleSubmissionDet_tblSampleSubmission" Association="LILI_CRMModel.FK_tblSampleSubmissionDet_tblSampleSubmission">
       <End Role="tblSampleSubmission" EntitySet="tblSampleSubmission" />
       <End Role="tblSampleSubmissionDet" EntitySet="tblSampleSubmissionDet" />
     </AssociationSet>
-    <EntitySet Name="tblBank" EntityType="LILI_CRMModel.tblBank" />
-    <EntitySet Name="tblDebitNote" EntityType="LILI_CRMModel.tblDebitNote" />
-    <EntitySet Name="tblDebitNoteDetail" EntityType="LILI_CRMModel.tblDebitNoteDetail" />
-    <EntitySet Name="tblVisitInformation" EntityType="LILI_CRMModel.tblVisitInformation" />
-    <AssociationSet Name="FK_tblDebitNote_tblBank" Association="LILI_CRMModel.FK_tblDebitNote_tblBank">
-      <End Role="tblBank" EntitySet="tblBank" />
-      <End Role="tblDebitNote" EntitySet="tblDebitNote" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblDebitNote_tblOrganization" Association="LILI_CRMModel.FK_tblDebitNote_tblOrganization">
-      <End Role="tblOrganization" EntitySet="tblOrganization" />
-      <End Role="tblDebitNote" EntitySet="tblDebitNote" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblDebitNote_tblSupplier" Association="LILI_CRMModel.FK_tblDebitNote_tblSupplier">
+    <AssociationSet Name="FK_tblSupplierAddress_tblSupplier" Association="LILI_CRMModel.FK_tblSupplierAddress_tblSupplier">
       <End Role="tblSupplier" EntitySet="tblSupplier" />
-      <End Role="tblDebitNote" EntitySet="tblDebitNote" />
+      <End Role="tblSupplierAddress" EntitySet="tblSupplierAddress" />
     </AssociationSet>
-    <AssociationSet Name="FK_tblDebitNoteDetail_tblDebitNote" Association="LILI_CRMModel.FK_tblDebitNoteDetail_tblDebitNote">
-      <End Role="tblDebitNote" EntitySet="tblDebitNote" />
-      <End Role="tblDebitNoteDetail" EntitySet="tblDebitNoteDetail" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblDebitNoteDetail_tblInvoice" Association="LILI_CRMModel.FK_tblDebitNoteDetail_tblInvoice">
-      <End Role="tblInvoice" EntitySet="tblInvoice" />
-      <End Role="tblDebitNoteDetail" EntitySet="tblDebitNoteDetail" />
+    <AssociationSet Name="FK_tblSupplierContact_tblSupplier" Association="LILI_CRMModel.FK_tblSupplierContact_tblSupplier">
+      <End Role="tblSupplier" EntitySet="tblSupplier" />
+      <End Role="tblSupplierContact" EntitySet="tblSupplierContact" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="BMS_tblMenuList">
@@ -282,6 +282,22 @@
     <NavigationProperty Name="BMS_tblMenuList" Relationship="LILI_CRMModel.FK_BMS_tblUserWiseMenuAssign_BMS_tblMenuList" FromRole="BMS_tblUserWiseMenuAssign" ToRole="BMS_tblMenuList" />
     <NavigationProperty Name="BMS_tblUserInfo" Relationship="LILI_CRMModel.FK_BMS_tblUserWiseMenuAssign_BMS_tblUserInfo" FromRole="BMS_tblUserWiseMenuAssign" ToRole="BMS_tblUserInfo" />
   </EntityType>
+  <EntityType Name="tblBank">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="AccountNo" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BankName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BranchName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SwiftCode" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblDebitNote" Relationship="LILI_CRMModel.FK_tblDebitNote_tblBank" FromRole="tblBank" ToRole="tblDebitNote" />
+  </EntityType>
   <EntityType Name="tblBusiness">
     <Key>
       <PropertyRef Name="Id" />
@@ -302,6 +318,92 @@
     <Property Type="DateTime" Name="IDate" Nullable="false" />
     <Property Type="DateTime" Name="EDate" />
   </EntityType>
+  <EntityType Name="tblCallReportProject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+    <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="CurrentStageId" Nullable="false" />
+    <Property Type="Int64" Name="CustomerId" Nullable="false" />
+    <Property Type="Int64" Name="SupplierId" Nullable="false" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SellingOpportunity" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="PotVolPerYear" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PotAmountPerYear" Precision="18" Scale="2" />
+    <Property Type="String" Name="RemarkNextAction" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="CommunicationChannelId" Nullable="false" />
+    <Property Type="String" Name="SalesPerson" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblCommunicationChannel" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblCommunicationChannel" FromRole="tblCallReportProject" ToRole="tblCommunicationChannel" />
+    <NavigationProperty Name="tblCurrentStage" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblCurrentStage" FromRole="tblCallReportProject" ToRole="tblCurrentStage" />
+    <NavigationProperty Name="tblCustomer" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblCustomer" FromRole="tblCallReportProject" ToRole="tblCustomer" />
+    <NavigationProperty Name="tblSupplier" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblSupplier" FromRole="tblCallReportProject" ToRole="tblSupplier" />
+  </EntityType>
+  <EntityType Name="tblCallReportProjectMember">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProjectId" Nullable="false" />
+    <Property Type="Int64" Name="MemberId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCallReportSalesCallInquiry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="CustomerId" Nullable="false" />
+    <Property Type="Int64" Name="SupplierId" Nullable="false" />
+    <Property Type="DateTime" Name="DateOfUpdate" Nullable="false" />
+    <Property Type="String" Name="SalesPerson" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblCustomer" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiry_tblCustomer" FromRole="tblCallReportSalesCallInquiry" ToRole="tblCustomer" />
+    <NavigationProperty Name="tblSupplier" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiry_tblSupplier" FromRole="tblCallReportSalesCallInquiry" ToRole="tblSupplier" />
+    <NavigationProperty Name="tblCallReportSalesCallInquiryDetail" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiryDetail_tblCallReportSalesCallInquiry" FromRole="tblCallReportSalesCallInquiry" ToRole="tblCallReportSalesCallInquiryDetail" />
+  </EntityType>
+  <EntityType Name="tblCallReportSalesCallInquiryDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="SalesCallInquiryId" Nullable="false" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Decimal" Name="Quantity" Precision="18" Scale="2" />
+    <Property Type="String" Name="Unit" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="OfferedAmountPerUnit" Precision="18" Scale="2" />
+    <Property Type="String" Name="PriceValidity" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="BidPrice" Precision="18" Scale="2" />
+    <Property Type="Int64" Name="StageId" Nullable="false" />
+    <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblCallReportSalesCallInquiry" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiryDetail_tblCallReportSalesCallInquiry" FromRole="tblCallReportSalesCallInquiryDetail" ToRole="tblCallReportSalesCallInquiry" />
+    <NavigationProperty Name="tblProduct" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiryDetail_tblProduct" FromRole="tblCallReportSalesCallInquiryDetail" ToRole="tblProduct" />
+  </EntityType>
+  <EntityType Name="tblCommCalculationType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CommissionCalculationTerm" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblInvoice_tblCommCalculationType" FromRole="tblCommCalculationType" ToRole="tblInvoice" />
+  </EntityType>
   <EntityType Name="tblCommonConfigType">
     <Key>
       <PropertyRef Name="TableName" />
@@ -312,6 +414,657 @@
     <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="Int32" Name="SortOrder" />
     <Property Type="Int32" Name="ModuleId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCommunicationChannel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CommunicationChannel" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblCallReportProject" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblCommunicationChannel" FromRole="tblCommunicationChannel" ToRole="tblCallReportProject" />
+  </EntityType>
+  <EntityType Name="tblCountry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblInvoice_tblCountry" FromRole="tblCountry" ToRole="tblInvoice" />
+    <NavigationProperty Name="tblPriceRequestDetail" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblCountry" FromRole="tblCountry" ToRole="tblPriceRequestDetail" />
+  </EntityType>
+  <EntityType Name="tblCurrency">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CurrencyName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShortCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblInvoice_tblCurrency" FromRole="tblCurrency" ToRole="tblInvoice" />
+  </EntityType>
+  <EntityType Name="tblCurrentStage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CurrentStage" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblCallReportProject" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblCurrentStage" FromRole="tblCurrentStage" ToRole="tblCallReportProject" />
+  </EntityType>
+  <EntityType Name="tblCustomer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CustomerId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Phone" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WebAddress" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TIN" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BIN" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblCallReportProject" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblCustomer" FromRole="tblCustomer" ToRole="tblCallReportProject" />
+    <NavigationProperty Name="tblCallReportSalesCallInquiry" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiry_tblCustomer" FromRole="tblCustomer" ToRole="tblCallReportSalesCallInquiry" />
+    <NavigationProperty Name="tblCustomerAddress" Relationship="LILI_CRMModel.FK_tblCustomerAddress_tblCustomer" FromRole="tblCustomer" ToRole="tblCustomerAddress" />
+    <NavigationProperty Name="tblCustomerContact" Relationship="LILI_CRMModel.FK_tblCustomerContact_tblCustomer" FromRole="tblCustomer" ToRole="tblCustomerContact" />
+    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblInvoice_tblCustomer" FromRole="tblCustomer" ToRole="tblInvoice" />
+    <NavigationProperty Name="tblPriceRequest" Relationship="LILI_CRMModel.FK_tblPriceRequest_tblCustomer" FromRole="tblCustomer" ToRole="tblPriceRequest" />
+    <NavigationProperty Name="tblSalesBudgetDetail" Relationship="LILI_CRMModel.FK_tblSalesBudgetDetail_tblCustomer" FromRole="tblCustomer" ToRole="tblSalesBudgetDetail" />
+  </EntityType>
+  <EntityType Name="tblCustomerAddress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="CustomerId" Nullable="false" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblCustomer" Relationship="LILI_CRMModel.FK_tblCustomerAddress_tblCustomer" FromRole="tblCustomerAddress" ToRole="tblCustomer" />
+  </EntityType>
+  <EntityType Name="tblCustomerContact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="CustomerId" Nullable="false" />
+    <Property Type="String" Name="ContactName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Designation" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Cell" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Phone" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WebAddress" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SkypeName" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblCustomer" Relationship="LILI_CRMModel.FK_tblCustomerContact_tblCustomer" FromRole="tblCustomerContact" ToRole="tblCustomer" />
+  </EntityType>
+  <EntityType Name="tblDebitNote">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="DebitNoteNo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DebitNoteDate" Nullable="false" />
+    <Property Type="Int64" Name="SupplierId" Nullable="false" />
+    <Property Type="Int64" Name="BankId" Nullable="false" />
+    <Property Type="Int64" Name="OrganizationId" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblBank" Relationship="LILI_CRMModel.FK_tblDebitNote_tblBank" FromRole="tblDebitNote" ToRole="tblBank" />
+    <NavigationProperty Name="tblOrganization" Relationship="LILI_CRMModel.FK_tblDebitNote_tblOrganization" FromRole="tblDebitNote" ToRole="tblOrganization" />
+    <NavigationProperty Name="tblSupplier" Relationship="LILI_CRMModel.FK_tblDebitNote_tblSupplier" FromRole="tblDebitNote" ToRole="tblSupplier" />
+    <NavigationProperty Name="tblDebitNoteDetail" Relationship="LILI_CRMModel.FK_tblDebitNoteDetail_tblDebitNote" FromRole="tblDebitNote" ToRole="tblDebitNoteDetail" />
+  </EntityType>
+  <EntityType Name="tblDebitNoteDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="DebitNoteId" Nullable="false" />
+    <Property Type="Int64" Name="InvoiceId" Nullable="false" />
+    <Property Type="Decimal" Name="CommissionPercent" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Commission" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="tblDebitNote" Relationship="LILI_CRMModel.FK_tblDebitNoteDetail_tblDebitNote" FromRole="tblDebitNoteDetail" ToRole="tblDebitNote" />
+    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblDebitNoteDetail_tblInvoice" FromRole="tblDebitNoteDetail" ToRole="tblInvoice" />
+  </EntityType>
+  <EntityType Name="tblDivision">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="DivisionName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Descriptions" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblSalesPerson" Relationship="LILI_CRMModel.FK_tblSalesPerson_tblSalesPerson" FromRole="tblDivision" ToRole="tblSalesPerson" />
+  </EntityType>
+  <EntityType Name="tblExpenseBudget">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="SalesPersonId" />
+    <Property Type="String" Name="DivisionId" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="Int64" Name="SBUId" />
+    <Property Type="String" Name="BudgetYear" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblExpenseBudgetDetail" Relationship="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail" FromRole="tblExpenseBudget" ToRole="tblExpenseBudgetDetail" />
+  </EntityType>
+  <EntityType Name="tblExpenseBudgetDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ExpenseBudgetId" Nullable="false" />
+    <Property Type="Int64" Name="ParticularId" Nullable="false" />
+    <Property Type="Int32" Name="BudgetMonth" Nullable="false" />
+    <Property Type="Decimal" Name="Value" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="tblExpenseBudget" Relationship="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail" FromRole="tblExpenseBudgetDetail" ToRole="tblExpenseBudget" />
+    <NavigationProperty Name="tblExpenseBudgetDetail1" Relationship="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail1" FromRole="tblExpenseBudgetDetail" ToRole="tblExpenseBudgetDetail1" />
+    <NavigationProperty Name="tblExpenseBudgetDetail2" Relationship="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail1" FromRole="tblExpenseBudgetDetail1" ToRole="tblExpenseBudgetDetail" />
+    <NavigationProperty Name="tblParticular" Relationship="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblParticular" FromRole="tblExpenseBudgetDetail" ToRole="tblParticular" />
+  </EntityType>
+  <EntityType Name="tblInvoice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="InvoiceNo" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="InvoicePeriod" Nullable="false" />
+    <Property Type="DateTime" Name="InvoiceDate" Nullable="false" />
+    <Property Type="Int64" Name="OrganizationId" Nullable="false" />
+    <Property Type="String" Name="InvoiceType" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="CustomerId" Nullable="false" />
+    <Property Type="Int64" Name="CurrencyId" Nullable="false" />
+    <Property Type="Int64" Name="PriceTermId" Nullable="false" />
+    <Property Type="Int64" Name="CommCalcTermId" Nullable="false" />
+    <Property Type="Decimal" Name="Total" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="OtherCharges" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="NET" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CommissionPercent" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Commission" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="Remarks" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LCNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="LCDate" />
+    <Property Type="DateTime" Name="LDE" />
+    <Property Type="DateTime" Name="LDS" />
+    <Property Type="Int64" Name="ShipmentFromCountryId" Nullable="false" />
+    <Property Type="Int64" Name="PortOfDischargeId" Nullable="false" />
+    <Property Type="DateTime" Name="ShipmentDate" />
+    <Property Type="DateTime" Name="ArrivalDate" />
+    <Property Type="String" Name="CommercialInvoiceNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CommercialInvoiceDate" />
+    <Property Type="String" Name="BoLNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblCommCalculationType" Relationship="LILI_CRMModel.FK_tblInvoice_tblCommCalculationType" FromRole="tblInvoice" ToRole="tblCommCalculationType" />
+    <NavigationProperty Name="tblCountry" Relationship="LILI_CRMModel.FK_tblInvoice_tblCountry" FromRole="tblInvoice" ToRole="tblCountry" />
+    <NavigationProperty Name="tblCurrency" Relationship="LILI_CRMModel.FK_tblInvoice_tblCurrency" FromRole="tblInvoice" ToRole="tblCurrency" />
+    <NavigationProperty Name="tblCustomer" Relationship="LILI_CRMModel.FK_tblInvoice_tblCustomer" FromRole="tblInvoice" ToRole="tblCustomer" />
+    <NavigationProperty Name="tblDebitNoteDetail" Relationship="LILI_CRMModel.FK_tblDebitNoteDetail_tblInvoice" FromRole="tblInvoice" ToRole="tblDebitNoteDetail" />
+    <NavigationProperty Name="tblInvoice1" Relationship="LILI_CRMModel.FK_tblInvoice_tblInvoice" FromRole="tblInvoice" ToRole="tblInvoice1" />
+    <NavigationProperty Name="tblInvoice2" Relationship="LILI_CRMModel.FK_tblInvoice_tblInvoice" FromRole="tblInvoice1" ToRole="tblInvoice" />
+    <NavigationProperty Name="tblPort" Relationship="LILI_CRMModel.FK_tblInvoice_tblPort" FromRole="tblInvoice" ToRole="tblPort" />
+    <NavigationProperty Name="tblPriceTerm" Relationship="LILI_CRMModel.FK_tblInvoice_tblPriceTerm" FromRole="tblInvoice" ToRole="tblPriceTerm" />
+    <NavigationProperty Name="tblInvoiceDetails" Relationship="LILI_CRMModel.FK_tblInvoiceDetails_tblInvoice" FromRole="tblInvoice" ToRole="tblInvoiceDetails" />
+  </EntityType>
+  <EntityType Name="tblInvoiceDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="InvoiceId" Nullable="false" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Decimal" Name="UnitPrice" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Quantity" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="SubTotal" Nullable="false" Precision="18" Scale="3" />
+    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblInvoiceDetails_tblInvoice" FromRole="tblInvoiceDetails" ToRole="tblInvoice" />
+    <NavigationProperty Name="tblProduct" Relationship="LILI_CRMModel.FK_tblInvoiceDetails_tblProduct" FromRole="tblInvoiceDetails" ToRole="tblProduct" />
+  </EntityType>
+  <EntityType Name="tblOrganization">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Organization" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EUser" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblDebitNote" Relationship="LILI_CRMModel.FK_tblDebitNote_tblOrganization" FromRole="tblOrganization" ToRole="tblDebitNote" />
+  </EntityType>
+  <EntityType Name="tblParticular">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ParticularName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblExpenseBudgetDetail" Relationship="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblParticular" FromRole="tblParticular" ToRole="tblExpenseBudgetDetail" />
+  </EntityType>
+  <EntityType Name="tblPort">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="PortName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblInvoice_tblPort" FromRole="tblPort" ToRole="tblInvoice" />
+  </EntityType>
+  <EntityType Name="tblPriceRequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="SalesCallId" Nullable="false" />
+    <Property Type="DateTime" Name="PriceRequestDate" Nullable="false" />
+    <Property Type="Int64" Name="SupplierId" Nullable="false" />
+    <Property Type="Int64" Name="CustomerId" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblCustomer" Relationship="LILI_CRMModel.FK_tblPriceRequest_tblCustomer" FromRole="tblPriceRequest" ToRole="tblCustomer" />
+    <NavigationProperty Name="tblSupplier" Relationship="LILI_CRMModel.FK_tblPriceRequest_tblSupplier" FromRole="tblPriceRequest" ToRole="tblSupplier" />
+    <NavigationProperty Name="tblPriceRequestDetail" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblPriceRequest" FromRole="tblPriceRequest" ToRole="tblPriceRequestDetail" />
+  </EntityType>
+  <EntityType Name="tblPriceRequestDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="PriceRequestId" Nullable="false" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Int64" Name="PriceTermId" Nullable="false" />
+    <Property Type="Decimal" Name="ExpectedPrice" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ReceivedPrice" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="AsOnDate" Nullable="false" />
+    <Property Type="DateTime" Name="ValidityDate" Nullable="false" />
+    <Property Type="Decimal" Name="MOQ" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int64" Name="ShipmentCountryId" Nullable="false" />
+    <Property Type="String" Name="ShipmentLeadTime" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PriceRequestStatus" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblCountry" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblCountry" FromRole="tblPriceRequestDetail" ToRole="tblCountry" />
+    <NavigationProperty Name="tblPriceRequest" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblPriceRequest" FromRole="tblPriceRequestDetail" ToRole="tblPriceRequest" />
+    <NavigationProperty Name="tblPriceTerm" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblPriceTerm" FromRole="tblPriceRequestDetail" ToRole="tblPriceTerm" />
+    <NavigationProperty Name="tblProduct" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblProduct" FromRole="tblPriceRequestDetail" ToRole="tblProduct" />
+  </EntityType>
+  <EntityType Name="tblPriceTerm">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="PriceTermName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblInvoice_tblPriceTerm" FromRole="tblPriceTerm" ToRole="tblInvoice" />
+    <NavigationProperty Name="tblPriceRequestDetail" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblPriceTerm" FromRole="tblPriceTerm" ToRole="tblPriceRequestDetail" />
+  </EntityType>
+  <EntityType Name="tblProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ProductCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProductName" Nullable="false" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GenericName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShortDesc" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HSCode" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SellingUnit" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SamplingUnit" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="UnitPrice" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="DutyStructure" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="String" Name="Origin" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LeadTime" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="MOQ" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int64" Name="SubCategoryId" />
+    <Property Type="Int64" Name="OrganizationId" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblCallReportSalesCallInquiryDetail" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiryDetail_tblProduct" FromRole="tblProduct" ToRole="tblCallReportSalesCallInquiryDetail" />
+    <NavigationProperty Name="tblInvoiceDetails" Relationship="LILI_CRMModel.FK_tblInvoiceDetails_tblProduct" FromRole="tblProduct" ToRole="tblInvoiceDetails" />
+    <NavigationProperty Name="tblPriceRequestDetail" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblProduct" FromRole="tblProduct" ToRole="tblPriceRequestDetail" />
+  </EntityType>
+  <EntityType Name="tblQuote">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="QuoteNo" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="QuoteDate" Nullable="false" />
+    <Property Type="Int64" Name="OrganizationId" />
+    <Property Type="Int64" Name="CustomerId" Nullable="false" />
+    <Property Type="Int64" Name="CusContactId" />
+    <Property Type="Int32" Name="CurrencyId" />
+    <Property Type="Int32" Name="PriceTermId" />
+    <Property Type="Int32" Name="PaymentTermId" />
+    <Property Type="String" Name="SubmissionText" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblQuote1" Relationship="LILI_CRMModel.FK_tblQuote_tblQuote" FromRole="tblQuote" ToRole="tblQuote1" />
+    <NavigationProperty Name="tblQuote2" Relationship="LILI_CRMModel.FK_tblQuote_tblQuote" FromRole="tblQuote1" ToRole="tblQuote" />
+    <NavigationProperty Name="tblQuoteDetails" Relationship="LILI_CRMModel.FK_tblQuoteDetails_tblQuote" FromRole="tblQuote" ToRole="tblQuoteDetails" />
+  </EntityType>
+  <EntityType Name="tblQuoteDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="QuoteId" Nullable="false" />
+    <Property Type="Int64" Name="ArticleId" Nullable="false" />
+    <Property Type="Decimal" Name="QuoteQuantity" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="MOQ" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="CurrencyId" />
+    <Property Type="DateTime" Name="ValidityDate" />
+    <Property Type="Decimal" Name="UnitPrice" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int64" Name="PriceTermId" />
+    <Property Type="Int64" Name="PaymentTermId" />
+    <Property Type="Int64" Name="SupplierId" Nullable="false" />
+    <Property Type="String" Name="ApproveState" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DetailText" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="ShipmentCountryId" />
+    <Property Type="String" Name="ShipmentLeadTime" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblQuote" Relationship="LILI_CRMModel.FK_tblQuoteDetails_tblQuote" FromRole="tblQuoteDetails" ToRole="tblQuote" />
+  </EntityType>
+  <EntityType Name="tblQuoteDocument">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="QuoteId" Nullable="false" />
+    <Property Type="Int32" Name="DocumentId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSalesBudget">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="SalesPersonId" />
+    <Property Type="Int64" Name="SBUId" />
+    <Property Type="Int64" Name="ProductId" />
+    <Property Type="String" Name="BudgetYear" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblSalesBudgetDetail" Relationship="LILI_CRMModel.FK_tblSalesBudgetDetail_tblSalesBudgetDetail" FromRole="tblSalesBudget" ToRole="tblSalesBudgetDetail" />
+  </EntityType>
+  <EntityType Name="tblSalesBudgetDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="SalesBudgetId" Nullable="false" />
+    <Property Type="Int64" Name="CustomerId" Nullable="false" />
+    <Property Type="Int64" Name="SupplierId" Nullable="false" />
+    <Property Type="Int32" Name="BudgetMonth" Nullable="false" />
+    <Property Type="Decimal" Name="Quantity" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Value" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Commission" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="tblCustomer" Relationship="LILI_CRMModel.FK_tblSalesBudgetDetail_tblCustomer" FromRole="tblSalesBudgetDetail" ToRole="tblCustomer" />
+    <NavigationProperty Name="tblSalesBudget" Relationship="LILI_CRMModel.FK_tblSalesBudgetDetail_tblSalesBudgetDetail" FromRole="tblSalesBudgetDetail" ToRole="tblSalesBudget" />
+    <NavigationProperty Name="tblSupplier" Relationship="LILI_CRMModel.FK_tblSalesBudgetDetail_tblSupplier" FromRole="tblSalesBudgetDetail" ToRole="tblSupplier" />
+  </EntityType>
+  <EntityType Name="tblSalesPerson">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SalesPersonId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SalesPersonName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Designation" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="StaffId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="DivisionId" Nullable="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblDivision" Relationship="LILI_CRMModel.FK_tblSalesPerson_tblSalesPerson" FromRole="tblSalesPerson" ToRole="tblDivision" />
+  </EntityType>
+  <EntityType Name="tblSampleDocumentRequired">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="DocName" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsSelected" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSampleRequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="RequestNo" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RequestDate" Nullable="false" />
+    <Property Type="Int64" Name="OrganizationId" />
+    <Property Type="Int64" Name="SupplierId" Nullable="false" />
+    <Property Type="DateTime" Name="ExpectingDate" />
+    <Property Type="Int32" Name="TransporterId" />
+    <Property Type="String" Name="DocTrackingNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DeliveryStateId" />
+    <Property Type="String" Name="Remarks" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblSampleRequestDetails" Relationship="LILI_CRMModel.FK_tblSampleRequestDetails_tblSampleRequest" FromRole="tblSampleRequest" ToRole="tblSampleRequestDetails" />
+  </EntityType>
+  <EntityType Name="tblSampleRequestDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="RequestId" Nullable="false" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Decimal" Name="RequestQuantity" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int64" Name="CustomerId" />
+    <Property Type="String" Name="Purpose" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="ReceivedQuantity" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="ReceivedDate" />
+    <Property Type="String" Name="DetailText" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblSampleRequest" Relationship="LILI_CRMModel.FK_tblSampleRequestDetails_tblSampleRequest" FromRole="tblSampleRequestDetails" ToRole="tblSampleRequest" />
+  </EntityType>
+  <EntityType Name="tblSampleRequestDocument">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="RequestId" Nullable="false" />
+    <Property Type="Int32" Name="DocumentId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSampleSubmission">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SubmissionNo" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="SubmissionDate" Nullable="false" />
+    <Property Type="Int64" Name="OrganizationId" />
+    <Property Type="Int64" Name="CustomerId" Nullable="false" />
+    <Property Type="Int64" Name="CusContactId" />
+    <Property Type="String" Name="SubmissionText" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblSampleSubmissionDet" Relationship="LILI_CRMModel.FK_tblSampleSubmissionDet_tblSampleSubmission" FromRole="tblSampleSubmission" ToRole="tblSampleSubmissionDet" />
+  </EntityType>
+  <EntityType Name="tblSampleSubmissionDet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="SubmissionId" Nullable="false" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Decimal" Name="SubmissionQuantity" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="ExpieryDate" />
+    <Property Type="String" Name="Purpose" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="SupplierId" />
+    <Property Type="String" Name="Origin" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TrialReport" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ApproveState" />
+    <Property Type="String" Name="DetailText" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblSampleSubmission" Relationship="LILI_CRMModel.FK_tblSampleSubmissionDet_tblSampleSubmission" FromRole="tblSampleSubmissionDet" ToRole="tblSampleSubmission" />
+  </EntityType>
+  <EntityType Name="tblSampleSubmissionDocument">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="SubmissionId" Nullable="false" />
+    <Property Type="Int32" Name="DocumentId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSBU">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SBUName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Descriptions" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+  </EntityType>
+  <EntityType Name="tblSupplier">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SupplierId" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SupplierName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Phone" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WebAddress" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Industry" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+    <NavigationProperty Name="tblCallReportProject" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblSupplier" FromRole="tblSupplier" ToRole="tblCallReportProject" />
+    <NavigationProperty Name="tblCallReportSalesCallInquiry" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiry_tblSupplier" FromRole="tblSupplier" ToRole="tblCallReportSalesCallInquiry" />
+    <NavigationProperty Name="tblDebitNote" Relationship="LILI_CRMModel.FK_tblDebitNote_tblSupplier" FromRole="tblSupplier" ToRole="tblDebitNote" />
+    <NavigationProperty Name="tblPriceRequest" Relationship="LILI_CRMModel.FK_tblPriceRequest_tblSupplier" FromRole="tblSupplier" ToRole="tblPriceRequest" />
+    <NavigationProperty Name="tblSalesBudgetDetail" Relationship="LILI_CRMModel.FK_tblSalesBudgetDetail_tblSupplier" FromRole="tblSupplier" ToRole="tblSalesBudgetDetail" />
+    <NavigationProperty Name="tblSupplierAddress" Relationship="LILI_CRMModel.FK_tblSupplierAddress_tblSupplier" FromRole="tblSupplier" ToRole="tblSupplierAddress" />
+    <NavigationProperty Name="tblSupplierContact" Relationship="LILI_CRMModel.FK_tblSupplierContact_tblSupplier" FromRole="tblSupplier" ToRole="tblSupplierContact" />
+  </EntityType>
+  <EntityType Name="tblSupplierAddress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="SupplierId" Nullable="false" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblSupplier" Relationship="LILI_CRMModel.FK_tblSupplierAddress_tblSupplier" FromRole="tblSupplierAddress" ToRole="tblSupplier" />
+  </EntityType>
+  <EntityType Name="tblSupplierContact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="SupplierId" Nullable="false" />
+    <Property Type="String" Name="ContactName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Designation" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Cell" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Phone" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WebAddress" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SkypeName" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblSupplier" Relationship="LILI_CRMModel.FK_tblSupplierContact_tblSupplier" FromRole="tblSupplierContact" ToRole="tblSupplier" />
+  </EntityType>
+  <EntityType Name="tblTermsCondition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TermsCondition" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+  </EntityType>
+  <EntityType Name="tblTransporter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TransporterName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TransporterAddress" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Phone" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Mobile" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WebAddress" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
+  </EntityType>
+  <EntityType Name="tblVisitInformation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="PreparationDate" Nullable="false" />
+    <Property Type="String" Name="SalesPerson" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PointOfDiscussion" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Details" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="IDate" Nullable="false" />
+    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDate" />
   </EntityType>
   <EntityType Name="viewWebACMaster">
     <Key>
@@ -442,471 +1195,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="tblTransporter">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="TransporterName" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="TransporterAddress" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Phone" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Mobile" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="WebAddress" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="Boolean" Name="IsActive" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-  </EntityType>
-  <EntityType Name="tblOrganization">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="Organization" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Address" MaxLength="500" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
-    <Property Type="Boolean" Name="IsActive" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="EUser" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblDebitNote" Relationship="LILI_CRMModel.FK_tblDebitNote_tblOrganization" FromRole="tblOrganization" ToRole="tblDebitNote" />
-  </EntityType>
-  <EntityType Name="tblSampleSubmission">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="SubmissionNo" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="SubmissionDate" Nullable="false" />
-    <Property Type="Int64" Name="OrganizationId" />
-    <Property Type="Int64" Name="CustomerId" Nullable="false" />
-    <Property Type="Int64" Name="CusContactId" />
-    <Property Type="String" Name="SubmissionText" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblSampleSubmissionDet" Relationship="LILI_CRMModel.FK_tblSampleSubmissionDet_tblSampleSubmission" FromRole="tblSampleSubmission" ToRole="tblSampleSubmissionDet" />
-  </EntityType>
-  <EntityType Name="tblSampleDocumentRequired">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int32" Name="Id" Nullable="false" />
-    <Property Type="String" Name="DocName" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Type="Boolean" Name="IsSelected" Nullable="false" />
-  </EntityType>
-  <EntityType Name="tblSampleRequestDocument">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="RequestId" Nullable="false" />
-    <Property Type="Int32" Name="DocumentId" Nullable="false" />
-  </EntityType>
-  <EntityType Name="tblQuoteDocument">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="QuoteId" Nullable="false" />
-    <Property Type="Int32" Name="DocumentId" Nullable="false" />
-  </EntityType>
-  <EntityType Name="tblSampleSubmissionDocument">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="SubmissionId" Nullable="false" />
-    <Property Type="Int32" Name="DocumentId" Nullable="false" />
-  </EntityType>
-  <EntityType Name="tblQuote">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="QuoteNo" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="QuoteDate" Nullable="false" />
-    <Property Type="Int64" Name="OrganizationId" />
-    <Property Type="Int64" Name="CustomerId" Nullable="false" />
-    <Property Type="Int64" Name="CusContactId" />
-    <Property Type="Int32" Name="CurrencyId" />
-    <Property Type="Int32" Name="PriceTermId" />
-    <Property Type="Int32" Name="PaymentTermId" />
-    <Property Type="String" Name="SubmissionText" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblQuote1" Relationship="LILI_CRMModel.FK_tblQuote_tblQuote" FromRole="tblQuote" ToRole="tblQuote1" />
-    <NavigationProperty Name="tblQuote2" Relationship="LILI_CRMModel.FK_tblQuote_tblQuote" FromRole="tblQuote1" ToRole="tblQuote" />
-    <NavigationProperty Name="tblQuoteDetails" Relationship="LILI_CRMModel.FK_tblQuoteDetails_tblQuote" FromRole="tblQuote" ToRole="tblQuoteDetails" />
-  </EntityType>
-  <EntityType Name="tblQuoteDetails">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="QuoteId" Nullable="false" />
-    <Property Type="Int64" Name="ArticleId" Nullable="false" />
-    <Property Type="Decimal" Name="QuoteQuantity" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="Decimal" Name="MOQ" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="Int32" Name="CurrencyId" />
-    <Property Type="DateTime" Name="ValidityDate" />
-    <Property Type="Decimal" Name="UnitPrice" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="Int32" Name="PriceTermId" />
-    <Property Type="Int32" Name="PaymentTermId" />
-    <Property Type="Int64" Name="SupplierId" Nullable="false" />
-    <Property Type="String" Name="ApproveState" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="DetailText" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="tblQuote" Relationship="LILI_CRMModel.FK_tblQuoteDetails_tblQuote" FromRole="tblQuoteDetails" ToRole="tblQuote" />
-  </EntityType>
-  <Association Name="FK_tblQuote_tblQuote">
-    <End Type="LILI_CRMModel.tblQuote" Role="tblQuote" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblQuote" Role="tblQuote1" Multiplicity="0..1" />
+  <Association Name="FK_tblDebitNote_tblBank">
+    <End Type="LILI_CRMModel.tblBank" Role="tblBank" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblDebitNote" Role="tblDebitNote" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="tblQuote">
+      <Principal Role="tblBank">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="tblQuote1">
-        <PropertyRef Name="Id" />
+      <Dependent Role="tblDebitNote">
+        <PropertyRef Name="BankId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tblQuoteDetails_tblQuote">
-    <End Type="LILI_CRMModel.tblQuote" Role="tblQuote" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblQuoteDetails" Role="tblQuoteDetails" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblQuote">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblQuoteDetails">
-        <PropertyRef Name="QuoteId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityType Name="tblSupplier">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="SupplierId" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="SupplierName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Address" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Phone" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="WebAddress" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Industry" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="Boolean" Name="IsActive" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblSalesBudgetDetail" Relationship="LILI_CRMModel.FK_tblSalesBudgetDetail_tblSupplier" FromRole="tblSupplier" ToRole="tblSalesBudgetDetail" />
-    <NavigationProperty Name="tblSupplierAddress" Relationship="LILI_CRMModel.FK_tblSupplierAddress_tblSupplier" FromRole="tblSupplier" ToRole="tblSupplierAddress" />
-    <NavigationProperty Name="tblSupplierContact" Relationship="LILI_CRMModel.FK_tblSupplierContact_tblSupplier" FromRole="tblSupplier" ToRole="tblSupplierContact" />
-    <NavigationProperty Name="tblCallReportProject" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblSupplier" FromRole="tblSupplier" ToRole="tblCallReportProject" />
-    <NavigationProperty Name="tblCallReportSalesCallInquiry" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiry_tblSupplier" FromRole="tblSupplier" ToRole="tblCallReportSalesCallInquiry" />
-    <NavigationProperty Name="tblPriceRequest" Relationship="LILI_CRMModel.FK_tblPriceRequest_tblSupplier" FromRole="tblSupplier" ToRole="tblPriceRequest" />
-    <NavigationProperty Name="tblDebitNote" Relationship="LILI_CRMModel.FK_tblDebitNote_tblSupplier" FromRole="tblSupplier" ToRole="tblDebitNote" />
-  </EntityType>
-  <EntityType Name="tblDivision">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="DivisionName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Descriptions" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblSalesPerson" Relationship="LILI_CRMModel.FK_tblSalesPerson_tblSalesPerson" FromRole="tblDivision" ToRole="tblSalesPerson" />
-  </EntityType>
-  <EntityType Name="tblSalesBudget">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="SalesPersonId" />
-    <Property Type="Int64" Name="SBUId" />
-    <Property Type="Int64" Name="ProductId" />
-    <Property Type="String" Name="BudgetYear" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblSalesBudgetDetail" Relationship="LILI_CRMModel.FK_tblSalesBudgetDetail_tblSalesBudgetDetail" FromRole="tblSalesBudget" ToRole="tblSalesBudgetDetail" />
-  </EntityType>
-  <EntityType Name="tblSalesBudgetDetail">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="SalesBudgetId" Nullable="false" />
-    <Property Type="Int64" Name="CustomerId" Nullable="false" />
-    <Property Type="Int64" Name="SupplierId" Nullable="false" />
-    <Property Type="Int32" Name="BudgetMonth" Nullable="false" />
-    <Property Type="Decimal" Name="Quantity" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="Decimal" Name="Value" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="Decimal" Name="Commission" Nullable="false" Precision="18" Scale="2" />
-    <NavigationProperty Name="tblSalesBudget" Relationship="LILI_CRMModel.FK_tblSalesBudgetDetail_tblSalesBudgetDetail" FromRole="tblSalesBudgetDetail" ToRole="tblSalesBudget" />
-    <NavigationProperty Name="tblSupplier" Relationship="LILI_CRMModel.FK_tblSalesBudgetDetail_tblSupplier" FromRole="tblSalesBudgetDetail" ToRole="tblSupplier" />
-    <NavigationProperty Name="tblCustomer" Relationship="LILI_CRMModel.FK_tblSalesBudgetDetail_tblCustomer" FromRole="tblSalesBudgetDetail" ToRole="tblCustomer" />
-  </EntityType>
-  <EntityType Name="tblSalesPerson">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="SalesPersonId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="SalesPersonName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Designation" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="StaffId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Type="Int64" Name="DivisionId" Nullable="false" />
-    <Property Type="Boolean" Name="IsActive" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblDivision" Relationship="LILI_CRMModel.FK_tblSalesPerson_tblSalesPerson" FromRole="tblSalesPerson" ToRole="tblDivision" />
-  </EntityType>
-  <EntityType Name="tblSBU">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="SBUName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Descriptions" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-  </EntityType>
-  <EntityType Name="tblSupplierAddress">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="SupplierId" Nullable="false" />
-    <Property Type="String" Name="Address" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="tblSupplier" Relationship="LILI_CRMModel.FK_tblSupplierAddress_tblSupplier" FromRole="tblSupplierAddress" ToRole="tblSupplier" />
-  </EntityType>
-  <EntityType Name="tblSupplierContact">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="SupplierId" Nullable="false" />
-    <Property Type="String" Name="ContactName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Designation" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Cell" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Phone" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="WebAddress" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="SkypeName" MaxLength="30" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="tblSupplier" Relationship="LILI_CRMModel.FK_tblSupplierContact_tblSupplier" FromRole="tblSupplierContact" ToRole="tblSupplier" />
-  </EntityType>
-  <Association Name="FK_tblSalesPerson_tblSalesPerson">
-    <End Type="LILI_CRMModel.tblDivision" Role="tblDivision" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblSalesPerson" Role="tblSalesPerson" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblDivision">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblSalesPerson">
-        <PropertyRef Name="DivisionId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tblSalesBudgetDetail_tblSalesBudgetDetail">
-    <End Type="LILI_CRMModel.tblSalesBudget" Role="tblSalesBudget" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblSalesBudgetDetail" Role="tblSalesBudgetDetail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblSalesBudget">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblSalesBudgetDetail">
-        <PropertyRef Name="SalesBudgetId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tblSalesBudgetDetail_tblSupplier">
-    <End Type="LILI_CRMModel.tblSupplier" Role="tblSupplier" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblSalesBudgetDetail" Role="tblSalesBudgetDetail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblSupplier">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblSalesBudgetDetail">
-        <PropertyRef Name="SupplierId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tblSupplierAddress_tblSupplier">
-    <End Type="LILI_CRMModel.tblSupplier" Role="tblSupplier" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblSupplierAddress" Role="tblSupplierAddress" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblSupplier">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblSupplierAddress">
-        <PropertyRef Name="SupplierId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tblSupplierContact_tblSupplier">
-    <End Type="LILI_CRMModel.tblSupplier" Role="tblSupplier" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblSupplierContact" Role="tblSupplierContact" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblSupplier">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblSupplierContact">
-        <PropertyRef Name="SupplierId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityType Name="tblCallReportProject">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="DateTime" Name="CreateDate" Nullable="false" />
-    <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Type="Int64" Name="CurrentStageId" Nullable="false" />
-    <Property Type="Int64" Name="CustomerId" Nullable="false" />
-    <Property Type="Int64" Name="SupplierId" Nullable="false" />
-    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="SellingOpportunity" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Type="Decimal" Name="PotVolPerYear" Precision="18" Scale="2" />
-    <Property Type="Decimal" Name="PotAmountPerYear" Precision="18" Scale="2" />
-    <Property Type="String" Name="RemarkNextAction" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Type="Int64" Name="CommunicationChannelId" Nullable="false" />
-    <Property Type="String" Name="SalesPerson" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="Boolean" Name="IsActive" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblCommunicationChannel" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblCommunicationChannel" FromRole="tblCallReportProject" ToRole="tblCommunicationChannel" />
-    <NavigationProperty Name="tblCurrentStage" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblCurrentStage" FromRole="tblCallReportProject" ToRole="tblCurrentStage" />
-    <NavigationProperty Name="tblSupplier" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblSupplier" FromRole="tblCallReportProject" ToRole="tblSupplier" />
-    <NavigationProperty Name="tblCustomer" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblCustomer" FromRole="tblCallReportProject" ToRole="tblCustomer" />
-  </EntityType>
-  <EntityType Name="tblCallReportProjectMember">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="ProjectId" Nullable="false" />
-    <Property Type="Int64" Name="MemberId" Nullable="false" />
-  </EntityType>
-  <EntityType Name="tblCallReportSalesCallInquiry">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="CustomerId" Nullable="false" />
-    <Property Type="Int64" Name="SupplierId" Nullable="false" />
-    <Property Type="DateTime" Name="DateOfUpdate" Nullable="false" />
-    <Property Type="String" Name="SalesPerson" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblSupplier" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiry_tblSupplier" FromRole="tblCallReportSalesCallInquiry" ToRole="tblSupplier" />
-    <NavigationProperty Name="tblCallReportSalesCallInquiryDetail" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiryDetail_tblCallReportSalesCallInquiry" FromRole="tblCallReportSalesCallInquiry" ToRole="tblCallReportSalesCallInquiryDetail" />
-    <NavigationProperty Name="tblCustomer" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiry_tblCustomer" FromRole="tblCallReportSalesCallInquiry" ToRole="tblCustomer" />
-  </EntityType>
-  <EntityType Name="tblCallReportSalesCallInquiryDetail">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="SalesCallInquiryId" Nullable="false" />
-    <Property Type="Int64" Name="ProductId" Nullable="false" />
-    <Property Type="Decimal" Name="Quantity" Precision="18" Scale="2" />
-    <Property Type="String" Name="Unit" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="Decimal" Name="OfferedAmountPerUnit" Precision="18" Scale="2" />
-    <Property Type="String" Name="PriceValidity" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="Decimal" Name="BidPrice" Precision="18" Scale="2" />
-    <Property Type="Int64" Name="StageId" Nullable="false" />
-    <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblCallReportSalesCallInquiry" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiryDetail_tblCallReportSalesCallInquiry" FromRole="tblCallReportSalesCallInquiryDetail" ToRole="tblCallReportSalesCallInquiry" />
-    <NavigationProperty Name="tblProduct" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiryDetail_tblProduct" FromRole="tblCallReportSalesCallInquiryDetail" ToRole="tblProduct" />
-  </EntityType>
-  <EntityType Name="tblCommunicationChannel">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="CommunicationChannel" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="Boolean" Name="IsActive" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblCallReportProject" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblCommunicationChannel" FromRole="tblCommunicationChannel" ToRole="tblCallReportProject" />
-  </EntityType>
-  <EntityType Name="tblCurrentStage">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="CurrentStage" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="Boolean" Name="IsActive" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblCallReportProject" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblCurrentStage" FromRole="tblCurrentStage" ToRole="tblCallReportProject" />
-  </EntityType>
-  <EntityType Name="tblExpenseBudget">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="SalesPersonId" />
-    <Property Type="String" Name="DivisionId" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Type="Int64" Name="SBUId" />
-    <Property Type="String" Name="BudgetYear" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblExpenseBudgetDetail" Relationship="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail" FromRole="tblExpenseBudget" ToRole="tblExpenseBudgetDetail" />
-  </EntityType>
-  <EntityType Name="tblExpenseBudgetDetail">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="ExpenseBudgetId" Nullable="false" />
-    <Property Type="Int64" Name="ParticularId" Nullable="false" />
-    <Property Type="Int32" Name="BudgetMonth" Nullable="false" />
-    <Property Type="Decimal" Name="Value" Nullable="false" Precision="18" Scale="2" />
-    <NavigationProperty Name="tblExpenseBudget" Relationship="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail" FromRole="tblExpenseBudgetDetail" ToRole="tblExpenseBudget" />
-    <NavigationProperty Name="tblExpenseBudgetDetail1" Relationship="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail1" FromRole="tblExpenseBudgetDetail" ToRole="tblExpenseBudgetDetail1" />
-    <NavigationProperty Name="tblExpenseBudgetDetail2" Relationship="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail1" FromRole="tblExpenseBudgetDetail1" ToRole="tblExpenseBudgetDetail" />
-    <NavigationProperty Name="tblParticular" Relationship="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblParticular" FromRole="tblExpenseBudgetDetail" ToRole="tblParticular" />
-  </EntityType>
-  <EntityType Name="tblParticular">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="ParticularName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="tblExpenseBudgetDetail" Relationship="LILI_CRMModel.FK_tblExpenseBudgetDetail_tblParticular" FromRole="tblParticular" ToRole="tblExpenseBudgetDetail" />
-  </EntityType>
   <Association Name="FK_tblCallReportProject_tblCommunicationChannel">
     <End Type="LILI_CRMModel.tblCommunicationChannel" Role="tblCommunicationChannel" Multiplicity="1" />
     <End Type="LILI_CRMModel.tblCallReportProject" Role="tblCallReportProject" Multiplicity="*" />
@@ -931,6 +1231,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_tblCallReportProject_tblCustomer">
+    <End Type="LILI_CRMModel.tblCustomer" Role="tblCustomer" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblCallReportProject" Role="tblCallReportProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCallReportProject">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_tblCallReportProject_tblSupplier">
     <End Type="LILI_CRMModel.tblSupplier" Role="tblSupplier" Multiplicity="1" />
     <End Type="LILI_CRMModel.tblCallReportProject" Role="tblCallReportProject" Multiplicity="*" />
@@ -940,6 +1252,18 @@
       </Principal>
       <Dependent Role="tblCallReportProject">
         <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCallReportSalesCallInquiry_tblCustomer">
+    <End Type="LILI_CRMModel.tblCustomer" Role="tblCustomer" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblCallReportSalesCallInquiry" Role="tblCallReportSalesCallInquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCallReportSalesCallInquiry">
+        <PropertyRef Name="CustomerId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -967,238 +1291,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail">
-    <End Type="LILI_CRMModel.tblExpenseBudget" Role="tblExpenseBudget" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblExpenseBudgetDetail" Role="tblExpenseBudgetDetail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblExpenseBudget">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblExpenseBudgetDetail">
-        <PropertyRef Name="ExpenseBudgetId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail1">
-    <End Type="LILI_CRMModel.tblExpenseBudgetDetail" Role="tblExpenseBudgetDetail" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblExpenseBudgetDetail" Role="tblExpenseBudgetDetail1" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="tblExpenseBudgetDetail">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblExpenseBudgetDetail1">
-        <PropertyRef Name="Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tblExpenseBudgetDetail_tblParticular">
-    <End Type="LILI_CRMModel.tblParticular" Role="tblParticular" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblExpenseBudgetDetail" Role="tblExpenseBudgetDetail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblParticular">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblExpenseBudgetDetail">
-        <PropertyRef Name="ParticularId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityType Name="tblCommCalculationType">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="CommissionCalculationTerm" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="Boolean" Name="IsActive" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblInvoice_tblCommCalculationType" FromRole="tblCommCalculationType" ToRole="tblInvoice" />
-  </EntityType>
-  <EntityType Name="tblCountry">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" />
-    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="Boolean" Name="IsActive" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblInvoice_tblCountry" FromRole="tblCountry" ToRole="tblInvoice" />
-    <NavigationProperty Name="tblPriceRequestDetail" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblCountry" FromRole="tblCountry" ToRole="tblPriceRequestDetail" />
-  </EntityType>
-  <EntityType Name="tblCurrency">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="CurrencyName" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="ShortCode" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Type="Boolean" Name="IsActive" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblInvoice_tblCurrency" FromRole="tblCurrency" ToRole="tblInvoice" />
-  </EntityType>
-  <EntityType Name="tblCustomer">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="CustomerId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Address" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Phone" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="WebAddress" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="TIN" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="BIN" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="Boolean" Name="IsActive" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblCallReportProject" Relationship="LILI_CRMModel.FK_tblCallReportProject_tblCustomer" FromRole="tblCustomer" ToRole="tblCallReportProject" />
-    <NavigationProperty Name="tblCallReportSalesCallInquiry" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiry_tblCustomer" FromRole="tblCustomer" ToRole="tblCallReportSalesCallInquiry" />
-    <NavigationProperty Name="tblCustomerAddress" Relationship="LILI_CRMModel.FK_tblCustomerAddress_tblCustomer" FromRole="tblCustomer" ToRole="tblCustomerAddress" />
-    <NavigationProperty Name="tblCustomerContact" Relationship="LILI_CRMModel.FK_tblCustomerContact_tblCustomer" FromRole="tblCustomer" ToRole="tblCustomerContact" />
-    <NavigationProperty Name="tblSalesBudgetDetail" Relationship="LILI_CRMModel.FK_tblSalesBudgetDetail_tblCustomer" FromRole="tblCustomer" ToRole="tblSalesBudgetDetail" />
-    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblInvoice_tblCustomer" FromRole="tblCustomer" ToRole="tblInvoice" />
-    <NavigationProperty Name="tblPriceRequest" Relationship="LILI_CRMModel.FK_tblPriceRequest_tblCustomer" FromRole="tblCustomer" ToRole="tblPriceRequest" />
-  </EntityType>
-  <EntityType Name="tblCustomerAddress">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="CustomerId" Nullable="false" />
-    <Property Type="String" Name="Address" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="tblCustomer" Relationship="LILI_CRMModel.FK_tblCustomerAddress_tblCustomer" FromRole="tblCustomerAddress" ToRole="tblCustomer" />
-  </EntityType>
-  <EntityType Name="tblCustomerContact">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="CustomerId" Nullable="false" />
-    <Property Type="String" Name="ContactName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Designation" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Cell" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Phone" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="WebAddress" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="SkypeName" MaxLength="30" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="tblCustomer" Relationship="LILI_CRMModel.FK_tblCustomerContact_tblCustomer" FromRole="tblCustomerContact" ToRole="tblCustomer" />
-  </EntityType>
-  <EntityType Name="tblInvoiceDetails">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="InvoiceId" Nullable="false" />
-    <Property Type="Int64" Name="ProductId" Nullable="false" />
-    <Property Type="Decimal" Name="UnitPrice" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="Decimal" Name="Quantity" Nullable="false" Precision="18" Scale="3" />
-    <Property Type="Decimal" Name="SubTotal" Nullable="false" Precision="18" Scale="3" />
-    <NavigationProperty Name="tblProduct" Relationship="LILI_CRMModel.FK_tblInvoiceDetails_tblProduct" FromRole="tblInvoiceDetails" ToRole="tblProduct" />
-    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblInvoiceDetails_tblInvoice" FromRole="tblInvoiceDetails" ToRole="tblInvoice" />
-  </EntityType>
-  <EntityType Name="tblPort">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="PortName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="Boolean" Name="IsActive" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblInvoice_tblPort" FromRole="tblPort" ToRole="tblInvoice" />
-  </EntityType>
-  <EntityType Name="tblPriceTerm">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="PriceTermName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="Boolean" Name="IsActive" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblInvoice_tblPriceTerm" FromRole="tblPriceTerm" ToRole="tblInvoice" />
-    <NavigationProperty Name="tblPriceRequestDetail" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblPriceTerm" FromRole="tblPriceTerm" ToRole="tblPriceRequestDetail" />
-  </EntityType>
-  <EntityType Name="tblProduct">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="ProductCode" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="ProductName" Nullable="false" MaxLength="120" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="GenericName" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="ShortDesc" MaxLength="120" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="HSCode" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="SellingUnit" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="SamplingUnit" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="Decimal" Name="UnitPrice" Nullable="false" Precision="18" Scale="4" />
-    <Property Type="Decimal" Name="DutyStructure" Nullable="false" Precision="18" Scale="4" />
-    <Property Type="String" Name="Origin" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="LeadTime" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="Decimal" Name="MOQ" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="Int64" Name="SubCategoryId" />
-    <Property Type="Int64" Name="OrganizationId" />
-    <Property Type="Boolean" Name="IsActive" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblCallReportSalesCallInquiryDetail" Relationship="LILI_CRMModel.FK_tblCallReportSalesCallInquiryDetail_tblProduct" FromRole="tblProduct" ToRole="tblCallReportSalesCallInquiryDetail" />
-    <NavigationProperty Name="tblInvoiceDetails" Relationship="LILI_CRMModel.FK_tblInvoiceDetails_tblProduct" FromRole="tblProduct" ToRole="tblInvoiceDetails" />
-    <NavigationProperty Name="tblPriceRequestDetail" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblProduct" FromRole="tblProduct" ToRole="tblPriceRequestDetail" />
-  </EntityType>
-  <EntityType Name="tblTermsCondition">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="TermsCondition" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="Boolean" Name="IsActive" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-  </EntityType>
-  <Association Name="FK_tblCallReportProject_tblCustomer">
-    <End Type="LILI_CRMModel.tblCustomer" Role="tblCustomer" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblCallReportProject" Role="tblCallReportProject" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblCustomer">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblCallReportProject">
-        <PropertyRef Name="CustomerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tblCallReportSalesCallInquiry_tblCustomer">
-    <End Type="LILI_CRMModel.tblCustomer" Role="tblCustomer" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblCallReportSalesCallInquiry" Role="tblCallReportSalesCallInquiry" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblCustomer">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblCallReportSalesCallInquiry">
-        <PropertyRef Name="CustomerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_tblCallReportSalesCallInquiryDetail_tblProduct">
     <End Type="LILI_CRMModel.tblProduct" Role="tblProduct" Multiplicity="1" />
     <End Type="LILI_CRMModel.tblCallReportSalesCallInquiryDetail" Role="tblCallReportSalesCallInquiryDetail" Multiplicity="*" />
@@ -1211,138 +1303,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tblCustomerAddress_tblCustomer">
-    <End Type="LILI_CRMModel.tblCustomer" Role="tblCustomer" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblCustomerAddress" Role="tblCustomerAddress" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblCustomer">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblCustomerAddress">
-        <PropertyRef Name="CustomerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tblCustomerContact_tblCustomer">
-    <End Type="LILI_CRMModel.tblCustomer" Role="tblCustomer" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblCustomerContact" Role="tblCustomerContact" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblCustomer">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblCustomerContact">
-        <PropertyRef Name="CustomerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tblSalesBudgetDetail_tblCustomer">
-    <End Type="LILI_CRMModel.tblCustomer" Role="tblCustomer" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblSalesBudgetDetail" Role="tblSalesBudgetDetail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblCustomer">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblSalesBudgetDetail">
-        <PropertyRef Name="CustomerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tblInvoiceDetails_tblProduct">
-    <End Type="LILI_CRMModel.tblProduct" Role="tblProduct" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblInvoiceDetails" Role="tblInvoiceDetails" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblProduct">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblInvoiceDetails">
-        <PropertyRef Name="ProductId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityType Name="tblInvoice">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="InvoiceNo" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="InvoicePeriod" Nullable="false" />
-    <Property Type="DateTime" Name="InvoiceDate" Nullable="false" />
-    <Property Type="Int64" Name="OrganizationId" Nullable="false" />
-    <Property Type="String" Name="InvoiceType" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
-    <Property Type="Int64" Name="CustomerId" Nullable="false" />
-    <Property Type="Int64" Name="CurrencyId" Nullable="false" />
-    <Property Type="Int64" Name="PriceTermId" Nullable="false" />
-    <Property Type="Int64" Name="CommCalcTermId" Nullable="false" />
-    <Property Type="Decimal" Name="Total" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="Decimal" Name="OtherCharges" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="Decimal" Name="NET" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="Decimal" Name="CommissionPercent" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="Decimal" Name="Commission" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="String" Name="Remarks" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="LCNo" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="LCDate" />
-    <Property Type="DateTime" Name="LDE" />
-    <Property Type="DateTime" Name="LDS" />
-    <Property Type="Int64" Name="ShipmentFromCountryId" Nullable="false" />
-    <Property Type="Int64" Name="PortOfDischargeId" Nullable="false" />
-    <Property Type="DateTime" Name="ShipmentDate" />
-    <Property Type="DateTime" Name="ArrivalDate" />
-    <Property Type="String" Name="CommercialInvoiceNo" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="CommercialInvoiceDate" />
-    <Property Type="String" Name="BoLNo" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblCommCalculationType" Relationship="LILI_CRMModel.FK_tblInvoice_tblCommCalculationType" FromRole="tblInvoice" ToRole="tblCommCalculationType" />
-    <NavigationProperty Name="tblCountry" Relationship="LILI_CRMModel.FK_tblInvoice_tblCountry" FromRole="tblInvoice" ToRole="tblCountry" />
-    <NavigationProperty Name="tblCurrency" Relationship="LILI_CRMModel.FK_tblInvoice_tblCurrency" FromRole="tblInvoice" ToRole="tblCurrency" />
-    <NavigationProperty Name="tblCustomer" Relationship="LILI_CRMModel.FK_tblInvoice_tblCustomer" FromRole="tblInvoice" ToRole="tblCustomer" />
-    <NavigationProperty Name="tblInvoice1" Relationship="LILI_CRMModel.FK_tblInvoice_tblInvoice" FromRole="tblInvoice" ToRole="tblInvoice1" />
-    <NavigationProperty Name="tblInvoice2" Relationship="LILI_CRMModel.FK_tblInvoice_tblInvoice" FromRole="tblInvoice1" ToRole="tblInvoice" />
-    <NavigationProperty Name="tblPort" Relationship="LILI_CRMModel.FK_tblInvoice_tblPort" FromRole="tblInvoice" ToRole="tblPort" />
-    <NavigationProperty Name="tblPriceTerm" Relationship="LILI_CRMModel.FK_tblInvoice_tblPriceTerm" FromRole="tblInvoice" ToRole="tblPriceTerm" />
-    <NavigationProperty Name="tblInvoiceDetails" Relationship="LILI_CRMModel.FK_tblInvoiceDetails_tblInvoice" FromRole="tblInvoice" ToRole="tblInvoiceDetails" />
-    <NavigationProperty Name="tblDebitNoteDetail" Relationship="LILI_CRMModel.FK_tblDebitNoteDetail_tblInvoice" FromRole="tblInvoice" ToRole="tblDebitNoteDetail" />
-  </EntityType>
-  <EntityType Name="tblPriceRequest">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="SalesCallId" Nullable="false" />
-    <Property Type="DateTime" Name="PriceRequestDate" Nullable="false" />
-    <Property Type="Int64" Name="SupplierId" Nullable="false" />
-    <Property Type="Int64" Name="CustomerId" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblCustomer" Relationship="LILI_CRMModel.FK_tblPriceRequest_tblCustomer" FromRole="tblPriceRequest" ToRole="tblCustomer" />
-    <NavigationProperty Name="tblSupplier" Relationship="LILI_CRMModel.FK_tblPriceRequest_tblSupplier" FromRole="tblPriceRequest" ToRole="tblSupplier" />
-    <NavigationProperty Name="tblPriceRequestDetail" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblPriceRequest" FromRole="tblPriceRequest" ToRole="tblPriceRequestDetail" />
-  </EntityType>
-  <EntityType Name="tblPriceRequestDetail">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="PriceRequestId" Nullable="false" />
-    <Property Type="Int64" Name="ProductId" Nullable="false" />
-    <Property Type="Int64" Name="PriceTermId" Nullable="false" />
-    <Property Type="Decimal" Name="ExpectedPrice" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="Decimal" Name="ReceivedPrice" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="DateTime" Name="AsOnDate" Nullable="false" />
-    <Property Type="DateTime" Name="ValidityDate" Nullable="false" />
-    <Property Type="Decimal" Name="MOQ" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="Int64" Name="ShipmentCountryId" Nullable="false" />
-    <Property Type="String" Name="ShipmentLeadTime" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="PriceRequestStatus" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="tblCountry" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblCountry" FromRole="tblPriceRequestDetail" ToRole="tblCountry" />
-    <NavigationProperty Name="tblPriceRequest" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblPriceRequest" FromRole="tblPriceRequestDetail" ToRole="tblPriceRequest" />
-    <NavigationProperty Name="tblPriceTerm" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblPriceTerm" FromRole="tblPriceRequestDetail" ToRole="tblPriceTerm" />
-    <NavigationProperty Name="tblProduct" Relationship="LILI_CRMModel.FK_tblPriceRequestDetail_tblProduct" FromRole="tblPriceRequestDetail" ToRole="tblProduct" />
-  </EntityType>
   <Association Name="FK_tblInvoice_tblCommCalculationType">
     <End Type="LILI_CRMModel.tblCommCalculationType" Role="tblCommCalculationType" Multiplicity="1" />
     <End Type="LILI_CRMModel.tblInvoice" Role="tblInvoice" Multiplicity="*" />
@@ -1391,6 +1351,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_tblCustomerAddress_tblCustomer">
+    <End Type="LILI_CRMModel.tblCustomer" Role="tblCustomer" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblCustomerAddress" Role="tblCustomerAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCustomerAddress">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCustomerContact_tblCustomer">
+    <End Type="LILI_CRMModel.tblCustomer" Role="tblCustomer" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblCustomerContact" Role="tblCustomerContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCustomerContact">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_tblInvoice_tblCustomer">
     <End Type="LILI_CRMModel.tblCustomer" Role="tblCustomer" Multiplicity="1" />
     <End Type="LILI_CRMModel.tblInvoice" Role="tblInvoice" Multiplicity="*" />
@@ -1412,6 +1396,114 @@
       </Principal>
       <Dependent Role="tblPriceRequest">
         <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSalesBudgetDetail_tblCustomer">
+    <End Type="LILI_CRMModel.tblCustomer" Role="tblCustomer" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblSalesBudgetDetail" Role="tblSalesBudgetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSalesBudgetDetail">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDebitNote_tblOrganization">
+    <End Type="LILI_CRMModel.tblOrganization" Role="tblOrganization" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblDebitNote" Role="tblDebitNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblOrganization">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblDebitNote">
+        <PropertyRef Name="OrganizationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDebitNote_tblSupplier">
+    <End Type="LILI_CRMModel.tblSupplier" Role="tblSupplier" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblDebitNote" Role="tblDebitNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSupplier">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblDebitNote">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDebitNoteDetail_tblDebitNote">
+    <End Type="LILI_CRMModel.tblDebitNote" Role="tblDebitNote" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblDebitNoteDetail" Role="tblDebitNoteDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDebitNote">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblDebitNoteDetail">
+        <PropertyRef Name="DebitNoteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDebitNoteDetail_tblInvoice">
+    <End Type="LILI_CRMModel.tblInvoice" Role="tblInvoice" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblDebitNoteDetail" Role="tblDebitNoteDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblInvoice">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblDebitNoteDetail">
+        <PropertyRef Name="InvoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSalesPerson_tblSalesPerson">
+    <End Type="LILI_CRMModel.tblDivision" Role="tblDivision" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblSalesPerson" Role="tblSalesPerson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDivision">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSalesPerson">
+        <PropertyRef Name="DivisionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail">
+    <End Type="LILI_CRMModel.tblExpenseBudget" Role="tblExpenseBudget" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblExpenseBudgetDetail" Role="tblExpenseBudgetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblExpenseBudget">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblExpenseBudgetDetail">
+        <PropertyRef Name="ExpenseBudgetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail1">
+    <End Type="LILI_CRMModel.tblExpenseBudgetDetail" Role="tblExpenseBudgetDetail" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblExpenseBudgetDetail" Role="tblExpenseBudgetDetail1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblExpenseBudgetDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblExpenseBudgetDetail1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblExpenseBudgetDetail_tblParticular">
+    <End Type="LILI_CRMModel.tblParticular" Role="tblParticular" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblExpenseBudgetDetail" Role="tblExpenseBudgetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblParticular">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblExpenseBudgetDetail">
+        <PropertyRef Name="ParticularId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1463,6 +1555,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_tblInvoiceDetails_tblProduct">
+    <End Type="LILI_CRMModel.tblProduct" Role="tblProduct" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblInvoiceDetails" Role="tblInvoiceDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblInvoiceDetails">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_tblPriceRequest_tblSupplier">
     <End Type="LILI_CRMModel.tblSupplier" Role="tblSupplier" Multiplicity="1" />
     <End Type="LILI_CRMModel.tblPriceRequest" Role="tblPriceRequest" Multiplicity="*" />
@@ -1511,41 +1615,54 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="tblSampleRequest">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="RequestNo" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="RequestDate" Nullable="false" />
-    <Property Type="Int64" Name="OrganizationId" />
-    <Property Type="Int64" Name="SupplierId" Nullable="false" />
-    <Property Type="DateTime" Name="ExpectingDate" />
-    <Property Type="Int32" Name="TransporterId" />
-    <Property Type="String" Name="DocTrackingNo" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="DeliveryStateId" />
-    <Property Type="String" Name="Remarks" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblSampleRequestDetails" Relationship="LILI_CRMModel.FK_tblSampleRequestDetails_tblSampleRequest" FromRole="tblSampleRequest" ToRole="tblSampleRequestDetails" />
-  </EntityType>
-  <EntityType Name="tblSampleRequestDetails">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="RequestId" Nullable="false" />
-    <Property Type="Int64" Name="ProductId" Nullable="false" />
-    <Property Type="Decimal" Name="RequestQuantity" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="Int64" Name="CustomerId" />
-    <Property Type="String" Name="Purpose" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="Decimal" Name="ReceivedQuantity" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="DateTime" Name="ReceivedDate" />
-    <Property Type="String" Name="DetailText" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="tblSampleRequest" Relationship="LILI_CRMModel.FK_tblSampleRequestDetails_tblSampleRequest" FromRole="tblSampleRequestDetails" ToRole="tblSampleRequest" />
-  </EntityType>
+  <Association Name="FK_tblQuote_tblQuote">
+    <End Type="LILI_CRMModel.tblQuote" Role="tblQuote" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblQuote" Role="tblQuote1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblQuote">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblQuote1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblQuoteDetails_tblQuote">
+    <End Type="LILI_CRMModel.tblQuote" Role="tblQuote" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblQuoteDetails" Role="tblQuoteDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblQuote">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblQuoteDetails">
+        <PropertyRef Name="QuoteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSalesBudgetDetail_tblSalesBudgetDetail">
+    <End Type="LILI_CRMModel.tblSalesBudget" Role="tblSalesBudget" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblSalesBudgetDetail" Role="tblSalesBudgetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSalesBudget">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSalesBudgetDetail">
+        <PropertyRef Name="SalesBudgetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSalesBudgetDetail_tblSupplier">
+    <End Type="LILI_CRMModel.tblSupplier" Role="tblSupplier" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblSalesBudgetDetail" Role="tblSalesBudgetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSupplier">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSalesBudgetDetail">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_tblSampleRequestDetails_tblSampleRequest">
     <End Type="LILI_CRMModel.tblSampleRequest" Role="tblSampleRequest" Multiplicity="1" />
     <End Type="LILI_CRMModel.tblSampleRequestDetails" Role="tblSampleRequestDetails" Multiplicity="*" />
@@ -1558,23 +1675,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="tblSampleSubmissionDet">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="SubmissionId" Nullable="false" />
-    <Property Type="Int64" Name="ProductId" Nullable="false" />
-    <Property Type="Decimal" Name="SubmissionQuantity" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="DateTime" Name="ExpieryDate" />
-    <Property Type="String" Name="Purpose" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="Int64" Name="SupplierId" />
-    <Property Type="String" Name="Origin" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="TrialReport" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="ApproveState" />
-    <Property Type="String" Name="DetailText" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="tblSampleSubmission" Relationship="LILI_CRMModel.FK_tblSampleSubmissionDet_tblSampleSubmission" FromRole="tblSampleSubmissionDet" ToRole="tblSampleSubmission" />
-  </EntityType>
   <Association Name="FK_tblSampleSubmissionDet_tblSampleSubmission">
     <End Type="LILI_CRMModel.tblSampleSubmission" Role="tblSampleSubmission" Multiplicity="1" />
     <End Type="LILI_CRMModel.tblSampleSubmissionDet" Role="tblSampleSubmissionDet" Multiplicity="*" />
@@ -1587,125 +1687,27 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="tblBank">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="AccountNo" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="BankName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="BranchName" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Address" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="SwiftCode" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblDebitNote" Relationship="LILI_CRMModel.FK_tblDebitNote_tblBank" FromRole="tblBank" ToRole="tblDebitNote" />
-  </EntityType>
-  <EntityType Name="tblDebitNote">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="DebitNoteNo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="DebitNoteDate" Nullable="false" />
-    <Property Type="Int64" Name="SupplierId" Nullable="false" />
-    <Property Type="Int64" Name="BankId" Nullable="false" />
-    <Property Type="Int64" Name="OrganizationId" Nullable="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-    <NavigationProperty Name="tblBank" Relationship="LILI_CRMModel.FK_tblDebitNote_tblBank" FromRole="tblDebitNote" ToRole="tblBank" />
-    <NavigationProperty Name="tblOrganization" Relationship="LILI_CRMModel.FK_tblDebitNote_tblOrganization" FromRole="tblDebitNote" ToRole="tblOrganization" />
-    <NavigationProperty Name="tblSupplier" Relationship="LILI_CRMModel.FK_tblDebitNote_tblSupplier" FromRole="tblDebitNote" ToRole="tblSupplier" />
-    <NavigationProperty Name="tblDebitNoteDetail" Relationship="LILI_CRMModel.FK_tblDebitNoteDetail_tblDebitNote" FromRole="tblDebitNote" ToRole="tblDebitNoteDetail" />
-  </EntityType>
-  <EntityType Name="tblDebitNoteDetail">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="DebitNoteId" Nullable="false" />
-    <Property Type="Int64" Name="InvoiceId" Nullable="false" />
-    <Property Type="Decimal" Name="CommissionPercent" Nullable="false" Precision="18" Scale="2" />
-    <Property Type="Decimal" Name="Commission" Nullable="false" Precision="18" Scale="2" />
-    <NavigationProperty Name="tblDebitNote" Relationship="LILI_CRMModel.FK_tblDebitNoteDetail_tblDebitNote" FromRole="tblDebitNoteDetail" ToRole="tblDebitNote" />
-    <NavigationProperty Name="tblInvoice" Relationship="LILI_CRMModel.FK_tblDebitNoteDetail_tblInvoice" FromRole="tblDebitNoteDetail" ToRole="tblInvoice" />
-  </EntityType>
-  <EntityType Name="tblVisitInformation">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="DateTime" Name="PreparationDate" Nullable="false" />
-    <Property Type="String" Name="SalesPerson" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="PointOfDiscussion" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Details" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="IUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="IDate" Nullable="false" />
-    <Property Type="String" Name="EUser" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="DateTime" Name="EDate" />
-  </EntityType>
-  <Association Name="FK_tblDebitNote_tblBank">
-    <End Type="LILI_CRMModel.tblBank" Role="tblBank" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblDebitNote" Role="tblDebitNote" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblBank">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblDebitNote">
-        <PropertyRef Name="BankId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tblDebitNote_tblOrganization">
-    <End Type="LILI_CRMModel.tblOrganization" Role="tblOrganization" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblDebitNote" Role="tblDebitNote" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblOrganization">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblDebitNote">
-        <PropertyRef Name="OrganizationId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tblDebitNote_tblSupplier">
+  <Association Name="FK_tblSupplierAddress_tblSupplier">
     <End Type="LILI_CRMModel.tblSupplier" Role="tblSupplier" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblDebitNote" Role="tblDebitNote" Multiplicity="*" />
+    <End Type="LILI_CRMModel.tblSupplierAddress" Role="tblSupplierAddress" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblSupplier">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="tblDebitNote">
+      <Dependent Role="tblSupplierAddress">
         <PropertyRef Name="SupplierId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tblDebitNoteDetail_tblDebitNote">
-    <End Type="LILI_CRMModel.tblDebitNote" Role="tblDebitNote" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblDebitNoteDetail" Role="tblDebitNoteDetail" Multiplicity="*" />
+  <Association Name="FK_tblSupplierContact_tblSupplier">
+    <End Type="LILI_CRMModel.tblSupplier" Role="tblSupplier" Multiplicity="1" />
+    <End Type="LILI_CRMModel.tblSupplierContact" Role="tblSupplierContact" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="tblDebitNote">
+      <Principal Role="tblSupplier">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="tblDebitNoteDetail">
-        <PropertyRef Name="DebitNoteId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tblDebitNoteDetail_tblInvoice">
-    <End Type="LILI_CRMModel.tblInvoice" Role="tblInvoice" Multiplicity="1" />
-    <End Type="LILI_CRMModel.tblDebitNoteDetail" Role="tblDebitNoteDetail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblInvoice">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblDebitNoteDetail">
-        <PropertyRef Name="InvoiceId" />
+      <Dependent Role="tblSupplierContact">
+        <PropertyRef Name="SupplierId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
