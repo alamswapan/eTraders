@@ -1,0 +1,24 @@
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.DAL.infrastructure\bin\Debug\MFS_IWM.DAL.infrastructure.dll
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.DAL.infrastructure\bin\Debug\MFS_IWM.DAL.infrastructure.pdb
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.DAL.infrastructure\bin\Debug\LinqKit.dll
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.DAL.infrastructure\obj\Debug\ResolveAssemblyReference.cache
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.DAL.infrastructure\obj\Debug\MFS_IWM.DAL.infrastructure.dll
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.DAL.infrastructure\obj\Debug\MFS_IWM.DAL.infrastructure.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.DAL.infrastructure\bin\Debug\MFS_IWM.DAL.infrastructure.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.DAL.infrastructure\bin\Debug\MFS_IWM.DAL.infrastructure.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.DAL.infrastructure\bin\Debug\LinqKit.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.DAL.infrastructure\obj\Debug\ResolveAssemblyReference.cache
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.DAL.infrastructure\obj\Debug\MFS_IWM.DAL.infrastructure.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.DAL.infrastructure\obj\Debug\MFS_IWM.DAL.infrastructure.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.DAL.infrastructure\bin\Debug\MFS_IWM.DAL.infrastructure.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.DAL.infrastructure\bin\Debug\MFS_IWM.DAL.infrastructure.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.DAL.infrastructure\bin\Debug\LinqKit.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.DAL.infrastructure\obj\Debug\ResolveAssemblyReference.cache
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.DAL.infrastructure\obj\Debug\MFS_IWM.DAL.infrastructure.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.DAL.infrastructure\obj\Debug\MFS_IWM.DAL.infrastructure.pdb
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.DAL.infrastructure\bin\Debug\MFS_IWM.DAL.infrastructure.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.DAL.infrastructure\bin\Debug\MFS_IWM.DAL.infrastructure.pdb
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.DAL.infrastructure\bin\Debug\LinqKit.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.DAL.infrastructure\obj\Debug\ResolveAssemblyReference.cache
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.DAL.infrastructure\obj\Debug\MFS_IWM.DAL.infrastructure.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.DAL.infrastructure\obj\Debug\MFS_IWM.DAL.infrastructure.pdb

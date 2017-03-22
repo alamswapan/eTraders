@@ -1,0 +1,29 @@
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.Utility\bin\Debug\MFS_IWM.Utility.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.Utility\bin\Debug\MFS_IWM.Utility.pdb
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.Utility\obj\Debug\ResolveAssemblyReference.cache
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.Utility\obj\Debug\MFS_IWM.Utility.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.Utility\obj\Debug\MFS_IWM.Utility.pdb
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.Utility\bin\Debug\MFS_IWM.Utility.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.Utility\bin\Debug\MFS_IWM.Utility.pdb
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.Utility\obj\Debug\ResolveAssemblyReference.cache
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.Utility\obj\Debug\MFS_IWM.Utility.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.Utility\obj\Debug\MFS_IWM.Utility.pdb
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.Utility\bin\Debug\MFS_IWM.Utility.dll
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.Utility\bin\Debug\MFS_IWM.Utility.pdb
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.Utility\obj\Debug\ResolveAssemblyReference.cache
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.Utility\obj\Debug\MFS_IWM.Utility.dll
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.Utility\obj\Debug\MFS_IWM.Utility.pdb
+E:\Sumon\LILI_BMS\Source\LILI_BMS.Utility\bin\Debug\MFS_IWM.Utility.dll
+E:\Sumon\LILI_BMS\Source\LILI_BMS.Utility\bin\Debug\MFS_IWM.Utility.pdb
+E:\Sumon\LILI_BMS\Source\LILI_BMS.Utility\obj\Debug\ResolveAssemblyReference.cache
+E:\Sumon\LILI_BMS\Source\LILI_BMS.Utility\obj\Debug\MFS_IWM.Utility.dll
+E:\Sumon\LILI_BMS\Source\LILI_BMS.Utility\obj\Debug\MFS_IWM.Utility.pdb
+E:\LILI_BMS\Source\LILI_BMS.Utility\bin\Debug\MFS_IWM.Utility.dll
+E:\LILI_BMS\Source\LILI_BMS.Utility\bin\Debug\MFS_IWM.Utility.pdb
+E:\LILI_BMS\Source\LILI_BMS.Utility\obj\Debug\MFS_IWM.Utility.dll
+E:\LILI_BMS\Source\LILI_BMS.Utility\obj\Debug\MFS_IWM.Utility.pdb
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Utility\bin\Debug\MFS_IWM.Utility.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Utility\bin\Debug\MFS_IWM.Utility.pdb
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Utility\obj\Debug\ResolveAssemblyReference.cache
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Utility\obj\Debug\MFS_IWM.Utility.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Utility\obj\Debug\MFS_IWM.Utility.pdb

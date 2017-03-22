@@ -1,0 +1,102 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.CommonConfigViewModel
+@using LILI_CRM.Web.Helpers
+<script type="text/javascript">
+    $(function () {
+        $(".addItem").click(function () {
+            $(".validation-summary-errors ").empty();
+        });
+    });
+</script>
+<div class="widget-box">
+    <div class="widget-header">
+        <h4>
+            Common Configuration Entry</h4>
+    </div>
+    <div class="widget-body">
+        <div class="widget-main">
+            <div class="row-fluid form">
+                <div class="row-fluid">
+                    <div class="span1">
+                        <label for="Name" class="control-label">
+                            Name *
+                        </label>
+                    </div>
+                    <div class="span8">
+                        @Html.TextBoxFor(model => model.Name, new { @maxlenght = "100", @class = "required span12", @style = "margin-left: -5px" })
+                        @Html.HiddenFor(model => model.Id)
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span4">
+                        <div class="span3">
+                            <label for="Code" class="control-label">
+                                Code *
+                            </label>
+                        </div>
+                        <div class="span3">
+                            @Html.TextBoxFor(model => model.Code, new { @maxlength = "20", @style = "width:200px" })
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="span3">
+                            <label for="SortOrder" class="control-label">
+                                Order/Size
+                            </label>
+                        </div>
+                        <div class="span3">
+                            @Html.TextBoxFor(model => model.SortOrder, new { @style = "width:30px" })
+                        </div>
+                    </div>                     
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span4">
+                        <div class="span3">
+                            <label for="Code" class="control-label">
+                                Description
+                            </label>
+                        </div>
+                        <div class="span3">
+                            @Html.TextAreaFor(model => model.Description, new { @maxlength = "100", @style = "width:200px" })
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="span3">
+                            <label for="IsActive" class="control-label">
+                                IsActive
+                            </label>
+                        </div>
+                        <div class="span3">
+                            @Html.EditorFor(model => model.IsActive, new { @style = "checkbox" })
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="GroupBox">
+    <table align="center">
+        <tr>
+            <td>
+                <div class="buttonSubmit">
+
+                        <input type="submit" value="Save" id="btnSave" name="btnSubmit" />
+
+                </div>
+            </td>
+            <td>
+                <div class="buttonSubmit">
+
+                        <input type="submit" value="Update" id="btnUpdate" name="btnSubmit" />
+
+                </div>
+            </td>
+            <td>
+                <div class="buttonSubmit">
+                    <input type="button" value="Clear" id="btnClear" name="btnSubmit" />
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

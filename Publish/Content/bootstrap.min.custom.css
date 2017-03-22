@@ -1,0 +1,70 @@
+﻿form
+{
+    margin: 0 0 10px;
+}
+
+.form-horizontal .control-group
+{
+    margin-bottom: 0px !important;
+    padding-top: 4px !important;
+}
+
+.form-horizontal .display
+{
+    border: 1px solid #ccc;
+    padding: 2px 0px 0px 5px;
+    margin-top: 1px;
+    margin-left: 180px;
+    height: 24px;
+}
+
+.form-horizontal .bg-gray
+{
+    background-color: #F5F5F5 !important;
+}
+
+.form-horizontal .padding
+{
+     padding: 4px 0px 4px 4px !important;
+}
+
+input, button, select, textarea {
+    font-family: Cambria, Verdana, Tahoma, Arial, Helvetica, sans-serif !important;
+}
+
+select, input[type="file"]
+{
+    height: 28px !important;
+    line-height: 20px !important;
+}
+
+.nav-tabs > li > a.k-link
+{
+    border-radius: 0px !important;
+}
+
+.nav-tabs > li.k-item
+{
+    border-radius: 0px !important;
+}
+
+.k-tabstrip-items .k-item, .k-panelbar .k-tabstrip-items .k-item
+{
+    border-left: 0px solid #7EC6E3 !important;
+}
+
+.k-tabstrip-items .k-state-active
+{
+    border-top: 2px solid #4C8FBD !important;
+    box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.15) !important;
+}
+
+.widget-header
+{
+    min-height: 30px !important;
+}
+
+.accordion
+{
+    margin-bottom: 14px !important;
+}

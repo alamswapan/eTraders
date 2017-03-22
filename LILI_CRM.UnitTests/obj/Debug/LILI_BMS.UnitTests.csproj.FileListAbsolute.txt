@@ -1,0 +1,35 @@
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll.config
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Debug\MFS_IWM.UnitTests.pdb
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Debug\Moq.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.UnitTests\obj\Debug\MFS_IWM.UnitTests.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.UnitTests\obj\Debug\MFS_IWM.UnitTests.pdb
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll.config
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.UnitTests\bin\Debug\MFS_IWM.UnitTests.pdb
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.UnitTests\bin\Debug\Moq.dll
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.UnitTests\obj\Debug\MFS_IWM.UnitTests.dll
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.UnitTests\obj\Debug\MFS_IWM.UnitTests.pdb
+E:\Sumon\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll.config
+E:\Sumon\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll
+E:\Sumon\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Debug\MFS_IWM.UnitTests.pdb
+E:\Sumon\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Debug\Moq.dll
+E:\Sumon\LILI_BMS\Source\LILI_BMS.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+E:\Sumon\LILI_BMS\Source\LILI_BMS.UnitTests\obj\Debug\MFS_IWM.UnitTests.dll
+E:\Sumon\LILI_BMS\Source\LILI_BMS.UnitTests\obj\Debug\MFS_IWM.UnitTests.pdb
+E:\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll.config
+E:\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll
+E:\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Debug\MFS_IWM.UnitTests.pdb
+E:\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Debug\Moq.dll
+E:\LILI_BMS\Source\LILI_BMS.UnitTests\obj\Debug\MFS_IWM.UnitTests.dll
+E:\LILI_BMS\Source\LILI_BMS.UnitTests\obj\Debug\MFS_IWM.UnitTests.pdb
+E:\LILI_BMS\Source\LILI_BMS.UnitTests\obj\Debug\LILI_BMS.UnitTests.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\Budget\Source\LILI_BMS.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll.config
+D:\Rasel\Projects\Budget\Source\LILI_BMS.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.UnitTests\bin\Debug\MFS_IWM.UnitTests.pdb
+D:\Rasel\Projects\Budget\Source\LILI_BMS.UnitTests\bin\Debug\Moq.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+D:\Rasel\Projects\Budget\Source\LILI_BMS.UnitTests\obj\Debug\MFS_IWM.UnitTests.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.UnitTests\obj\Debug\MFS_IWM.UnitTests.pdb

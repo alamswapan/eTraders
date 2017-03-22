@@ -1,0 +1,54 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.SBUModel
+@using (Ajax.BeginForm("Edit", "SBU", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "EditSBUSuccess",
+        }, new { @id = "editSBUForm" }))
+{
+    
+    <div class="row-fluid form-horizontal">
+        <div class="popup-widget-box clearfix">
+            <div class="content">
+                @Html.ValidationSummary(true)
+                <div id="updateTargetId" class="alert alert-info" style="display: none;">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.SBUName)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.SBUName, new { @style = "text-align: left !important;" })
+                    @Html.ValidationMessageFor(model => model.SBUName)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Descriptions)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.Descriptions, new { @style = "text-align: left !important;" })
+                    @Html.ValidationMessageFor(model => model.Descriptions)
+                </div>
+            </div>
+
+
+
+            <div class="hr">
+            </div>
+            <div class="content pull-right">
+                <button type="submit" class="btn btn-mini btn-primary" id="btnEditSBU" name="btnEditSBU">
+                    <i class="icon-save bigger-125"></i>Edit</button>
+                &nbsp;&nbsp;
+                <button type="button" class="btn btn-mini btn-primary" id="btnCancelSBU" name="btnCancelSBU"
+                    value="Cancel" onclick=" $($('#editSBUDialog').dialog('close'));">
+                    <i class="icon-remove bigger-125"></i>Cancel</button>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,460 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.PriceRequestModel
+@using (Ajax.BeginForm("Edit", "PriceRequest", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "EditPriceRequestSuccess",
+        }, new { @id = "editPriceRequestForm" }))
+{
+    <div class="row-fluid form-horizontal">
+        <div class="popup-widget-box clearfix">
+            <div class="content">
+                @Html.ValidationSummary(true)
+                <div id="updateTargetEditId" class="alert alert-info" style="display: none;">
+                </div>
+                @Html.HiddenFor(model => model.Id)
+            </div>          
+            
+            <div class="row-fluid">
+			<div class="span6 pull-left">
+                <span class="span3">
+                    @Html.LabelFor(model => model.SalesCallId)
+                </span>
+                <span class="span9 pull-left">
+                    @Html.EditorFor(model => model.SalesCallId)
+                    @Html.ValidationMessageFor(model => model.SalesCallId)
+                </span>
+            </div>
+		</div>
+
+        <div class="row-fluid">
+			<div class="span6 pull-left">
+                <span class="span3">
+                    @Html.LabelFor(model => model.PriceRequestDate)
+                </span>
+                <span class="span9 pull-left">
+                    @Html.EditorFor(model => model.PriceRequestDate)
+                    @Html.ValidationMessageFor(model => model.PriceRequestDate)
+                </span>
+            </div>
+		</div>
+
+        <div class="row-fluid">
+            <div class="span6 pull-left">
+                <span class="span3">
+                    @Html.LabelFor(model => model.CustomerId)
+                </span>
+                <span class="span9 pull-left">
+                    @Html.DropDownList("CustomerId", Model.ddlCustomer, new { @class = "clsProduct" ,Style = "background:#FFFFFF"})
+                    @Html.ValidationMessageFor(model => model.CustomerId)
+                </span>
+            </div>
+        </div>
+		
+		
+		<div class="row-fluid">
+            <div class="span6 pull-left">
+                    <span class="span3">
+                        @Html.LabelFor(model => model.SupplierId)
+                    </span>
+                    <span class="span9 pull-left">
+                        @Html.DropDownList("SupplierId", Model.ddlSupplier, new { @class = "clsProduct" ,Style = "background:#FFFFFF"})
+                        @Html.ValidationMessageFor(model => model.SupplierId)
+                    </span>
+             </div>	
+		</div> 
+       
+            
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span3">
+                        @Html.LabelFor(model => model.ArticleCode)
+                    </span>
+                    <span class="span4 pull-left">
+                        @Html.TextBoxFor(model => model.ArticleCode, new { @style = "text-align: left !important;" })
+                        @Html.ValidationMessageFor(model => model.ArticleCode)
+                    </span>
+                    <span class="span5 pull-left">
+                        @*<div id="PriceRequestAddItemButtonZone" class="row-fluid">*@
+                            <button type="button" class="btn btn-mini btn-primary" id="btnAddArticle" name="btnAddArticle"
+                            value="Cancel" onclick="AddRow()">
+                            <i class="icon-edit bigger-125"></i>Add to List</button>
+                        @*</div>*@
+                    </span>
+                </div>
+          </div>
+
+        <div class="row-fluid">
+            <div id="PriceRequestDetailsGridZone">
+                <div id="PriceRequestDetailsEditKendoGrid">
+                </div>
+            </div>
+        </div>
+
+        <div class="hr"></div>	
+
+        
+        <div class="content pull-right"> 
+		
+		<button type="button" onclick="UpdateSalesBudget()" class="btn btn-mini btn-primary" id="btnSalesBudgetSubmissionDetailList" name="btnSalesBudgetSubmissionDetailList">
+            <i class="icon-save bigger-125"></i>Save</button>
+            &nbsp;&nbsp;
+            <button type="button" class="btn btn-mini btn-primary" id="btnCancelSalesBudget" name="btnCancelSalesBudget"
+                value="Cancel" onclick=" $($('#editSalesBudgetDialog').dialog('close'));">
+                <i class="icon-remove bigger-125"></i>Cancel</button>
+        </div>
+
+
+      </div>
+        
+    </div>
+}
+
+
+@*  SampleSubmission Detail Kendo Grid start *@
+<script type="text/javascript">
+
+//    var modalId = @Model.Id;
+//    alert(modalId);
+
+
+    var dataSource = new kendo.data.DataSource({
+        pageSize: 20,
+        height: 400,
+        update: function (e) { return true; },
+        type: "json",
+        transport: {
+            read: "/PCV/PriceRequest/GetPriceRequestDetails"
+        },
+
+        schema: {
+            model: {
+                id: "Id",
+                fields: {
+                Id: { type: "number", editable: false },                
+                ArticleId: { type: "number", editable: false },
+                ArticleName: { type: "string", editable: false },
+                SamplingUnit: { type: "string", editable: false },
+                PriceTermId : { type: "number", editable: false },             
+                PriceTermName: { defaultValue: { PriceTermId: 0, PriceTermName: "- Select One -"} },				
+				ExpectedPrice: { type: "decimal", editable: true},
+                ReceivedPrice:{ type: "decimal", editable: true},
+				AsOnDate: { type : "date",editable:true},
+                ValidityDate : {type : "date", editable:true},
+                MOQ : {type : "number", editable:true},
+                ShipmentCountryId : { type: "number", editable: false },
+				CountryName: { defaultValue: { ShipmentCountryId: 0, CountryName: "- Select One -"} },
+                ShipmentLeadTime: { type: "string",editable:true },
+                PriceRequestStatus: { type: "string",editable:true }
+                 }
+                }
+        }
+    });
+
+
+    $("#PriceRequestDetailsEditKendoGrid").kendoGrid({
+        dataSource: dataSource,
+        resizable: true,
+        height: 350,        
+        scrollable: true,
+        //  toolbar: ["create"],
+        filterable: false,
+        groupable: true,
+        sortable: true,
+        resizable: true,
+        height: 350,
+        //editable: true,
+        editable: "incell",
+        columnMenu: false,
+        scrollable: true,
+        columns: [
+                { field: "Id", title: "Id", width: 100, hidden:true, filterable: false, sortable: false, locked: true },
+                { field: "ArticleId", title: "ArticleId", width: 100, hidden:true, filterable: false, sortable: false, locked: true },                
+                { field: "ArticleName", title: "Article Name", width: 200, filterable: false, sortable: false, locked: true },
+                { field: "SamplingUnit", title: "Unit", width: 80, filterable: false, sortable: false, locked: true },
+                { field: "PriceTermId", title: "PriceTermId", width: 100, hidden:true, filterable: false, sortable: false, locked: true },               
+                { field: "PriceTermName", title: "PriceTerm", width: 120, editor: priceTermDropDownEditor },
+				{ field: "ExpectedPrice", title: "Expected Price", format: "{0:n}", width: 120, sortable: false, locked: false, groupable: false, attributes: { style: "text-align:right;"} },
+                { field: "ReceivedPrice", title: "Received Price", format: "{0:n}", width: 120, sortable: false, locked: false, groupable: false, attributes: { style: "text-align:right;"} },					
+                { field: "AsOnDate", title: "As On Date", format: "{0: dd/MM/yyyy}", width: 120, filterable: false, sortable: false, locked: true },
+                { field: "ValidityDate", title: "Validity Date", format: "{0: dd/MM/yyyy}", width: 120, filterable: false, sortable: false, locked: true },
+                { field: "ShipmentCountryId", title: "ShipmentCountryId", width: 100, hidden:true, filterable: false, sortable: false, locked: true },                
+                { field: "CountryName", title: "Shipment From", width: 120, editor: shipmentCountryDropDownEditor },
+                { field: "ShipmentLeadTime", title: "ShipmentLeadTime", width: 100, filterable: false, sortable: false, locked: true },
+                { field: "PriceRequestStatus", title: "PriceRequestStatus", width: 100, filterable: false, sortable: false, locked: true },
+                { command: "destroy", title: " ", width: 100}],
+        navigatable: false,
+        editable: true
+    });
+
+
+    
+    // Add New Row To Grid End Here 
+     // Add New Row To Grid
+    function AddRow()
+        {
+        var invoiceDetGrid = $('#PriceRequestDetailsEditKendoGrid').data('kendoGrid');
+        var dataSource = invoiceDetGrid.dataSource;
+
+        var articleCode = $('#ArticleCode').val();
+        alert(articleCode);
+
+        $.get(
+                "@Url.Action("AddArticleToGrid")",
+                {'articleCode':articleCode},
+                function(jresult){
+                    if(jresult != '')
+                    {
+                        if (Find_Grid_Item(jresult[0].Id))
+                        {
+                            alert('This Element is Allready Exists');
+                            return;
+                        }
+                        dataSource.add({ ArticleId: jresult[0].Id, 
+                            ArticleName: jresult[0].ProductName,
+                            SamplingUnit: jresult[0].SamplingUnit,  
+                            PriceTermName: "--Select--", 
+                            ExpectedPrice: 0,  
+                            ReceivedPrice: 0,  
+                            AsOnDate: 0,
+                            ValidityDate:0,
+                            CountryName:"--Select--",
+                            ShipmentLeadTime:0,
+                            PriceRequestStatus: "Active" 
+                            });
+                        }
+                        else{
+                            $("#message").show();
+                            $('#message').text(data).css({ 'color':'red' });
+                            $("#message").delay(3000).hide();
+                        }
+                        //Calculate_Grid_Total();
+                    }
+                );
+        }
+    // Add New Row To Grid End Here 		
+
+    function Find_Grid_Item(itemId)
+    {
+            //alert (itemId);
+        var rowNo =0;
+        var gridData = $("#PriceRequestDetailsEditKendoGrid").data("kendoGrid").dataSource.data();
+
+        for (var index = 0; index < gridData.length; index++) 
+        {
+            
+            var currentDataItem = gridData[index];
+            if (itemId==currentDataItem.ArticleId)
+            {
+                rowNo=index;
+                return true;
+            }
+        }
+
+    }
+
+    	 // priceTerm DropDown Editor In Grid
+ function priceTermDropDownEditor(container, options) {
+     $('<input required data-text-field="PriceTermName" data-value-field="Id" data-bind="value:' + options.field + '"/>')
+           .appendTo(container)
+           .kendoDropDownList({
+               autoBind: false,
+               optionLabel: "...Select...",
+               dataTextField: "PriceTermName",
+               dataValueField: "PriceTermId",
+               dataSource: {
+                   type: "json",
+                   transport: {
+                       read: "/PCV/PriceRequest/ReadPriceTermList"
+                   }
+               },
+               change: function (e) {
+                   var dataItem = e.sender.dataItem();
+                   options.model.set("PriceTermName", dataItem.PriceTermName);
+                   options.model.set("PriceTermId", dataItem.PriceTermId);
+               }
+           });
+    }
+
+    	 // Country DropDown Editor In Grid     
+ function shipmentCountryDropDownEditor(container, options) {
+ alert("country");
+     $('<input required data-text-field="CountryName" data-value-field="Id" data-bind="value:' + options.field + '"/>')
+           .appendTo(container)
+           .kendoDropDownList({
+               autoBind: false,
+               optionLabel: "...Select...",
+               dataTextField: "CountryName",
+               dataValueField: "ShipmentCountryId",
+               dataSource: {
+                   type: "json",
+                   transport: {
+                       read: "/PCV/PriceRequest/GetCountryList"
+                   }
+               },
+               change: function (e) {
+                   var dataItem = e.sender.dataItem();
+                   options.model.set("CountryName", dataItem.CountryName);
+                   options.model.set("ShipmentCountryId", dataItem.ShipmentCountryId);
+               }
+           });
+    }
+
+       //Update Sales Budget
+
+       function UpdateSalesBudget() {
+           //getting json data from kendo Grid
+           var gridData = $("#SalesBudgetDetailsEditKendoGrid").data("kendoGrid").dataSource.data();
+           var salesMasterList = [];
+           var salesDetailList = [];
+            
+           //alert($('.js_SUB_val').val());
+           var SalesBudgetMasterViewModel = {};
+           var id = @Model.Id;
+           SalesBudgetMasterViewModel.SalesPersonId = $('#SalesPersonId').val();
+           SalesBudgetMasterViewModel.BudgetYear = $('#BudgetYear').val();
+           SalesBudgetMasterViewModel.ProductId = $('.js_product_val').val();
+           SalesBudgetMasterViewModel.SBUId = $('.js_SUB_val').val();
+           salesMasterList.push(SalesBudgetMasterViewModel);
+
+
+
+           //loop through each json data from kendo Grid		
+           for (var i = 0; i < gridData.length; i++) {
+
+               var currentDataItem = gridData[i];
+
+               console.log(currentDataItem);
+
+               var SalesBudgetDetailViewModel = {};
+               SalesBudgetDetailViewModel.CustomerId = currentDataItem.CustomerId;
+               SalesBudgetDetailViewModel.SupplierId = currentDataItem.SupplierId;
+
+               SalesBudgetDetailViewModel.JanQty = currentDataItem.JanQty;
+               SalesBudgetDetailViewModel.JanVal = currentDataItem.JanVal;
+               SalesBudgetDetailViewModel.JanCom = currentDataItem.JanCom;
+
+               SalesBudgetDetailViewModel.FebQty = currentDataItem.FebQty;
+               SalesBudgetDetailViewModel.FebVal = currentDataItem.FebVal;
+               SalesBudgetDetailViewModel.FebCom = currentDataItem.FebCom;
+
+               SalesBudgetDetailViewModel.MarQty = currentDataItem.MarQty;
+               SalesBudgetDetailViewModel.MarVal = currentDataItem.MarVal;
+               SalesBudgetDetailViewModel.MarCom = currentDataItem.MarCom;
+
+               SalesBudgetDetailViewModel.AprQty = currentDataItem.AprQty;
+               SalesBudgetDetailViewModel.AprVal = currentDataItem.AprVal;
+               SalesBudgetDetailViewModel.AprCom = currentDataItem.AprCom;
+
+               SalesBudgetDetailViewModel.MayQty = currentDataItem.MayQty;
+               SalesBudgetDetailViewModel.MayVal = currentDataItem.MayVal;
+               SalesBudgetDetailViewModel.MayCom = currentDataItem.MayCom;
+
+               SalesBudgetDetailViewModel.JunQty = currentDataItem.JunQty;
+               SalesBudgetDetailViewModel.JunVal = currentDataItem.JunVal;
+               SalesBudgetDetailViewModel.JunCom = currentDataItem.JunCom;
+
+               SalesBudgetDetailViewModel.JulyQty = currentDataItem.JulyQty;
+               SalesBudgetDetailViewModel.JulyVal = currentDataItem.JulyVal;
+               SalesBudgetDetailViewModel.JulyCom = currentDataItem.JulyCom;
+
+               SalesBudgetDetailViewModel.AugQty = currentDataItem.AugQty;
+               SalesBudgetDetailViewModel.AugVal = currentDataItem.AugVal;
+               SalesBudgetDetailViewModel.AugCom = currentDataItem.AugCom;
+
+               SalesBudgetDetailViewModel.SepQty = currentDataItem.SepQty;
+               SalesBudgetDetailViewModel.SepVal = currentDataItem.SepVal;
+               SalesBudgetDetailViewModel.SepCom = currentDataItem.SepCom;
+
+               SalesBudgetDetailViewModel.OctQty = currentDataItem.OctQty;
+               SalesBudgetDetailViewModel.OctVal = currentDataItem.OctVal;
+               SalesBudgetDetailViewModel.OctCom = currentDataItem.OctCom;
+
+               SalesBudgetDetailViewModel.NovQty = currentDataItem.NovQty;
+               SalesBudgetDetailViewModel.NovVal = currentDataItem.NovVal;
+               SalesBudgetDetailViewModel.NovCom = currentDataItem.NovCom;
+
+               SalesBudgetDetailViewModel.DecQty = currentDataItem.DecQty;
+               SalesBudgetDetailViewModel.DecVal = currentDataItem.DecVal;
+               SalesBudgetDetailViewModel.DecCom = currentDataItem.DecCom;
+
+               salesDetailList.push(SalesBudgetDetailViewModel);
+           }
+
+           //url
+           var postUrl = '@Url.Content("~/PCV/SalesBudget/SetSalesBudgetForUpdate")';
+
+           
+
+           //Post json data from kendo Grid to Controller
+           $.ajax({
+               url: postUrl,
+               type: 'POST',
+               dataType: 'json',
+               data: JSON.stringify({ 'lstSampleSubmissionMaster': salesMasterList, 'lstSampleSubmissionDetails': salesDetailList,'UpdateId':id }),
+               contentType: 'application/json; charset=utf-8',
+               success: function (result) {
+                   //if (result !='') 
+                   //    {
+                   //        alert(jresult[0].TP);
+                   //        //TP= jresult[0].TP;
+                   //        $('#TP').val(result[0].TP);
+                   //    }
+                           
+                   if (result != '') {
+                           //alert(JSON.stringify(result));
+                           //alert(result.strMessage);
+                           $("#updateTargetEditId").html(result.strMessage).show();
+                           //$('#SalesBudgetKendoGrid').data('kendoGrid').refresh();  
+                           var dGrid = $('#SalesBudgetKendoGrid').data('kendoGrid');
+                           dGrid.dataSource.read();                         
+                   }
+
+
+                   console.log(result);
+               },
+               error: function (objAjaxRequest, strError) {
+                   var respText = objAjaxRequest.responseText;
+                   console.log(respText);
+               }
+           });
+       }
+
+
+
+ 
+</script>
+
+@*On Document Ready*@
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#ArticleCode").kendoAutoComplete({
+            dataTextField: "ProductCode",
+            dataSource: {
+                transport: {
+                    read: {
+                        url: "/PCV/PriceRequest/PopulateArticleAutoComplete/",
+                        serverPaging: true,
+                        type: "POST",
+                        data: {
+                        // json: JSON.stringify([{"ProductCode": "A001"}, {"ProductCode": "A002"}] )
+                    }
+                }
+            }
+        }
+    });
+
+
+});
+
+</script>
+
+
+
+
+
+
+

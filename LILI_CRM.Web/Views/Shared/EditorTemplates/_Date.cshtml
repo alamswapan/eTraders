@@ -1,0 +1,20 @@
+﻿@model System.Nullable<DateTime>
+
+@* JQuery Date Picker*@
+@Html.TextBox("", String.Format("{0:dd/MM/yyyy}", Model), new { @class = "datePicker", @placeholder = "dd/mm/yyyy", @style = "width:100px;height:24px;" })
+
+<script type='text/javascript'>
+    $(document).ready(function () {
+        $(".datePicker").datepicker({ buttonImage: '@Url.Content("~/Content/Images/calendar-gray.png")', dateFormat: 'dd/mm/yy', buttonImageOnly: true, showOn: "button", buttonText: 'dd/mm/yy' });
+    });
+</script>
+
+@*Kendu Date Picker
+@Html.TextBox("", String.Format("{0:dd/MM/yyyy}", Model), new { @class = "kendoDatePicker", @placeholder = "dd/mm/yyyy", @style = "width:100px;height:24px;" })
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".kendoDatePicker").kendoDatePicker({ format: "dd/MM/yyyy" });
+    });
+</script>
+*@

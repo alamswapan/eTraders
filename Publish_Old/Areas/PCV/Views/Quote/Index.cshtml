@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Quote";
+    Layout = "~/Areas/PCV/Views/Shared/_Layout.cshtml";
+}
+
+<div id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li><i class="icon-home"></i>Setup <span class="divider"><i class="icon-angle-right"></i></span></li>
+        <li class="active"><a href="#">Quote Submission</a></li>
+    </ul>
+    <!--.breadcrumb-->
+</div>
+
+<div id="page-content" class="clearfix">
+    <!--/#page-content-->
+    <div class="row-fluid">
+        <div id="indexPageQuote">
+            <div id="QuoteMessageZone">
+                <div id="message" class="alert alert-success" style="display: none;"></div>
+            </div>
+            <div id="QuoteAddButtonZone" class="row-fluid">
+                @*if ((new AIMS_UNDP.Web.Utility.AppConstant()).IsAddAssigned)
+                {*@
+                    <a class="btn btn-mini btn-primary" id="lnkAddQuote" href='@Url.Content("~/PCV/Quote/Create")'>
+                        <i class="icon-plus"></i>Create New
+                    </a>
+                @*}*@
+            </div>
+            <br />
+            <div id="QuoteGridZone" class="row-fluid">
+                <div id="QuoteKendoGrid"></div>
+            </div>
+            <div id="QuotePopUpZone">
+                <div id="addQuoteDialog" title="Create Quote"></div>
+                <div id="editQuoteDialog" title="Edit Quote"></div>
+                <div id="deleteQuoteDialog" title="Delete Quote"></div>
+                <div id="detailsQuoteDialog" title="View Quote"></div>
+                <div id="searchArticleDialog" title="Search Artcle Quote"></div>
+            </div>
+        </div>
+        <script src="@Url.Content("~/Scripts/App/Quote.js")" type="text/javascript"></script>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".ui-selectee").removeClass("active");
+        $(".ui-selectee").removeClass("open");
+
+        $(".mnuQuote").addClass("active");
+        $(".mnuQuote").parent().parent().addClass("active").addClass("open");
+        $(".mnuQuote").parent().parent().addClass("open");
+    });
+</script>

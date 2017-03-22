@@ -1,0 +1,162 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.CustomerInfoModel
+@using (Ajax.BeginForm("Create", "Customer", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddCustomerSuccess",
+        }, new { @id = "addCustomerForm" }))
+{
+    
+    <div class="row-fluid form-horizontal">
+        <div class="popup-widget-box clearfix">
+            <div class="content">
+                @Html.ValidationSummary(true)
+                <div id="updateTargetId" class="alert alert-info" style="display: none;">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.CustomerId)
+                </span>
+                <span class="span6">
+                    @Html.TextBoxFor(model => model.CustomerId, new { @style = "text-align: left !important;" })
+                    @Html.ValidationMessageFor(model => model.CustomerId)
+                </span>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.CustomerName)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.CustomerName, new { @style = "text-align: left !important;" })
+                    @Html.ValidationMessageFor(model => model.CustomerName)
+                </div>
+            </div>
+
+            <div class="row-fluid Margin">
+                <div class = "span12">
+                    <div class = "span12">
+                        <span class="span2">
+                            @Html.LabelFor(model => model.Address1)
+                        </span>
+                        <span class="span10">
+                            @Html.TextAreaFor(model => model.Address1, new { @style = "text-align: left !important; margin-left:-2Px; width:100.2% !important" })
+                            @Html.ValidationMessageFor(model => model.Address1)
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+@*            <div class="row-fluid Margin">
+
+                <div class = "span12">
+                    <div class = "span12">
+                        <span class="span2">
+                            @Html.LabelFor(model => model.Address2)
+                        </span>
+                        <span class="span10">
+                            @Html.TextAreaFor(model => model.Address2, new { @style = "text-align: left !important; margin-left:-2Px; width:100.2% !important" })
+                            @Html.ValidationMessageFor(model => model.Address2)
+                        </span>
+                    </div>
+                </div>
+            </div>*@
+
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Country)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.Country)
+                    @Html.ValidationMessageFor(model => model.Country)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Phone)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.Phone)
+                    @Html.ValidationMessageFor(model => model.Phone)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Fax)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.Fax)
+                    @Html.ValidationMessageFor(model => model.Fax)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Mobile)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.Mobile)
+                    @Html.ValidationMessageFor(model => model.Mobile)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Email)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.Email)
+                    @Html.ValidationMessageFor(model => model.Email)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.WebAddress)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.WebAddress)
+                    @Html.ValidationMessageFor(model => model.WebAddress)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.TIN)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.TIN)
+                    @Html.ValidationMessageFor(model => model.TIN)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.BIN)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.BIN)
+                    @Html.ValidationMessageFor(model => model.BIN)
+                </div>
+            </div>
+            <div class="hr">
+            </div>
+            <div class="content pull-right">
+                <button type="submit" class="btn btn-mini btn-primary" id="btnAddCustomer" name="btnAddCustomer">
+                    <i class="icon-save bigger-125"></i>Add</button>
+                &nbsp;&nbsp;
+                <button type="button" class="btn btn-mini btn-primary" id="btnCancelCustomer" name="btnCancelCustomer"
+                    value="Cancel" onclick=" $($('#addCustomerDialog').dialog('close'));">
+                    <i class="icon-remove bigger-125"></i>Cancel</button>
+            </div>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "DebitNote";
+    Layout = "~/Areas/PCV/Views/Shared/_Layout.cshtml";
+}
+
+<div id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li><i class="icon-home"></i>Setup <span class="divider"><i class="icon-angle-right"></i></span></li>
+        <li class="active"><a href="#">DebitNote</a></li>
+    </ul>
+    <!--.breadcrumb-->
+</div>
+
+<div id="page-content" class="clearfix">
+    <!--/#page-content-->
+    <div class="row-fluid">
+        <div id="indexPageDebitNote">
+            <div id="DebitNoteMessageZone">
+                <div id="message" class="alert alert-success" style="display: none;"></div>
+            </div>
+            <div id="DebitNoteAddButtonZone" class="row-fluid">
+                @*if ((new AIMS_UNDP.Web.Utility.AppConstant()).IsAddAssigned)
+                {*@
+                    <a class="btn btn-mini btn-primary" id="lnkAddDebitNote" href='@Url.Content("~/PCV/DebitNote/Create")'>
+                        <i class="icon-plus"></i>Create New
+                    </a>
+                @*}*@
+            </div>
+            <br />
+            <div id="DebitNoteGridZone" class="row-fluid">
+                <div id="DebitNoteKendoGrid"></div>
+            </div>
+            <div id="DebitNotePopUpZone">
+                <div id="addDebitNoteDialog" title="Create DebitNote"></div>
+                <div id="editDebitNoteDialog" title="Edit DebitNote"></div>
+                <div id="deleteDebitNoteDialog" title="Delete DebitNote"></div>
+                <div id="detailsDebitNoteDialog" title="View DebitNote"></div>
+                <div id="searchArticleDialog" title="Search Artcle DebitNote"></div>
+            </div>
+        </div>
+        <script src="@Url.Content("~/Scripts/App/DebitNote.js")" type="text/javascript"></script>
+        
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".ui-selectee").removeClass("active");
+        $(".ui-selectee").removeClass("open");
+
+        $(".mnuDebitNote").addClass("active");
+        $(".mnuDebitNote").parent().parent().addClass("active").addClass("open");
+        $(".mnuDebitNote").parent().parent().addClass("open");
+    });
+</script>

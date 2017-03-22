@@ -1,0 +1,28 @@
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll.config
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.UnitTests\bin\Debug\MFS_IWM.UnitTests.pdb
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.UnitTests\bin\Debug\Moq.dll
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.UnitTests\obj\Debug\MFS_IWM.UnitTests.dll
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.UnitTests\obj\Debug\MFS_IWM.UnitTests.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll.config
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.UnitTests\bin\Debug\MFS_IWM.UnitTests.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.UnitTests\bin\Debug\Moq.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.UnitTests\obj\Debug\MFS_IWM.UnitTests.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.UnitTests\obj\Debug\MFS_IWM.UnitTests.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll.config
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.UnitTests\bin\Debug\MFS_IWM.UnitTests.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.UnitTests\bin\Debug\Moq.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.UnitTests\obj\Debug\MFS_IWM.UnitTests.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.UnitTests\obj\Debug\MFS_IWM.UnitTests.pdb
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll.config
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.UnitTests\bin\Debug\MFS_IWM.UnitTests.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.UnitTests\bin\Debug\MFS_IWM.UnitTests.pdb
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.UnitTests\bin\Debug\Moq.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.UnitTests\obj\Debug\MFS_IWM.UnitTests.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.UnitTests\obj\Debug\MFS_IWM.UnitTests.pdb

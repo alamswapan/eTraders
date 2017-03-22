@@ -1,0 +1,27 @@
+﻿.ui-widget-header 
+{ 
+    border: 1px solid #aaa; /*{borderColorHeader}*/
+    background-color: blue !important; 
+    color: #fff; /*{fcHeader}*/
+    font-weight: bold; 
+}
+
+.ui-jqgrid-sortable {
+    background: #E0EEE0 !important; 
+}
+
+.ui-pg-table {
+    background: #E0EEE0 !important; 
+}
+
+.ui-widget {
+    font-family: Cambria, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-family: Cambria, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.ui-widget-content a {
+    color: #034AF3 !important;
+}

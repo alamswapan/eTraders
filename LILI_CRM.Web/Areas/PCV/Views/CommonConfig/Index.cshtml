@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "CommonConfig";
+    Layout = "~/Areas/BMS/Views/Shared/_Layout.cshtml";
+}
+<h1>
+    <div align="center">
+        @*@ViewBag.TitleName*@
+    </div>
+</h1>
+<div id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li><i class="icon-home"></i><a href="#">Common Configuration</a> <span class="divider">
+            <i class="icon-angle-right"></i></span></li>
+        <li class="ccSiteMap">Common Config.</li>
+    </ul>
+    <!--.breadcrumb-->
+    @*<div id="nav-search">
+        <form class="form-search">
+        <span class="input-icon">
+            <input type="text" placeholder="Search ..." class="input-small search-query" id="nav-search-input"
+                autocomplete="off" />
+            <i class="icon-search" id="nav-search-icon"></i></span>
+        </form>
+    </div>*@
+    <!--#nav-search-->
+</div>
+<!--/#page-content-->
+@using (Ajax.BeginForm("Index", "CommonConfig", new AjaxOptions { HttpMethod = "POST" }, new { id = "frm" }))
+{     
+    <div class="row-fluid">
+        <form class="form-horizontal">
+        <div class="row-fluid">
+            <div class="span12 ">
+                <div class="GroupBox" style="min-height: 15px" id="message">
+                    @Html.ValidationSummary(false, LILI_CRM.Web.Utility.Common.ValidationSummaryHead)
+                </div>
+                <div class="span12">
+                    @Html.Partial("_CreateOrEdit")
+                </div>
+                <div class="span12">
+                    @Html.Partial("_CommonConfigList")
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        </form>
+    </div>   
+}
+<div id="deleteCommonConfigDialog" title="Delete Confirmation">
+</div>
+<script type="text/javascript">
+
+    //mnuCommonConfig
+    $(document).ready(function () {
+
+        $(".mnuCommonConfig").addClass('active open');
+
+    });
+
+</script>

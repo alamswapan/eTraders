@@ -1,0 +1,308 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.CallReportProjectInfoModel
+@using (Ajax.BeginForm("EditProject", "CallReport", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "EditProjectSuccess",
+        }, new { @id = "editProjectForm" }))
+{
+    <div class="row-fluid form-horizontal">
+        <div id="divProjectEdit" class="popup-widget-box clearfix">
+            <div class="content">
+                @Html.ValidationSummary(true)
+                <div id="updateTargetId" class="alert alert-info" style="display: none;">
+                </div>
+                @Html.HiddenFor(model => model.Id)
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.CreateDate)
+                </span>
+                <div class="controls">
+                    @Html.EditorFor(model => model.CreateDate)
+                    @Html.ValidationMessageFor(model => model.CreateDate)
+                </div>
+            </div>
+
+            <div class ="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.ProjectName)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.ProjectName, new { @style = "text-align: left !important;" })
+                    @Html.ValidationMessageFor(model => model.ProjectName)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.CurrentStageId)
+                </span>
+                <div class="controls">
+                    @Html.DropDownList("CurrentStageId", Model.ddlCurrentStage, new { @class = "clsProject" })
+                    @Html.ValidationMessageFor(model => model.CurrentStageId)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.CustomerId)
+                </span>
+                <div class="controls">
+                    @Html.DropDownList("CustomerId", Model.ddlCustomer, new { @class = "clsProject" })
+                    @Html.ValidationMessageFor(model => model.CustomerId)
+                </div>
+            </div>
+
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.SupplierId)
+                </span>
+                <div class="controls">
+                    @Html.DropDownList("SupplierId", Model.ddlSupplier, new { @class = "clsProject" })
+                    @Html.ValidationMessageFor(model => model.SupplierId)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Description)
+                </span>
+                <div class="controls">
+                    @Html.TextAreaFor(model => model.Description)
+                    @Html.ValidationMessageFor(model => model.Description)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.SellingOpportunity)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.SellingOpportunity)
+                    @Html.ValidationMessageFor(model => model.SellingOpportunity)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.PotVolPerYear)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.PotVolPerYear)
+                    @Html.ValidationMessageFor(model => model.PotVolPerYear)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.PotAmountPerYear)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.PotAmountPerYear)
+                    @Html.ValidationMessageFor(model => model.PotAmountPerYear)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model=> model.RemarkNextAction)
+                </span>
+                <div class="controls">
+                    @Html.TextAreaFor(model=> model.RemarkNextAction)
+                    @Html.ValidationMessageFor(model=>model.RemarkNextAction)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.CommunicationChannelId)
+                </span>
+                <div class="controls">
+                    @Html.DropDownList("CommunicationChannelId", Model.ddlCommunicationChannel, new { @class = "clsProject" })
+                    @Html.ValidationMessageFor(model => model.CommunicationChannelId)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model=> model.SalesPerson)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.SalesPerson, new { Style = "background:#4E6693", @readonly = "true" })
+                    @Html.ValidationMessageFor(model=>model.SalesPerson)
+                </div>
+            </div>
+
+            <div class="hr">
+            </div>
+            <div class="content pull-right">
+                <button type="submit" class="btn btn-mini btn-primary" id="btnEditProject" name="btnEditProject">
+                    <i class="icon-save bigger-125"></i>Edit</button>
+                &nbsp;&nbsp;
+                <button type="button" class="btn btn-mini btn-primary" id="btnCancelProject" name="btnCancelProject"
+                    value="Cancel" onclick=" $($('#editProjectDialogNew').dialog('close'));">
+                    <i class="icon-remove bigger-125"></i>Cancel</button>
+            </div>
+
+
+        </div>
+
+
+        @*SampleRequest Grid*@
+        <div id="indexPageSampleRequest">
+            <div id="SampleRequestIndexMessageZone">
+                <div id="messageSampleRequestIndex" class="alert alert-success" style="display: none;"></div>
+            </div>
+            <fieldset>
+                <legend>Sample Request</legend>
+                <div id="SampleRequestIndexAddButtonZone" class="row-fluid">
+                    @*if ((new AIMS_UNDP.Web.Utility.AppConstant()).IsAddAssigned)
+                    {*@
+                        @*<a class="btn btn-mini btn-primary" id="lnkAddOrderLost" href='@Url.Content("~/PCV/CallReport/Create")'>
+                            <i class="icon-plus"></i>Add Sales Call Inquiry
+                        </a>*@
+                    @*}*@
+                </div>
+                <div id="SampleRequestIndexGridZone" class="row-fluid">
+                    <div id="SampleRequestIndexKendoGrid"></div>
+                </div>
+            </fieldset>
+            <div id="SampleRequestIndexPopUpZone" >
+                <div id="addSampleRequestIndexDialog" title="Add Sample Request"></div>
+                <div id="editSampleRequestDialog" title="Edit Sample Request"></div>
+                <div id="deleteSampleRequestIndexDialog" title="Delete Sample Request"></div>
+                <div id="detailsSampleRequestIndexDialog" title="View Sample Request"></div>
+            </div>
+        </div>
+
+
+        @*SampleSubmission Grid*@
+        <div id="indexPageSampleSubmission">
+            <div id="SampleSubmissionIndexMessageZone">
+                <div id="messageSampleSubmissionIndex" class="alert alert-success" style="display: none;"></div>
+            </div>
+            <fieldset>
+                <legend>Sample Submission</legend>
+                <div id="SampleSubmissionIndexAddButtonZone" class="row-fluid">
+                    @*if ((new AIMS_UNDP.Web.Utility.AppConstant()).IsAddAssigned)
+                    {*@
+                        @*<a class="btn btn-mini btn-primary" id="lnkAddOrderLost" href='@Url.Content("~/PCV/CallReport/Create")'>
+                            <i class="icon-plus"></i>Add Sales Call Inquiry
+                        </a>*@
+                    @*}*@
+                </div>
+                <div id="SampleSubmissionIndexGridZone" class="row-fluid">
+                    <div id="SampleSubmissionIndexKendoGrid"></div>
+                </div>
+            </fieldset>
+            <div id="SampleSubmissionIndexPopUpZone" >
+                <div id="addSampleSubmissionIndexDialog" title="Add Sample Request"></div>
+                <div id="editSampleSubmissionDialog" title="Edit Sample Request"></div>
+                <div id="deleteSampleSubmissionIndexDialog" title="Delete Sample Request"></div>
+                <div id="detailsSampleSubmissionIndexDialog" title="View Sample Request"></div>
+            </div>
+        </div>
+        
+
+
+    </div>
+}
+
+
+<script type="text/javascript">
+
+    $("#SampleRequestIndexKendoGrid").kendoGrid({
+        dataSource: {
+            transport: {
+                read: "/PCV/SampleRequest/SampleRequestRead"
+            },
+            schema: {
+                model: {
+                    fields: {
+                        Id: { type: "number" },
+                        RequestNo: { type: "string" },
+                        RequestDate: { type: "Date" },
+                        Organization: { type: "string" },
+                        SupplierName: { type: "string" },
+                        TransporterName: { type: "string" },
+                        DocTrackingNo: { type: "string" },
+                        DeliveryState: { type: "string" },
+                        ActionLink: { type: "string" }
+                    }
+                }
+            },
+            pageSize: 20,
+            serverPaging: false,
+            serverFiltering: false,
+            serverSorting: false
+        },
+        height: 250,
+        filterable: true,
+        groupable: true,
+        sortable: true,
+        resizable: true,
+        editable: false,
+        pageable: {
+            refresh: true,
+            pageSizes: [20, 40, 60, 80, 100]
+        },
+        columns: [{ field: "Id", title: "Id", hidden: false, filterable: false, sortable: false, width: "10%" },
+                { field: "RequestNo", title: "SampleRequest No#", hidden: true, width: "25%" },
+                { field: "RequestDate", title: "Request Date", format: "{0:dd-MMM-yyyy}", width: "15%" },
+                { field: "Organization", title: "Organization", width: "25%" },
+                { field: "SupplierName", title: "Supplier", width: "50%" },
+                { field: "TransporterName", title: "Courier", width: "25%" },
+                { field: "DocTrackingNo", title: "Tracck No", width: "10%" },
+                { field: "DeliveryState", title: "Status", width: "10%" },
+                { field: "ActionLink", title: "Actions", width: "10%", filterable: false, sortable: false, template: "#= ActionLink #" }
+            ]
+    });
+
+
+    $("#SampleSubmissionIndexKendoGrid").kendoGrid({
+        dataSource: {
+            transport: {
+                read: "/PCV/SampleSubmission/SampleSubmissionRead"
+            },
+            schema: {
+                model: {
+                    fields: {
+                        Id: { type: "number" },
+                        SubmissionNo: { type: "string" },
+                        SubmissionDate: { type: "Date" },
+                        Organization: { type: "string" },
+                        CustomerName: { type: "string" },
+                        ActionLink: { type: "string" }
+                    }
+                }
+            },
+            pageSize: 20,
+            serverPaging: false,
+            serverFiltering: false,
+            serverSorting: false
+        },
+        height: 250,
+        filterable: true,
+        groupable: true,
+        sortable: true,
+        resizable: true,
+        editable: false,
+        pageable: {
+            refresh: true,
+            pageSizes: [20, 40, 60, 80, 100]
+        },
+        columns: [{ field: "Id", title: "Id", hidden: false, filterable: false, sortable: false, width: "10%" },
+                { field: "SubmissionNo", title: "SampleSubmission No#", hidden: true, width: "25%" },
+                { field: "SubmissionDate", title: "Request Date", format: "{0:dd-MMM-yyyy}", width: "15%" },
+                { field: "Organization", title: "Organization", width: "25%" },
+                { field: "CustomerName", title: "Customer", width: "50%" },
+                { field: "ActionLink", title: "Actions", width: "10%", filterable: false, sortable: false, template: "#= ActionLink #" }
+            ]
+    });
+
+</script>

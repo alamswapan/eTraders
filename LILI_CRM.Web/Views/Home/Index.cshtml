@@ -1,0 +1,16 @@
+﻿@model LILI_CRM.Web.Models.Menu
+@{
+    ViewBag.Title = "Dashboard";
+}
+<link href="@Url.Content("~/Content/Dashboard.css")" rel="stylesheet" type="text/css" />
+@*<h1>@ViewBag.Message</h1>*@
+<div align="center" style="min-height: 400px;">
+
+<table class="dashboard">
+    <tr>
+        <td>@Html.ActionLink(" ", "Index", new { area = "BMS", controller = "Home" }, new { @class = "projectinfo" })</td>
+    </tr>
+
+</table>
+
+</div>

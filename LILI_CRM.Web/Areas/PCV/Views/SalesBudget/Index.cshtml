@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Sales Budget";
+    Layout = "~/Areas/PCV/Views/Shared/_Layout.cshtml";
+}
+
+<div id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li><i class="icon-home"></i>Setup <span class="divider"><i class="icon-angle-right"></i></span></li>
+        <li class="active"><a href="#">SalesBudget</a></li>
+    </ul>
+    <!--.breadcrumb-->
+</div>
+
+<div id="page-content" class="clearfix">
+    <!--/#page-content-->
+    <div class="row-fluid">
+        <div id="indexPageSalesBudget">
+            <div id="SalesBudgetMessageZone">
+                <div id="message" class="alert alert-success" style="display: none;"></div>
+            </div>
+            <div id="SalesBudgetAddButtonZone" class="row-fluid">
+			@*if ((new AIMS_UNDP.Web.Utility.AppConstant()).IsAddAssigned)
+                {*@
+                    <a class="btn btn-mini btn-primary" id="lnkAddSalesBudget" href='@Url.Content("~/PCV/SalesBudget/Create")'>
+                        <i class="icon-plus"></i>Add
+                    </a>
+                @*}*@           
+            </div>
+            <br />
+            <div id="SalesBudgetZone" class="row-fluid">
+                <div id="SalesBudgetKendoGrid"></div>
+            </div>
+            <div id="SalesBudgetPopUpZone">
+                <div id="addSalesBudgetDialog" title="Add Sales Budget"></div>
+                <div id="editSalesBudgetDialog" title="Edit Sales Budget"></div>
+                <div id="deleteSalesBudgetDialog" title="Delete Sales Budget"></div>
+                <div id="detailsSalesBudgetDialog" title="View Sales Budget"></div>
+            </div>
+        </div>
+        <script src="@Url.Content("~/Scripts/App/SalesBudget.js")" type="text/javascript"></script>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".ui-selectee").removeClass("active");
+        $(".ui-selectee").removeClass("open");
+
+        $(".mnuCustomer").addClass("active");
+        $(".mnuCustomer").parent().parent().addClass("active").addClass("open");
+        $(".mnuCustomer").parent().parent().addClass("open");
+    });
+</script>

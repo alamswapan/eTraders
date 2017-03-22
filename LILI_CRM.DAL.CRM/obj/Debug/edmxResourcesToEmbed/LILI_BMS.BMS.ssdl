@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LILI_BMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="LILI_BMSModelStoreContainer">
+    <EntitySet Name="BMS_tblMenuList" EntityType="LILI_BMSModel.Store.BMS_tblMenuList" store:Type="Tables" store:Schema="dbo" store:Name="BMS_tblMenuList">
+      <DefiningQuery>SELECT 
+      [BMS_tblMenuList].[Id] AS [Id], 
+      [BMS_tblMenuList].[ModuleName] AS [ModuleName], 
+      [BMS_tblMenuList].[MenuName] AS [MenuName], 
+      [BMS_tblMenuList].[ParentMenuName] AS [ParentMenuName], 
+      [BMS_tblMenuList].[PageUrl] AS [PageUrl], 
+      [BMS_tblMenuList].[ControllerName] AS [ControllerName], 
+      [BMS_tblMenuList].[ActionName] AS [ActionName]
+      FROM [dbo].[BMS_tblMenuList] AS [BMS_tblMenuList]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="BMS_tblUserInfo" EntityType="LILI_BMSModel.Store.BMS_tblUserInfo" store:Type="Tables" store:Schema="dbo" store:Name="BMS_tblUserInfo">
+      <DefiningQuery>SELECT 
+      [BMS_tblUserInfo].[Id] AS [Id], 
+      [BMS_tblUserInfo].[UserName] AS [UserName], 
+      [BMS_tblUserInfo].[UserPassword] AS [UserPassword], 
+      [BMS_tblUserInfo].[EmpId] AS [EmpId], 
+      [BMS_tblUserInfo].[IsActive] AS [IsActive], 
+      [BMS_tblUserInfo].[IUser] AS [IUser], 
+      [BMS_tblUserInfo].[EUser] AS [EUser], 
+      [BMS_tblUserInfo].[IDate] AS [IDate], 
+      [BMS_tblUserInfo].[EDate] AS [EDate]
+      FROM [dbo].[BMS_tblUserInfo] AS [BMS_tblUserInfo]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="BMS_tblUserWiseMenuAssign" EntityType="LILI_BMSModel.Store.BMS_tblUserWiseMenuAssign" store:Type="Tables" store:Schema="dbo" store:Name="BMS_tblUserWiseMenuAssign">
+      <DefiningQuery>SELECT 
+      [BMS_tblUserWiseMenuAssign].[Id] AS [Id], 
+      [BMS_tblUserWiseMenuAssign].[UserId] AS [UserId], 
+      [BMS_tblUserWiseMenuAssign].[MenuId] AS [MenuId], 
+      [BMS_tblUserWiseMenuAssign].[IUser] AS [IUser], 
+      [BMS_tblUserWiseMenuAssign].[EUser] AS [EUser], 
+      [BMS_tblUserWiseMenuAssign].[IDate] AS [IDate], 
+      [BMS_tblUserWiseMenuAssign].[EDate] AS [EDate]
+      FROM [dbo].[BMS_tblUserWiseMenuAssign] AS [BMS_tblUserWiseMenuAssign]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="BusinessSumGroup" EntityType="LILI_BMSModel.Store.BusinessSumGroup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CommonConfigType" EntityType="LILI_BMSModel.Store.CommonConfigType" store:Type="Tables" store:Schema="dbo" store:Name="CommonConfigType">
+      <DefiningQuery>SELECT 
+      [CommonConfigType].[TableName] AS [TableName], 
+      [CommonConfigType].[DisplayName] AS [DisplayName], 
+      [CommonConfigType].[SortOrder] AS [SortOrder], 
+      [CommonConfigType].[ModuleId] AS [ModuleId]
+      FROM [dbo].[CommonConfigType] AS [CommonConfigType]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Level1" EntityType="LILI_BMSModel.Store.Level1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Level2" EntityType="LILI_BMSModel.Store.Level2" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Level3" EntityType="LILI_BMSModel.Store.Level3" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Level4" EntityType="LILI_BMSModel.Store.Level4" store:Type="Tables" store:Schema="dbo" store:Name="Level4">
+      <DefiningQuery>SELECT 
+      [Level4].[Level4] AS [Level4], 
+      [Level4].[Level4Name] AS [Level4Name], 
+      [Level4].[Designation] AS [Designation], 
+      [Level4].[Level5] AS [Level5], 
+      [Level4].[Business] AS [Business], 
+      [Level4].[DCRCode] AS [DCRCode]
+      FROM [dbo].[Level4] AS [Level4]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Level5" EntityType="LILI_BMSModel.Store.Level5" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Product" EntityType="LILI_BMSModel.Store.Product" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserBusiness" EntityType="LILI_BMSModel.Store.UserBusiness" store:Type="Tables" store:Schema="dbo" store:Name="UserBusiness">
+      <DefiningQuery>SELECT 
+      [UserBusiness].[UserId] AS [UserId], 
+      [UserBusiness].[Business] AS [Business]
+      FROM [dbo].[UserBusiness] AS [UserBusiness]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UserManager" EntityType="LILI_BMSModel.Store.UserManager" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Budget_Entry.dbo.BMS_tblMenuList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="BMS_tblMenuList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ModuleName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MenuName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ParentMenuName" Type="varchar" MaxLength="100" />
+    <Property Name="PageUrl" Type="varchar" MaxLength="250" />
+    <Property Name="ControllerName" Type="varchar" MaxLength="250" />
+    <Property Name="ActionName" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Budget_Entry.dbo.BMS_tblOrganizationInformation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Budget_Entry.dbo.BMS_tblUserInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="BMS_tblUserInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UserPassword" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EmpId" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Budget_Entry.dbo.BMS_tblUserWiseMenuAssign' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="BMS_tblUserWiseMenuAssign">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="MenuId" Type="int" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Budget_Entry.dbo.BudgetYear' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Budget_Entry.dbo.Business' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="BusinessSumGroup">
+    <Key>
+      <PropertyRef Name="BusiSumGroupCode" />
+    </Key>
+    <Property Name="Business" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="BusiSumGroupCode" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="BusiSumGroupName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SubGroupCode" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="ReportOrder" Type="int" Nullable="false" />
+    <Property Name="Active" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="Total" Type="varchar" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Budget_Entry.dbo.CommonConfigType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CommonConfigType">
+    <Key>
+      <PropertyRef Name="TableName" />
+      <PropertyRef Name="DisplayName" />
+      <PropertyRef Name="ModuleId" />
+    </Key>
+    <Property Name="TableName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DisplayName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="ModuleId" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Budget_Entry.dbo.Depot' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Budget_Entry.dbo.GetSales' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Level1">
+    <Key>
+      <PropertyRef Name="Level1" />
+      <PropertyRef Name="Business" />
+      <PropertyRef Name="DepotCode" />
+      <PropertyRef Name="Period" />
+    </Key>
+    <Property Name="Level1" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Level1Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Base" Type="varchar" MaxLength="80" />
+    <Property Name="Designation" Type="varchar" Nullable="false" MaxLength="35" />
+    <Property Name="Level2" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="StaffId" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Business" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="DepotCode" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="City" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="Active" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="Period" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="Institution" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="SubBusinessCode" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Level2">
+    <Key>
+      <PropertyRef Name="Level2" />
+      <PropertyRef Name="DepotCode" />
+      <PropertyRef Name="Period" />
+    </Key>
+    <Property Name="Level2" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Level2Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Designation" Type="varchar" Nullable="false" MaxLength="35" />
+    <Property Name="Level3" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="DepotCode" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="Business" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="StaffId" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="City" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="Period" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="Institution" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="SubBusinessCode" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="base" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Level3">
+    <Key>
+      <PropertyRef Name="Level3" />
+      <PropertyRef Name="Business" />
+    </Key>
+    <Property Name="Level3" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="Level3Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Designation" Type="varchar" Nullable="false" MaxLength="35" />
+    <Property Name="Region" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Business" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="Level4" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="StaffId" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="SubBusinessCode" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="DCRCode" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Budget_Entry.dbo.Level4' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Level4">
+    <Key>
+      <PropertyRef Name="Level4" />
+      <PropertyRef Name="Level4Name" />
+      <PropertyRef Name="Designation" />
+      <PropertyRef Name="Level5" />
+      <PropertyRef Name="Business" />
+      <PropertyRef Name="DCRCode" />
+    </Key>
+    <Property Name="Level4" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="Level4Name" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="Designation" Type="varchar" Nullable="false" MaxLength="35" />
+    <Property Name="Level5" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="Business" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="DCRCode" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Level5">
+    <Key>
+      <PropertyRef Name="Level5" />
+    </Key>
+    <Property Name="Level5" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="Level5Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Designation" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Business" Type="varchar" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductCode" />
+    </Key>
+    <Property Name="ProductCode" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="SMSCODE" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="ProductName" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="PackSize" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="BrandCode" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="ProductCategory" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="GroupCode" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="PCCC" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="UnitPrice" Type="numeric" Nullable="false" Scale="4" />
+    <Property Name="DistDiscount" Type="numeric" Nullable="false" Scale="4" />
+    <Property Name="VAT" Type="numeric" Nullable="false" Scale="4" />
+    <Property Name="MRP" Type="numeric" Nullable="false" Scale="4" />
+    <Property Name="Business" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="Active" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="DiscountStatus" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="BusiSumGroupCode" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="Carton" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="RatePerCarton" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="EffectedDate" Type="datetime" Nullable="false" />
+    <Property Name="SubBusinessCode" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="ProductName1" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="Show" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="PrincipalCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ReportGroupCode" Type="varchar" Nullable="false" MaxLength="5" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Budget_Entry.dbo.UserBusiness' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="UserBusiness">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="Business" />
+    </Key>
+    <Property Name="UserId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Business" Type="varchar" Nullable="false" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="UserManager">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="UserId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="JoiningDate" Type="datetime" />
+    <Property Name="Designation" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="grpAdd" Type="bit" Nullable="false" />
+    <Property Name="grpSup" Type="bit" Nullable="false" />
+    <Property Name="grpISup" Type="bit" Nullable="false" />
+    <Property Name="grpUser" Type="bit" Nullable="false" />
+    <Property Name="Active" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="InvoiceFormat" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="DefaultBusiness" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="UserLevel" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="LevelCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Subbusinesscode" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="staffid" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="UserLocation" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="UserLevelMKT" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,166 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.ArticleModel
+@using (Ajax.BeginForm("Edit", "Article", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "EditArticleSuccess",
+        }, new { @id = "editArticleForm" }))
+{
+    
+    <div class="row-fluid form-horizontal">
+        <div class="popup-widget-box clearfix">
+            <div class="content">
+                @Html.ValidationSummary(true)
+                <div id="updateTargetId" class="alert alert-info" style="display: none;">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.ArticleCode)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.ArticleCode, new { @style = "text-align: left !important;" })
+                    @Html.ValidationMessageFor(model => model.ArticleCode)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.ArticleName)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.ArticleName, new { @style = "text-align: left !important;" })
+                    @Html.ValidationMessageFor(model => model.ArticleName)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.GenericName)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.GenericName, new { @style = "text-align: left !important;" })
+                    @Html.ValidationMessageFor(model => model.GenericName)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.HSCode)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.HSCode)
+                    @Html.ValidationMessageFor(model => model.HSCode)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.BaseUnit)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.BaseUnit)
+                    @Html.ValidationMessageFor(model => model.BaseUnit)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.SamplingUnit)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.SamplingUnit)
+                    @Html.ValidationMessageFor(model => model.SamplingUnit)
+                </div>
+            </div>
+
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.UnitPrice)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.UnitPrice)
+                    @Html.ValidationMessageFor(model => model.UnitPrice)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.DutyStructure)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.DutyStructure)
+                    @Html.ValidationMessageFor(model => model.DutyStructure)
+                </div>
+            </div>
+
+@*            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.SubCategoryId)
+                </span>
+                <div class="controls">
+                    @Html.DropDownList("SubCategoryId", Model.ddlArticleSubCategory)
+                    @Html.ValidationMessageFor(model => model.SubCategoryId)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.OrganizationId)
+                </span>
+                <div class="controls">
+                    @Html.DropDownList("OrganizationId", Model.ddlOrganization)
+                    @Html.ValidationMessageFor(model => model.OrganizationId)
+                </div>
+            </div>*@
+
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Origin)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.Origin)
+                    @Html.ValidationMessageFor(model => model.Origin)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.MOQ)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.MOQ)
+                    @Html.ValidationMessageFor(model => model.MOQ)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.LeadTime)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.LeadTime)
+                    @Html.ValidationMessageFor(model => model.LeadTime)
+                </div>
+            </div>
+
+
+
+            <div class="hr">
+            </div>
+            <div class="content pull-right">
+                <button type="submit" class="btn btn-mini btn-primary" id="btnEditArticle" name="btnEditArticle">
+                    <i class="icon-save bigger-125"></i>Edit</button>
+                &nbsp;&nbsp;
+                <button type="button" class="btn btn-mini btn-primary" id="btnCancelArticle" name="btnCancelArticle"
+                    value="Cancel" onclick=" $($('#editArticleDialog').dialog('close'));">
+                    <i class="icon-remove bigger-125"></i>Cancel</button>
+            </div>
+        </div>
+    </div>
+}

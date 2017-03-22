@@ -1,0 +1,35 @@
+E:\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Release\MFS_IWM.UnitTests.dll.config
+E:\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Release\MFS_IWM.UnitTests.dll
+E:\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Release\MFS_IWM.UnitTests.pdb
+E:\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Release\Moq.dll
+E:\LILI_BMS\Source\LILI_BMS.UnitTests\obj\Release\MFS_IWM.UnitTests.dll
+E:\LILI_BMS\Source\LILI_BMS.UnitTests\obj\Release\MFS_IWM.UnitTests.pdb
+E:\LILI_BMS\Source\LILI_BMS.UnitTests\obj\Release\LILI_BMS.UnitTests.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Release\MFS_IWM.UnitTests.dll.config
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Release\MFS_IWM.UnitTests.dll
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Release\MFS_IWM.UnitTests.pdb
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.UnitTests\bin\Release\Moq.dll
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.UnitTests\obj\Release\ResolveAssemblyReference.cache
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.UnitTests\obj\Release\MFS_IWM.UnitTests.dll
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.UnitTests\obj\Release\MFS_IWM.UnitTests.pdb
+D:\Rasel\Projects\Budget\Source\LILI_BMS.UnitTests\bin\Release\MFS_IWM.UnitTests.dll.config
+D:\Rasel\Projects\Budget\Source\LILI_BMS.UnitTests\bin\Release\MFS_IWM.UnitTests.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.UnitTests\bin\Release\MFS_IWM.UnitTests.pdb
+D:\Rasel\Projects\Budget\Source\LILI_BMS.UnitTests\bin\Release\Moq.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.UnitTests\obj\Release\MFS_IWM.UnitTests.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.UnitTests\obj\Release\MFS_IWM.UnitTests.pdb
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.UnitTests\bin\Release\MFS_IWM.UnitTests.dll.config
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.UnitTests\bin\Release\MFS_IWM.UnitTests.dll
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.UnitTests\bin\Release\MFS_IWM.UnitTests.pdb
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.UnitTests\bin\Release\Moq.dll
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.UnitTests\obj\Release\ResolveAssemblyReference.cache
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.UnitTests\obj\Release\MFS_IWM.UnitTests.dll
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.UnitTests\obj\Release\MFS_IWM.UnitTests.pdb
+D:\Rasel\Projects\Budget\Source\LILI_BMS.UnitTests\obj\Release\LILI_BMS.UnitTests.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.UnitTests\bin\Release\MFS_IWM.UnitTests.dll.config
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.UnitTests\bin\Release\MFS_IWM.UnitTests.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.UnitTests\bin\Release\MFS_IWM.UnitTests.pdb
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.UnitTests\bin\Release\Moq.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.UnitTests\obj\Release\MFS_IWM.UnitTests.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.UnitTests\obj\Release\MFS_IWM.UnitTests.pdb
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.UnitTests\obj\Release\LILI_BMS.UnitTests.csprojResolveAssemblyReference.cache

@@ -1,0 +1,756 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.InvoiceModel
+@using (Ajax.BeginForm("Create", "Invoice", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddInvoiceSuccess",
+        }, new { @id = "addInvoiceForm" }))
+{
+
+    <div class="row-fluid form-horizontal">
+        <div class="left popup-widget-box clearfix">
+            <div class="content">
+                @Html.ValidationSummary(true)
+                <div id="updateTargetId" class="alert alert-info" style="display: none;">
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.CustomerId)
+                    </span>
+                    <span class="span8">
+                        @Html.DropDownList("CustomerId", Model.ddlCustomer, new { @class = "clsCustomer" })
+                        @Html.ValidationMessageFor(model => model.CustomerId)
+                    </span>
+                </div>
+                <div class="span6 pull-left">           
+                    <span class="span4">
+                            @Html.LabelFor(model => model.Organization)
+                    </span>
+                    <span class="span8">
+                        @Html.DropDownList("OrganizationId", Model.ddlOrganization, new { @class = "clsOrganization" })
+                        @Html.ValidationMessageFor(model => model.OrganizationId)
+                    </span>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.CustomerAddress)
+                    </span>
+                    <span class="span8">
+                        @Html.TextBoxFor(model => model.CustomerAddress, new { Style = "background:#e0eee0", @disabled = "disabled" })  
+                    </span>
+                </div>
+                <div class="span6 pull-left">
+                    <span class="span4">
+                            @Html.LabelFor(model => model.InvoiceType)
+                    </span>
+                    <span class="span8">
+                        @Html.DropDownList("InvoiceTypeId", Model.ddlInvoiceType, new { @class = "clsInvoiceType" })
+                        @Html.ValidationMessageFor(model => model.InvoiceType)
+                    </span>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.Phone)
+                    </span>
+                    <span class="span8">
+                        @Html.TextBoxFor(model => model.Phone, new { Style = "background:#F0F0F0", @disabled = "disabled" })  
+                    </span>
+                </div>
+                <div class="span6 pull-left">
+                    <span class="span4">
+                        @Html.LabelFor(model => model.InvoiceNo)
+                    </span>
+                    <span class="span8">
+                        @Html.TextBoxFor(model => model.InvoiceNo, new { @style = "text-align: left !important;" })
+                        @Html.ValidationMessageFor(model => model.InvoiceNo)
+                    </span>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.Email)
+                    </span>
+                    <span class="span8">
+                        @Html.TextBoxFor(model => model.Email, new { Style = "background:#F0F0F0", @disabled = "disabled" })  
+                    </span>
+                </div>
+                <div class="span6 pull-left">
+                    <span class="span4">
+                        @Html.LabelFor(model => model.InvoiceDate)
+                    </span>
+                    <span class="span8">
+                        @Html.EditorFor(model => model.InvoiceDate)
+                        @Html.ValidationMessageFor(model => model.InvoiceDate)
+                    </span>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.TIN)
+                    </span>
+                    <span class="span8">
+                        @Html.TextBoxFor(model => model.TIN, new { Style = "background:#F0F0F0", @disabled = "disabled" })  
+                    </span>
+                </div>
+                <div class="span6 pull-left">
+                    <span class="span4">
+                            @Html.LabelFor(model => model.PriceTermId)
+                    </span>
+                    <span class="span8">
+                        @Html.DropDownList("PriceTermId", Model.ddlPriceTerm, new { @class = "clsPriceTerm" })
+                        @Html.ValidationMessageFor(model => model.PriceTermId)
+                    </span>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.BIN)
+                    </span>
+                    <span class="span8">
+                        @Html.TextBoxFor(model => model.BIN, new { Style = "background:#F0F0F0", @disabled = "disabled" }) 
+                    </span>
+                </div>
+                <div class="span6 pull-left">
+                    <span class="span4">
+                            @Html.LabelFor(model => model.CurrencyId)
+                    </span>
+                    <span class="span8">
+                        @Html.DropDownList("CurrencyId", Model.ddlCurrency, new { @class = "clsCurrency" })
+                        @Html.ValidationMessageFor(model => model.CurrencyId)
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4">
+                        @Html.LabelFor(model => model.Product)
+                    </span>
+                    <span class="span4 pull-left">
+                        @Html.TextBoxFor(model => model.Product, new { @style = "text-align: left !important;" })
+                        @Html.ValidationMessageFor(model => model.Product)
+                    </span>
+                    <span class="span4 pull-right">
+                            <button type="button" class="btn btn-mini btn-primary" id="btnAddProductName" name="btnAddProductName"
+                            value="Cancel" onclick="AddRow()">
+                            <i class="icon-edit bigger-125"></i>Add to List</button>
+                    </span>
+                </div>
+                
+                <div class="span4 pull-left">
+                    <span class="span6">
+                        @*@Html.LabelFor(model => model.InvoiceDate)*@
+                    </span><span class="span6">
+                        @*@Html.EditorFor(model => model.InvoiceDate)
+                        @Html.ValidationMessageFor(model => model.InvoiceDate)*@
+                    </span>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div id="InvoiceDetailsGridZone">
+                    <div id="InvoiceDetailsKendoGrid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="hr"></div>
+            &nbsp; 
+            &nbsp;
+            
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.ShipmentCountryName)
+                    </span>
+                    <span class="span8">
+                        @Html.DropDownList("ShipmentFromCountryId", Model.ddlShipmentCountry, new { @class = "clsShipmentCountry" })
+                        @Html.ValidationMessageFor(model => model.ShipmentCountryName)
+                    </span>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4">
+                        @Html.LabelFor(model => model.PortName)
+                    </span>
+                    <span class="span8">
+                        @Html.DropDownList("PortOfDischargeId", Model.ddlPortOfDischarge, new { @class = "clsPortOfDischarge" })
+                        @Html.ValidationMessageFor(model => model.PortName)
+                    </span>
+                </div>
+                <div class="span6 pull-left">
+                    <span class="span8">
+                            @Html.LabelFor(model => model.OtherCharges)
+                    </span>
+                        <span class="span4">
+                            @Html.TextBoxFor(model => model.OtherCharges, new { @style = "background-color:Black !important; text-align: right; color:white; font-weight: bold;" })
+                            @Html.ValidationMessageFor(model => model.OtherCharges)
+                    </span>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.LCNo)
+                    </span>
+                    <span class="span8">
+                        @Html.TextBoxFor(model => model.LCNo)  
+                        @Html.ValidationMessageFor(model => model.LCNo)                    
+                    </span>
+                </div>
+                <div class="span6 pull-left">   
+                    <span class="span8">
+                        @Html.LabelFor(model => model.NET)
+                    </span>
+                    <span class="span4">
+                        @Html.TextBoxFor(model => model.NET, new { @style = "background-color:Black !important; text-align: right; color:white; font-weight: bold;", @readonly = true })
+                    </span>
+                </div>
+            </div>
+
+            <div class="row-fluid ">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.LCDate)
+                    </span>
+                    <span class="span8">
+                        @Html.EditorFor(model => model.LCDate)
+                        @Html.ValidationMessageFor(model => model.LCDate)
+                        </span>
+                </div>
+            </div>    
+
+            <div class="row-fluid ">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.LDS)
+                    </span>
+                    <span class="span8">
+                        @Html.EditorFor(model => model.LDS)
+                        @Html.ValidationMessageFor(model => model.LDS)
+                        </span>
+                </div>
+                  <div class="span6 pull-left">
+                    <span class="span8">
+                        @Html.LabelFor(model => model.CommCalcTermId)
+                    </span>
+                    <span class="span4">
+                        @Html.DropDownList("CommCalcTermId", Model.ddlCommissionTerm, new { @class = "clsCommCalcTerm" })
+                        @Html.ValidationMessageFor(model => model.CommissionCalculationTerm)
+                    </span>
+                </div>
+            </div>        
+    
+            <div class="row-fluid ">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.LDE)
+                    </span>
+                    <span class="span8">
+                        @Html.EditorFor(model => model.LDE)
+                        @Html.ValidationMessageFor(model => model.LDE)
+                        </span>
+                </div>
+                <div class="span6 pull-left">   
+                    <span class="span8">
+                            @Html.LabelFor(model => model.CommissionPer)
+                    </span>
+                    <span class="span4">
+                        @Html.TextBoxFor(model => model.CommissionPer, new { @style = "background-color:Black !important; text-align: right; color:white; font-weight: bold;" })
+                        @Html.ValidationMessageFor(model => model.CommissionPer)
+                    </span>
+                </div>
+            </div>       
+    
+            <div class="row-fluid ">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.ShipmentDate)
+                    </span>
+                    <span class="span8">
+                        @Html.EditorFor(model => model.ShipmentDate)
+                        @Html.ValidationMessageFor(model => model.ShipmentDate)
+                        </span>
+                </div>
+                <div class="span6 pull-left">
+                    <span class="span8">
+                            @Html.LabelFor(model => model.Commission)
+                    </span>
+                    <span class="span4">
+                        @Html.TextBoxFor(model => model.Commission, new { @style = "background-color:Black !important; text-align: right; color:white; font-weight: bold;", @readonly = true })
+                    </span>
+                </div>
+            </div>    
+
+            <div class="row-fluid ">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.ArrivalDate)
+                    </span>
+                    <span class="span8">
+                        @Html.EditorFor(model => model.ArrivalDate)
+                        @Html.ValidationMessageFor(model => model.ArrivalDate)
+                        </span>
+                </div>
+            </div>    
+        
+            <div class="row-fluid ">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.CommercialInvoiceNo)
+                    </span>
+                    <span class="span8">
+                        @Html.EditorFor(model => model.CommercialInvoiceNo)
+                        @Html.ValidationMessageFor(model => model.CommercialInvoiceNo)
+                        </span>
+                </div>
+                <div class="span6 pull-left">
+                    <span class="span8">
+                        <button type="button" class="btn btn-mini btn-primary" id="btnCalculateComm" name="btnCalculateComm"
+                        value="Cancel" onclick="CalculateCommission()">
+                        <i class="icon-edit bigger-125"></i>Calculate Commission</button>
+                    </span>
+                </div>
+            </div>        
+    
+            <div class="row-fluid ">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.CommercialInvoiceDate)
+                    </span>
+                    <span class="span8">
+                        @Html.EditorFor(model => model.CommercialInvoiceDate)
+                        @Html.ValidationMessageFor(model => model.CommercialInvoiceDate)
+                        </span>
+                </div>
+            </div>       
+    
+            <div class="row-fluid ">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.BoLNo)
+                    </span>
+                    <span class="span8">
+                        @Html.EditorFor(model => model.BoLNo)
+                        @Html.ValidationMessageFor(model => model.BoLNo)
+                        </span>
+                </div>
+            </div>    
+    
+            <div class="row-fluid">
+            <div class="hr"> </div>
+                <div class="content pull-right">
+                    <button type="button" class="btn btn-mini btn-primary" id="btnPrepsreInvoiceDetailList" name="btnPrepsreInvoiceDetailList"
+                        onclick="PreSaveInvoiceDetails()">
+                        <i class="icon-save bigger-125"></i>Prepare List</button>
+
+                    <button type="submit" class="btn btn-mini btn-primary" id="btnAddInvoice" name="btnAddInvoice">
+                        <i class="icon-save bigger-125"></i>Save</button>
+                        &nbsp;&nbsp;
+                    <button type="button" class="btn btn-mini btn-primary" id="btnCancelInvoice" name="btnCancelInvoice"
+                        value="Cancel" onclick=" $($('#addInvoiceDialog').dialog('close'));">
+                            <i class="icon-remove bigger-125"></i>Cancel</button>
+                </div>
+            </div>
+        </div>
+            </div>
+    
+}
+@*<script src="@Url.Content("~/Scripts/App/Invoice.js")" type="text/javascript"></script>*@
+
+
+
+@*  Invoice Detail Kendo Grid start *@
+<script type="text/javascript">
+    // Kendo Data Source
+    var dataSource = new kendo.data.DataSource({
+        pageSize: 20,
+        height: 400,
+        //batch: true,
+        //transport: { read: {} },
+        schema: {
+            model: {
+                id: "Id",
+                fields: {
+                ProductId: { type: "number", editable: false },
+                ProductName: { type: "string", editable: false },
+                GenericName: { type: "string", editable: false },
+                HSCode: { type: "string", editable: false },
+                Origin: { type: "string", editable: false },
+                SellingUnit: { type: "string", editable: false },
+                UnitPrice: { type: "number", validation: { required: true, min: 1, max: 9999999999} },
+                Quantity: { type: "number",  editable: true, validation: { required: true, min: 1, max: 9999999999} },
+                SubTotal: { type: "number", locked: true, validation: { max: 9999999999} }
+            }
+        }
+    },
+    aggregate: 
+    [
+        { field: "SubTotal", aggregate: "sum" } //,
+        //{ field: "Commission", aggregate: "sum" }
+    ]
+});
+
+// Kendo Krid Initialize
+$("#InvoiceDetailsKendoGrid").kendoGrid({
+    dataSource: dataSource,
+    height: 300,
+    filterable: false,
+    groupable: true,
+    sortable: true,
+    resizable: true,
+    //editable: "incell",
+    columnMenu: false,
+    //scrollable: true,
+    columns: [
+                { field: "ProductId", title: "Product Id", width: 100, hidden: true, filterable: false, sortable: false, locked: true },
+                { field: "ProductName", title: "Product Name", width: 200, filterable: false, sortable: false, locked: true },
+                { field: "GenericName", title: "Generic Name", width: 150, filterable: false, sortable: false, locked: true },
+                { field: "HSCode", title: "HS Code", width: 80, filterable: false, sortable: false, locked: true },
+                { field: "Origin", title: "Origin", width: 80, filterable: false, sortable: false, locked: true },
+                { field: "SellingUnit", title: "Unit", width: 80, filterable: false, sortable: false, locked: true },
+                { field: "UnitPrice", title: "Unit Price", editable: true, format: "{0:n}", width: 80, sortable: false, locked: false, groupable: false, attributes: { style: "text-align:right;"} },
+                { field: "Quantity", title: "Quantity", editable: true, format: "{0:n}", width: 80, locked: false, sortable: false, groupable: false, attributes: { style: "text-align:right;"} },
+                { field: "SubTotal", editor: function (container, options) { $("<span>" + options.model.SubTotal + "</span>").appendTo(container); }, title: "Sub Total", format: "{0:n}", sortable: false, filterable: false, groupable: false, width: 80, attributes: { style: "text-align:right;" }, footerTemplate: "<div style='float: right'>#= sum #</div>" },
+                {command: "destroy", title: " ", width: 100 }
+            ],
+    navigatable: false
+    , editable: true
+    , save: function (data) {
+        if (data.values.Quantity) {
+            var test = data.model.set("SubTotal", (data.model.UnitPrice * data.values.Quantity));
+
+            var dataSource = this.dataSource;
+            data.model.one("change", function () {
+                dataSource.one("change", function () {
+                    dataSource.aggregates().SubTotal.sum
+                });
+                dataSource.fetch();
+            });
+        }
+
+        else if (data.values.UnitPrice) {
+            var test = data.model.set("SubTotal", (data.model.Quantity * data.values.UnitPrice));
+            //var test2 = data.model.set("Commission", (data.model.SubTotal * data.model.CommissionPer / 100));
+        }
+        // Else If End here 
+    }
+});
+
+// For Header Formatting
+//function onDataBound(arg) {
+
+//    //    var myElem = document.getElementById('trParentHeaderAdd');
+//    //    if (myElem == null) {
+
+//    //        $("#InvoiceDetailsKendoGrid").find("th.k-header").parent()
+//    //            .after("<tr id='trParentHeaderAdd' >  <th colspan='4' class='k-header' style='background-color:tomato;'></th>   <th colspan='4' class='k-header' style='background-color:tomato; font-weight: bold; font-size: 14px;'>January</th>     <th colspan='4' class='k-header' style='background-color:tomato; font-weight: bold; font-size: 14px;'>February</th>      <th colspan='4' class='k-header' style='background-color:tomato; font-weight: bold; font-size: 14px;'>March</th>        <th colspan='4' class='k-header' style='background-color:tomato; font-weight: bold; font-size: 14px;'>April</th>      <th colspan='4' class='k-header' style='background-color:tomato; font-weight: bold; font-size: 14px;'>May</th>        <th colspan='4' class='k-header' style='background-color:tomato; font-weight: bold; font-size: 14px;'>June</th>     <th colspan='4' class='k-header' style='background-color:tomato; font-weight: bold; font-size: 14px;'>July</th>      <th colspan='4' class='k-header' style='background-color:tomato; font-weight: bold; font-size: 14px;'>August</th>     <th colspan='4' class='k-header'style='background-color:tomato; font-weight: bold; font-size: 14px;'>September</th>     <th colspan='4' class='k-header' style='background-color:tomato; font-weight: bold; font-size: 14px;'>October</th>   <th colspan='4' class='k-header'style='background-color:tomato; font-weight: bold; font-size: 14px;'>November</th>     <th colspan='4' class='k-header' style='background-color:tomato; font-weight: bold; font-size: 14px;'>December</th>    <th colspan='1' class='k-header' align='centre'></th>   </tr>");
+//    //    }
+
+//}
+//Invoice Detail Kendo Grid End Here 
+//-----------------------------------------------------
+</script>
+
+@*Add New Row to Grid*@
+<script type="text/javascript">
+    // Add New Row To Grid
+    function AddRow()
+        {
+        var invoiceDetGrid = $('#InvoiceDetailsKendoGrid').data('kendoGrid');
+        var dataSource = invoiceDetGrid.dataSource;
+
+        var product = $('#Product').val();
+
+        $.get(
+                "@Url.Action("AddProductToGrid")",
+                {'product':product},
+                function(jresult){
+                    if(jresult != '')
+                    {
+                        if (Find_Grid_Item(jresult[0].Id))
+                        {
+                            alert('This Element is Allready Exists');
+                            return;
+                        }
+                        //alert (jresult[0].Id);
+                        dataSource.add({ ProductId: jresult[0].Id, 
+                            ProductName: jresult[0].ProductName, GenericName: jresult[0].GenericName, HSCode: jresult[0].HSCode, 
+                            Origin: jresult[0].Origin, SellingUnit: jresult[0].SellingUnit,
+                            UnitPrice: jresult[0].UnitPrice,  
+                            Quantity: 1, 
+                            SubTotal: jresult[0].UnitPrice,  
+                            Discontinued: false 
+                            });
+                        }
+                        else{
+                            $("#message").show();
+                            $('#message').text(data).css({ 'color':'red' });
+                            $("#message").delay(3000).hide();
+                        }
+                        $('#Product').val('');
+                        //Calculate_Grid_Total();
+                    }
+                );
+        }
+    // Add New Row To Grid End Here 
+
+
+    function Find_Grid_Item(itemId)
+    {
+            //alert (itemId);
+        var rowNo =0;
+        var gridData = $("#InvoiceDetailsKendoGrid").data("kendoGrid").dataSource.data();
+
+        for (var index = 0; index < gridData.length; index++) 
+        {
+            
+            var currentDataItem = gridData[index];
+            if (itemId==currentDataItem.ProductId)
+            {
+                rowNo=index;
+                return true;
+            }
+        }
+    }
+
+        $('#OtherCharges').on('change',function(){
+           
+        var TotalSum=0.00, NetSum=0.00, OtherCharges=0.00;  
+        TotalSum =  $('#Total').val();
+        OtherCharges =  $('#OtherCharges').val();
+        NetSum = parseFloat(TotalSum) + parseFloat(OtherCharges);
+        $('#NET').val(NetSum);
+
+          });
+
+
+    function Calculate_Grid_Total() 
+    {
+        
+        var TotalSum=0.00, NetSum=0.00, OtherCharge=0.00;
+        var gridData = $("#InvoiceDetailsKendoGrid").data("kendoGrid").dataSource.data();
+
+        for (var i = 1; i < gridData.length; i++)
+        {
+            var currentDataItem = gridData[i];
+            TotalSum = TotalSum+currentDataItem.SubTotal;           
+        }
+        $('#Total').val(TotalSum);
+        OtherCharge =  $('#OtherCharges').val();
+        NetSum = TotalSum + OtherCharge;
+        $('#NET').val(NetSum);
+    }
+    // Add New Row To Grid End Here 
+
+
+</script>
+
+@*Calculate Commission *@
+<script type="text/javascript">
+    // CalculateCommission
+    function CalculateCommission() {
+        
+        var commCalcTypeId = $('#CommCalcTermId').val();
+        var commPercent = $('#CommissionPer').val();
+        var commissionTotal = 0.00;
+        
+        var totalQuantity = $('#NET').val();
+        var totalSum = $('#Total').val();
+        var net = $('#NET').val();
+
+        if (commCalcTypeId == 1) {
+            commissionTotal = parseFloat(commPercent) * parseFloat(totalSum) / 100;
+        }
+        else if (commCalcTypeId == 2) {
+            commissionTotal = parseFloat(commPercent) * parseFloat(net) / 100;
+        }
+        else {
+            commissionTotal = parseFloat(commPercent) * parseFloat(totalQuantity);
+        }
+        alert(commissionTotal);
+        $('#Commission').val(commissionTotal);
+                
+        }
+    // Calculate Commission End Here 
+
+
+
+
+        $('#CommissionPer').on('change', function () {
+
+            var commCalcTypeId = $('#CommCalcTermId').val();
+            var commPercent = $('#CommissionPer').val();
+            var commissionTotal = 0.00;
+
+            var totalQuantity = $('#NET').val();
+            var totalSum = $('#Total').val();
+            var net = $('#NET').val();
+
+            if (commCalcTypeId == 1) {
+                commissionTotal = parseFloat(commPercent) * parseFloat(totalSum)/100;
+            }
+            else if (commCalcTypeId == 2) {
+                commissionTotal = parseFloat(commPercent) * parseFloat(net)/100;
+            }
+            else {
+                commissionTotal = parseFloat(commPercent) * parseFloat(totalQuantity);
+            }
+            alert(commissionTotal);
+            $('#Commission').val(commissionTotal);
+
+        });
+
+</script>
+
+@*Save Grid Data*@
+<script type="text/javascript">
+
+    function SaveInvoiceDetails() 
+    {
+        //var TotalSum = 0, NetSum = 0, OtherCharge = 0;
+        var TotalSum = 0.00, NetSum = 0.00, OtherCharge = 0.00;
+
+        //getting json data from kendo Grid
+        var gridData = $("#InvoiceDetailsKendoGrid").data("kendoGrid").dataSource.data();
+        var invoiceDetailViewModelList = [];
+
+        //loop through each json data from kendo Grid
+        for (var i = 0; i < gridData.length; i++) {
+
+            var currentDataItem = gridData[i];
+
+            var invoiceDetailViewModel = {};
+            invoiceDetailViewModel.InvoiceId= "";    //currentDataItem.InvoiceId;
+            invoiceDetailViewModel.ProductId = currentDataItem.ProductId;
+            invoiceDetailViewModel.UnitPrice = currentDataItem.UnitPrice;
+            invoiceDetailViewModel.Quantity = currentDataItem.Quantity;
+            invoiceDetailViewModel.SubTotal = currentDataItem.SubTotal;
+            invoiceDetailViewModelList.push(invoiceDetailViewModel);
+
+            TotalSum = TotalSum + currentDataItem.SubTotal;
+        }
+
+        $('#Total').val(TotalSum);
+        NetSum = TotalSum;
+        OtherCharge = $('#OtherCharges').val();
+         $('#NET').val(NetSum);
+
+        var postUrl = '@Url.Content("~/PCV/Invoice/SetInvoiceDetailsListForSave")';
+        //alert(postUrl);
+        var paramValue = JSON.stringify({ lstInvoiceDetails: invoiceDetailViewModelList });
+        alert(paramValue);
+
+     //Post json data from kendo Grid to Controller
+        $.ajax({
+            url: postUrl,
+            type: 'POST',
+            dataType: 'json',
+            data: paramValue,
+            contentType: 'application/json; charset=utf-8',
+            success: function (result) {
+                console.log(result);
+            },
+            error: function (objAjaxRequest, strError) {
+                var respText = objAjaxRequest.responseText;
+                console.log(respText);
+            }
+        });
+    }
+
+    function PreSaveInvoiceDetails() {
+        
+        SaveInvoiceDetails();
+
+    }
+</script>
+
+@*On Document Ready*@
+<script type="text/javascript">
+$(document).ready(function () {
+
+    $("#Product").kendoAutoComplete({
+        dataTextField: "ProductCode",
+            dataSource: {
+                transport: {
+                    read: {
+                        url: "/PCV/Invoice/PopulateProductAutoComplete/",
+                        serverPaging: true,
+                        type: "POST",
+                        data: {
+                        // json: JSON.stringify([{"ProductCode": "A001"}, {"ProductCode": "A002"}] )
+                    }
+                }
+            }
+        }
+    });
+
+//    $("input:submit, input:button, button", ".jqUI").button();
+//    $('.date').datepicker({ dateFormat: "dd/mm/yy" });
+
+});
+
+</script>
+
+
+
+<script type="text/javascript">
+    $(function () {
+        $('#CustomerId').on('change',function(){
+            
+            $('#CustomerAddress').val("");
+            $('#Phone').val("");
+            $('#Email').val("");
+            $('#TIN').val("");
+            $('#BIN').val("");
+
+            var custId = $(this).val();
+
+            if(custId == "0")
+            {
+               return;
+            }
+            $.get(
+                    "@Url.Action("GetCustomerDetails")",
+                    {'id':custId},
+                    function(jresult){
+                        if(jresult != ''){
+                             $('#CustomerAddress').val(jresult[0].Address1);
+                             $('#Phone').val(jresult[0].Phone);
+                             $('#Email').val(jresult[0].Email);
+                             $('#TIN').val(jresult[0].TIN);
+                             $('#BIN').val(jresult[0].BIN);
+                        }
+                        else{
+                            $("#message").show();
+                            $('#message').text(data).css({ 'color':'red' });
+                            $("#message").delay(3000).hide();
+                        }
+                    }
+                );
+
+        });
+    });
+
+</script>
+

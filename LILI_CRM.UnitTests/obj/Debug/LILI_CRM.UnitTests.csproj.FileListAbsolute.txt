@@ -1,0 +1,45 @@
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll.config
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.pdb
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.UnitTests\bin\Debug\Moq.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.pdb
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll.config
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.pdb
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.UnitTests\bin\Debug\Moq.dll
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.dll
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.pdb
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.csprojResolveAssemblyReference.cache
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll.config
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.pdb
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.UnitTests\bin\Debug\Moq.dll
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.dll
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll.config
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.UnitTests\bin\Debug\Moq.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll.config
+E:\Web Application\Trading Intelligent\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.UnitTests\bin\Debug\Moq.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.csprojResolveAssemblyReference.cache
+E:\Web Application\Trading Intelligent\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.pdb
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll.config
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.pdb
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.UnitTests\bin\Debug\Moq.dll
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.dll
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.pdb
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll.config
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.UnitTests\bin\Debug\LILI_CRM.UnitTests.pdb
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.UnitTests\bin\Debug\Moq.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.UnitTests\obj\Debug\LILI_CRM.UnitTests.pdb

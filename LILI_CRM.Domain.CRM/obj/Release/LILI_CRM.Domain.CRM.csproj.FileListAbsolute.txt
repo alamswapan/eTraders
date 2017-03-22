@@ -1,0 +1,60 @@
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.Domain.CRM.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.Domain.CRM.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.CRM.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.infrastructure.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Domain.CRM\bin\Release\LinqKit.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.CRM.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.infrastructure.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.Domain.CRM.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.Domain.CRM.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.CRM.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.infrastructure.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.Domain.CRM\bin\Release\LinqKit.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.CRM.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.infrastructure.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.Domain.CRM.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.Domain.CRM.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.CRM.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.infrastructure.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LinqKit.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.CRM.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.infrastructure.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.csprojResolveAssemblyReference.cache
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.Domain.CRM.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.Domain.CRM.pdb
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.CRM.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.infrastructure.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Domain.CRM\bin\Release\LinqKit.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.CRM.pdb
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.infrastructure.pdb
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.csprojResolveAssemblyReference.cache
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.pdb
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.Domain.CRM.dll
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.Domain.CRM.pdb
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.CRM.dll
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.infrastructure.dll
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LinqKit.dll
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.CRM.pdb
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.infrastructure.pdb
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.dll
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.pdb
+D:\ASP\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.Domain.CRM.dll
+D:\ASP\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.Domain.CRM.pdb
+D:\ASP\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.CRM.dll
+D:\ASP\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.infrastructure.dll
+D:\ASP\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LinqKit.dll
+D:\ASP\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.CRM.pdb
+D:\ASP\Trading Intelligent\LILI_CRM.Domain.CRM\bin\Release\LILI_CRM.DAL.infrastructure.pdb
+D:\ASP\Trading Intelligent\LILI_CRM.Domain.CRM\obj\Release\ResolveAssemblyReference.cache
+D:\ASP\Trading Intelligent\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.dll
+D:\ASP\Trading Intelligent\LILI_CRM.Domain.CRM\obj\Release\LILI_CRM.Domain.CRM.pdb

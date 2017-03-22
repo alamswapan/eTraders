@@ -1,0 +1,102 @@
+﻿@model LILI_CRM.Web.Models.MenuModels
+@*<link href="@Url.Content("~/MenuControl/CSS/superfish.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/MenuControl/JS/hoverIntent.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/MenuControl/JS/superfish.js")" type="text/javascript"></script>*@
+<script type="text/javascript">
+
+</script>
+<style type="text/css">
+    .siteMap
+    {
+        @*float: left;*@
+        font-size: 13px;
+        color: blue;
+        display: inline;
+        margin-left:5px;
+        padding:5px;
+    
+    }
+    .siteMap li
+    {
+        float: left;
+        list-style-type: none;
+        padding-left: 1px;
+        padding-top: .5px;
+        border-width: 0px;
+    }
+    .siteMap span
+    {
+        float: left;
+        list-style-type: none;
+        /*padding-left: 1px;*/
+        border-width: 0px; /*font-weight: bold;*/
+        color: #333333;
+    }
+    .siteMap a, a.Visited
+    {
+        color: #333333;
+        text-decoration: none;
+    }
+</style>
+<div>
+    @Sitemap()
+</div>
+@helper Sitemap()
+    { 
+        string[] rawUrl = Request.RawUrl.TrimStart('/').Split('/');
+        string controllername = string.Empty;
+        string actionname = string.Empty;
+
+        try
+        {
+            controllername = Convert.ToString(ViewContext.ParentActionViewContext.RouteData.Values["controller"]).Trim();
+            actionname = Convert.ToString(ViewContext.ParentActionViewContext.RouteData.Values["action"]).Trim();
+        }
+        catch { }
+
+
+        List<LILI_CRM.Web.Models.Menu> list = Model.MenuList;
+
+
+        //var currentMenu = (LILI_CRM.Web.IWMSecurityService.Menu)HttpContext.Current.Session["CurrentMenu"];
+        LILI_CRM.Web.Models.Menu currentMenu = Model.MenuList.Where(l => !string.IsNullOrEmpty(l.ControllerName) && l.ControllerName.ToLower().Equals(controllername.ToLower()) &&
+            !string.IsNullOrEmpty(l.ActionName) && l.ActionName.ToLower().Equals(actionname.ToLower() + "/")).FirstOrDefault();
+                /*module wise filter does not require, since the list is already filtered with the module*/
+    
+   
+    
+        
+    <div style="width:90%; margin-left:5px;">
+        <ul class="siteMap">
+            @if (currentMenu != null)
+            {
+                // Push into a stack to reverse them 
+                var node = currentMenu;
+                var nodes = new Stack<LILI_CRM.Web.Models.Menu>();
+                while (!string.IsNullOrEmpty(node.ParentMenuName))
+                {
+                    nodes.Push(list.Single(l => l.MenuId == node.ParentMenuId));
+                    node = list.Single(l => l.MenuId == node.ParentMenuId);
+                }
+
+                while (nodes.Count != 0)
+                {
+                    LILI_CRM.Web.Models.Menu n = nodes.Pop(); 
+                <li><a href="@n.PageUrl" title="Description">@n.MenuName</a>&nbsp;&gt;&gt;</li> 
+                } 
+                <li><span>@currentMenu.MenuName</span></li> 
+            }
+            else
+            {
+                string[] module = Request.Url.AbsoluteUri.Split('/');
+                string s = module[3];
+                
+                var pmid = Model.MenuList.Where(m => !string.IsNullOrEmpty(m.ControllerName) && m.ControllerName.ToLower().Equals(s.ToLower())).FirstOrDefault();
+                if (pmid != null)
+                {
+                <li><span>@pmid.ParentMenuName&nbsp;&gt;&gt;@pmid.MenuName</span></li> 
+                }
+            }
+        </ul>
+    </div>
+}

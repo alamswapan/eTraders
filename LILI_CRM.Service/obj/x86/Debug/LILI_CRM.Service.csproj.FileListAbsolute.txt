@@ -1,0 +1,98 @@
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe.config
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.pdb
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Service\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Service\bin\Debug\LinqKit.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.pdb
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.exe
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.pdb
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe.config
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.pdb
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.dll
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Service\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LinqKit.dll
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.pdb
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.exe
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.pdb
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe.config
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.pdb
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.dll
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Service\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LinqKit.dll
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.pdb
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Service\obj\x86\Debug\ResolveAssemblyReference.cache
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.exe
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe.config
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Service\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Service\bin\Debug\LinqKit.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.exe
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe.config
+E:\Web Application\Trading Intelligent\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe
+E:\Web Application\Trading Intelligent\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.Service\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.Service\bin\Debug\LinqKit.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.csprojResolveAssemblyReference.cache
+E:\Web Application\Trading Intelligent\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.exe
+E:\Web Application\Trading Intelligent\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.pdb
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.csprojResolveAssemblyReference.cache
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.pdb
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe.config
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.pdb
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.dll
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Service\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Service\bin\Debug\LinqKit.dll
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.pdb
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.exe
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe.config
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.exe
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Service\bin\Debug\LILI_CRM.Service.pdb
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Service\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Service\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Service\bin\Debug\LinqKit.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.CRM.pdb
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Service\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.csprojResolveAssemblyReference.cache
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.exe
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Service\obj\x86\Debug\LILI_CRM.Service.pdb

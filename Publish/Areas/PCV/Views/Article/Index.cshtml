@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Article";
+    Layout = "~/Areas/PCV/Views/Shared/_Layout.cshtml";
+}
+
+<div id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li><i class="icon-home"></i>Setup <span class="divider"><i class="icon-angle-right"></i></span></li>
+        <li class="active"><a href="#">Article</a></li>
+    </ul>
+    <!--.breadcrumb-->
+</div>
+
+<div id="page-content" class="clearfix">
+    <!--/#page-content-->
+    <div class="row-fluid">
+        <div id="indexPageArticle">
+            <div id="ArticleMessageZone">
+                <div id="message" class="alert alert-success" style="display: none;"></div>
+            </div>
+            <div id="ArticleAddButtonZone" class="row-fluid">
+                @*if ((new AIMS_UNDP.Web.Utility.AppConstant()).IsAddAssigned)
+                {*@
+                    <a class="btn btn-mini btn-primary" id="lnkAddArticle" href='@Url.Content("~/PCV/Article/Create")'>
+                        <i class="icon-plus"></i>Add
+                    </a>
+                @*}*@
+            </div>
+            <br />
+            <div id="ArticleGridZone" class="row-fluid">
+                <div id="ArticleKendoGrid"></div>
+            </div>
+            <div id="ArticlePopUpZone">
+                <div id="addArticleDialog" title="Add Article"></div>
+                <div id="editArticleDialog" title="Edit Article"></div>
+                <div id="deleteArticleDialog" title="Delete Article"></div>
+                <div id="detailsArticleDialog" title="View Article"></div>
+            </div>
+        </div>
+        <script src="@Url.Content("~/Scripts/App/Article.js")" type="text/javascript"></script>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".ui-selectee").removeClass("active");
+        $(".ui-selectee").removeClass("open");
+
+        $(".mnuArticle").addClass("active");
+        $(".mnuArticle").parent().parent().addClass("active").addClass("open");
+        $(".mnuArticle").parent().parent().addClass("open");
+    });
+</script>

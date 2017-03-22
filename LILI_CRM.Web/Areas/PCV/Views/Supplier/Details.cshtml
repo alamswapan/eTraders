@@ -1,0 +1,140 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.SupplierInfoModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>SupplierInfoModel</legend>
+
+    <div class="display-label">SupplierId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SupplierId)
+    </div>
+
+    <div class="display-label">SupplierName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SupplierName)
+    </div>
+
+    <div class="display-label">Address</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">Country</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Country)
+    </div>
+
+    <div class="display-label">Phone</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+
+    <div class="display-label">Fax</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fax)
+    </div>
+
+    <div class="display-label">Mobile</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Mobile)
+    </div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">WebAddress</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WebAddress)
+    </div>
+
+    <div class="display-label">Industry</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Industry)
+    </div>
+
+    <div class="display-label">IsActive</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsActive)
+    </div>
+
+    <div class="display-label">IUser</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IUser)
+    </div>
+
+    <div class="display-label">IDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IDate)
+    </div>
+
+    <div class="display-label">EUser</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EUser)
+    </div>
+
+    <div class="display-label">EDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDate)
+    </div>
+
+    <div class="display-label">ActionLink</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ActionLink)
+    </div>
+
+    <div class="display-label">ActionType</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ActionType)
+    </div>
+
+    <div class="display-label">ButtonText</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ButtonText)
+    </div>
+
+    <div class="display-label">DeleteEnable</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DeleteEnable)
+    </div>
+
+    <div class="display-label">SelectedClass</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SelectedClass)
+    </div>
+
+    <div class="display-label">Message</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Message)
+    </div>
+
+    <div class="display-label">ErrorClass</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ErrorClass)
+    </div>
+
+    <div class="display-label">Mode</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Mode)
+    </div>
+
+    <div class="display-label">IsError</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsError)
+    </div>
+
+    <div class="display-label">ErrMsg</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ErrMsg)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

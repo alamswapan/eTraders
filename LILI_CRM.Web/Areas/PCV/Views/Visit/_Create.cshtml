@@ -1,0 +1,83 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.VisitInfoModel
+@using (Ajax.BeginForm("Create", "Visit", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddVisitSuccess",
+        }, new { @id = "addVisitForm" }))
+{
+    
+    <div class="row-fluid form-horizontal">
+        <div class="popup-widget-box clearfix">
+            <div class="content">
+                @Html.ValidationSummary(true)
+                <div id="updateTargetId" class="alert alert-info" style="display: none;">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.PreparationDate)
+                </span>
+                <div class="controls">
+                    @Html.EditorFor(model => model.PreparationDate)
+                    @Html.ValidationMessageFor(model => model.PreparationDate)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model=> model.SalesPerson)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.SalesPerson, new { Style = "background:#4E6693", @readonly = "true" })
+                    @Html.ValidationMessageFor(model=>model.SalesPerson)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.PointOfDiscussion)
+                </span>
+                <div class="controls">
+                    @Html.TextAreaFor(model => model.PointOfDiscussion)
+                    @Html.ValidationMessageFor(model => model.PointOfDiscussion)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Details)
+                </span>
+                <div class="controls">
+                    @Html.TextAreaFor(model => model.Details)
+                    @Html.ValidationMessageFor(model => model.Details)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Remarks)
+                </span>
+                <div class="controls">
+                    @Html.TextAreaFor(model => model.Remarks)
+                    @Html.ValidationMessageFor(model => model.Remarks)
+                </div>
+            </div>
+
+            <div class="hr">
+            </div>
+            <div class="content pull-right">
+                <button type="submit" class="btn btn-mini btn-primary" id="btnAddVisit" name="btnAddVisit">
+                    <i class="icon-save bigger-125"></i>Add</button>
+                &nbsp;&nbsp;
+                <button type="button" class="btn btn-mini btn-primary" id="btnCancelVisit" name="btnCancelVisit"
+                    value="Cancel" onclick=" $($('#addVisitDialog').dialog('close'));">
+                    <i class="icon-remove bigger-125"></i>Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+}

@@ -1,0 +1,2343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LILI_BMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="LILI_BMSModelStoreContainer">
+    <EntitySet Name="CommonConfigType" EntityType="LILI_BMSModel.Store.CommonConfigType" store:Type="Tables" store:Schema="dbo" store:Name="CommonConfigType">
+      <DefiningQuery>SELECT 
+      [CommonConfigType].[TableName] AS [TableName], 
+      [CommonConfigType].[DisplayName] AS [DisplayName], 
+      [CommonConfigType].[SortOrder] AS [SortOrder], 
+      [CommonConfigType].[ModuleId] AS [ModuleId]
+      FROM [dbo].[CommonConfigType] AS [CommonConfigType]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblAgreementType" EntityType="LILI_BMSModel.Store.tblAgreementType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblAidCategory" EntityType="LILI_BMSModel.Store.tblAidCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblAIDEffectivenessIndicators" EntityType="LILI_BMSModel.Store.tblAIDEffectivenessIndicators" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblAIDEffectivenessInfo" EntityType="LILI_BMSModel.Store.tblAIDEffectivenessInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblAIDEffectivenessPIUType" EntityType="LILI_BMSModel.Store.tblAIDEffectivenessPIUType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblAIDEffectivenessResourceTiedType" EntityType="LILI_BMSModel.Store.tblAIDEffectivenessResourceTiedType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblAIDPlanning" EntityType="LILI_BMSModel.Store.tblAIDPlanning" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblAIDPlanningDetail" EntityType="LILI_BMSModel.Store.tblAIDPlanningDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblApprovalAuthority" EntityType="LILI_BMSModel.Store.tblApprovalAuthority" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblApprovalStatus" EntityType="LILI_BMSModel.Store.tblApprovalStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblAssistanceType" EntityType="LILI_BMSModel.Store.tblAssistanceType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCurrency" EntityType="LILI_BMSModel.Store.tblCurrency" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblDistrict" EntityType="LILI_BMSModel.Store.tblDistrict" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblDivision" EntityType="LILI_BMSModel.Store.tblDivision" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblDocumentCategory" EntityType="LILI_BMSModel.Store.tblDocumentCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblFinancialYear" EntityType="LILI_BMSModel.Store.tblFinancialYear" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblFundSource" EntityType="LILI_BMSModel.Store.tblFundSource" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblFundSourceCategory" EntityType="LILI_BMSModel.Store.tblFundSourceCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblImplementationStatus" EntityType="LILI_BMSModel.Store.tblImplementationStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblLoanAgreement" EntityType="LILI_BMSModel.Store.tblLoanAgreement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblLoanRepaymentType" EntityType="LILI_BMSModel.Store.tblLoanRepaymentType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblMinistry" EntityType="LILI_BMSModel.Store.tblMinistry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblMinistryAgency" EntityType="LILI_BMSModel.Store.tblMinistryAgency" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblNGOCSO" EntityType="LILI_BMSModel.Store.tblNGOCSO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblNGOOrganizationType" EntityType="LILI_BMSModel.Store.tblNGOOrganizationType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblOrganizationType" EntityType="LILI_BMSModel.Store.tblOrganizationType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblProjectADPInfo" EntityType="LILI_BMSModel.Store.tblProjectADPInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblProjectAttachment" EntityType="LILI_BMSModel.Store.tblProjectAttachment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblProjectFundingActualDisbursement" EntityType="LILI_BMSModel.Store.tblProjectFundingActualDisbursement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblProjectFundingCommitment" EntityType="LILI_BMSModel.Store.tblProjectFundingCommitment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblProjectFundingExpenditure" EntityType="LILI_BMSModel.Store.tblProjectFundingExpenditure" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblProjectFundingPlannedDisbursement" EntityType="LILI_BMSModel.Store.tblProjectFundingPlannedDisbursement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblProjectGeographicAllocation" EntityType="LILI_BMSModel.Store.tblProjectGeographicAllocation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblProjectGoBExecutingAgency" EntityType="LILI_BMSModel.Store.tblProjectGoBExecutingAgency" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblProjectInfo" EntityType="LILI_BMSModel.Store.tblProjectInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblProjectNote" EntityType="LILI_BMSModel.Store.tblProjectNote" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblProjectSectoralAllocation" EntityType="LILI_BMSModel.Store.tblProjectSectoralAllocation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblProjectThematicMarker" EntityType="LILI_BMSModel.Store.tblProjectThematicMarker" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblProjectType" EntityType="LILI_BMSModel.Store.tblProjectType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblRevisionStatus" EntityType="LILI_BMSModel.Store.tblRevisionStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSector" EntityType="LILI_BMSModel.Store.tblSector" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSubSector" EntityType="LILI_BMSModel.Store.tblSubSector" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblThematicMarker" EntityType="LILI_BMSModel.Store.tblThematicMarker" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblUpazila" EntityType="LILI_BMSModel.Store.tblUpazila" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblUserFundSource" EntityType="LILI_BMSModel.Store.tblUserFundSource" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblUserProject" EntityType="LILI_BMSModel.Store.tblUserProject" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblUserRegistrationInfo" EntityType="LILI_BMSModel.Store.tblUserRegistrationInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblUserRegistrationStatus" EntityType="LILI_BMSModel.Store.tblUserRegistrationStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblVerificationStatus" EntityType="LILI_BMSModel.Store.tblVerificationStatus" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_tblAIDEffectivenessIndicators_tblAIDEffectivenessPIUType" Association="LILI_BMSModel.Store.FK_tblAIDEffectivenessIndicators_tblAIDEffectivenessPIUType">
+      <End Role="tblAIDEffectivenessPIUType" EntitySet="tblAIDEffectivenessPIUType" />
+      <End Role="tblAIDEffectivenessIndicators" EntitySet="tblAIDEffectivenessIndicators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAIDEffectivenessIndicators_tblAIDEffectivenessResourceTiedType" Association="LILI_BMSModel.Store.FK_tblAIDEffectivenessIndicators_tblAIDEffectivenessResourceTiedType">
+      <End Role="tblAIDEffectivenessResourceTiedType" EntitySet="tblAIDEffectivenessResourceTiedType" />
+      <End Role="tblAIDEffectivenessIndicators" EntitySet="tblAIDEffectivenessIndicators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAIDEffectivenessIndicators_tblFundSource" Association="LILI_BMSModel.Store.FK_tblAIDEffectivenessIndicators_tblFundSource">
+      <End Role="tblFundSource" EntitySet="tblFundSource" />
+      <End Role="tblAIDEffectivenessIndicators" EntitySet="tblAIDEffectivenessIndicators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAIDEffectivenessIndicators_tblProjectInfo" Association="LILI_BMSModel.Store.FK_tblAIDEffectivenessIndicators_tblProjectInfo">
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+      <End Role="tblAIDEffectivenessIndicators" EntitySet="tblAIDEffectivenessIndicators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAIDEffectivenessInfo_tblFundSource" Association="LILI_BMSModel.Store.FK_tblAIDEffectivenessInfo_tblFundSource">
+      <End Role="tblFundSource" EntitySet="tblFundSource" />
+      <End Role="tblAIDEffectivenessInfo" EntitySet="tblAIDEffectivenessInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAIDEffectivenessInfo_tblMinistryAgency" Association="LILI_BMSModel.Store.FK_tblAIDEffectivenessInfo_tblMinistryAgency">
+      <End Role="tblMinistryAgency" EntitySet="tblMinistryAgency" />
+      <End Role="tblAIDEffectivenessInfo" EntitySet="tblAIDEffectivenessInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAIDEffectivenessInfo_tblProjectInfo" Association="LILI_BMSModel.Store.FK_tblAIDEffectivenessInfo_tblProjectInfo">
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+      <End Role="tblAIDEffectivenessInfo" EntitySet="tblAIDEffectivenessInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAIDPlanning_tblFundSource" Association="LILI_BMSModel.Store.FK_tblAIDPlanning_tblFundSource">
+      <End Role="tblFundSource" EntitySet="tblFundSource" />
+      <End Role="tblAIDPlanning" EntitySet="tblAIDPlanning" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAIDPlanningDetail_tblAIDPlanning" Association="LILI_BMSModel.Store.FK_tblAIDPlanningDetail_tblAIDPlanning">
+      <End Role="tblAIDPlanning" EntitySet="tblAIDPlanning" />
+      <End Role="tblAIDPlanningDetail" EntitySet="tblAIDPlanningDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAIDPlanningDetail_tblSector" Association="LILI_BMSModel.Store.FK_tblAIDPlanningDetail_tblSector">
+      <End Role="tblSector" EntitySet="tblSector" />
+      <End Role="tblAIDPlanningDetail" EntitySet="tblAIDPlanningDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDistrict_tblDivision" Association="LILI_BMSModel.Store.FK_tblDistrict_tblDivision">
+      <End Role="tblDivision" EntitySet="tblDivision" />
+      <End Role="tblDistrict" EntitySet="tblDistrict" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblFundSource_tblCurrency" Association="LILI_BMSModel.Store.FK_tblFundSource_tblCurrency">
+      <End Role="tblCurrency" EntitySet="tblCurrency" />
+      <End Role="tblFundSource" EntitySet="tblFundSource" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblFundSource_tblFundSourceCategory" Association="LILI_BMSModel.Store.FK_tblFundSource_tblFundSourceCategory">
+      <End Role="tblFundSourceCategory" EntitySet="tblFundSourceCategory" />
+      <End Role="tblFundSource" EntitySet="tblFundSource" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblMinistryAgency_tblMinistry" Association="LILI_BMSModel.Store.FK_tblMinistryAgency_tblMinistry">
+      <End Role="tblMinistry" EntitySet="tblMinistry" />
+      <End Role="tblMinistryAgency" EntitySet="tblMinistryAgency" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblNGOCSO_tblNGOOrganizationType" Association="LILI_BMSModel.Store.FK_tblNGOCSO_tblNGOOrganizationType">
+      <End Role="tblNGOOrganizationType" EntitySet="tblNGOOrganizationType" />
+      <End Role="tblNGOCSO" EntitySet="tblNGOCSO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectAttachment_tblDocumentCategory" Association="LILI_BMSModel.Store.FK_tblProjectAttachment_tblDocumentCategory">
+      <End Role="tblDocumentCategory" EntitySet="tblDocumentCategory" />
+      <End Role="tblProjectAttachment" EntitySet="tblProjectAttachment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectAttachment_tblProjectInfo" Association="LILI_BMSModel.Store.FK_tblProjectAttachment_tblProjectInfo">
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+      <End Role="tblProjectAttachment" EntitySet="tblProjectAttachment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingActualDisbursement_tblAidCategory" Association="LILI_BMSModel.Store.FK_tblProjectFundingActualDisbursement_tblAidCategory">
+      <End Role="tblAidCategory" EntitySet="tblAidCategory" />
+      <End Role="tblProjectFundingActualDisbursement" EntitySet="tblProjectFundingActualDisbursement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingActualDisbursement_tblCurrency" Association="LILI_BMSModel.Store.FK_tblProjectFundingActualDisbursement_tblCurrency">
+      <End Role="tblCurrency" EntitySet="tblCurrency" />
+      <End Role="tblProjectFundingActualDisbursement" EntitySet="tblProjectFundingActualDisbursement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingActualDisbursement_tblFundSource" Association="LILI_BMSModel.Store.FK_tblProjectFundingActualDisbursement_tblFundSource">
+      <End Role="tblFundSource" EntitySet="tblFundSource" />
+      <End Role="tblProjectFundingActualDisbursement" EntitySet="tblProjectFundingActualDisbursement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingActualDisbursement_tblProjectInfo" Association="LILI_BMSModel.Store.FK_tblProjectFundingActualDisbursement_tblProjectInfo">
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+      <End Role="tblProjectFundingActualDisbursement" EntitySet="tblProjectFundingActualDisbursement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingActualDisbursement_tblVerificationStatus" Association="LILI_BMSModel.Store.FK_tblProjectFundingActualDisbursement_tblVerificationStatus">
+      <End Role="tblVerificationStatus" EntitySet="tblVerificationStatus" />
+      <End Role="tblProjectFundingActualDisbursement" EntitySet="tblProjectFundingActualDisbursement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingCommitment_tblAidCategory" Association="LILI_BMSModel.Store.FK_tblProjectFundingCommitment_tblAidCategory">
+      <End Role="tblAidCategory" EntitySet="tblAidCategory" />
+      <End Role="tblProjectFundingCommitment" EntitySet="tblProjectFundingCommitment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingCommitment_tblCurrency" Association="LILI_BMSModel.Store.FK_tblProjectFundingCommitment_tblCurrency">
+      <End Role="tblCurrency" EntitySet="tblCurrency" />
+      <End Role="tblProjectFundingCommitment" EntitySet="tblProjectFundingCommitment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingCommitment_tblFundSource" Association="LILI_BMSModel.Store.FK_tblProjectFundingCommitment_tblFundSource">
+      <End Role="tblFundSource" EntitySet="tblFundSource" />
+      <End Role="tblProjectFundingCommitment" EntitySet="tblProjectFundingCommitment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingCommitment_tblLoanRepaymentType" Association="LILI_BMSModel.Store.FK_tblProjectFundingCommitment_tblLoanRepaymentType">
+      <End Role="tblLoanRepaymentType" EntitySet="tblLoanRepaymentType" />
+      <End Role="tblProjectFundingCommitment" EntitySet="tblProjectFundingCommitment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingCommitment_tblProjectInfo" Association="LILI_BMSModel.Store.FK_tblProjectFundingCommitment_tblProjectInfo">
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+      <End Role="tblProjectFundingCommitment" EntitySet="tblProjectFundingCommitment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingCommitment_tblVerificationStatus" Association="LILI_BMSModel.Store.FK_tblProjectFundingCommitment_tblVerificationStatus">
+      <End Role="tblVerificationStatus" EntitySet="tblVerificationStatus" />
+      <End Role="tblProjectFundingCommitment" EntitySet="tblProjectFundingCommitment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingExpenditure_tblAidCategory" Association="LILI_BMSModel.Store.FK_tblProjectFundingExpenditure_tblAidCategory">
+      <End Role="tblAidCategory" EntitySet="tblAidCategory" />
+      <End Role="tblProjectFundingExpenditure" EntitySet="tblProjectFundingExpenditure" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingExpenditure_tblCurrency" Association="LILI_BMSModel.Store.FK_tblProjectFundingExpenditure_tblCurrency">
+      <End Role="tblCurrency" EntitySet="tblCurrency" />
+      <End Role="tblProjectFundingExpenditure" EntitySet="tblProjectFundingExpenditure" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingExpenditure_tblFundSource" Association="LILI_BMSModel.Store.FK_tblProjectFundingExpenditure_tblFundSource">
+      <End Role="tblFundSource" EntitySet="tblFundSource" />
+      <End Role="tblProjectFundingExpenditure" EntitySet="tblProjectFundingExpenditure" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingExpenditure_tblProjectInfo" Association="LILI_BMSModel.Store.FK_tblProjectFundingExpenditure_tblProjectInfo">
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+      <End Role="tblProjectFundingExpenditure" EntitySet="tblProjectFundingExpenditure" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingPlannedDisbursement_tblAidCategory" Association="LILI_BMSModel.Store.FK_tblProjectFundingPlannedDisbursement_tblAidCategory">
+      <End Role="tblAidCategory" EntitySet="tblAidCategory" />
+      <End Role="tblProjectFundingPlannedDisbursement" EntitySet="tblProjectFundingPlannedDisbursement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingPlannedDisbursement_tblFundSource" Association="LILI_BMSModel.Store.FK_tblProjectFundingPlannedDisbursement_tblFundSource">
+      <End Role="tblFundSource" EntitySet="tblFundSource" />
+      <End Role="tblProjectFundingPlannedDisbursement" EntitySet="tblProjectFundingPlannedDisbursement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectFundingPlannedDisbursement_tblProjectInfo" Association="LILI_BMSModel.Store.FK_tblProjectFundingPlannedDisbursement_tblProjectInfo">
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+      <End Role="tblProjectFundingPlannedDisbursement" EntitySet="tblProjectFundingPlannedDisbursement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectGeographicAllocation_tblDistrict" Association="LILI_BMSModel.Store.FK_tblProjectGeographicAllocation_tblDistrict">
+      <End Role="tblDistrict" EntitySet="tblDistrict" />
+      <End Role="tblProjectGeographicAllocation" EntitySet="tblProjectGeographicAllocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectGeographicAllocation_tblDivision" Association="LILI_BMSModel.Store.FK_tblProjectGeographicAllocation_tblDivision">
+      <End Role="tblDivision" EntitySet="tblDivision" />
+      <End Role="tblProjectGeographicAllocation" EntitySet="tblProjectGeographicAllocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectGeographicAllocation_tblProjectInfo" Association="LILI_BMSModel.Store.FK_tblProjectGeographicAllocation_tblProjectInfo">
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+      <End Role="tblProjectGeographicAllocation" EntitySet="tblProjectGeographicAllocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectGeographicAllocation_tblUpazila" Association="LILI_BMSModel.Store.FK_tblProjectGeographicAllocation_tblUpazila">
+      <End Role="tblUpazila" EntitySet="tblUpazila" />
+      <End Role="tblProjectGeographicAllocation" EntitySet="tblProjectGeographicAllocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectGoBExecutingAgency_tblMinistry" Association="LILI_BMSModel.Store.FK_tblProjectGoBExecutingAgency_tblMinistry">
+      <End Role="tblMinistry" EntitySet="tblMinistry" />
+      <End Role="tblProjectGoBExecutingAgency" EntitySet="tblProjectGoBExecutingAgency" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectGoBExecutingAgency_tblMinistryAgency" Association="LILI_BMSModel.Store.FK_tblProjectGoBExecutingAgency_tblMinistryAgency">
+      <End Role="tblMinistryAgency" EntitySet="tblMinistryAgency" />
+      <End Role="tblProjectGoBExecutingAgency" EntitySet="tblProjectGoBExecutingAgency" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectGoBExecutingAgency_tblProjectInfo" Association="LILI_BMSModel.Store.FK_tblProjectGoBExecutingAgency_tblProjectInfo">
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+      <End Role="tblProjectGoBExecutingAgency" EntitySet="tblProjectGoBExecutingAgency" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectInfo_tblAgreementType" Association="LILI_BMSModel.Store.FK_tblProjectInfo_tblAgreementType">
+      <End Role="tblAgreementType" EntitySet="tblAgreementType" />
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectInfo_tblApprovalAuthority" Association="LILI_BMSModel.Store.FK_tblProjectInfo_tblApprovalAuthority">
+      <End Role="tblApprovalAuthority" EntitySet="tblApprovalAuthority" />
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectInfo_tblApprovalStatus" Association="LILI_BMSModel.Store.FK_tblProjectInfo_tblApprovalStatus">
+      <End Role="tblApprovalStatus" EntitySet="tblApprovalStatus" />
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectInfo_tblAssistanceType" Association="LILI_BMSModel.Store.FK_tblProjectInfo_tblAssistanceType">
+      <End Role="tblAssistanceType" EntitySet="tblAssistanceType" />
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectInfo_tblFundSource" Association="LILI_BMSModel.Store.FK_tblProjectInfo_tblFundSource">
+      <End Role="tblFundSource" EntitySet="tblFundSource" />
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectInfo_tblFundSource1" Association="LILI_BMSModel.Store.FK_tblProjectInfo_tblFundSource1">
+      <End Role="tblFundSource" EntitySet="tblFundSource" />
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectInfo_tblImplementationStatus" Association="LILI_BMSModel.Store.FK_tblProjectInfo_tblImplementationStatus">
+      <End Role="tblImplementationStatus" EntitySet="tblImplementationStatus" />
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectInfo_tblProjectType" Association="LILI_BMSModel.Store.FK_tblProjectInfo_tblProjectType">
+      <End Role="tblProjectType" EntitySet="tblProjectType" />
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectInfo_tblRevisionStatus" Association="LILI_BMSModel.Store.FK_tblProjectInfo_tblRevisionStatus">
+      <End Role="tblRevisionStatus" EntitySet="tblRevisionStatus" />
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectInfo_tblSector" Association="LILI_BMSModel.Store.FK_tblProjectInfo_tblSector">
+      <End Role="tblSector" EntitySet="tblSector" />
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectNote_tblProjectInfo" Association="LILI_BMSModel.Store.FK_tblProjectNote_tblProjectInfo">
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+      <End Role="tblProjectNote" EntitySet="tblProjectNote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectSectoralAllocation_tblProjectInfo" Association="LILI_BMSModel.Store.FK_tblProjectSectoralAllocation_tblProjectInfo">
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+      <End Role="tblProjectSectoralAllocation" EntitySet="tblProjectSectoralAllocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectSectoralAllocation_tblSector" Association="LILI_BMSModel.Store.FK_tblProjectSectoralAllocation_tblSector">
+      <End Role="tblSector" EntitySet="tblSector" />
+      <End Role="tblProjectSectoralAllocation" EntitySet="tblProjectSectoralAllocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectSectoralAllocation_tblSubSector" Association="LILI_BMSModel.Store.FK_tblProjectSectoralAllocation_tblSubSector">
+      <End Role="tblSubSector" EntitySet="tblSubSector" />
+      <End Role="tblProjectSectoralAllocation" EntitySet="tblProjectSectoralAllocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectThematicMarker_tblProjectInfo" Association="LILI_BMSModel.Store.FK_tblProjectThematicMarker_tblProjectInfo">
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+      <End Role="tblProjectThematicMarker" EntitySet="tblProjectThematicMarker" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProjectThematicMarker_tblThematicMarker" Association="LILI_BMSModel.Store.FK_tblProjectThematicMarker_tblThematicMarker">
+      <End Role="tblThematicMarker" EntitySet="tblThematicMarker" />
+      <End Role="tblProjectThematicMarker" EntitySet="tblProjectThematicMarker" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSubSector_tblSector" Association="LILI_BMSModel.Store.FK_tblSubSector_tblSector">
+      <End Role="tblSector" EntitySet="tblSector" />
+      <End Role="tblSubSector" EntitySet="tblSubSector" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUpazila_tblDistrict" Association="LILI_BMSModel.Store.FK_tblUpazila_tblDistrict">
+      <End Role="tblDistrict" EntitySet="tblDistrict" />
+      <End Role="tblUpazila" EntitySet="tblUpazila" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUpazila_tblDivision" Association="LILI_BMSModel.Store.FK_tblUpazila_tblDivision">
+      <End Role="tblDivision" EntitySet="tblDivision" />
+      <End Role="tblUpazila" EntitySet="tblUpazila" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserFundSource_tblFundSource" Association="LILI_BMSModel.Store.FK_tblUserFundSource_tblFundSource">
+      <End Role="tblFundSource" EntitySet="tblFundSource" />
+      <End Role="tblUserFundSource" EntitySet="tblUserFundSource" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserFundSource_tblUserRegistrationInfo" Association="LILI_BMSModel.Store.FK_tblUserFundSource_tblUserRegistrationInfo">
+      <End Role="tblUserRegistrationInfo" EntitySet="tblUserRegistrationInfo" />
+      <End Role="tblUserFundSource" EntitySet="tblUserFundSource" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserProject_tblProjectInfo" Association="LILI_BMSModel.Store.FK_tblUserProject_tblProjectInfo">
+      <End Role="tblProjectInfo" EntitySet="tblProjectInfo" />
+      <End Role="tblUserProject" EntitySet="tblUserProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserProject_tblUserRegistrationInfo" Association="LILI_BMSModel.Store.FK_tblUserProject_tblUserRegistrationInfo">
+      <End Role="tblUserRegistrationInfo" EntitySet="tblUserRegistrationInfo" />
+      <End Role="tblUserProject" EntitySet="tblUserProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserRegistrationInfo_tblOrganizationType" Association="LILI_BMSModel.Store.FK_tblUserRegistrationInfo_tblOrganizationType">
+      <End Role="tblOrganizationType" EntitySet="tblOrganizationType" />
+      <End Role="tblUserRegistrationInfo" EntitySet="tblUserRegistrationInfo" />
+    </AssociationSet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'LILI_BMS.dbo.CommonConfigType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CommonConfigType">
+    <Key>
+      <PropertyRef Name="TableName" />
+      <PropertyRef Name="DisplayName" />
+      <PropertyRef Name="ModuleId" />
+    </Key>
+    <Property Name="TableName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DisplayName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="ModuleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblAgreementType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblAidCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblAIDEffectivenessIndicators">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="AEITotalCommitmentAmountUSD" Type="decimal" Scale="2" />
+    <Property Name="AEISurveyYear" Type="int" />
+    <Property Name="AEIPointOfDeliveryFundSourceId" Type="int" />
+    <Property Name="AEIDisbursementForGobSectorPercentage" Type="int" />
+    <Property Name="AEIDisbursementForGobSectorAmountUSD" Type="decimal" Scale="2" />
+    <Property Name="AEIIsAssociatedToGOBResultFramework" Type="bit" />
+    <Property Name="AEIIsPartOfProgramBasesApproach" Type="bit" />
+    <Property Name="AEIIsUseGobPublicFinancialManagementSystem" Type="bit" />
+    <Property Name="AEIDisbursementByNBEPPercentage" Type="int" />
+    <Property Name="AEIDisbursementByNBEPAmountUSD" Type="decimal" Scale="2" />
+    <Property Name="AEIDisbursementByNFRPPercentage" Type="int" />
+    <Property Name="AEIDisbursementByNFRPAmountUSD" Type="decimal" Scale="2" />
+    <Property Name="AEIDisbursementByNAPPercentage" Type="int" />
+    <Property Name="AEIDisbursementByNAPAmountUSD" Type="decimal" Scale="2" />
+    <Property Name="AEIIsUseGobProcementSystem" Type="bit" />
+    <Property Name="AEIDisbursementByNPSPercentage" Type="int" />
+    <Property Name="AEIDisbursementByNPSAmountUSD" Type="decimal" Scale="2" />
+    <Property Name="AEIIsUsePIU" Type="bit" />
+    <Property Name="AEITypeOfPIU" Type="int" />
+    <Property Name="AEIResourceTiedTypeId" Type="int" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblAIDEffectivenessInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="Type" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Title" Type="varchar" Nullable="false" MaxLength="1500" />
+    <Property Name="DurationStartDate" Type="datetime" Nullable="false" />
+    <Property Name="DurationCompletionDate" Type="datetime" Nullable="false" />
+    <Property Name="IsJoint" Type="bit" />
+    <Property Name="OtherDPFundSourceId" Type="int" />
+    <Property Name="GoBLeadMinistryAgencyId" Type="int" />
+    <Property Name="FocalPointContactName" Type="varchar" MaxLength="100" />
+    <Property Name="FocalPointContactTitle" Type="varchar" MaxLength="20" />
+    <Property Name="FocalPointContactDesignation" Type="varchar" MaxLength="100" />
+    <Property Name="FocalPointContactTelephone" Type="varchar" MaxLength="50" />
+    <Property Name="FocalPointContactFax" Type="varchar" MaxLength="50" />
+    <Property Name="FocalPointContactEmail" Type="varchar" MaxLength="100" />
+    <Property Name="FocalPointContactAddress" Type="varchar" MaxLength="500" />
+    <Property Name="Remarks" Type="varchar" MaxLength="500" />
+    <Property Name="AEIAttachmentTitle" Type="varchar" MaxLength="250" />
+    <Property Name="AEIAttachmentFileName" Type="varchar" MaxLength="250" />
+    <Property Name="AEIAttachmentMetaData" Type="varchar" MaxLength="500" />
+    <Property Name="AEIAttachmentFilePath" Type="varchar" MaxLength="500" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblAIDEffectivenessPIUType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblAIDEffectivenessResourceTiedType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblAIDPlanning">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FundSourceId" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="AIDPlanAmount" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblAIDPlanningDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AIDPlanningId" Type="int" Nullable="false" />
+    <Property Name="SectorId" Type="int" Nullable="false" />
+    <Property Name="AIDPlanAmount" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblApprovalAuthority">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblApprovalStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblAssistanceType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblCurrency">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblDistrict">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DistrictName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DivisionId" Type="int" Nullable="false" />
+    <Property Name="StandardCode" Type="varchar" MaxLength="10" />
+    <Property Name="GPSLatitude" Type="decimal" Precision="15" Scale="12" />
+    <Property Name="GPSLongitude" Type="decimal" Precision="15" Scale="12" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblDivision">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DivisionName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="StandardCode" Type="varchar" MaxLength="10" />
+    <Property Name="GPSLatitude" Type="decimal" Precision="15" Scale="12" />
+    <Property Name="GPSLongitude" Type="decimal" Precision="15" Scale="12" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblDocumentCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblFinancialYear">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FinancialYearName" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="FinancialYearStartDate" Type="datetime" Nullable="false" />
+    <Property Name="FinancialYearEndDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblFundSource">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FundSourceName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FundSourceCategoryId" Type="int" Nullable="false" />
+    <Property Name="FundSourceGroup" Type="varchar" MaxLength="50" />
+    <Property Name="CurrencyId" Type="int" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="250" />
+    <Property Name="TelephoneNo" Type="varchar" MaxLength="50" />
+    <Property Name="FaxNo" Type="varchar" MaxLength="50" />
+    <Property Name="WebURL" Type="varchar" MaxLength="100" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPersonName" Type="varchar" MaxLength="100" />
+    <Property Name="ContactPersonTelephone" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPersonEMail" Type="varchar" MaxLength="100" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tblFundSourceCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblImplementationStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblLoanAgreement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LoanAgreementTitle" Type="varchar" Nullable="false" MaxLength="3000" />
+    <Property Name="LoanAgreementCode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblLoanRepaymentType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblMinistry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+    <Property Name="MinistryName" Type="varchar" MaxLength="100" />
+    <Property Name="StandardCode" Type="varchar" MaxLength="50" />
+    <Property Name="IMEDCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblMinistryAgency">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MinistryId" Type="int" Nullable="false" />
+    <Property Name="AgencyName" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblNGOCSO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NGOOrganizationName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="NGOOrganizationTypeId" Type="int" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="250" />
+    <Property Name="TelephoneNo" Type="varchar" MaxLength="50" />
+    <Property Name="FaxNo" Type="varchar" MaxLength="50" />
+    <Property Name="WebURL" Type="varchar" MaxLength="100" />
+    <Property Name="ContactPersonName" Type="varchar" MaxLength="100" />
+    <Property Name="ContactPersonTelephone" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPersonEMail" Type="varchar" MaxLength="100" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblNGOOrganizationType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblOrganizationType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblProjectADPInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ADPInfoProjectCode" Type="varchar" MaxLength="50" />
+    <Property Name="ADPInfoProjectName" Type="varchar" MaxLength="250" />
+    <Property Name="ADPInfoMoFProjectCodePart1" Type="varchar" MaxLength="15" />
+    <Property Name="ADPInfoMoFProjectCodePart2" Type="varchar" MaxLength="15" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblProjectAttachment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="DocumentCategoryId" Type="int" Nullable="false" />
+    <Property Name="AttachmentTitle" Type="varchar" MaxLength="250" />
+    <Property Name="AttachmentFileName" Type="varchar" MaxLength="250" />
+    <Property Name="AttachmentMetaData" Type="varchar" MaxLength="500" />
+    <Property Name="AttachmentFilePath" Type="varchar" MaxLength="500" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblProjectFundingActualDisbursement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="FundSourceId" Type="int" Nullable="false" />
+    <Property Name="DisbursementDate" Type="datetime" Nullable="false" />
+    <Property Name="AidCategoryId" Type="int" Nullable="false" />
+    <Property Name="DisbursedCurrencyId" Type="int" Nullable="false" />
+    <Property Name="DisbursedAmount" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="DisbursedExchangeRateToUSD" Type="decimal" Nullable="false" Precision="12" Scale="6" />
+    <Property Name="DisbursedAmountInUSD" Type="decimal" Scale="2" />
+    <Property Name="DisbursedExchangeRateToBDT" Type="decimal" Nullable="false" Precision="12" Scale="6" />
+    <Property Name="DisbursedAmountInBDT" Type="decimal" Scale="2" />
+    <Property Name="VerificationId" Type="int" />
+    <Property Name="VerifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="VerificationRemarks" Type="varchar" MaxLength="500" />
+    <Property Name="Remarks" Type="varchar" MaxLength="500" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblProjectFundingCommitment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="FundSourceId" Type="int" Nullable="false" />
+    <Property Name="AidCategoryId" Type="int" Nullable="false" />
+    <Property Name="LoanNumber" Type="varchar" MaxLength="50" />
+    <Property Name="InterestRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="ManagementFee" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="CommitmentFee" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="GracePeriod" Type="decimal" Precision="6" Scale="2" />
+    <Property Name="MaturityPeriod" Type="decimal" Precision="6" Scale="2" />
+    <Property Name="CommitmentMaidCurrencyId" Type="int" Nullable="false" />
+    <Property Name="CommittedAmount" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="ExchangeRateToUSD" Type="decimal" Nullable="false" Precision="12" Scale="6" />
+    <Property Name="DateOfExchangeRateCommitment" Type="datetime" Nullable="false" />
+    <Property Name="CommittedAmountInUSD" Type="decimal" Scale="2" />
+    <Property Name="ExchangeRateToBDT" Type="decimal" Nullable="false" Precision="12" Scale="6" />
+    <Property Name="CommittedAmountInBDT" Type="decimal" Scale="2" />
+    <Property Name="NoOfRepaymentPerYear" Type="int" />
+    <Property Name="RepaymentType" Type="int" />
+    <Property Name="VerificationId" Type="int" />
+    <Property Name="VerifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="VerificationRemarks" Type="varchar" MaxLength="500" />
+    <Property Name="Remarks" Type="varchar" MaxLength="500" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblProjectFundingExpenditure">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="FundSourceId" Type="int" Nullable="false" />
+    <Property Name="AidCategoryId" Type="int" Nullable="false" />
+    <Property Name="ExpenditureReportingDate" Type="datetime" Nullable="false" />
+    <Property Name="ExpenditureReportingPeriodFromDate" Type="datetime" Nullable="false" />
+    <Property Name="ExpenditureReportingPeriodToDate" Type="datetime" Nullable="false" />
+    <Property Name="ExpenditureCurrencyId" Type="int" Nullable="false" />
+    <Property Name="ExpenditureAmount" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="ExpenditureExchangeRateToUSD" Type="decimal" Nullable="false" Precision="12" Scale="6" />
+    <Property Name="ExpenditureAmountInUSD" Type="decimal" Scale="2" />
+    <Property Name="ExpenditureExchangeRateToBDT" Type="decimal" Nullable="false" Precision="12" Scale="6" />
+    <Property Name="ExpenditureAmountInBDT" Type="decimal" Scale="2" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblProjectFundingPlannedDisbursement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="FundSourceId" Type="int" Nullable="false" />
+    <Property Name="AidCategoryId" Type="int" Nullable="false" />
+    <Property Name="Month" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="PlannedDisbursementCurrencyId" Type="int" Nullable="false" />
+    <Property Name="PlannedDisburseAmount" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="PlannedDisburseExchangeRateToUSD" Type="decimal" Nullable="false" Precision="12" Scale="6" />
+    <Property Name="PlannedDisburseAmountInUSD" Type="decimal" Scale="2" />
+    <Property Name="PlannedDisburseExchangeRateToBDT" Type="decimal" Nullable="false" Precision="12" Scale="6" />
+    <Property Name="PlannedDisburseAmountInBDT" Type="decimal" Scale="2" />
+    <Property Name="IsLocked" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblProjectGeographicAllocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="DivisionId" Type="int" />
+    <Property Name="DistrictId" Type="int" />
+    <Property Name="UpazilaId" Type="int" />
+    <Property Name="TotalCommitmentPercentForDistrict" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblProjectGoBExecutingAgency">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="GOBExeAgencyMinistryId" Type="int" />
+    <Property Name="GOBExeAgencyMinistryAgencyId" Type="int" />
+    <Property Name="IsLeadAgency" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblProjectInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="varchar" Nullable="false" MaxLength="3000" />
+    <Property Name="Objective" Type="varchar" Nullable="false" MaxLength="3000" />
+    <Property Name="FundSourceId" Type="int" Nullable="false" />
+    <Property Name="IsProgramBasedApproach" Type="bit" />
+    <Property Name="SectorId" Type="int" />
+    <Property Name="IsUnderADP" Type="bit" />
+    <Property Name="IsCountryWide" Type="bit" />
+    <Property Name="ApprovalStatusId" Type="int" />
+    <Property Name="ApprovalAuthorityId" Type="int" />
+    <Property Name="DPProjectNo" Type="varchar" MaxLength="100" />
+    <Property Name="MoFProjectCodePart1" Type="varchar" MaxLength="15" />
+    <Property Name="MoFProjectCodePart2" Type="varchar" MaxLength="15" />
+    <Property Name="ADPProjectCode" Type="varchar" MaxLength="50" />
+    <Property Name="ADPProjectName" Type="varchar" MaxLength="250" />
+    <Property Name="AssistanceTypeId" Type="int" Nullable="false" />
+    <Property Name="ProjectTypeId" Type="int" Nullable="false" />
+    <Property Name="IsCofundedProject" Type="bit" />
+    <Property Name="LeadDPFundSourceId" Type="int" />
+    <Property Name="AgreementTypeId" Type="int" />
+    <Property Name="AidAgreementId" Type="int" />
+    <Property Name="AidAgreementTitle" Type="varchar" MaxLength="5000" />
+    <Property Name="ProjectCostUSD" Type="decimal" Scale="2" />
+    <Property Name="DPAssistanceUSD" Type="decimal" Scale="2" />
+    <Property Name="GoBSharingUSD" Type="decimal" Scale="2" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="12" Scale="6" />
+    <Property Name="DateOfExchangeRate" Type="datetime" />
+    <Property Name="AgreementSignDate" Type="datetime" Nullable="false" />
+    <Property Name="EffectiveDate" Type="datetime" Nullable="false" />
+    <Property Name="ProjectApprovalDate" Type="datetime" />
+    <Property Name="PlannedProjectStartDate" Type="datetime" />
+    <Property Name="PlannedProjectCompletionDate" Type="datetime" />
+    <Property Name="ActualProjectStartDate" Type="datetime" />
+    <Property Name="RevisedProjectCompletionDate" Type="datetime" />
+    <Property Name="ImplementationStatusId" Type="int" />
+    <Property Name="RevisionStatusId" Type="int" />
+    <Property Name="ExecutingAgencyType" Type="varchar" MaxLength="20" />
+    <Property Name="ExecutingAgencyId" Type="int" />
+    <Property Name="FocalPointDPContactName" Type="varchar" MaxLength="100" />
+    <Property Name="FocalPointDPContactTitle" Type="varchar" MaxLength="20" />
+    <Property Name="FocalPointDPContactDesignation" Type="varchar" MaxLength="50" />
+    <Property Name="FocalPointDPContactTelephone" Type="varchar" MaxLength="50" />
+    <Property Name="FocalPointDPContactFax" Type="varchar" MaxLength="50" />
+    <Property Name="FocalPointDPContactEmail" Type="varchar" MaxLength="100" />
+    <Property Name="FocalPointDPContactAddress" Type="varchar" MaxLength="500" />
+    <Property Name="FocalPointGoBContactName" Type="varchar" MaxLength="100" />
+    <Property Name="FocalPointGoBContactTitle" Type="varchar" MaxLength="20" />
+    <Property Name="FocalPointGoBContactDesignation" Type="varchar" MaxLength="50" />
+    <Property Name="FocalPointGoBContactTelephone" Type="varchar" MaxLength="50" />
+    <Property Name="FocalPointGoBContactFax" Type="varchar" MaxLength="50" />
+    <Property Name="FocalPointGoBContactEmail" Type="varchar" MaxLength="100" />
+    <Property Name="FocalPointGoBContactAddress" Type="varchar" MaxLength="500" />
+    <Property Name="Remarks" Type="varchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblProjectNote">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="ProjectNote" Type="text" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblProjectSectoralAllocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="SectorId" Type="int" />
+    <Property Name="SubSectorId" Type="int" />
+    <Property Name="TotalCommitmentPercent" Type="decimal" Precision="10" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblProjectThematicMarker">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="SelectedThematicMarkerId" Type="int" Nullable="false" />
+    <Property Name="TotalCommitmentPercent" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblProjectType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblRevisionStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblSector">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblSubSector">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SectorId" Type="int" Nullable="false" />
+    <Property Name="SubSectorName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblThematicMarker">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblUpazila">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DivisionId" Type="int" Nullable="false" />
+    <Property Name="DistrictId" Type="int" Nullable="false" />
+    <Property Name="AreaType" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="UpazilaName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="StandardCode" Type="varchar" MaxLength="10" />
+    <Property Name="GPSLatitude" Type="decimal" Precision="15" Scale="12" />
+    <Property Name="GPSLongitude" Type="decimal" Precision="15" Scale="12" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblUserFundSource">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="FundSourceId" Type="int" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblUserProject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblUserRegistrationInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserFullName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="OrganizationTypeId" Type="int" Nullable="false" />
+    <Property Name="OrgTypeFundSourceMinistryId" Type="int" />
+    <Property Name="OrganizationName" Type="varchar" MaxLength="100" />
+    <Property Name="EMail" Type="varchar" MaxLength="100" />
+    <Property Name="Telephone" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="250" />
+    <Property Name="UserId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="50" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="ProjectPermissionType" Type="int" />
+  </EntityType>
+  <EntityType Name="tblUserRegistrationStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblVerificationStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Acronym" Type="varchar" MaxLength="20" />
+    <Property Name="IATICode" Type="varchar" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_tblAIDEffectivenessIndicators_tblAIDEffectivenessPIUType">
+    <End Role="tblAIDEffectivenessPIUType" Type="LILI_BMSModel.Store.tblAIDEffectivenessPIUType" Multiplicity="0..1" />
+    <End Role="tblAIDEffectivenessIndicators" Type="LILI_BMSModel.Store.tblAIDEffectivenessIndicators" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAIDEffectivenessPIUType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblAIDEffectivenessIndicators">
+        <PropertyRef Name="AEITypeOfPIU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAIDEffectivenessIndicators_tblAIDEffectivenessResourceTiedType">
+    <End Role="tblAIDEffectivenessResourceTiedType" Type="LILI_BMSModel.Store.tblAIDEffectivenessResourceTiedType" Multiplicity="0..1" />
+    <End Role="tblAIDEffectivenessIndicators" Type="LILI_BMSModel.Store.tblAIDEffectivenessIndicators" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAIDEffectivenessResourceTiedType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblAIDEffectivenessIndicators">
+        <PropertyRef Name="AEIResourceTiedTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAIDEffectivenessIndicators_tblFundSource">
+    <End Role="tblFundSource" Type="LILI_BMSModel.Store.tblFundSource" Multiplicity="0..1" />
+    <End Role="tblAIDEffectivenessIndicators" Type="LILI_BMSModel.Store.tblAIDEffectivenessIndicators" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFundSource">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblAIDEffectivenessIndicators">
+        <PropertyRef Name="AEIPointOfDeliveryFundSourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAIDEffectivenessIndicators_tblProjectInfo">
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="1" />
+    <End Role="tblAIDEffectivenessIndicators" Type="LILI_BMSModel.Store.tblAIDEffectivenessIndicators" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblAIDEffectivenessIndicators">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAIDEffectivenessInfo_tblFundSource">
+    <End Role="tblFundSource" Type="LILI_BMSModel.Store.tblFundSource" Multiplicity="0..1" />
+    <End Role="tblAIDEffectivenessInfo" Type="LILI_BMSModel.Store.tblAIDEffectivenessInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFundSource">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblAIDEffectivenessInfo">
+        <PropertyRef Name="OtherDPFundSourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAIDEffectivenessInfo_tblMinistryAgency">
+    <End Role="tblMinistryAgency" Type="LILI_BMSModel.Store.tblMinistryAgency" Multiplicity="0..1" />
+    <End Role="tblAIDEffectivenessInfo" Type="LILI_BMSModel.Store.tblAIDEffectivenessInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMinistryAgency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblAIDEffectivenessInfo">
+        <PropertyRef Name="GoBLeadMinistryAgencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAIDEffectivenessInfo_tblProjectInfo">
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="1" />
+    <End Role="tblAIDEffectivenessInfo" Type="LILI_BMSModel.Store.tblAIDEffectivenessInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblAIDEffectivenessInfo">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAIDPlanning_tblFundSource">
+    <End Role="tblFundSource" Type="LILI_BMSModel.Store.tblFundSource" Multiplicity="1" />
+    <End Role="tblAIDPlanning" Type="LILI_BMSModel.Store.tblAIDPlanning" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFundSource">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblAIDPlanning">
+        <PropertyRef Name="FundSourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAIDPlanningDetail_tblAIDPlanning">
+    <End Role="tblAIDPlanning" Type="LILI_BMSModel.Store.tblAIDPlanning" Multiplicity="1" />
+    <End Role="tblAIDPlanningDetail" Type="LILI_BMSModel.Store.tblAIDPlanningDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAIDPlanning">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblAIDPlanningDetail">
+        <PropertyRef Name="AIDPlanningId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAIDPlanningDetail_tblSector">
+    <End Role="tblSector" Type="LILI_BMSModel.Store.tblSector" Multiplicity="1" />
+    <End Role="tblAIDPlanningDetail" Type="LILI_BMSModel.Store.tblAIDPlanningDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSector">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblAIDPlanningDetail">
+        <PropertyRef Name="SectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDistrict_tblDivision">
+    <End Role="tblDivision" Type="LILI_BMSModel.Store.tblDivision" Multiplicity="1" />
+    <End Role="tblDistrict" Type="LILI_BMSModel.Store.tblDistrict" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDivision">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblDistrict">
+        <PropertyRef Name="DivisionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblFundSource_tblCurrency">
+    <End Role="tblCurrency" Type="LILI_BMSModel.Store.tblCurrency" Multiplicity="1" />
+    <End Role="tblFundSource" Type="LILI_BMSModel.Store.tblFundSource" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCurrency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblFundSource">
+        <PropertyRef Name="CurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblFundSource_tblFundSourceCategory">
+    <End Role="tblFundSourceCategory" Type="LILI_BMSModel.Store.tblFundSourceCategory" Multiplicity="1" />
+    <End Role="tblFundSource" Type="LILI_BMSModel.Store.tblFundSource" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFundSourceCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblFundSource">
+        <PropertyRef Name="FundSourceCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblMinistryAgency_tblMinistry">
+    <End Role="tblMinistry" Type="LILI_BMSModel.Store.tblMinistry" Multiplicity="1" />
+    <End Role="tblMinistryAgency" Type="LILI_BMSModel.Store.tblMinistryAgency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMinistry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblMinistryAgency">
+        <PropertyRef Name="MinistryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblNGOCSO_tblNGOOrganizationType">
+    <End Role="tblNGOOrganizationType" Type="LILI_BMSModel.Store.tblNGOOrganizationType" Multiplicity="1" />
+    <End Role="tblNGOCSO" Type="LILI_BMSModel.Store.tblNGOCSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblNGOOrganizationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblNGOCSO">
+        <PropertyRef Name="NGOOrganizationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectAttachment_tblDocumentCategory">
+    <End Role="tblDocumentCategory" Type="LILI_BMSModel.Store.tblDocumentCategory" Multiplicity="1" />
+    <End Role="tblProjectAttachment" Type="LILI_BMSModel.Store.tblProjectAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDocumentCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectAttachment">
+        <PropertyRef Name="DocumentCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectAttachment_tblProjectInfo">
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="1" />
+    <End Role="tblProjectAttachment" Type="LILI_BMSModel.Store.tblProjectAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectAttachment">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingActualDisbursement_tblAidCategory">
+    <End Role="tblAidCategory" Type="LILI_BMSModel.Store.tblAidCategory" Multiplicity="1" />
+    <End Role="tblProjectFundingActualDisbursement" Type="LILI_BMSModel.Store.tblProjectFundingActualDisbursement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAidCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingActualDisbursement">
+        <PropertyRef Name="AidCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingActualDisbursement_tblCurrency">
+    <End Role="tblCurrency" Type="LILI_BMSModel.Store.tblCurrency" Multiplicity="1" />
+    <End Role="tblProjectFundingActualDisbursement" Type="LILI_BMSModel.Store.tblProjectFundingActualDisbursement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCurrency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingActualDisbursement">
+        <PropertyRef Name="DisbursedCurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingActualDisbursement_tblFundSource">
+    <End Role="tblFundSource" Type="LILI_BMSModel.Store.tblFundSource" Multiplicity="1" />
+    <End Role="tblProjectFundingActualDisbursement" Type="LILI_BMSModel.Store.tblProjectFundingActualDisbursement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFundSource">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingActualDisbursement">
+        <PropertyRef Name="FundSourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingActualDisbursement_tblProjectInfo">
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="1" />
+    <End Role="tblProjectFundingActualDisbursement" Type="LILI_BMSModel.Store.tblProjectFundingActualDisbursement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingActualDisbursement">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingActualDisbursement_tblVerificationStatus">
+    <End Role="tblVerificationStatus" Type="LILI_BMSModel.Store.tblVerificationStatus" Multiplicity="0..1" />
+    <End Role="tblProjectFundingActualDisbursement" Type="LILI_BMSModel.Store.tblProjectFundingActualDisbursement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblVerificationStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingActualDisbursement">
+        <PropertyRef Name="VerificationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingCommitment_tblAidCategory">
+    <End Role="tblAidCategory" Type="LILI_BMSModel.Store.tblAidCategory" Multiplicity="1" />
+    <End Role="tblProjectFundingCommitment" Type="LILI_BMSModel.Store.tblProjectFundingCommitment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAidCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingCommitment">
+        <PropertyRef Name="AidCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingCommitment_tblCurrency">
+    <End Role="tblCurrency" Type="LILI_BMSModel.Store.tblCurrency" Multiplicity="1" />
+    <End Role="tblProjectFundingCommitment" Type="LILI_BMSModel.Store.tblProjectFundingCommitment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCurrency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingCommitment">
+        <PropertyRef Name="CommitmentMaidCurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingCommitment_tblFundSource">
+    <End Role="tblFundSource" Type="LILI_BMSModel.Store.tblFundSource" Multiplicity="1" />
+    <End Role="tblProjectFundingCommitment" Type="LILI_BMSModel.Store.tblProjectFundingCommitment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFundSource">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingCommitment">
+        <PropertyRef Name="FundSourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingCommitment_tblLoanRepaymentType">
+    <End Role="tblLoanRepaymentType" Type="LILI_BMSModel.Store.tblLoanRepaymentType" Multiplicity="0..1" />
+    <End Role="tblProjectFundingCommitment" Type="LILI_BMSModel.Store.tblProjectFundingCommitment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblLoanRepaymentType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingCommitment">
+        <PropertyRef Name="RepaymentType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingCommitment_tblProjectInfo">
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="1" />
+    <End Role="tblProjectFundingCommitment" Type="LILI_BMSModel.Store.tblProjectFundingCommitment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingCommitment">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingCommitment_tblVerificationStatus">
+    <End Role="tblVerificationStatus" Type="LILI_BMSModel.Store.tblVerificationStatus" Multiplicity="0..1" />
+    <End Role="tblProjectFundingCommitment" Type="LILI_BMSModel.Store.tblProjectFundingCommitment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblVerificationStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingCommitment">
+        <PropertyRef Name="VerificationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingExpenditure_tblAidCategory">
+    <End Role="tblAidCategory" Type="LILI_BMSModel.Store.tblAidCategory" Multiplicity="1" />
+    <End Role="tblProjectFundingExpenditure" Type="LILI_BMSModel.Store.tblProjectFundingExpenditure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAidCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingExpenditure">
+        <PropertyRef Name="AidCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingExpenditure_tblCurrency">
+    <End Role="tblCurrency" Type="LILI_BMSModel.Store.tblCurrency" Multiplicity="1" />
+    <End Role="tblProjectFundingExpenditure" Type="LILI_BMSModel.Store.tblProjectFundingExpenditure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCurrency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingExpenditure">
+        <PropertyRef Name="ExpenditureCurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingExpenditure_tblFundSource">
+    <End Role="tblFundSource" Type="LILI_BMSModel.Store.tblFundSource" Multiplicity="1" />
+    <End Role="tblProjectFundingExpenditure" Type="LILI_BMSModel.Store.tblProjectFundingExpenditure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFundSource">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingExpenditure">
+        <PropertyRef Name="FundSourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingExpenditure_tblProjectInfo">
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="1" />
+    <End Role="tblProjectFundingExpenditure" Type="LILI_BMSModel.Store.tblProjectFundingExpenditure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingExpenditure">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingPlannedDisbursement_tblAidCategory">
+    <End Role="tblAidCategory" Type="LILI_BMSModel.Store.tblAidCategory" Multiplicity="1" />
+    <End Role="tblProjectFundingPlannedDisbursement" Type="LILI_BMSModel.Store.tblProjectFundingPlannedDisbursement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAidCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingPlannedDisbursement">
+        <PropertyRef Name="AidCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingPlannedDisbursement_tblFundSource">
+    <End Role="tblFundSource" Type="LILI_BMSModel.Store.tblFundSource" Multiplicity="1" />
+    <End Role="tblProjectFundingPlannedDisbursement" Type="LILI_BMSModel.Store.tblProjectFundingPlannedDisbursement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFundSource">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingPlannedDisbursement">
+        <PropertyRef Name="FundSourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectFundingPlannedDisbursement_tblProjectInfo">
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="1" />
+    <End Role="tblProjectFundingPlannedDisbursement" Type="LILI_BMSModel.Store.tblProjectFundingPlannedDisbursement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectFundingPlannedDisbursement">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectGeographicAllocation_tblDistrict">
+    <End Role="tblDistrict" Type="LILI_BMSModel.Store.tblDistrict" Multiplicity="0..1" />
+    <End Role="tblProjectGeographicAllocation" Type="LILI_BMSModel.Store.tblProjectGeographicAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDistrict">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectGeographicAllocation">
+        <PropertyRef Name="DistrictId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectGeographicAllocation_tblDivision">
+    <End Role="tblDivision" Type="LILI_BMSModel.Store.tblDivision" Multiplicity="0..1" />
+    <End Role="tblProjectGeographicAllocation" Type="LILI_BMSModel.Store.tblProjectGeographicAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDivision">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectGeographicAllocation">
+        <PropertyRef Name="DivisionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectGeographicAllocation_tblProjectInfo">
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="1" />
+    <End Role="tblProjectGeographicAllocation" Type="LILI_BMSModel.Store.tblProjectGeographicAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectGeographicAllocation">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectGeographicAllocation_tblUpazila">
+    <End Role="tblUpazila" Type="LILI_BMSModel.Store.tblUpazila" Multiplicity="0..1" />
+    <End Role="tblProjectGeographicAllocation" Type="LILI_BMSModel.Store.tblProjectGeographicAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUpazila">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectGeographicAllocation">
+        <PropertyRef Name="UpazilaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectGoBExecutingAgency_tblMinistry">
+    <End Role="tblMinistry" Type="LILI_BMSModel.Store.tblMinistry" Multiplicity="0..1" />
+    <End Role="tblProjectGoBExecutingAgency" Type="LILI_BMSModel.Store.tblProjectGoBExecutingAgency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMinistry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectGoBExecutingAgency">
+        <PropertyRef Name="GOBExeAgencyMinistryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectGoBExecutingAgency_tblMinistryAgency">
+    <End Role="tblMinistryAgency" Type="LILI_BMSModel.Store.tblMinistryAgency" Multiplicity="0..1" />
+    <End Role="tblProjectGoBExecutingAgency" Type="LILI_BMSModel.Store.tblProjectGoBExecutingAgency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMinistryAgency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectGoBExecutingAgency">
+        <PropertyRef Name="GOBExeAgencyMinistryAgencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectGoBExecutingAgency_tblProjectInfo">
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="1" />
+    <End Role="tblProjectGoBExecutingAgency" Type="LILI_BMSModel.Store.tblProjectGoBExecutingAgency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectGoBExecutingAgency">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectInfo_tblAgreementType">
+    <End Role="tblAgreementType" Type="LILI_BMSModel.Store.tblAgreementType" Multiplicity="0..1" />
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAgreementType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectInfo">
+        <PropertyRef Name="AgreementTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectInfo_tblApprovalAuthority">
+    <End Role="tblApprovalAuthority" Type="LILI_BMSModel.Store.tblApprovalAuthority" Multiplicity="0..1" />
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblApprovalAuthority">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectInfo">
+        <PropertyRef Name="ApprovalAuthorityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectInfo_tblApprovalStatus">
+    <End Role="tblApprovalStatus" Type="LILI_BMSModel.Store.tblApprovalStatus" Multiplicity="0..1" />
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblApprovalStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectInfo">
+        <PropertyRef Name="ApprovalStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectInfo_tblAssistanceType">
+    <End Role="tblAssistanceType" Type="LILI_BMSModel.Store.tblAssistanceType" Multiplicity="1" />
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAssistanceType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectInfo">
+        <PropertyRef Name="AssistanceTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectInfo_tblFundSource">
+    <End Role="tblFundSource" Type="LILI_BMSModel.Store.tblFundSource" Multiplicity="1" />
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFundSource">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectInfo">
+        <PropertyRef Name="FundSourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectInfo_tblFundSource1">
+    <End Role="tblFundSource" Type="LILI_BMSModel.Store.tblFundSource" Multiplicity="0..1" />
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFundSource">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectInfo">
+        <PropertyRef Name="LeadDPFundSourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectInfo_tblImplementationStatus">
+    <End Role="tblImplementationStatus" Type="LILI_BMSModel.Store.tblImplementationStatus" Multiplicity="0..1" />
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblImplementationStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectInfo">
+        <PropertyRef Name="ImplementationStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectInfo_tblProjectType">
+    <End Role="tblProjectType" Type="LILI_BMSModel.Store.tblProjectType" Multiplicity="1" />
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProjectType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectInfo">
+        <PropertyRef Name="ProjectTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectInfo_tblRevisionStatus">
+    <End Role="tblRevisionStatus" Type="LILI_BMSModel.Store.tblRevisionStatus" Multiplicity="0..1" />
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblRevisionStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectInfo">
+        <PropertyRef Name="RevisionStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectInfo_tblSector">
+    <End Role="tblSector" Type="LILI_BMSModel.Store.tblSector" Multiplicity="0..1" />
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSector">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectInfo">
+        <PropertyRef Name="SectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectNote_tblProjectInfo">
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="1" />
+    <End Role="tblProjectNote" Type="LILI_BMSModel.Store.tblProjectNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectNote">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectSectoralAllocation_tblProjectInfo">
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="1" />
+    <End Role="tblProjectSectoralAllocation" Type="LILI_BMSModel.Store.tblProjectSectoralAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectSectoralAllocation">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectSectoralAllocation_tblSector">
+    <End Role="tblSector" Type="LILI_BMSModel.Store.tblSector" Multiplicity="0..1" />
+    <End Role="tblProjectSectoralAllocation" Type="LILI_BMSModel.Store.tblProjectSectoralAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSector">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectSectoralAllocation">
+        <PropertyRef Name="SectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectSectoralAllocation_tblSubSector">
+    <End Role="tblSubSector" Type="LILI_BMSModel.Store.tblSubSector" Multiplicity="0..1" />
+    <End Role="tblProjectSectoralAllocation" Type="LILI_BMSModel.Store.tblProjectSectoralAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSubSector">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectSectoralAllocation">
+        <PropertyRef Name="SubSectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectThematicMarker_tblProjectInfo">
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="1" />
+    <End Role="tblProjectThematicMarker" Type="LILI_BMSModel.Store.tblProjectThematicMarker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectThematicMarker">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProjectThematicMarker_tblThematicMarker">
+    <End Role="tblThematicMarker" Type="LILI_BMSModel.Store.tblThematicMarker" Multiplicity="1" />
+    <End Role="tblProjectThematicMarker" Type="LILI_BMSModel.Store.tblProjectThematicMarker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblThematicMarker">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProjectThematicMarker">
+        <PropertyRef Name="SelectedThematicMarkerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSubSector_tblSector">
+    <End Role="tblSector" Type="LILI_BMSModel.Store.tblSector" Multiplicity="1" />
+    <End Role="tblSubSector" Type="LILI_BMSModel.Store.tblSubSector" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSector">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSubSector">
+        <PropertyRef Name="SectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUpazila_tblDistrict">
+    <End Role="tblDistrict" Type="LILI_BMSModel.Store.tblDistrict" Multiplicity="1" />
+    <End Role="tblUpazila" Type="LILI_BMSModel.Store.tblUpazila" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDistrict">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblUpazila">
+        <PropertyRef Name="DistrictId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUpazila_tblDivision">
+    <End Role="tblDivision" Type="LILI_BMSModel.Store.tblDivision" Multiplicity="1" />
+    <End Role="tblUpazila" Type="LILI_BMSModel.Store.tblUpazila" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDivision">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblUpazila">
+        <PropertyRef Name="DivisionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserFundSource_tblFundSource">
+    <End Role="tblFundSource" Type="LILI_BMSModel.Store.tblFundSource" Multiplicity="1" />
+    <End Role="tblUserFundSource" Type="LILI_BMSModel.Store.tblUserFundSource" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFundSource">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblUserFundSource">
+        <PropertyRef Name="FundSourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserFundSource_tblUserRegistrationInfo">
+    <End Role="tblUserRegistrationInfo" Type="LILI_BMSModel.Store.tblUserRegistrationInfo" Multiplicity="1" />
+    <End Role="tblUserFundSource" Type="LILI_BMSModel.Store.tblUserFundSource" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserRegistrationInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblUserFundSource">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserProject_tblProjectInfo">
+    <End Role="tblProjectInfo" Type="LILI_BMSModel.Store.tblProjectInfo" Multiplicity="1" />
+    <End Role="tblUserProject" Type="LILI_BMSModel.Store.tblUserProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblUserProject">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserProject_tblUserRegistrationInfo">
+    <End Role="tblUserRegistrationInfo" Type="LILI_BMSModel.Store.tblUserRegistrationInfo" Multiplicity="1" />
+    <End Role="tblUserProject" Type="LILI_BMSModel.Store.tblUserProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserRegistrationInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblUserProject">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserRegistrationInfo_tblOrganizationType">
+    <End Role="tblOrganizationType" Type="LILI_BMSModel.Store.tblOrganizationType" Multiplicity="1" />
+    <End Role="tblUserRegistrationInfo" Type="LILI_BMSModel.Store.tblUserRegistrationInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblOrganizationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblUserRegistrationInfo">
+        <PropertyRef Name="OrganizationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="CommonConfigGet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="strDisplayName" Type="varchar" Mode="In" />
+    <Parameter Name="intID" Type="int" Mode="In" />
+    <Parameter Name="strName" Type="varchar" Mode="In" />
+    <Parameter Name="strSortBy" Type="varchar" Mode="In" />
+    <Parameter Name="strSortType" Type="varchar" Mode="In" />
+    <Parameter Name="startRowIndex" Type="int" Mode="In" />
+    <Parameter Name="maximumRows" Type="int" Mode="In" />
+    <Parameter Name="numTotalRows" Type="int" Mode="InOut" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="CommonConfigTypeDML" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="strDisplayName" Type="varchar" Mode="In" />
+    <Parameter Name="intID" Type="int" Mode="In" />
+    <Parameter Name="strName" Type="varchar" Mode="In" />
+    <Parameter Name="Acronym" Type="varchar" Mode="In" />
+    <Parameter Name="IATICode" Type="varchar" Mode="In" />
+    <Parameter Name="intSortOrder" Type="int" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="strUser" Type="varchar" Mode="In" />
+    <Parameter Name="strMode" Type="varchar" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_AidAllocationBySector" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FundSourceIds" Type="varchar(max)" Mode="In" />
+    <Parameter Name="dtFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="dtToDate" Type="varchar" Mode="In" />
+    <Parameter Name="ISUnderADP" Type="int" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_AidAllocationByThematicArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FundSourceIds" Type="varchar(max)" Mode="In" />
+    <Parameter Name="dtFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="dtToDate" Type="varchar" Mode="In" />
+    <Parameter Name="ISUnderADP" Type="int" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Dashboard_ChartCategoryWise" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="categoryId" Type="int" Mode="In" />
+    <Parameter Name="categoryName" Type="varchar" Mode="In" />
+    <Parameter Name="FromDate" Type="varchar" Mode="In" />
+    <Parameter Name="ToDate" Type="varchar" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_Dashboard_ChartOnOffBudget" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_Dashboard_GridDetailsListWithFilter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="categoryId" Type="int" Mode="In" />
+    <Parameter Name="subCategoryIds" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="FromDate" Type="varchar" Mode="In" />
+    <Parameter Name="ToDate" Type="varchar" Mode="In" />
+    <Parameter Name="searhKeyword" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_Dashboard_GridList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intFundSourceId" Type="int" Mode="In" />
+    <Parameter Name="intAgencyId" Type="int" Mode="In" />
+    <Parameter Name="AgencyType" Type="varchar" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_Dashboard_GridListWithFilter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="categoryId" Type="int" Mode="In" />
+    <Parameter Name="subCategoryIds" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="FromDate" Type="varchar" Mode="In" />
+    <Parameter Name="ToDate" Type="varchar" Mode="In" />
+    <Parameter Name="intFundSourceId" Type="int" Mode="In" />
+    <Parameter Name="intAgencyId" Type="int" Mode="In" />
+    <Parameter Name="AgencyType" Type="varchar" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ProjectUserActivity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intProjectId" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_Rpt_DashboardReportWithFilter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FundSourceSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="DPProjectNoSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ProjectTitleSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ADPProjectCodeSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="MOFProjectCodePartSelectionCriteria" Type="nvarchar" Mode="In" />
+    <Parameter Name="ADPProjectNameSelectionCriteria" Type="nvarchar" Mode="In" />
+    <Parameter Name="SectorNameSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SubSectorNameSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ApprovalStatusNameSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="AssistanceTypeNameSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ProjectTypeNameSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ImplementationStatusNameSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="RevisionStatusNameSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ExecutingAgencyNameSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="GeographicDivisionNameSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="GeographicDistrictNameSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="GeographicUpazilaNameSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ThematicMarkerNameSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="AidCategoryNameSelectionCriteria" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="CommitmentUSDFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="CommitmentUSDToDate" Type="varchar" Mode="In" />
+    <Parameter Name="ActualDisbursementUSDFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="ActualDisbursementUSDToDate" Type="varchar" Mode="In" />
+    <Parameter Name="PlannedDisbursementUSDFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="PlannedDisbursementUSDToDate" Type="varchar" Mode="In" />
+    <Parameter Name="ExpenditureUSDFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="ExpenditureUSDToDate" Type="varchar" Mode="In" />
+    <Parameter Name="LastUpdateDateFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="LastUpdateDateToDate" Type="varchar" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_Rpt_ProjectProfile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intProjectId" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_Rpt_ProjectProfileActualDisbursement" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intProjectId" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_Rpt_ProjectProfileAidEffectivenessIndicators" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intProjectId" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_Rpt_ProjectProfileCommitment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intProjectId" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_Rpt_ProjectProfileExpenditure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intProjectId" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_Rpt_ProjectProfileGeographicAllocation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intProjectId" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_Rpt_ProjectProfileGovExecuteAgency" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intProjectId" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_Rpt_ProjectProfilePlannedDisbursement" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intProjectId" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_Rpt_ProjectProfileSectoralAllocation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intProjectId" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_Rpt_ProjectProfileThematicMarker" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intProjectId" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spChartODAHistoricalTrend" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FundSourceIds" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FromDate" Type="varchar" Mode="In" />
+    <Parameter Name="ToDate" Type="varchar" Mode="In" />
+    <Parameter Name="projectId" Type="int" Mode="In" />
+    <Parameter Name="ISUnderADP" Type="int" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptAidAllocationByNationalPriority" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FundSourceIds" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ProjectId" Type="int" Mode="In" />
+    <Parameter Name="dtFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="dtToDate" Type="varchar" Mode="In" />
+    <Parameter Name="ISUnderADP" Type="int" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptAidAllocationBySector" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FundSourceIds" Type="varchar(max)" Mode="In" />
+    <Parameter Name="dtFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="dtToDate" Type="varchar" Mode="In" />
+    <Parameter Name="ISUnderADP" Type="int" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptDPProfile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FundSourceId" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptDPProfile_FundFlowSummary" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FundSourceId" Type="int" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptDPProfile_Last10YrsDisburseTend" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FundSourceId" Type="int" Mode="In" />
+    <Parameter Name="CompletionDate" Type="varchar" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptDPProfile_ProjectsinPrioritySectors" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FundSourceId" Type="int" Mode="In" />
+    <Parameter Name="CompletionDate" Type="varchar" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptGetProjectInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="FundSourceId" Type="int" Mode="In" />
+    <Parameter Name="DPProjectNo" Type="varchar" Mode="In" />
+    <Parameter Name="AssistanceTypeId" Type="int" Mode="In" />
+    <Parameter Name="ProjectTypeId" Type="int" Mode="In" />
+    <Parameter Name="strSortBy" Type="varchar" Mode="In" />
+    <Parameter Name="strSortType" Type="varchar" Mode="In" />
+    <Parameter Name="startRowIndex" Type="int" Mode="In" />
+    <Parameter Name="maximumRows" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptHighestDisbursementStatusDPWise" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dtFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="dtToDate" Type="varchar" Mode="In" />
+    <Parameter Name="ISUnderADP" Type="int" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptNewlySignedAidAgreements" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dtFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="dtToDate" Type="varchar" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptSectoralTrendsNAidAllocation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FundSourceIds" Type="varchar(max)" Mode="In" />
+    <Parameter Name="dtFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="dtToDate" Type="varchar" Mode="In" />
+    <Parameter Name="ISUnderADP" Type="int" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="intMode" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptSectorProfile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dtFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="dtToDate" Type="varchar" Mode="In" />
+    <Parameter Name="intSectorId" Type="int" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptSectorProfileDisByFundSource" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dtFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="dtToDate" Type="varchar" Mode="In" />
+    <Parameter Name="intSectorId" Type="int" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptSectorProfileParameter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptSectorWisePlannedDisbrusement" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dtFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="dtToDate" Type="varchar" Mode="In" />
+    <Parameter Name="ISUnderADP" Type="int" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="intMode" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptSummaryofProject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FundSourceId" Type="int" Mode="In" />
+    <Parameter Name="FromDate" Type="varchar" Mode="In" />
+    <Parameter Name="ToDate" Type="varchar" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptTop10BiggestActualDisbrusement" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dtFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="dtToDate" Type="varchar" Mode="In" />
+    <Parameter Name="intSectorId" Type="int" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptTop10BiggestGeographicAllocation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dtFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="dtToDate" Type="varchar" Mode="In" />
+    <Parameter Name="intSectorId" Type="int" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptTotalDisbursementofTop10DP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FundSourceIds" Type="varchar(max)" Mode="In" />
+    <Parameter Name="dtFromDate" Type="varchar" Mode="In" />
+    <Parameter Name="dtToDate" Type="varchar" Mode="In" />
+    <Parameter Name="ISUnderADP" Type="int" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="spRptTrendsInDevelopmentCooperation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FundSourceIds" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FromDate" Type="varchar" Mode="In" />
+    <Parameter Name="ToDate" Type="varchar" Mode="In" />
+    <Parameter Name="projectId" Type="int" Mode="In" />
+    <Parameter Name="ISUnderADP" Type="int" Mode="In" />
+    <Parameter Name="MonetaryValueType" Type="int" Mode="In" />
+    <Parameter Name="Mode" Type="int" Mode="In" />
+    <Parameter Name="numErrorCode" Type="int" Mode="InOut" />
+    <Parameter Name="strErrorMsg" Type="varchar" Mode="InOut" />
+  </Function>
+</Schema>

@@ -1,0 +1,286 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.UserMenuModel
+@using LILI_CRM.Web.Helpers
+@*<script src="@Url.Content("~/Scripts/listEditor.js")" type="text/javascript"></script>*@
+
+@using (Ajax.BeginForm("Index", null, new AjaxOptions { HttpMethod = "POST", OnComplete = "OnComplete" }, new { id = "frm", action = Url.Action(Model.Mode == "Create" ? "Create" : "Edit") }))
+{
+    <div class="GroupBox fixedContent" style="max-height: 30px; text-align:center; background-color:gainsboro">
+        <label style='color:midnightblue; font-size:x-large; text-align:center'>USER WISE MENU INFORMATION</label>
+    </div>
+    
+    <div class="GroupBox fixedContent">
+     @Html.HiddenFor(m => m.Id)   
+        <div class="row">
+            <span class="label">
+                @Html.LabelFor(model => model.UserName)
+                <label style='color: red'>*</label>
+            </span>
+            <span class="field">
+                @Html.EditorFor(model => model.UserName)
+            </span>
+
+             <span class="label-right">
+                @Html.LabelFor(model => model.Password)
+                <label style='color: red'>*</label>
+            </span>
+            <span class="field">
+                @Html.EditorFor(model => model.Password)
+            </span>
+        </div>
+
+         <div class="row">
+            <span class="label">
+                @Html.LabelFor(model => model.IsActive)
+                </span>
+            <span class="field">
+                @Html.EditorFor(model => model.IsActive)
+            </span>
+        </div>
+
+        <div class="clear"></div>
+
+    </div>
+    
+    <div class ="GroupBox">
+    
+        
+        <div class="row">
+            <span class="label">
+                @Html.LabelFor(model => model.MenuId)
+
+            </span>
+            <span class="field">
+                @Html.DropDownListFor(m => m.MenuId, Model.MenuList, @String.Format("{0}", Content.DDLOptionalLabel()))
+            </span>
+        </div>
+
+
+        <div class="button-crude fixedAddButton" style="text-align: right;">
+            <input id="btnAdd" type="button" value="Add" />
+            <input id="btnChildUpdate" type="button" value="Update" style="display: none;" />
+        </div>
+    
+        <div class="clear"></div>
+
+        <table id="grid" class="contenttable">
+        
+            <thead>
+                <tr>
+                    <th style="display:none;">
+                        Item Id
+                    </th>
+                    <th>
+                        Menu Name
+                    </th>
+                
+                    <th>
+                        Remove
+                    </th>
+                </tr>
+            </thead>        
+
+            <tbody>
+                @for (int i = 0; i < Model.UserMenuDetail.Count; i++)
+                {
+                    var item = Model.UserMenuDetail.ToList()[i];
+                    
+                    <tr class="row">
+
+                        <td style="display:none;">
+                            <input style="display:none;" type="text" name="@("UserMenuDetail[" + i + "].MenuId")" value="@item.MenuId" /><span>@item.MenuId</span>
+                        </td>
+
+                        <td>
+                            <input style="display:none;" type="text" name="@("UserMenuDetail[" + i + "].MenuName")" value="@item.MenuName" /><span>@item.MenuName</span>
+                        </td>
+
+                        
+                        <td><a class="deleteRow" title="delete" href="javascript:void(0)"><img alt="delete" style="border: none;" src="@Url.Content("~/Content/Images/Delete.png")" /></a></td>
+                       
+                    </tr>
+                    
+                }
+            </tbody>
+        
+        </table>
+
+        <div class="clear"></div>
+    
+    </div>
+    
+    <div class="clear"></div>
+    
+    <div id="message" class="GroupBox" style="min-height: 15px;">
+        @Html.ValidationSummary(false, LILI_CRM.Web.Utility.Common.ValidationSummaryHead)
+        @if (!string.IsNullOrEmpty(Model.Message))
+        {
+            <div class="@Model.ErrorClass">
+                @Model.Message
+            </div>
+        }
+    </div>
+    
+    <div id="divEmpList">
+    <iframe id="styleAdvance" src="" width="99%" height="98%" style="border: 0px solid white;
+        padding-right: 0px;">
+        <p>
+            Your browser does not support iframes.</p>
+    </iframe>
+    </div>
+}
+    
+
+    <script type="text/javascript">
+    $(function () {
+        $(".addItem").click(function () {
+            $(".validation-summary-errors ").empty();
+        });
+    });
+
+    $('#btnAdd').live('click', function () {
+
+        var i = $('#grid tbody tr').length;
+        $('#message').empty();
+        
+        var tr = $('#grid tbody tr').first().clone();
+
+        var menuId = $('#MenuId').val();
+//        alert(menuId);
+        var menuName = $('#MenuId option:selected').text();
+//        alert(menuName);
+
+        if(menuId == '' || menuId <= 0){
+            $('#message').show().text('Please select a menu').css({'color':'red'});
+            return false;
+        }
+
+        var isDuplicate = false;
+        $('#grid tbody tr').each(function(i){
+             
+             var tmpMenuId = $(this).find('td:eq(0)').find('input').val();
+             if(menuId == tmpMenuId){
+                isDuplicate=true;
+                $('#message').show().text('Duplicate menu.').css({'color':'red'});
+             }
+                 
+        })
+
+        if(isDuplicate) return false;
+
+        var row = "<tr class='row'>" +
+        "<td style='display:none;'><input style='display:none' type='text' name='UserMenuDetail[" + i + "].MenuId' value='" + menuId + "'></input>" + menuId + "</td>" +
+        "<td><input style='display:none' type='text' name='UserMenuDetail[" + i + "].MenuName' value='" + menuName + "'></input>" + menuName + "</td>" +
+        "<td><a class='deleteRow' title='delete' href='#'><img style='border: none; ' src='@Url.Content("~/Content/Images/Delete.png")'></a></td>";
+        $('#grid').find('tbody').append(row);
+
+//        $('#MenuId').val(0);
+//        $('#MenuId').val('');
+        
+    })
+
+
+    $('.row a.deleteRow').live('click',function(){
+        $(this).parent().parent().remove();
+        ResetDynamicTableSequenceNumber();
+    })
+
+
+    function ResetDynamicTableSequenceNumber() {
+            var counter = 0;
+            $('#grid tr.row').each(function () {          
+                $(this).find("td input").each(function () {
+                    var toVal=$(this).attr("name");
+                    var v= toVal.substr(0,15);
+                    var v1= toVal.substr(16,toVal.length-14);
+                    $(this).attr("name",v+counter+v1);
+                });
+                counter++;
+            });
+        } 
+
+
+    $(function () {
+        $(".addItem").click(function () {
+            $(".validation-summary-errors ").empty();
+        });
+    });
+//    // ******** functions for open popup *************
+//    $(document).ready(function () {
+
+//        $("#divEmpList").dialog({ autoOpen: false, modal: true, height: 500, width: 850, title: 'Item', beforeclose: function (event, ui) { Closing(); } });
+//        //showErrMsg();
+////        DisableEmpSearch();
+//    });
+
+//    function DisableEmpSearch() {        
+//        if ($('#Id').val() > 0)
+//            $('#imgItemSearch').hide();
+//        else $('#imgItemSearch').show();
+//    }
+    
+//    function openItem() {
+//        
+//        var url = '@Url.Action("ItemSearch", "IndentRequest")';
+//       
+//        $.ajax({
+//            url: url,
+//            type: 'GET',
+//            dataType: 'text',
+//            timeout: 5000,
+//            error: function () {
+//                alert('System is unable to load data please try again.');
+//            },
+//            success: function (result) {
+//                $('#divEmpList').html(result);
+//            }
+//        });
+
+//        $("#divEmpList").dialog('open');
+//        return false;
+//    }
+
+
+//    function setData(id) {
+//        $('#MenuId').val(0);
+//        $('#MenuId').val(id);
+//        GetItemInfo();
+//        $("#divEmpList").dialog('close');
+//    }
+
+
+    function Closing() {
+
+    }
+   
+    //--------------------------------------
+//    function GetItemInfo() {
+//        var empId = $('#ItemIdS').val();
+//        var url = '@Url.Action("GetItemInfo", "IndentRequest")';
+//        var form = $('#frm');
+//        var serializedForm = form.serialize();
+
+
+//        $("#ItemIdS").val('');
+//        $("#ItemNameS").val('');
+//        $("#PartNoS").val('');
+//        $("#MachineNameS").val('');
+//        $("#ItemDescriptionS").val('');
+//        $("#UnitS").val('');
+
+//        if (empId > 0) {
+//            $.post(url, {'empId':empId}, function (obj) {
+//                $("#ItemIdS").val(obj.ItemIdS);
+//                $("#ItemNameS").val(obj.ItemNameS);
+//                $("#PartNoS").val(obj.PartNoS);
+//                $("#MachineNameS").val(obj.MachineNameS);
+//                $("#ItemDescriptionS").val(obj.ItemDescriptionS);
+//                $("#UnitS").val(obj.UnitS);
+//                $('#PresentStockS').val(obj.OpeningBalanceS);
+
+
+//            }, "json");
+//        }
+//        return false;
+//    }
+
+</script>

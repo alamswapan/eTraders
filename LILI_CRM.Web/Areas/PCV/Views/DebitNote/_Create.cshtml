@@ -1,0 +1,321 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.DebitNoteModel
+@using (Ajax.BeginForm("Create", "DebitNote", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddDebitNoteSuccess",
+        }, new { @id = "addDebitNoteForm" }))
+{
+
+    <div class="row-fluid form-horizontal">
+        <div class="left popup-widget-box clearfix">
+            <div class="content">
+                @Html.ValidationSummary(true)
+                <div id="updateTargetId" class="alert alert-info" style="display: none;">
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.SupplierId)
+                    </span>
+                    <span class="span8">
+                        @Html.DropDownList("SupplierId", Model.ddlSupplier, new { @class = "clsSupplier" })
+                        @Html.ValidationMessageFor(model => model.SupplierId)
+                    </span>
+                </div>
+                <div class="span6 pull-left">
+                    <span class="span4">
+                        @Html.LabelFor(model => model.DebitNoteDate)
+                    </span>
+                    <span class="span8">
+                        @Html.EditorFor(model => model.DebitNoteDate)
+                        @Html.ValidationMessageFor(model => model.DebitNoteDate)
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.SupplierAddress)
+                    </span>
+                    <span class="span8">
+                        @Html.TextBoxFor(model => model.SupplierAddress, new { Style = "background:#e0eee0", @disabled = "disabled" })  
+                    </span>
+                </div>
+                <div class="span6 pull-left">
+                    <span class="span4">
+                        @Html.LabelFor(model => model.DebitNoteNo)
+                    </span>
+                    <span class="span8">
+                        @Html.TextBoxFor(model => model.DebitNoteNo, new { @style = "text-align: left !important;" })
+                        @Html.ValidationMessageFor(model => model.DebitNoteNo)
+
+                    </span>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4 ">
+                        @Html.LabelFor(model => model.AttentionPerson)
+                    </span>
+                    <span class="span8">
+                        @Html.TextBoxFor(model => model.AttentionPerson, new { Style = "background:#F0F0F0", @disabled = "disabled" })  
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="row-fluid">
+                <div id="DebitNoteDetailsGridZone">
+                    <div id="DebitNoteDetailsKendoGrid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="hr"></div>
+            &nbsp; 
+            &nbsp;
+            
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                        GT
+                             <br />
+                             <br />
+
+                        Please remit our commission USD                -to the below Bank Account No. 
+                        <br />
+                        <br />
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4">
+                        @Html.LabelFor(model => model.BankId)
+                    </span>
+                    <span class="span8">
+                        @Html.DropDownList("BankId", Model.ddlBank, new { @class = "clsBank" })
+                        @Html.ValidationMessageFor(model => model.BankId)
+                    </span>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4">
+                        @Html.LabelFor(model => model.BankAddress)
+                    </span>
+                    <span class="span8">
+                        @Html.TextBoxFor(model => model.BankAddress, new { Style = "background:#F0F0F0", @disabled = "disabled" })  
+                    </span>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4">
+                        @Html.LabelFor(model => model.AccountNo)
+                    </span>
+                    <span class="span8">
+                        @Html.TextBoxFor(model => model.AccountNo, new { Style = "background:#F0F0F0", @disabled = "disabled" }) 
+                    </span>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span4">
+                        @Html.LabelFor(model => model.SwiftCode)
+                    </span>
+                    <span class="span8">
+                        @Html.TextBoxFor(model => model.SwiftCode, new { Style = "background:#F0F0F0", @disabled = "disabled" }) 
+                    </span>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+            <div class="hr"> </div>
+                <div class="content pull-right">
+                    <button type="button" class="btn btn-mini btn-primary" id="btnPrepsreDebitNoteDetailList" name="btnPrepsreDebitNoteDetailList"
+                        onclick="PreSaveDebitNoteDetails()">
+                        <i class="icon-save bigger-125"></i>Prepare List</button>
+
+                    <button type="submit" class="btn btn-mini btn-primary" id="btnAddDebitNote" name="btnAddDebitNote">
+                        <i class="icon-save bigger-125"></i>Save</button>
+                        &nbsp;&nbsp;
+                    <button type="button" class="btn btn-mini btn-primary" id="btnCancelDebitNote" name="btnCancelDebitNote"
+                        value="Cancel" onclick=" $($('#addDebitNoteDialog').dialog('close'));">
+                            <i class="icon-remove bigger-125"></i>Cancel</button>
+                </div>
+            </div>
+        </div>
+            </div>
+    
+}
+@*<script src="@Url.Content("~/Scripts/App/DebitNote.js")" type="text/javascript"></script>*@
+
+
+
+@*  DebitNote Detail Kendo Grid start *@
+<script type="text/javascript">
+    // Kendo Data Source
+    var dataSource = new kendo.data.DataSource({
+        pageSize: 20,
+        height: 400,
+        update: function (e) { return true; },
+        type: "json",
+        transport: {
+            read: "/PCV/DebitNote/GetDebitNoteDetails"
+        },
+
+        schema: {
+            model: {
+                id: "Id",
+                fields: {
+                    //Id: { type: "number", editable: false }, ProductId: { type: "number", editable: false },
+                InvoiceId: { type: "number"},
+                InvoiceDate: { type: "date" },
+                CommercialInvoiceNo: { type: "string"},
+                CommercialInvoiceDate: { type: "date" },
+                CommissionCalculationTerm: { type: "string" },
+                CommissionPer: { type: "number"},
+                Commission: { type: "number"},
+                CustomerName: { type: "string"},
+                Quantity: { type: "number"}
+            }
+        }
+        }
+});
+
+// Kendo Krid Initialize
+$("#DebitNoteDetailsKendoGrid").kendoGrid({
+    dataSource: dataSource,
+    height: 300,
+    filterable: false,
+    groupable: true,
+    sortable: true,
+    resizable: true,
+    columnMenu: false,
+    columns: [
+                    //{ field: "Id", title: "Id", width: 100, hidden: true, filterable: false, sortable: false, locked: true },
+                { field: "InvoiceId", title: "Invoice Id", width: 100, hidden: false, filterable: false, sortable: false, locked: true },
+                { field: "InvoiceDate", title: "Invoice Date", format: "{0: dd/MM/yyyy}", width: 120, filterable: false, sortable: false, locked: true },
+                { field: "CommercialInvoiceNo", title: "Commercial Invoice No", width: 150, filterable: false, sortable: false, locked: true },
+                { field: "CommercialInvoiceDate", title: "Commercial Invoice Date", format: "{0: dd/MM/yyyy}", width: 120, filterable: false, sortable: false, locked: true },
+                { field: "CommissionCalculationTerm", title: "Commission Term", width: 80, filterable: false, sortable: false, locked: true },
+                { field: "CommissionPer", title: "Commission Per", width: 80, filterable: false, sortable: false, locked: true },
+                { field: "Commission", title: "Commission", width: 80, sortable: false},
+                { field: "Quantity", title: "Quantity", width: 80, sortable: false},
+                { field: "CustomerName", title: "Customer Name", width: 150, filterable: false, sortable: false, locked: true },
+                {command: "destroy", title: " ", width: 100 }
+            ],
+    navigatable: false
+});
+
+</script>
+
+
+@*Save Grid Data*@
+<script type="text/javascript">
+
+////////function SaveDebitNoteDetails() 
+////////{
+////////    //var TotalSum = 0, NetSum = 0, OtherCharge = 0;
+////////    var TotalSum = 0.00, NetSum = 0.00, OtherCharge = 0.00;
+
+////////    //getting json data from kendo Grid
+////////    var gridData = $("#DebitNoteDetailsKendoGrid").data("kendoGrid").dataSource.data();
+////////    var invoiceDetailViewModelList = [];
+
+////////    //loop through each json data from kendo Grid
+////////    for (var i = 0; i < gridData.length; i++) {
+
+////////        var currentDataItem = gridData[i];
+
+////////        var invoiceDetailViewModel = {};
+////////        invoiceDetailViewModel.DebitNoteId= "";    //currentDataItem.DebitNoteId;
+////////        invoiceDetailViewModel.ProductId = currentDataItem.ProductId;
+////////        invoiceDetailViewModel.UnitPrice = currentDataItem.UnitPrice;
+////////        invoiceDetailViewModel.Quantity = currentDataItem.Quantity;
+////////        invoiceDetailViewModel.SubTotal = currentDataItem.SubTotal;
+////////        invoiceDetailViewModelList.push(invoiceDetailViewModel);
+
+////////        TotalSum = TotalSum + currentDataItem.SubTotal;
+////////    }
+
+////////    $('#Total').val(TotalSum);
+////////    NetSum = TotalSum;
+////////    OtherCharge = $('#OtherCharges').val();
+////////        $('#NET').val(NetSum);
+
+////////    var postUrl = '@Url.Content("~/PCV/DebitNote/SetDebitNoteDetailsListForSave")';
+////////    //alert(postUrl);
+////////    var paramValue = JSON.stringify({ lstDebitNoteDetails: invoiceDetailViewModelList });
+////////    alert(paramValue);
+
+////////    //Post json data from kendo Grid to Controller
+////////    $.ajax({
+////////        url: postUrl,
+////////        type: 'POST',
+////////        dataType: 'json',
+////////        data: paramValue,
+////////        contentType: 'application/json; charset=utf-8',
+////////        success: function (result) {
+////////            console.log(result);
+////////        },
+////////        error: function (objAjaxRequest, strError) {
+////////            var respText = objAjaxRequest.responseText;
+////////            console.log(respText);
+////////        }
+////////    });
+////////}
+
+////////function PreSaveDebitNoteDetails() {
+////////        
+////////    SaveDebitNoteDetails();
+
+////////}
+</script>
+
+
+<script type="text/javascript">
+    $(function () {
+        $('#SupplierId').on('change',function(){
+            
+            $('#SupplierName').val("");
+            $('#Address').val("");
+
+            var custId = $(this).val();
+
+            if(custId == "0")
+            {
+               return;
+            }
+            $.get(
+                    "@Url.Action("GetSupplierDetails")",
+                    {'id':custId},
+                    function(jresult){
+                        if(jresult != ''){
+                             $('#SupplierName').val(jresult[0].Address1);
+                             $('#Address').val(jresult[0].Phone);
+                        }
+                        else{
+                            $("#message").show();
+                            $('#message').text(data).css({ 'color':'red' });
+                            $("#message").delay(3000).hide();
+                        }
+                    }
+                );
+
+        });
+    });
+
+</script>
+

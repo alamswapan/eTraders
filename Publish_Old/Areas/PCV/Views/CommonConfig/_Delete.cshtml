@@ -1,0 +1,20 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.CommonConfigViewModel
+@using (Ajax.BeginForm("Delete", "CommonConfig", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "DeleteCommonConfigSuccess",
+        }, new { @id = "deleteCommonConfigForm" }))
+{  
+    <div id="updateTargetId" class="error invisible"></div>
+    @Html.HiddenFor(model => model.Id)
+    <div class="display-field">
+        <strong>Name: </strong>@Html.DisplayFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        Do you want delete this category?
+    </div>
+ 
+}

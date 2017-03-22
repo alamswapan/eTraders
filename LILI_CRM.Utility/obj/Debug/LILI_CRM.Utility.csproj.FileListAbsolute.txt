@@ -1,0 +1,29 @@
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.pdb
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.pdb
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.dll
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.pdb
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.dll
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.pdb
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.dll
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.pdb
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Utility\obj\Debug\ResolveAssemblyReference.cache
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.dll
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.pdb
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.dll
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.pdb
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.dll
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.pdb
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Utility\bin\Debug\LILI_CRM.Utility.pdb
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.Utility\obj\Debug\LILI_CRM.Utility.pdb

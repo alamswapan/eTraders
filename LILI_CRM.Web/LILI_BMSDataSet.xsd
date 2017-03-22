@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LILI_BMSDataSet" targetNamespace="http://tempuri.org/LILI_BMSDataSet.xsd" xmlns:mstns="http://tempuri.org/LILI_BMSDataSet.xsd" xmlns="http://tempuri.org/LILI_BMSDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="LILI_BMSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LILI_BMSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.LILI_BMSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_Daily_BreakdownTableAdapter" GeneratorDataComponentClassName="vw_Daily_BreakdownTableAdapter" Name="vw_Daily_Breakdown" UserDataComponentName="vw_Daily_BreakdownTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LILI_BMSConnectionString (Web.config)" DbObjectName="LILI_BMS.dbo.vw_Daily_Breakdown" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT UnitName, ShiftName, PackSize, FlavorName, ProductionTime, ProductionTimeUnit, ProductionCapacityPH, ProductionCapacityPHUnit, TotalBreakdownTime, TotalBreakdownTimeUnit, TotalProductionUnit, CostPerHour, CostPerHourUnit, MachineId, Material, Oper, Mech, Elec, BreakdownCause, MachineName, DateOfBreakdown, DailyBreakdownId FROM dbo.vw_Daily_Breakdown</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="UnitName" DataSetColumn="UnitName" />
+              <Mapping SourceColumn="ShiftName" DataSetColumn="ShiftName" />
+              <Mapping SourceColumn="PackSize" DataSetColumn="PackSize" />
+              <Mapping SourceColumn="FlavorName" DataSetColumn="FlavorName" />
+              <Mapping SourceColumn="ProductionTime" DataSetColumn="ProductionTime" />
+              <Mapping SourceColumn="ProductionTimeUnit" DataSetColumn="ProductionTimeUnit" />
+              <Mapping SourceColumn="ProductionCapacityPH" DataSetColumn="ProductionCapacityPH" />
+              <Mapping SourceColumn="ProductionCapacityPHUnit" DataSetColumn="ProductionCapacityPHUnit" />
+              <Mapping SourceColumn="TotalBreakdownTime" DataSetColumn="TotalBreakdownTime" />
+              <Mapping SourceColumn="TotalBreakdownTimeUnit" DataSetColumn="TotalBreakdownTimeUnit" />
+              <Mapping SourceColumn="TotalProductionUnit" DataSetColumn="TotalProductionUnit" />
+              <Mapping SourceColumn="CostPerHour" DataSetColumn="CostPerHour" />
+              <Mapping SourceColumn="CostPerHourUnit" DataSetColumn="CostPerHourUnit" />
+              <Mapping SourceColumn="MachineId" DataSetColumn="MachineId" />
+              <Mapping SourceColumn="Material" DataSetColumn="Material" />
+              <Mapping SourceColumn="Oper" DataSetColumn="Oper" />
+              <Mapping SourceColumn="Mech" DataSetColumn="Mech" />
+              <Mapping SourceColumn="Elec" DataSetColumn="Elec" />
+              <Mapping SourceColumn="BreakdownCause" DataSetColumn="BreakdownCause" />
+              <Mapping SourceColumn="MachineName" DataSetColumn="MachineName" />
+              <Mapping SourceColumn="DateOfBreakdown" DataSetColumn="DateOfBreakdown" />
+              <Mapping SourceColumn="DailyBreakdownId" DataSetColumn="DailyBreakdownId" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LILI_BMSDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="LILI_BMSDataSet" msprop:Generator_UserDSName="LILI_BMSDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_Daily_Breakdown" msprop:Generator_TableClassName="vw_Daily_BreakdownDataTable" msprop:Generator_TableVarName="tablevw_Daily_Breakdown" msprop:Generator_TablePropName="vw_Daily_Breakdown" msprop:Generator_RowDeletingName="vw_Daily_BreakdownRowDeleting" msprop:Generator_RowChangingName="vw_Daily_BreakdownRowChanging" msprop:Generator_RowEvHandlerName="vw_Daily_BreakdownRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Daily_BreakdownRowDeleted" msprop:Generator_UserTableName="vw_Daily_Breakdown" msprop:Generator_RowChangedName="vw_Daily_BreakdownRowChanged" msprop:Generator_RowEvArgName="vw_Daily_BreakdownRowChangeEvent" msprop:Generator_RowClassName="vw_Daily_BreakdownRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UnitName" msprop:Generator_ColumnVarNameInTable="columnUnitName" msprop:Generator_ColumnPropNameInRow="UnitName" msprop:Generator_ColumnPropNameInTable="UnitNameColumn" msprop:Generator_UserColumnName="UnitName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShiftName" msprop:Generator_ColumnVarNameInTable="columnShiftName" msprop:Generator_ColumnPropNameInRow="ShiftName" msprop:Generator_ColumnPropNameInTable="ShiftNameColumn" msprop:Generator_UserColumnName="ShiftName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PackSize" msprop:Generator_ColumnVarNameInTable="columnPackSize" msprop:Generator_ColumnPropNameInRow="PackSize" msprop:Generator_ColumnPropNameInTable="PackSizeColumn" msprop:Generator_UserColumnName="PackSize">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FlavorName" msprop:Generator_ColumnVarNameInTable="columnFlavorName" msprop:Generator_ColumnPropNameInRow="FlavorName" msprop:Generator_ColumnPropNameInTable="FlavorNameColumn" msprop:Generator_UserColumnName="FlavorName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductionTime" msprop:Generator_ColumnVarNameInTable="columnProductionTime" msprop:Generator_ColumnPropNameInRow="ProductionTime" msprop:Generator_ColumnPropNameInTable="ProductionTimeColumn" msprop:Generator_UserColumnName="ProductionTime" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ProductionTimeUnit" msprop:Generator_ColumnVarNameInTable="columnProductionTimeUnit" msprop:Generator_ColumnPropNameInRow="ProductionTimeUnit" msprop:Generator_ColumnPropNameInTable="ProductionTimeUnitColumn" msprop:Generator_UserColumnName="ProductionTimeUnit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductionCapacityPH" msprop:Generator_ColumnVarNameInTable="columnProductionCapacityPH" msprop:Generator_ColumnPropNameInRow="ProductionCapacityPH" msprop:Generator_ColumnPropNameInTable="ProductionCapacityPHColumn" msprop:Generator_UserColumnName="ProductionCapacityPH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ProductionCapacityPHUnit" msprop:Generator_ColumnVarNameInTable="columnProductionCapacityPHUnit" msprop:Generator_ColumnPropNameInRow="ProductionCapacityPHUnit" msprop:Generator_ColumnPropNameInTable="ProductionCapacityPHUnitColumn" msprop:Generator_UserColumnName="ProductionCapacityPHUnit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalBreakdownTime" msprop:Generator_ColumnVarNameInTable="columnTotalBreakdownTime" msprop:Generator_ColumnPropNameInRow="TotalBreakdownTime" msprop:Generator_ColumnPropNameInTable="TotalBreakdownTimeColumn" msprop:Generator_UserColumnName="TotalBreakdownTime" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalBreakdownTimeUnit" msprop:Generator_ColumnVarNameInTable="columnTotalBreakdownTimeUnit" msprop:Generator_ColumnPropNameInRow="TotalBreakdownTimeUnit" msprop:Generator_ColumnPropNameInTable="TotalBreakdownTimeUnitColumn" msprop:Generator_UserColumnName="TotalBreakdownTimeUnit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalProductionUnit" msprop:Generator_ColumnVarNameInTable="columnTotalProductionUnit" msprop:Generator_ColumnPropNameInRow="TotalProductionUnit" msprop:Generator_ColumnPropNameInTable="TotalProductionUnitColumn" msprop:Generator_UserColumnName="TotalProductionUnit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CostPerHour" msprop:Generator_ColumnVarNameInTable="columnCostPerHour" msprop:Generator_ColumnPropNameInRow="CostPerHour" msprop:Generator_ColumnPropNameInTable="CostPerHourColumn" msprop:Generator_UserColumnName="CostPerHour" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CostPerHourUnit" msprop:Generator_ColumnVarNameInTable="columnCostPerHourUnit" msprop:Generator_ColumnPropNameInRow="CostPerHourUnit" msprop:Generator_ColumnPropNameInTable="CostPerHourUnitColumn" msprop:Generator_UserColumnName="CostPerHourUnit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MachineId" msprop:Generator_ColumnVarNameInTable="columnMachineId" msprop:Generator_ColumnPropNameInRow="MachineId" msprop:Generator_ColumnPropNameInTable="MachineIdColumn" msprop:Generator_UserColumnName="MachineId" type="xs:int" />
+              <xs:element name="Material" msprop:Generator_ColumnVarNameInTable="columnMaterial" msprop:Generator_ColumnPropNameInRow="Material" msprop:Generator_ColumnPropNameInTable="MaterialColumn" msprop:Generator_UserColumnName="Material" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Oper" msprop:Generator_ColumnVarNameInTable="columnOper" msprop:Generator_ColumnPropNameInRow="Oper" msprop:Generator_ColumnPropNameInTable="OperColumn" msprop:Generator_UserColumnName="Oper" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Mech" msprop:Generator_ColumnVarNameInTable="columnMech" msprop:Generator_ColumnPropNameInRow="Mech" msprop:Generator_ColumnPropNameInTable="MechColumn" msprop:Generator_UserColumnName="Mech" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Elec" msprop:Generator_ColumnVarNameInTable="columnElec" msprop:Generator_ColumnPropNameInRow="Elec" msprop:Generator_ColumnPropNameInTable="ElecColumn" msprop:Generator_UserColumnName="Elec" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BreakdownCause" msprop:Generator_ColumnVarNameInTable="columnBreakdownCause" msprop:Generator_ColumnPropNameInRow="BreakdownCause" msprop:Generator_ColumnPropNameInTable="BreakdownCauseColumn" msprop:Generator_UserColumnName="BreakdownCause" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MachineName" msprop:Generator_ColumnVarNameInTable="columnMachineName" msprop:Generator_ColumnPropNameInRow="MachineName" msprop:Generator_ColumnPropNameInTable="MachineNameColumn" msprop:Generator_UserColumnName="MachineName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateOfBreakdown" msprop:Generator_ColumnVarNameInTable="columnDateOfBreakdown" msprop:Generator_ColumnPropNameInRow="DateOfBreakdown" msprop:Generator_ColumnPropNameInTable="DateOfBreakdownColumn" msprop:Generator_UserColumnName="DateOfBreakdown" type="xs:dateTime" />
+              <xs:element name="DailyBreakdownId" msprop:Generator_ColumnVarNameInTable="columnDailyBreakdownId" msprop:Generator_ColumnPropNameInRow="DailyBreakdownId" msprop:Generator_ColumnPropNameInTable="DailyBreakdownIdColumn" msprop:Generator_UserColumnName="DailyBreakdownId" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Daily_Breakdown" />
+      <xs:field xpath="mstns:DailyBreakdownId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,400 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.PriceRequestModel
+@using (Ajax.BeginForm("Create", "PriceRequest", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddPriceRequestSuccess",
+        }, new { @id = "addPriceRequestForm" }))
+{
+
+    <div class="row-fluid form-horizontal">
+        <div class="content">
+            @Html.ValidationSummary(true)
+            <div id="updateTargetId" class="alert alert-info" style="display: none;">
+            </div>
+        </div>
+         
+
+        <div class="row-fluid">
+			<div class="span6 pull-left">
+                <span class="span3">
+                    @Html.LabelFor(model => model.SalesCallId)
+                </span>
+                <span class="span9 pull-left">
+                    @Html.EditorFor(model => model.SalesCallId)
+                    @Html.ValidationMessageFor(model => model.SalesCallId)
+                </span>
+            </div>
+		</div>
+
+        <div class="row-fluid">
+			<div class="span6 pull-left">
+                <span class="span3">
+                    @Html.LabelFor(model => model.PriceRequestDate)
+                </span>
+                <span class="span9 pull-left">
+                    @Html.EditorFor(model => model.PriceRequestDate)
+                    @Html.ValidationMessageFor(model => model.PriceRequestDate)
+                </span>
+            </div>
+		</div>
+
+        <div class="row-fluid">
+            <div class="span6 pull-left">
+                <span class="span3">
+                    @Html.LabelFor(model => model.CustomerId)
+                </span>
+                <span class="span9 pull-left">
+                    @Html.DropDownList("CustomerId", Model.ddlCustomer, new { @class = "clsProduct" ,Style = "background:#FFFFFF"})
+                    @Html.ValidationMessageFor(model => model.CustomerId)
+                </span>
+            </div>
+        </div>
+		
+		
+		<div class="row-fluid">
+            <div class="span6 pull-left">
+                    <span class="span3">
+                        @Html.LabelFor(model => model.SupplierId)
+                    </span>
+                    <span class="span9 pull-left">
+                        @Html.DropDownList("SupplierId", Model.ddlSupplier, new { @class = "clsProduct" ,Style = "background:#FFFFFF"})
+                        @Html.ValidationMessageFor(model => model.SupplierId)
+                    </span>
+             </div>	
+		</div> 
+       
+            
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span3">
+                        @Html.LabelFor(model => model.ArticleCode)
+                    </span>
+                    <span class="span4 pull-left">
+                        @Html.TextBoxFor(model => model.ArticleCode, new { @style = "text-align: left !important;" })
+                        @Html.ValidationMessageFor(model => model.ArticleCode)
+                    </span>
+                    <span class="span5 pull-left">
+                        @*<div id="PriceRequestAddItemButtonZone" class="row-fluid">*@
+                            <button type="button" class="btn btn-mini btn-primary" id="btnAddArticle" name="btnAddArticle"
+                            value="Cancel" onclick="AddRow()">
+                            <i class="icon-edit bigger-125"></i>Add to List</button>
+                        @*</div>*@
+                    </span>
+                </div>
+          </div>
+
+		<div class="hr"></div>
+            <div class="row-fluid">
+                <div id="PriceRequestGridZone">
+                    <div id="PriceRequestDetailsKendoGrid">
+                    </div>
+                </div>
+            </div>	
+
+            <div class="hr"></div>
+
+        
+        <div class="content pull-right"> 
+		
+		<button type="button" onclick="PriceRequestSaveDetails()" class="btn btn-mini btn-primary" id="btnSalesBudgetSubmissionDetailList" name="btnSalesBudgetSubmissionDetailList">
+            <i class="icon-save bigger-125"></i>Save</button>
+            &nbsp;&nbsp;
+            <button type="button" class="btn btn-mini btn-primary" id="btnCancelPriceRequest" name="btnCancelPriceRequest"
+                value="Cancel" onclick=" $($('#addPriceRequestDialog').dialog('close'));">
+                <i class="icon-remove bigger-125"></i>Cancel</button>
+        </div>        
+
+    </div>
+}
+
+
+<script type="text/javascript">
+
+
+//    var html = "<tr id='trParentHeaderCreate'>  <th colspan='1' class='k-header'><strong></strong></th> <th colspan='1' class='k-header'><strong></strong></th>  <th colspan='3' class='k-header'><strong>January</strong></th> <th colspan='3' class='k-header'><strong>February</strong></th> <th colspan='3' class='k-header'><strong>March</strong></th> <th colspan='3' class='k-header'><strong>April</strong></th> <th colspan='3' class='k-header'><strong>May</strong></th><th colspan='3' class='k-header'><strong>Jun</strong></th><th colspan='3' class='k-header'><strong>July</strong></th><th colspan='3' class='k-header'><strong>Augest</strong></th><th colspan='3' class='k-header'><strong>September</strong></th><th colspan='3' class='k-header'><strong>October</strong></th><th colspan='3' class='k-header'><strong>November</strong></th><th colspan='3' class='k-header'><strong>December</strong></th> </tr>";
+
+//    function onDataBoundCreate(arg) {
+//        var myElem = document.getElementById('trParentHeaderCreate');
+//        if (myElem == null) {
+//            $("#SalesBudgetDetailsKendoGrid").find("th.k-header").parent().before(html);
+//        }
+//    }
+
+var dataSource = new kendo.data.DataSource({
+        pageSize: 20,
+        height: 400,
+        autoSync: true,
+        schema: {
+            model: {
+            id: "Id",
+            fields: {                 
+                Id: { type: "number", editable: false },                
+                ArticleId: { type: "number", editable: false },
+                ArticleName: { type: "string", editable: false },
+                SamplingUnit: { type: "string", editable: false },                
+                PriceTermName: { defaultValue: { PriceTermId: 0, PriceTermName: "- Select One -"} },				
+				ExpectedPrice: { type: "decimal", editable: true},
+                ReceivedPrice:{ type: "decimal", editable: true},
+				AsOnDate: { type : "date",editable:true},
+                ValidityDate : {type : "date", editable:true},
+                MOQ : {type : "number", editable:true},
+				CountryName: { defaultValue: { ShipmentCountryId: 0, CountryName: "- Select One -"} },
+                ShipmentLeadTime: { type: "string",editable:true },
+                PriceRequestStatus: { type: "string",editable:true }
+                 }
+                }
+            }
+});
+//"Please Select Customer"
+
+$("#PriceRequestDetailsKendoGrid").kendoGrid({
+    dataSource: dataSource,
+    height: 350,    
+    scrollable: true,
+    filterable: false,
+    groupable: true,
+    sortable: true,
+    resizable: true,
+    height: 350,
+//    editable: "incell",
+    columnMenu: false,
+    scrollable: true,
+    columns: [                
+                { field: "Id", title: "Id", width: 100, hidden:true, filterable: false, sortable: false, locked: true },
+                { field: "ArticleId", title: "ArticleId", width: 100, hidden:true, filterable: false, sortable: false, locked: true },                
+                { field: "ArticleName", title: "Article Name", width: 200, filterable: false, sortable: false, locked: true },
+                { field: "SamplingUnit", title: "Unit", width: 80, filterable: false, sortable: false, locked: true },                
+                { field: "PriceTermName", title: "PriceTerm", width: 120, editor: priceTermDropDownEditor },
+				{ field: "ExpectedPrice", title: "Expected Price", format: "{0:n}", width: 120, sortable: false, locked: false, groupable: false, attributes: { style: "text-align:right;"} },
+                { field: "ReceivedPrice", title: "Received Price", format: "{0:n}", width: 120, sortable: false, locked: false, groupable: false, attributes: { style: "text-align:right;"} },					
+                { field: "AsOnDate", title: "As On Date", format: "{0: dd/MM/yyyy}", width: 120, filterable: false, sortable: false, locked: true },
+                { field: "ValidityDate", title: "Validity Date", format: "{0: dd/MM/yyyy}", width: 120, filterable: false, sortable: false, locked: true },                
+                { field: "CountryName", title: "Shipment From", width: 120, editor: shipmentCountryDropDownEditor },
+                { field: "ShipmentLeadTime", title: "ShipmentLeadTime", width: 100, filterable: false, sortable: false, locked: true },
+                { field: "PriceRequestStatus", title: "PriceRequestStatus", width: 100, filterable: false, sortable: false, locked: true },
+				
+
+                ],
+    
+      navigatable: false,
+     editable: true
+    });
+
+	  
+    // Add New Row To Grid
+    function AddRow()
+        {
+        var invoiceDetGrid = $('#PriceRequestDetailsKendoGrid').data('kendoGrid');
+        var dataSource = invoiceDetGrid.dataSource;
+
+        var articleCode = $('#ArticleCode').val();
+        //alert(articleCode);
+
+        $.get(
+                "@Url.Action("AddArticleToGrid")",
+                {'articleCode':articleCode},
+                function(jresult){
+                    if(jresult != '')
+                    {
+                        if (Find_Grid_Item(jresult[0].Id))
+                        {
+                            alert('This Element is Allready Exists');
+                            return;
+                        }
+                        dataSource.add({ ArticleId: jresult[0].Id, 
+                            ArticleName: jresult[0].ProductName,
+                            SamplingUnit: jresult[0].SamplingUnit,  
+                            PriceTermName: "--Select--", 
+                            ExpectedPrice: 0,  
+                            ReceivedPrice: 0,  
+                            AsOnDate: 0,
+                            ValidityDate:0,
+                            CountryName:"--Select--",
+                            ShipmentLeadTime:0,
+                            PriceRequestStatus: "Active" 
+                            });
+                        }
+                        else{
+                            $("#message").show();
+                            $('#message').text(data).css({ 'color':'red' });
+                            $("#message").delay(3000).hide();
+                        }
+                        //Calculate_Grid_Total();
+                    }
+                );
+        }
+    // Add New Row To Grid End Here 
+		
+
+    function Find_Grid_Item(itemId)
+    {
+            //alert (itemId);
+        var rowNo =0;
+        var gridData = $("#PriceRequestDetailsKendoGrid").data("kendoGrid").dataSource.data();
+
+        for (var index = 0; index < gridData.length; index++) 
+        {
+            
+            var currentDataItem = gridData[index];
+            if (itemId==currentDataItem.ArticleId)
+            {
+                rowNo=index;
+                return true;
+            }
+        }
+
+    }
+
+    
+
+    	 // priceTerm DropDown Editor In Grid
+ function priceTermDropDownEditor(container, options) {
+     $('<input required data-text-field="PriceTermName" data-value-field="PriceTermId" data-bind="value:' + options.field + '"/>')
+           .appendTo(container)
+           .kendoDropDownList({
+               autoBind: false,
+               optionLabel: "...Select...",
+               dataTextField: "PriceTermName",
+               dataValueField: "PriceTermId",
+               dataSource: {
+                   type: "json",
+                   transport: {
+                       read: "/PCV/PriceRequest/ReadPriceTermList"
+                   }
+               },
+               change: function (e) {
+                   var dataItem = e.sender.dataItem();
+                   options.model.set("PriceTermName", dataItem.PriceTermName);
+                   options.model.set("PriceTermId", dataItem.PriceTermId);
+               }
+           });
+    }
+
+    	 // Country DropDown Editor In Grid     
+ function shipmentCountryDropDownEditor(container, options) {
+     $('<input required data-text-field="CountryName" data-value-field="CountryId" data-bind="value:' + options.field + '"/>')
+           .appendTo(container)
+           .kendoDropDownList({
+               autoBind: false,
+               optionLabel: "...Select...",
+               dataTextField: "CountryName",
+               dataValueField: "ShipmentCountryId",
+               dataSource: {
+                   type: "json",
+                   transport: {
+                       read: "/PCV/PriceRequest/GetCountryList"
+                   }
+               },
+               change: function (e) {
+                   var dataItem = e.sender.dataItem();
+                   options.model.set("CountryName", dataItem.CountryName);
+                   options.model.set("ShipmentCountryId", dataItem.ShipmentCountryId);
+               }
+           });
+    }
+
+
+
+	// Add New Row To Grid
+
+	function PriceRequestSaveDetails() 
+    {
+        //getting json data from kendo Grid
+        var gridData = $("#PriceRequestDetailsKendoGrid").data("kendoGrid").dataSource.data();
+        var priceRequestMasterList = [];
+        var priceRequestDetailList = [];
+
+		var priceRequestMasterViewModel = {};
+		priceRequestMasterViewModel.SalesCallId = $('#SalesCallId').val();
+		priceRequestMasterViewModel.PriceRequestDate = $('#PriceRequestDate').val();
+		priceRequestMasterViewModel.CustomerId = $('#CustomerId').val();
+		priceRequestMasterViewModel.SupplierId = $('#SupplierId').val();
+        priceRequestMasterList.push(priceRequestMasterViewModel);
+
+
+
+        //loop through each json data from kendo Grid		
+        for (var i = 0; i < gridData.length; i++) {
+
+            var currentDataItem = gridData[i];
+
+			console.log(currentDataItem.ReceivedPrice);
+
+            var priceRequestDetailViewModel = {};           
+            priceRequestDetailViewModel.ArticleId = currentDataItem.ArticleId;
+            priceRequestDetailViewModel.PriceTermId = currentDataItem.PriceTermId;
+
+            priceRequestDetailViewModel.ExpectedPrice = currentDataItem.ExpectedPrice;
+            priceRequestDetailViewModel.ReceivedPrice = currentDataItem.ReceivedPrice;
+			priceRequestDetailViewModel.AsOnDate = currentDataItem.AsOnDate;
+            priceRequestDetailViewModel.ValidityDate = currentDataItem.ValidityDate;
+            priceRequestDetailViewModel.MOQ = currentDataItem.MOQ;
+            priceRequestDetailViewModel.ShipmentCountryId = currentDataItem.ShipmentCountryId;
+            priceRequestDetailViewModel.ShipmentLeadTime = currentDataItem.ShipmentLeadTime;
+            priceRequestDetailViewModel.PriceRequestStatus = currentDataItem.PriceRequestStatus;
+			
+
+            priceRequestDetailList.push(priceRequestDetailViewModel);
+        }
+
+        console.log(priceRequestDetailList);
+
+		//url
+        var postUrl = '@Url.Content("~/PCV/PriceRequest/SavePriceRequestData")';
+
+      
+
+     //Post json data from kendo Grid to Controller
+        $.ajax({
+            url: postUrl,
+            type: 'POST',
+            dataType: 'json',
+            data: JSON.stringify({ 'lstSampleSubmissionMaster': priceRequestMasterList, 'lstSampleSubmissionDetails': priceRequestDetailList }),
+            contentType: 'application/json; charset=utf-8',
+            success: function (result) {
+
+                if (result != '') {
+                    $("#updateTargetId").html(result.strMessage).show();                   
+                    var dGrid = $('#PriceRequestKendoGrid').data('kendoGrid');
+                    dGrid.dataSource.read();
+                }
+
+            },
+            error: function (objAjaxRequest, strError) {
+                var respText = objAjaxRequest.responseText;
+                console.log(respText);
+            }
+        });
+    }
+
+
+</script>
+
+@*On Document Ready*@
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#ArticleCode").kendoAutoComplete({
+            dataTextField: "ProductCode",
+            dataSource: {
+                transport: {
+                    read: {
+                        url: "/PCV/PriceRequest/PopulateArticleAutoComplete/",
+                        serverPaging: true,
+                        type: "POST",
+                        data: {
+                        // json: JSON.stringify([{"ProductCode": "A001"}, {"ProductCode": "A002"}] )
+                    }
+                }
+            }
+        }
+    });
+    
+
+});
+
+</script>
+

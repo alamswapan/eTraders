@@ -1,0 +1,63 @@
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll.config
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.pdb
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.DAL.CRM\bin\Debug\LinqKit.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.pdb
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll.config
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.pdb
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.DAL.CRM\bin\Debug\LinqKit.dll
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.dll
+D:\Rasel\Projects\OTHERS Practice\C# Source -For New Project\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.pdb
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll.config
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.pdb
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.DAL.CRM\bin\Debug\LinqKit.dll
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.DAL.CRM\obj\Debug\ResolveAssemblyReference.cache
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.dll
+\\192.168.100.2\d$\Projects\DevelopmentNew\Rasel Alam\C# Source -For New Project\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll.config
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.DAL.CRM\bin\Debug\LinqKit.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll.config
+E:\Web Application\Trading Intelligent\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.DAL.CRM\bin\Debug\LinqKit.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.csprojResolveAssemblyReference.cache
+E:\Web Application\Trading Intelligent\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.pdb
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.csprojResolveAssemblyReference.cache
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.pdb
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll.config
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.pdb
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.DAL.CRM\bin\Debug\LinqKit.dll
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+E:\Russel Taslim\Trading Intelligent\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll.config
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.CRM.pdb
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.DAL.CRM\bin\Debug\LinqKit.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.DAL.CRM\bin\Debug\LILI_CRM.DAL.infrastructure.pdb
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.csprojResolveAssemblyReference.cache
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.dll
+E:\Russel Taslim\Trading Intelligent_Taslim_RaselAlam\LILI_CRM.DAL.CRM\obj\Debug\LILI_CRM.DAL.CRM.pdb

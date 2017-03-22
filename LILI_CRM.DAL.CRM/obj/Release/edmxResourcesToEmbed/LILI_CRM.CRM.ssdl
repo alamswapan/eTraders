@@ -1,0 +1,1700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LILI_CRMModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="LILI_CRMModelStoreContainer">
+    <EntitySet Name="BMS_tblMenuList" EntityType="LILI_CRMModel.Store.BMS_tblMenuList" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BMS_tblUserInfo" EntityType="LILI_CRMModel.Store.BMS_tblUserInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BMS_tblUserWiseMenuAssign" EntityType="LILI_CRMModel.Store.BMS_tblUserWiseMenuAssign" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblBank" EntityType="LILI_CRMModel.Store.tblBank" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblBusiness" EntityType="LILI_CRMModel.Store.tblBusiness" store:Type="Tables" store:Schema="dbo" store:Name="tblBusiness">
+      <DefiningQuery>SELECT 
+      [tblBusiness].[Id] AS [Id], 
+      [tblBusiness].[BusinessName] AS [BusinessName], 
+      [tblBusiness].[Address] AS [Address], 
+      [tblBusiness].[Phone] AS [Phone], 
+      [tblBusiness].[Fax] AS [Fax], 
+      [tblBusiness].[EMail] AS [EMail], 
+      [tblBusiness].[Description] AS [Description], 
+      [tblBusiness].[IsActive] AS [IsActive], 
+      [tblBusiness].[IUser] AS [IUser], 
+      [tblBusiness].[EUser] AS [EUser], 
+      [tblBusiness].[IDate] AS [IDate], 
+      [tblBusiness].[EDate] AS [EDate]
+      FROM [dbo].[tblBusiness] AS [tblBusiness]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblCallReportProject" EntityType="LILI_CRMModel.Store.tblCallReportProject" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCallReportProjectMember" EntityType="LILI_CRMModel.Store.tblCallReportProjectMember" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCallReportSalesCallInquiry" EntityType="LILI_CRMModel.Store.tblCallReportSalesCallInquiry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCallReportSalesCallInquiryDetail" EntityType="LILI_CRMModel.Store.tblCallReportSalesCallInquiryDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCommCalculationType" EntityType="LILI_CRMModel.Store.tblCommCalculationType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCommonConfigType" EntityType="LILI_CRMModel.Store.tblCommonConfigType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCommunicationChannel" EntityType="LILI_CRMModel.Store.tblCommunicationChannel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCountry" EntityType="LILI_CRMModel.Store.tblCountry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCurrency" EntityType="LILI_CRMModel.Store.tblCurrency" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCurrentStage" EntityType="LILI_CRMModel.Store.tblCurrentStage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCustomer" EntityType="LILI_CRMModel.Store.tblCustomer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCustomerAddress" EntityType="LILI_CRMModel.Store.tblCustomerAddress" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblCustomerContact" EntityType="LILI_CRMModel.Store.tblCustomerContact" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblDebitNote" EntityType="LILI_CRMModel.Store.tblDebitNote" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblDebitNoteDetail" EntityType="LILI_CRMModel.Store.tblDebitNoteDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblDivision" EntityType="LILI_CRMModel.Store.tblDivision" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblExpenseBudget" EntityType="LILI_CRMModel.Store.tblExpenseBudget" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblExpenseBudgetDetail" EntityType="LILI_CRMModel.Store.tblExpenseBudgetDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblInvoice" EntityType="LILI_CRMModel.Store.tblInvoice" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblInvoiceDetails" EntityType="LILI_CRMModel.Store.tblInvoiceDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblOrganization" EntityType="LILI_CRMModel.Store.tblOrganization" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblParticular" EntityType="LILI_CRMModel.Store.tblParticular" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblPort" EntityType="LILI_CRMModel.Store.tblPort" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblPriceRequest" EntityType="LILI_CRMModel.Store.tblPriceRequest" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblPriceRequestDetail" EntityType="LILI_CRMModel.Store.tblPriceRequestDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblPriceTerm" EntityType="LILI_CRMModel.Store.tblPriceTerm" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblProduct" EntityType="LILI_CRMModel.Store.tblProduct" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblQuote" EntityType="LILI_CRMModel.Store.tblQuote" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblQuoteDetails" EntityType="LILI_CRMModel.Store.tblQuoteDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblQuoteDocument" EntityType="LILI_CRMModel.Store.tblQuoteDocument" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSalesBudget" EntityType="LILI_CRMModel.Store.tblSalesBudget" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSalesBudgetDetail" EntityType="LILI_CRMModel.Store.tblSalesBudgetDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSalesPerson" EntityType="LILI_CRMModel.Store.tblSalesPerson" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSampleDocumentRequired" EntityType="LILI_CRMModel.Store.tblSampleDocumentRequired" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSampleRequest" EntityType="LILI_CRMModel.Store.tblSampleRequest" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSampleRequestDetails" EntityType="LILI_CRMModel.Store.tblSampleRequestDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSampleRequestDocument" EntityType="LILI_CRMModel.Store.tblSampleRequestDocument" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSampleSubmission" EntityType="LILI_CRMModel.Store.tblSampleSubmission" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSampleSubmissionDet" EntityType="LILI_CRMModel.Store.tblSampleSubmissionDet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSampleSubmissionDocument" EntityType="LILI_CRMModel.Store.tblSampleSubmissionDocument" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSBU" EntityType="LILI_CRMModel.Store.tblSBU" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSupplier" EntityType="LILI_CRMModel.Store.tblSupplier" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSupplierAddress" EntityType="LILI_CRMModel.Store.tblSupplierAddress" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblSupplierContact" EntityType="LILI_CRMModel.Store.tblSupplierContact" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblTermsCondition" EntityType="LILI_CRMModel.Store.tblTermsCondition" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblTransporter" EntityType="LILI_CRMModel.Store.tblTransporter" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblVisitInformation" EntityType="LILI_CRMModel.Store.tblVisitInformation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="viewWebACMaster" EntityType="LILI_CRMModel.Store.viewWebACMaster" store:Type="Tables" store:Schema="dbo" store:Name="viewWebACMaster">
+      <DefiningQuery>SELECT 
+      [viewWebACMaster].[CompanyCode] AS [CompanyCode], 
+      [viewWebACMaster].[AMCode] AS [AMCode], 
+      [viewWebACMaster].[AMDetails] AS [AMDetails], 
+      [viewWebACMaster].[BusiNo] AS [BusiNo], 
+      [viewWebACMaster].[Business] AS [Business], 
+      [viewWebACMaster].[Dept] AS [Dept], 
+      [viewWebACMaster].[Department] AS [Department], 
+      [viewWebACMaster].[SubDept] AS [SubDept], 
+      [viewWebACMaster].[SubDeptName] AS [SubDeptName]
+      FROM [dbo].[viewWebACMaster] AS [viewWebACMaster]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwWebPettyCashVoucher" EntityType="LILI_CRMModel.Store.vwWebPettyCashVoucher" store:Type="Tables" store:Schema="dbo" store:Name="vwWebPettyCashVoucher">
+      <DefiningQuery>SELECT 
+      [vwWebPettyCashVoucher].[VoucherNo] AS [VoucherNo], 
+      [vwWebPettyCashVoucher].[CompanyCode] AS [CompanyCode], 
+      [vwWebPettyCashVoucher].[PayTo] AS [PayTo], 
+      [vwWebPettyCashVoucher].[StaffID] AS [StaffID], 
+      [vwWebPettyCashVoucher].[VoucherDate] AS [VoucherDate], 
+      [vwWebPettyCashVoucher].[UserId] AS [UserId], 
+      [vwWebPettyCashVoucher].[AMCode] AS [AMCode], 
+      [vwWebPettyCashVoucher].[Narration] AS [Narration], 
+      [vwWebPettyCashVoucher].[Debit] AS [Debit], 
+      [vwWebPettyCashVoucher].[AMDetails] AS [AMDetails], 
+      [vwWebPettyCashVoucher].[Business] AS [Business], 
+      [vwWebPettyCashVoucher].[Department] AS [Department]
+      FROM [dbo].[vwWebPettyCashVoucher] AS [vwWebPettyCashVoucher]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WebApproval" EntityType="LILI_CRMModel.Store.WebApproval" store:Type="Tables" store:Schema="dbo" store:Name="WebApproval">
+      <DefiningQuery>SELECT 
+      [WebApproval].[CompanyCode] AS [CompanyCode], 
+      [WebApproval].[BusiNo] AS [BusiNo], 
+      [WebApproval].[CheckedBy] AS [CheckedBy], 
+      [WebApproval].[ApprovedBy] AS [ApprovedBy]
+      FROM [dbo].[WebApproval] AS [WebApproval]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WebUserManager" EntityType="LILI_CRMModel.Store.WebUserManager" store:Type="Tables" store:Schema="dbo" store:Name="WebUserManager">
+      <DefiningQuery>SELECT 
+      [WebUserManager].[UserId] AS [UserId], 
+      [WebUserManager].[UserName] AS [UserName], 
+      [WebUserManager].[Designation] AS [Designation], 
+      [WebUserManager].[Passwd] AS [Passwd], 
+      [WebUserManager].[StaffID] AS [StaffID], 
+      [WebUserManager].[CompanyCode] AS [CompanyCode], 
+      [WebUserManager].[BusiNo] AS [BusiNo], 
+      [WebUserManager].[Dept] AS [Dept], 
+      [WebUserManager].[Active] AS [Active]
+      FROM [dbo].[WebUserManager] AS [WebUserManager]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WebVoucherDetails" EntityType="LILI_CRMModel.Store.WebVoucherDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WebVoucherMaster" EntityType="LILI_CRMModel.Store.WebVoucherMaster" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_BMS_tblUserWiseMenuAssign_BMS_tblMenuList" Association="LILI_CRMModel.Store.FK_BMS_tblUserWiseMenuAssign_BMS_tblMenuList">
+      <End Role="BMS_tblMenuList" EntitySet="BMS_tblMenuList" />
+      <End Role="BMS_tblUserWiseMenuAssign" EntitySet="BMS_tblUserWiseMenuAssign" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BMS_tblUserWiseMenuAssign_BMS_tblUserInfo" Association="LILI_CRMModel.Store.FK_BMS_tblUserWiseMenuAssign_BMS_tblUserInfo">
+      <End Role="BMS_tblUserInfo" EntitySet="BMS_tblUserInfo" />
+      <End Role="BMS_tblUserWiseMenuAssign" EntitySet="BMS_tblUserWiseMenuAssign" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCallReportProject_tblCommunicationChannel" Association="LILI_CRMModel.Store.FK_tblCallReportProject_tblCommunicationChannel">
+      <End Role="tblCommunicationChannel" EntitySet="tblCommunicationChannel" />
+      <End Role="tblCallReportProject" EntitySet="tblCallReportProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCallReportProject_tblCurrentStage" Association="LILI_CRMModel.Store.FK_tblCallReportProject_tblCurrentStage">
+      <End Role="tblCurrentStage" EntitySet="tblCurrentStage" />
+      <End Role="tblCallReportProject" EntitySet="tblCallReportProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCallReportProject_tblCustomer" Association="LILI_CRMModel.Store.FK_tblCallReportProject_tblCustomer">
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+      <End Role="tblCallReportProject" EntitySet="tblCallReportProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCallReportProject_tblSupplier" Association="LILI_CRMModel.Store.FK_tblCallReportProject_tblSupplier">
+      <End Role="tblSupplier" EntitySet="tblSupplier" />
+      <End Role="tblCallReportProject" EntitySet="tblCallReportProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCallReportSalesCallInquiry_tblCustomer" Association="LILI_CRMModel.Store.FK_tblCallReportSalesCallInquiry_tblCustomer">
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+      <End Role="tblCallReportSalesCallInquiry" EntitySet="tblCallReportSalesCallInquiry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCallReportSalesCallInquiry_tblSupplier" Association="LILI_CRMModel.Store.FK_tblCallReportSalesCallInquiry_tblSupplier">
+      <End Role="tblSupplier" EntitySet="tblSupplier" />
+      <End Role="tblCallReportSalesCallInquiry" EntitySet="tblCallReportSalesCallInquiry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCallReportSalesCallInquiryDetail_tblCallReportSalesCallInquiry" Association="LILI_CRMModel.Store.FK_tblCallReportSalesCallInquiryDetail_tblCallReportSalesCallInquiry">
+      <End Role="tblCallReportSalesCallInquiry" EntitySet="tblCallReportSalesCallInquiry" />
+      <End Role="tblCallReportSalesCallInquiryDetail" EntitySet="tblCallReportSalesCallInquiryDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCallReportSalesCallInquiryDetail_tblProduct" Association="LILI_CRMModel.Store.FK_tblCallReportSalesCallInquiryDetail_tblProduct">
+      <End Role="tblProduct" EntitySet="tblProduct" />
+      <End Role="tblCallReportSalesCallInquiryDetail" EntitySet="tblCallReportSalesCallInquiryDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCustomerAddress_tblCustomer" Association="LILI_CRMModel.Store.FK_tblCustomerAddress_tblCustomer">
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+      <End Role="tblCustomerAddress" EntitySet="tblCustomerAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCustomerContact_tblCustomer" Association="LILI_CRMModel.Store.FK_tblCustomerContact_tblCustomer">
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+      <End Role="tblCustomerContact" EntitySet="tblCustomerContact" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDebitNote_tblBank" Association="LILI_CRMModel.Store.FK_tblDebitNote_tblBank">
+      <End Role="tblBank" EntitySet="tblBank" />
+      <End Role="tblDebitNote" EntitySet="tblDebitNote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDebitNote_tblOrganization" Association="LILI_CRMModel.Store.FK_tblDebitNote_tblOrganization">
+      <End Role="tblOrganization" EntitySet="tblOrganization" />
+      <End Role="tblDebitNote" EntitySet="tblDebitNote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDebitNote_tblSupplier" Association="LILI_CRMModel.Store.FK_tblDebitNote_tblSupplier">
+      <End Role="tblSupplier" EntitySet="tblSupplier" />
+      <End Role="tblDebitNote" EntitySet="tblDebitNote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDebitNoteDetail_tblDebitNote" Association="LILI_CRMModel.Store.FK_tblDebitNoteDetail_tblDebitNote">
+      <End Role="tblDebitNote" EntitySet="tblDebitNote" />
+      <End Role="tblDebitNoteDetail" EntitySet="tblDebitNoteDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDebitNoteDetail_tblInvoice" Association="LILI_CRMModel.Store.FK_tblDebitNoteDetail_tblInvoice">
+      <End Role="tblInvoice" EntitySet="tblInvoice" />
+      <End Role="tblDebitNoteDetail" EntitySet="tblDebitNoteDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail" Association="LILI_CRMModel.Store.FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail">
+      <End Role="tblExpenseBudget" EntitySet="tblExpenseBudget" />
+      <End Role="tblExpenseBudgetDetail" EntitySet="tblExpenseBudgetDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail1" Association="LILI_CRMModel.Store.FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail1">
+      <End Role="tblExpenseBudgetDetail" EntitySet="tblExpenseBudgetDetail" />
+      <End Role="tblExpenseBudgetDetail1" EntitySet="tblExpenseBudgetDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblExpenseBudgetDetail_tblParticular" Association="LILI_CRMModel.Store.FK_tblExpenseBudgetDetail_tblParticular">
+      <End Role="tblParticular" EntitySet="tblParticular" />
+      <End Role="tblExpenseBudgetDetail" EntitySet="tblExpenseBudgetDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblInvoice_tblCommCalculationType" Association="LILI_CRMModel.Store.FK_tblInvoice_tblCommCalculationType">
+      <End Role="tblCommCalculationType" EntitySet="tblCommCalculationType" />
+      <End Role="tblInvoice" EntitySet="tblInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblInvoice_tblCountry" Association="LILI_CRMModel.Store.FK_tblInvoice_tblCountry">
+      <End Role="tblCountry" EntitySet="tblCountry" />
+      <End Role="tblInvoice" EntitySet="tblInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblInvoice_tblCurrency" Association="LILI_CRMModel.Store.FK_tblInvoice_tblCurrency">
+      <End Role="tblCurrency" EntitySet="tblCurrency" />
+      <End Role="tblInvoice" EntitySet="tblInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblInvoice_tblCustomer" Association="LILI_CRMModel.Store.FK_tblInvoice_tblCustomer">
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+      <End Role="tblInvoice" EntitySet="tblInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblInvoice_tblInvoice" Association="LILI_CRMModel.Store.FK_tblInvoice_tblInvoice">
+      <End Role="tblInvoice" EntitySet="tblInvoice" />
+      <End Role="tblInvoice1" EntitySet="tblInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblInvoice_tblPort" Association="LILI_CRMModel.Store.FK_tblInvoice_tblPort">
+      <End Role="tblPort" EntitySet="tblPort" />
+      <End Role="tblInvoice" EntitySet="tblInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblInvoice_tblPriceTerm" Association="LILI_CRMModel.Store.FK_tblInvoice_tblPriceTerm">
+      <End Role="tblPriceTerm" EntitySet="tblPriceTerm" />
+      <End Role="tblInvoice" EntitySet="tblInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblInvoiceDetails_tblInvoice" Association="LILI_CRMModel.Store.FK_tblInvoiceDetails_tblInvoice">
+      <End Role="tblInvoice" EntitySet="tblInvoice" />
+      <End Role="tblInvoiceDetails" EntitySet="tblInvoiceDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblInvoiceDetails_tblProduct" Association="LILI_CRMModel.Store.FK_tblInvoiceDetails_tblProduct">
+      <End Role="tblProduct" EntitySet="tblProduct" />
+      <End Role="tblInvoiceDetails" EntitySet="tblInvoiceDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPriceRequest_tblCustomer" Association="LILI_CRMModel.Store.FK_tblPriceRequest_tblCustomer">
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+      <End Role="tblPriceRequest" EntitySet="tblPriceRequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPriceRequest_tblSupplier" Association="LILI_CRMModel.Store.FK_tblPriceRequest_tblSupplier">
+      <End Role="tblSupplier" EntitySet="tblSupplier" />
+      <End Role="tblPriceRequest" EntitySet="tblPriceRequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPriceRequestDetail_tblCountry" Association="LILI_CRMModel.Store.FK_tblPriceRequestDetail_tblCountry">
+      <End Role="tblCountry" EntitySet="tblCountry" />
+      <End Role="tblPriceRequestDetail" EntitySet="tblPriceRequestDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPriceRequestDetail_tblPriceRequest" Association="LILI_CRMModel.Store.FK_tblPriceRequestDetail_tblPriceRequest">
+      <End Role="tblPriceRequest" EntitySet="tblPriceRequest" />
+      <End Role="tblPriceRequestDetail" EntitySet="tblPriceRequestDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPriceRequestDetail_tblPriceTerm" Association="LILI_CRMModel.Store.FK_tblPriceRequestDetail_tblPriceTerm">
+      <End Role="tblPriceTerm" EntitySet="tblPriceTerm" />
+      <End Role="tblPriceRequestDetail" EntitySet="tblPriceRequestDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPriceRequestDetail_tblProduct" Association="LILI_CRMModel.Store.FK_tblPriceRequestDetail_tblProduct">
+      <End Role="tblProduct" EntitySet="tblProduct" />
+      <End Role="tblPriceRequestDetail" EntitySet="tblPriceRequestDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblQuote_tblQuote" Association="LILI_CRMModel.Store.FK_tblQuote_tblQuote">
+      <End Role="tblQuote" EntitySet="tblQuote" />
+      <End Role="tblQuote1" EntitySet="tblQuote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblQuoteDetails_tblQuote" Association="LILI_CRMModel.Store.FK_tblQuoteDetails_tblQuote">
+      <End Role="tblQuote" EntitySet="tblQuote" />
+      <End Role="tblQuoteDetails" EntitySet="tblQuoteDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSalesBudgetDetail_tblCustomer" Association="LILI_CRMModel.Store.FK_tblSalesBudgetDetail_tblCustomer">
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+      <End Role="tblSalesBudgetDetail" EntitySet="tblSalesBudgetDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSalesBudgetDetail_tblSalesBudgetDetail" Association="LILI_CRMModel.Store.FK_tblSalesBudgetDetail_tblSalesBudgetDetail">
+      <End Role="tblSalesBudget" EntitySet="tblSalesBudget" />
+      <End Role="tblSalesBudgetDetail" EntitySet="tblSalesBudgetDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSalesBudgetDetail_tblSupplier" Association="LILI_CRMModel.Store.FK_tblSalesBudgetDetail_tblSupplier">
+      <End Role="tblSupplier" EntitySet="tblSupplier" />
+      <End Role="tblSalesBudgetDetail" EntitySet="tblSalesBudgetDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSalesPerson_tblSalesPerson" Association="LILI_CRMModel.Store.FK_tblSalesPerson_tblSalesPerson">
+      <End Role="tblDivision" EntitySet="tblDivision" />
+      <End Role="tblSalesPerson" EntitySet="tblSalesPerson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSampleRequestDetails_tblSampleRequest" Association="LILI_CRMModel.Store.FK_tblSampleRequestDetails_tblSampleRequest">
+      <End Role="tblSampleRequest" EntitySet="tblSampleRequest" />
+      <End Role="tblSampleRequestDetails" EntitySet="tblSampleRequestDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSampleSubmissionDet_tblSampleSubmission" Association="LILI_CRMModel.Store.FK_tblSampleSubmissionDet_tblSampleSubmission">
+      <End Role="tblSampleSubmission" EntitySet="tblSampleSubmission" />
+      <End Role="tblSampleSubmissionDet" EntitySet="tblSampleSubmissionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSupplierAddress_tblSupplier" Association="LILI_CRMModel.Store.FK_tblSupplierAddress_tblSupplier">
+      <End Role="tblSupplier" EntitySet="tblSupplier" />
+      <End Role="tblSupplierAddress" EntitySet="tblSupplierAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSupplierContact_tblSupplier" Association="LILI_CRMModel.Store.FK_tblSupplierContact_tblSupplier">
+      <End Role="tblSupplier" EntitySet="tblSupplier" />
+      <End Role="tblSupplierContact" EntitySet="tblSupplierContact" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BMS_tblMenuList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ModuleName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MenuName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ParentMenuName" Type="varchar" MaxLength="100" />
+    <Property Name="PageUrl" Type="varchar" MaxLength="250" />
+    <Property Name="ControllerName" Type="varchar" MaxLength="250" />
+    <Property Name="ActionName" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="BMS_tblUserInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UserPassword" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EmpId" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BMS_tblUserWiseMenuAssign">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="MenuId" Type="int" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblBank">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountNo" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="BankName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="BranchName" Type="varchar" MaxLength="100" />
+    <Property Name="Address" Type="varchar" MaxLength="250" />
+    <Property Name="SwiftCode" Type="varchar" MaxLength="30" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'eTrader.dbo.tblBusiness' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tblBusiness">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="BusinessName" />
+      <PropertyRef Name="IUser" />
+      <PropertyRef Name="IDate" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BusinessName" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="Address" Type="varchar" MaxLength="500" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="EMail" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblCallReportProject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ProjectName" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CurrentStageId" Type="bigint" Nullable="false" />
+    <Property Name="CustomerId" Type="bigint" Nullable="false" />
+    <Property Name="SupplierId" Type="bigint" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="SellingOpportunity" Type="varchar" MaxLength="250" />
+    <Property Name="PotVolPerYear" Type="numeric" Scale="2" />
+    <Property Name="PotAmountPerYear" Type="numeric" Scale="2" />
+    <Property Name="RemarkNextAction" Type="varchar" MaxLength="250" />
+    <Property Name="CommunicationChannelId" Type="bigint" Nullable="false" />
+    <Property Name="SalesPerson" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblCallReportProjectMember">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="bigint" Nullable="false" />
+    <Property Name="MemberId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCallReportSalesCallInquiry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="bigint" Nullable="false" />
+    <Property Name="SupplierId" Type="bigint" Nullable="false" />
+    <Property Name="DateOfUpdate" Type="datetime" Nullable="false" />
+    <Property Name="SalesPerson" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblCallReportSalesCallInquiryDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SalesCallInquiryId" Type="bigint" Nullable="false" />
+    <Property Name="ProductId" Type="bigint" Nullable="false" />
+    <Property Name="Quantity" Type="numeric" Scale="2" />
+    <Property Name="Unit" Type="varchar" MaxLength="50" />
+    <Property Name="OfferedAmountPerUnit" Type="numeric" Scale="2" />
+    <Property Name="PriceValidity" Type="varchar" MaxLength="50" />
+    <Property Name="BidPrice" Type="numeric" Scale="2" />
+    <Property Name="StageId" Type="bigint" Nullable="false" />
+    <Property Name="Remarks" Type="varchar" MaxLength="250" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblCommCalculationType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CommissionCalculationTerm" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblCommonConfigType">
+    <Key>
+      <PropertyRef Name="TableName" />
+      <PropertyRef Name="DisplayName" />
+      <PropertyRef Name="ModuleId" />
+    </Key>
+    <Property Name="TableName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DisplayName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SortOrder" Type="int" />
+    <Property Name="ModuleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCommunicationChannel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CommunicationChannel" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblCountry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="CountryName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblCurrency">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CurrencyName" Type="varchar" MaxLength="50" />
+    <Property Name="ShortCode" Type="varchar" MaxLength="10" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblCurrentStage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CurrentStage" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblCustomer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CustomerName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Address" Type="varchar" MaxLength="250" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="30" />
+    <Property Name="WebAddress" Type="varchar" MaxLength="30" />
+    <Property Name="TIN" Type="varchar" MaxLength="30" />
+    <Property Name="BIN" Type="varchar" MaxLength="30" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblCustomerAddress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="bigint" Nullable="false" />
+    <Property Name="Address" Type="varchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblCustomerContact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="bigint" Nullable="false" />
+    <Property Name="ContactName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Designation" Type="varchar" MaxLength="100" />
+    <Property Name="Cell" Type="varchar" MaxLength="30" />
+    <Property Name="Phone" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="30" />
+    <Property Name="WebAddress" Type="varchar" MaxLength="30" />
+    <Property Name="SkypeName" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="tblDebitNote">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DebitNoteNo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DebitNoteDate" Type="datetime" Nullable="false" />
+    <Property Name="SupplierId" Type="bigint" Nullable="false" />
+    <Property Name="BankId" Type="bigint" Nullable="false" />
+    <Property Name="OrganizationId" Type="bigint" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblDebitNoteDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DebitNoteId" Type="bigint" Nullable="false" />
+    <Property Name="InvoiceId" Type="bigint" Nullable="false" />
+    <Property Name="CommissionPercent" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="Commission" Type="numeric" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="tblDivision">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DivisionName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Descriptions" Type="varchar" MaxLength="250" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblExpenseBudget">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SalesPersonId" Type="bigint" />
+    <Property Name="DivisionId" Type="nchar" MaxLength="10" />
+    <Property Name="SBUId" Type="bigint" />
+    <Property Name="BudgetYear" Type="nchar" MaxLength="10" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblExpenseBudgetDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ExpenseBudgetId" Type="bigint" Nullable="false" />
+    <Property Name="ParticularId" Type="bigint" Nullable="false" />
+    <Property Name="BudgetMonth" Type="int" Nullable="false" />
+    <Property Name="Value" Type="numeric" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="tblInvoice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceNo" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="InvoicePeriod" Type="int" Nullable="false" />
+    <Property Name="InvoiceDate" Type="datetime" Nullable="false" />
+    <Property Name="OrganizationId" Type="bigint" Nullable="false" />
+    <Property Name="InvoiceType" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="CustomerId" Type="bigint" Nullable="false" />
+    <Property Name="CurrencyId" Type="bigint" Nullable="false" />
+    <Property Name="PriceTermId" Type="bigint" Nullable="false" />
+    <Property Name="CommCalcTermId" Type="bigint" Nullable="false" />
+    <Property Name="Total" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="OtherCharges" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="NET" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="CommissionPercent" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="Commission" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="Remarks" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LCNo" Type="varchar" MaxLength="50" />
+    <Property Name="LCDate" Type="datetime" />
+    <Property Name="LDE" Type="datetime" />
+    <Property Name="LDS" Type="datetime" />
+    <Property Name="ShipmentFromCountryId" Type="bigint" Nullable="false" />
+    <Property Name="PortOfDischargeId" Type="bigint" Nullable="false" />
+    <Property Name="ShipmentDate" Type="datetime" />
+    <Property Name="ArrivalDate" Type="datetime" />
+    <Property Name="CommercialInvoiceNo" Type="varchar" MaxLength="50" />
+    <Property Name="CommercialInvoiceDate" Type="datetime" />
+    <Property Name="BoLNo" Type="varchar" MaxLength="50" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblInvoiceDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceId" Type="bigint" Nullable="false" />
+    <Property Name="ProductId" Type="bigint" Nullable="false" />
+    <Property Name="UnitPrice" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="Quantity" Type="numeric" Nullable="false" Scale="3" />
+    <Property Name="SubTotal" Type="numeric" Nullable="false" Scale="3" />
+  </EntityType>
+  <EntityType Name="tblOrganization">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Organization" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="Address" Type="varchar" MaxLength="500" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EUser" Type="varchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblParticular">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ParticularName" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblPort">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PortName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblPriceRequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SalesCallId" Type="bigint" Nullable="false" />
+    <Property Name="PriceRequestDate" Type="datetime" Nullable="false" />
+    <Property Name="SupplierId" Type="bigint" Nullable="false" />
+    <Property Name="CustomerId" Type="bigint" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblPriceRequestDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PriceRequestId" Type="bigint" Nullable="false" />
+    <Property Name="ProductId" Type="bigint" Nullable="false" />
+    <Property Name="PriceTermId" Type="bigint" Nullable="false" />
+    <Property Name="ExpectedPrice" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="ReceivedPrice" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="AsOnDate" Type="datetime" Nullable="false" />
+    <Property Name="ValidityDate" Type="datetime" Nullable="false" />
+    <Property Name="MOQ" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="ShipmentCountryId" Type="bigint" Nullable="false" />
+    <Property Name="ShipmentLeadTime" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PriceRequestStatus" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblPriceTerm">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PriceTermName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductCode" Type="varchar" MaxLength="10" />
+    <Property Name="ProductName" Type="varchar" Nullable="false" MaxLength="120" />
+    <Property Name="GenericName" Type="varchar" MaxLength="100" />
+    <Property Name="ShortDesc" Type="varchar" MaxLength="120" />
+    <Property Name="HSCode" Type="varchar" MaxLength="50" />
+    <Property Name="SellingUnit" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SamplingUnit" Type="varchar" MaxLength="20" />
+    <Property Name="UnitPrice" Type="numeric" Nullable="false" Scale="4" />
+    <Property Name="DutyStructure" Type="numeric" Nullable="false" Scale="4" />
+    <Property Name="Origin" Type="varchar" MaxLength="100" />
+    <Property Name="LeadTime" Type="varchar" MaxLength="100" />
+    <Property Name="MOQ" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="SubCategoryId" Type="bigint" />
+    <Property Name="OrganizationId" Type="bigint" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblQuote">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="QuoteNo" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="QuoteDate" Type="datetime" Nullable="false" />
+    <Property Name="OrganizationId" Type="bigint" />
+    <Property Name="CustomerId" Type="bigint" Nullable="false" />
+    <Property Name="CusContactId" Type="bigint" />
+    <Property Name="CurrencyId" Type="int" />
+    <Property Name="PriceTermId" Type="int" />
+    <Property Name="PaymentTermId" Type="int" />
+    <Property Name="SubmissionText" Type="varchar" MaxLength="50" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblQuoteDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="QuoteId" Type="bigint" Nullable="false" />
+    <Property Name="ArticleId" Type="bigint" Nullable="false" />
+    <Property Name="QuoteQuantity" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="MOQ" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="CurrencyId" Type="int" />
+    <Property Name="ValidityDate" Type="datetime" />
+    <Property Name="UnitPrice" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="PriceTermId" Type="bigint" />
+    <Property Name="PaymentTermId" Type="bigint" />
+    <Property Name="SupplierId" Type="bigint" Nullable="false" />
+    <Property Name="ApproveState" Type="varchar" MaxLength="50" />
+    <Property Name="DetailText" Type="varchar" MaxLength="50" />
+    <Property Name="ShipmentCountryId" Type="bigint" />
+    <Property Name="ShipmentLeadTime" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblQuoteDocument">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="QuoteId" Type="bigint" Nullable="false" />
+    <Property Name="DocumentId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSalesBudget">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SalesPersonId" Type="bigint" />
+    <Property Name="SBUId" Type="bigint" />
+    <Property Name="ProductId" Type="bigint" />
+    <Property Name="BudgetYear" Type="nchar" MaxLength="10" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblSalesBudgetDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SalesBudgetId" Type="bigint" Nullable="false" />
+    <Property Name="CustomerId" Type="bigint" Nullable="false" />
+    <Property Name="SupplierId" Type="bigint" Nullable="false" />
+    <Property Name="BudgetMonth" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="Value" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="Commission" Type="numeric" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="tblSalesPerson">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SalesPersonId" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="SalesPersonName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Designation" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="StaffId" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="DivisionId" Type="bigint" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblSampleDocumentRequired">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="DocName" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="IsSelected" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSampleRequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RequestNo" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="RequestDate" Type="datetime" Nullable="false" />
+    <Property Name="OrganizationId" Type="bigint" />
+    <Property Name="SupplierId" Type="bigint" Nullable="false" />
+    <Property Name="ExpectingDate" Type="datetime" />
+    <Property Name="TransporterId" Type="int" />
+    <Property Name="DocTrackingNo" Type="varchar" MaxLength="50" />
+    <Property Name="DeliveryStateId" Type="int" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblSampleRequestDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RequestId" Type="bigint" Nullable="false" />
+    <Property Name="ProductId" Type="bigint" Nullable="false" />
+    <Property Name="RequestQuantity" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="CustomerId" Type="bigint" />
+    <Property Name="Purpose" Type="varchar" MaxLength="50" />
+    <Property Name="ReceivedQuantity" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="ReceivedDate" Type="datetime" />
+    <Property Name="DetailText" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblSampleRequestDocument">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RequestId" Type="bigint" Nullable="false" />
+    <Property Name="DocumentId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSampleSubmission">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubmissionNo" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="SubmissionDate" Type="datetime" Nullable="false" />
+    <Property Name="OrganizationId" Type="bigint" />
+    <Property Name="CustomerId" Type="bigint" Nullable="false" />
+    <Property Name="CusContactId" Type="bigint" />
+    <Property Name="SubmissionText" Type="varchar" MaxLength="50" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblSampleSubmissionDet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubmissionId" Type="bigint" Nullable="false" />
+    <Property Name="ProductId" Type="bigint" Nullable="false" />
+    <Property Name="SubmissionQuantity" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="ExpieryDate" Type="datetime" />
+    <Property Name="Purpose" Type="varchar" MaxLength="50" />
+    <Property Name="SupplierId" Type="bigint" />
+    <Property Name="Origin" Type="varchar" MaxLength="50" />
+    <Property Name="TrialReport" Type="varchar" MaxLength="50" />
+    <Property Name="ApproveState" Type="int" />
+    <Property Name="DetailText" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblSampleSubmissionDocument">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubmissionId" Type="bigint" Nullable="false" />
+    <Property Name="DocumentId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSBU">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SBUName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Descriptions" Type="varchar" MaxLength="250" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblSupplier">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierId" Type="varchar" MaxLength="20" />
+    <Property Name="SupplierName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Address" Type="varchar" MaxLength="250" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="30" />
+    <Property Name="WebAddress" Type="varchar" MaxLength="30" />
+    <Property Name="Industry" Type="varchar" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblSupplierAddress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierId" Type="bigint" Nullable="false" />
+    <Property Name="Address" Type="varchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblSupplierContact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierId" Type="bigint" Nullable="false" />
+    <Property Name="ContactName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Designation" Type="varchar" MaxLength="100" />
+    <Property Name="Cell" Type="varchar" MaxLength="30" />
+    <Property Name="Phone" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="30" />
+    <Property Name="WebAddress" Type="varchar" MaxLength="30" />
+    <Property Name="SkypeName" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="tblTermsCondition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TermsCondition" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblTransporter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TransporterName" Type="varchar" MaxLength="100" />
+    <Property Name="TransporterAddress" Type="varchar" MaxLength="200" />
+    <Property Name="Phone" Type="varchar" MaxLength="30" />
+    <Property Name="Mobile" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="30" />
+    <Property Name="WebAddress" Type="varchar" MaxLength="30" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblVisitInformation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PreparationDate" Type="datetime" Nullable="false" />
+    <Property Name="SalesPerson" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PointOfDiscussion" Type="varchar" MaxLength="250" />
+    <Property Name="Details" Type="varchar" MaxLength="250" />
+    <Property Name="Remarks" Type="varchar" MaxLength="250" />
+    <Property Name="IUser" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IDate" Type="datetime" Nullable="false" />
+    <Property Name="EUser" Type="varchar" MaxLength="20" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'eTrader.dbo.viewWebACMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="viewWebACMaster">
+    <Key>
+      <PropertyRef Name="CompanyCode" />
+      <PropertyRef Name="AMCode" />
+      <PropertyRef Name="AMDetails" />
+      <PropertyRef Name="BusiNo" />
+      <PropertyRef Name="Dept" />
+      <PropertyRef Name="SubDept" />
+    </Key>
+    <Property Name="CompanyCode" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="AMCode" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="AMDetails" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="BusiNo" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="Business" Type="varchar" MaxLength="100" />
+    <Property Name="Dept" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="Department" Type="varchar" MaxLength="50" />
+    <Property Name="SubDept" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="SubDeptName" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'eTrader.dbo.vwWebPettyCashVoucher' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="vwWebPettyCashVoucher">
+    <Key>
+      <PropertyRef Name="VoucherNo" />
+      <PropertyRef Name="CompanyCode" />
+      <PropertyRef Name="PayTo" />
+      <PropertyRef Name="StaffID" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="AMCode" />
+      <PropertyRef Name="Narration" />
+      <PropertyRef Name="Debit" />
+      <PropertyRef Name="AMDetails" />
+    </Key>
+    <Property Name="VoucherNo" Type="bigint" Nullable="false" />
+    <Property Name="CompanyCode" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="PayTo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="StaffID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="VoucherDate" Type="datetime" />
+    <Property Name="UserId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="AMCode" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="Narration" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="Debit" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="AMDetails" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Business" Type="varchar" MaxLength="100" />
+    <Property Name="Department" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'eTrader.dbo.WebApproval' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="WebApproval">
+    <Key>
+      <PropertyRef Name="CompanyCode" />
+      <PropertyRef Name="BusiNo" />
+      <PropertyRef Name="CheckedBy" />
+      <PropertyRef Name="ApprovedBy" />
+    </Key>
+    <Property Name="CompanyCode" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="BusiNo" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="CheckedBy" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ApprovedBy" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'eTrader.dbo.WebUserManager' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="WebUserManager">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="Designation" />
+      <PropertyRef Name="Passwd" />
+      <PropertyRef Name="StaffID" />
+      <PropertyRef Name="CompanyCode" />
+      <PropertyRef Name="BusiNo" />
+      <PropertyRef Name="Dept" />
+      <PropertyRef Name="Active" />
+    </Key>
+    <Property Name="UserId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Designation" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Passwd" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="StaffID" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="CompanyCode" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="BusiNo" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="Dept" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="Active" Type="varchar" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="WebVoucherDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VoucherNo" Type="bigint" Nullable="false" />
+    <Property Name="AMCode" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ASCode" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="Narration" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="Debit" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="Credit" Type="numeric" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="WebVoucherMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyCode" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="PayTo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="StaffID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="VoucherDate" Type="datetime" />
+    <Property Name="TransDate" Type="datetime" Nullable="false" />
+    <Property Name="UserId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Posted" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="Period" Type="int" Nullable="false" />
+    <Property Name="JVNo" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK_BMS_tblUserWiseMenuAssign_BMS_tblMenuList">
+    <End Role="BMS_tblMenuList" Type="LILI_CRMModel.Store.BMS_tblMenuList" Multiplicity="1" />
+    <End Role="BMS_tblUserWiseMenuAssign" Type="LILI_CRMModel.Store.BMS_tblUserWiseMenuAssign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BMS_tblMenuList">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BMS_tblUserWiseMenuAssign">
+        <PropertyRef Name="MenuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BMS_tblUserWiseMenuAssign_BMS_tblUserInfo">
+    <End Role="BMS_tblUserInfo" Type="LILI_CRMModel.Store.BMS_tblUserInfo" Multiplicity="1" />
+    <End Role="BMS_tblUserWiseMenuAssign" Type="LILI_CRMModel.Store.BMS_tblUserWiseMenuAssign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BMS_tblUserInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BMS_tblUserWiseMenuAssign">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCallReportProject_tblCommunicationChannel">
+    <End Role="tblCommunicationChannel" Type="LILI_CRMModel.Store.tblCommunicationChannel" Multiplicity="1" />
+    <End Role="tblCallReportProject" Type="LILI_CRMModel.Store.tblCallReportProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCommunicationChannel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCallReportProject">
+        <PropertyRef Name="CommunicationChannelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCallReportProject_tblCurrentStage">
+    <End Role="tblCurrentStage" Type="LILI_CRMModel.Store.tblCurrentStage" Multiplicity="1" />
+    <End Role="tblCallReportProject" Type="LILI_CRMModel.Store.tblCallReportProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCurrentStage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCallReportProject">
+        <PropertyRef Name="CurrentStageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCallReportProject_tblCustomer">
+    <End Role="tblCustomer" Type="LILI_CRMModel.Store.tblCustomer" Multiplicity="1" />
+    <End Role="tblCallReportProject" Type="LILI_CRMModel.Store.tblCallReportProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCallReportProject">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCallReportProject_tblSupplier">
+    <End Role="tblSupplier" Type="LILI_CRMModel.Store.tblSupplier" Multiplicity="1" />
+    <End Role="tblCallReportProject" Type="LILI_CRMModel.Store.tblCallReportProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSupplier">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCallReportProject">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCallReportSalesCallInquiry_tblCustomer">
+    <End Role="tblCustomer" Type="LILI_CRMModel.Store.tblCustomer" Multiplicity="1" />
+    <End Role="tblCallReportSalesCallInquiry" Type="LILI_CRMModel.Store.tblCallReportSalesCallInquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCallReportSalesCallInquiry">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCallReportSalesCallInquiry_tblSupplier">
+    <End Role="tblSupplier" Type="LILI_CRMModel.Store.tblSupplier" Multiplicity="1" />
+    <End Role="tblCallReportSalesCallInquiry" Type="LILI_CRMModel.Store.tblCallReportSalesCallInquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSupplier">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCallReportSalesCallInquiry">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCallReportSalesCallInquiryDetail_tblCallReportSalesCallInquiry">
+    <End Role="tblCallReportSalesCallInquiry" Type="LILI_CRMModel.Store.tblCallReportSalesCallInquiry" Multiplicity="1" />
+    <End Role="tblCallReportSalesCallInquiryDetail" Type="LILI_CRMModel.Store.tblCallReportSalesCallInquiryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCallReportSalesCallInquiry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCallReportSalesCallInquiryDetail">
+        <PropertyRef Name="SalesCallInquiryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCallReportSalesCallInquiryDetail_tblProduct">
+    <End Role="tblProduct" Type="LILI_CRMModel.Store.tblProduct" Multiplicity="1" />
+    <End Role="tblCallReportSalesCallInquiryDetail" Type="LILI_CRMModel.Store.tblCallReportSalesCallInquiryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCallReportSalesCallInquiryDetail">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCustomerAddress_tblCustomer">
+    <End Role="tblCustomer" Type="LILI_CRMModel.Store.tblCustomer" Multiplicity="1" />
+    <End Role="tblCustomerAddress" Type="LILI_CRMModel.Store.tblCustomerAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCustomerAddress">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCustomerContact_tblCustomer">
+    <End Role="tblCustomer" Type="LILI_CRMModel.Store.tblCustomer" Multiplicity="1" />
+    <End Role="tblCustomerContact" Type="LILI_CRMModel.Store.tblCustomerContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCustomerContact">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDebitNote_tblBank">
+    <End Role="tblBank" Type="LILI_CRMModel.Store.tblBank" Multiplicity="1" />
+    <End Role="tblDebitNote" Type="LILI_CRMModel.Store.tblDebitNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBank">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblDebitNote">
+        <PropertyRef Name="BankId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDebitNote_tblOrganization">
+    <End Role="tblOrganization" Type="LILI_CRMModel.Store.tblOrganization" Multiplicity="1" />
+    <End Role="tblDebitNote" Type="LILI_CRMModel.Store.tblDebitNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblOrganization">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblDebitNote">
+        <PropertyRef Name="OrganizationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDebitNote_tblSupplier">
+    <End Role="tblSupplier" Type="LILI_CRMModel.Store.tblSupplier" Multiplicity="1" />
+    <End Role="tblDebitNote" Type="LILI_CRMModel.Store.tblDebitNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSupplier">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblDebitNote">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDebitNoteDetail_tblDebitNote">
+    <End Role="tblDebitNote" Type="LILI_CRMModel.Store.tblDebitNote" Multiplicity="1" />
+    <End Role="tblDebitNoteDetail" Type="LILI_CRMModel.Store.tblDebitNoteDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDebitNote">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblDebitNoteDetail">
+        <PropertyRef Name="DebitNoteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDebitNoteDetail_tblInvoice">
+    <End Role="tblInvoice" Type="LILI_CRMModel.Store.tblInvoice" Multiplicity="1" />
+    <End Role="tblDebitNoteDetail" Type="LILI_CRMModel.Store.tblDebitNoteDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblInvoice">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblDebitNoteDetail">
+        <PropertyRef Name="InvoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail">
+    <End Role="tblExpenseBudget" Type="LILI_CRMModel.Store.tblExpenseBudget" Multiplicity="1" />
+    <End Role="tblExpenseBudgetDetail" Type="LILI_CRMModel.Store.tblExpenseBudgetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblExpenseBudget">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblExpenseBudgetDetail">
+        <PropertyRef Name="ExpenseBudgetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblExpenseBudgetDetail_tblExpenseBudgetDetail1">
+    <End Role="tblExpenseBudgetDetail" Type="LILI_CRMModel.Store.tblExpenseBudgetDetail" Multiplicity="1" />
+    <End Role="tblExpenseBudgetDetail1" Type="LILI_CRMModel.Store.tblExpenseBudgetDetail" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblExpenseBudgetDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblExpenseBudgetDetail1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblExpenseBudgetDetail_tblParticular">
+    <End Role="tblParticular" Type="LILI_CRMModel.Store.tblParticular" Multiplicity="1" />
+    <End Role="tblExpenseBudgetDetail" Type="LILI_CRMModel.Store.tblExpenseBudgetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblParticular">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblExpenseBudgetDetail">
+        <PropertyRef Name="ParticularId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblInvoice_tblCommCalculationType">
+    <End Role="tblCommCalculationType" Type="LILI_CRMModel.Store.tblCommCalculationType" Multiplicity="1" />
+    <End Role="tblInvoice" Type="LILI_CRMModel.Store.tblInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCommCalculationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblInvoice">
+        <PropertyRef Name="CommCalcTermId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblInvoice_tblCountry">
+    <End Role="tblCountry" Type="LILI_CRMModel.Store.tblCountry" Multiplicity="1" />
+    <End Role="tblInvoice" Type="LILI_CRMModel.Store.tblInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCountry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblInvoice">
+        <PropertyRef Name="ShipmentFromCountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblInvoice_tblCurrency">
+    <End Role="tblCurrency" Type="LILI_CRMModel.Store.tblCurrency" Multiplicity="1" />
+    <End Role="tblInvoice" Type="LILI_CRMModel.Store.tblInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCurrency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblInvoice">
+        <PropertyRef Name="CurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblInvoice_tblCustomer">
+    <End Role="tblCustomer" Type="LILI_CRMModel.Store.tblCustomer" Multiplicity="1" />
+    <End Role="tblInvoice" Type="LILI_CRMModel.Store.tblInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblInvoice">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblInvoice_tblInvoice">
+    <End Role="tblInvoice" Type="LILI_CRMModel.Store.tblInvoice" Multiplicity="1" />
+    <End Role="tblInvoice1" Type="LILI_CRMModel.Store.tblInvoice" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblInvoice">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblInvoice1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblInvoice_tblPort">
+    <End Role="tblPort" Type="LILI_CRMModel.Store.tblPort" Multiplicity="1" />
+    <End Role="tblInvoice" Type="LILI_CRMModel.Store.tblInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPort">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblInvoice">
+        <PropertyRef Name="PortOfDischargeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblInvoice_tblPriceTerm">
+    <End Role="tblPriceTerm" Type="LILI_CRMModel.Store.tblPriceTerm" Multiplicity="1" />
+    <End Role="tblInvoice" Type="LILI_CRMModel.Store.tblInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPriceTerm">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblInvoice">
+        <PropertyRef Name="PriceTermId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblInvoiceDetails_tblInvoice">
+    <End Role="tblInvoice" Type="LILI_CRMModel.Store.tblInvoice" Multiplicity="1" />
+    <End Role="tblInvoiceDetails" Type="LILI_CRMModel.Store.tblInvoiceDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblInvoice">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblInvoiceDetails">
+        <PropertyRef Name="InvoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblInvoiceDetails_tblProduct">
+    <End Role="tblProduct" Type="LILI_CRMModel.Store.tblProduct" Multiplicity="1" />
+    <End Role="tblInvoiceDetails" Type="LILI_CRMModel.Store.tblInvoiceDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblInvoiceDetails">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPriceRequest_tblCustomer">
+    <End Role="tblCustomer" Type="LILI_CRMModel.Store.tblCustomer" Multiplicity="1" />
+    <End Role="tblPriceRequest" Type="LILI_CRMModel.Store.tblPriceRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblPriceRequest">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPriceRequest_tblSupplier">
+    <End Role="tblSupplier" Type="LILI_CRMModel.Store.tblSupplier" Multiplicity="1" />
+    <End Role="tblPriceRequest" Type="LILI_CRMModel.Store.tblPriceRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSupplier">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblPriceRequest">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPriceRequestDetail_tblCountry">
+    <End Role="tblCountry" Type="LILI_CRMModel.Store.tblCountry" Multiplicity="1" />
+    <End Role="tblPriceRequestDetail" Type="LILI_CRMModel.Store.tblPriceRequestDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCountry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblPriceRequestDetail">
+        <PropertyRef Name="ShipmentCountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPriceRequestDetail_tblPriceRequest">
+    <End Role="tblPriceRequest" Type="LILI_CRMModel.Store.tblPriceRequest" Multiplicity="1" />
+    <End Role="tblPriceRequestDetail" Type="LILI_CRMModel.Store.tblPriceRequestDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPriceRequest">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblPriceRequestDetail">
+        <PropertyRef Name="PriceRequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPriceRequestDetail_tblPriceTerm">
+    <End Role="tblPriceTerm" Type="LILI_CRMModel.Store.tblPriceTerm" Multiplicity="1" />
+    <End Role="tblPriceRequestDetail" Type="LILI_CRMModel.Store.tblPriceRequestDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPriceTerm">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblPriceRequestDetail">
+        <PropertyRef Name="PriceTermId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPriceRequestDetail_tblProduct">
+    <End Role="tblProduct" Type="LILI_CRMModel.Store.tblProduct" Multiplicity="1" />
+    <End Role="tblPriceRequestDetail" Type="LILI_CRMModel.Store.tblPriceRequestDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblPriceRequestDetail">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblQuote_tblQuote">
+    <End Role="tblQuote" Type="LILI_CRMModel.Store.tblQuote" Multiplicity="1" />
+    <End Role="tblQuote1" Type="LILI_CRMModel.Store.tblQuote" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblQuote">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblQuote1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblQuoteDetails_tblQuote">
+    <End Role="tblQuote" Type="LILI_CRMModel.Store.tblQuote" Multiplicity="1" />
+    <End Role="tblQuoteDetails" Type="LILI_CRMModel.Store.tblQuoteDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblQuote">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblQuoteDetails">
+        <PropertyRef Name="QuoteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSalesBudgetDetail_tblCustomer">
+    <End Role="tblCustomer" Type="LILI_CRMModel.Store.tblCustomer" Multiplicity="1" />
+    <End Role="tblSalesBudgetDetail" Type="LILI_CRMModel.Store.tblSalesBudgetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSalesBudgetDetail">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSalesBudgetDetail_tblSalesBudgetDetail">
+    <End Role="tblSalesBudget" Type="LILI_CRMModel.Store.tblSalesBudget" Multiplicity="1" />
+    <End Role="tblSalesBudgetDetail" Type="LILI_CRMModel.Store.tblSalesBudgetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSalesBudget">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSalesBudgetDetail">
+        <PropertyRef Name="SalesBudgetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSalesBudgetDetail_tblSupplier">
+    <End Role="tblSupplier" Type="LILI_CRMModel.Store.tblSupplier" Multiplicity="1" />
+    <End Role="tblSalesBudgetDetail" Type="LILI_CRMModel.Store.tblSalesBudgetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSupplier">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSalesBudgetDetail">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSalesPerson_tblSalesPerson">
+    <End Role="tblDivision" Type="LILI_CRMModel.Store.tblDivision" Multiplicity="1" />
+    <End Role="tblSalesPerson" Type="LILI_CRMModel.Store.tblSalesPerson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDivision">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSalesPerson">
+        <PropertyRef Name="DivisionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSampleRequestDetails_tblSampleRequest">
+    <End Role="tblSampleRequest" Type="LILI_CRMModel.Store.tblSampleRequest" Multiplicity="1" />
+    <End Role="tblSampleRequestDetails" Type="LILI_CRMModel.Store.tblSampleRequestDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSampleRequest">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSampleRequestDetails">
+        <PropertyRef Name="RequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSampleSubmissionDet_tblSampleSubmission">
+    <End Role="tblSampleSubmission" Type="LILI_CRMModel.Store.tblSampleSubmission" Multiplicity="1" />
+    <End Role="tblSampleSubmissionDet" Type="LILI_CRMModel.Store.tblSampleSubmissionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSampleSubmission">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSampleSubmissionDet">
+        <PropertyRef Name="SubmissionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSupplierAddress_tblSupplier">
+    <End Role="tblSupplier" Type="LILI_CRMModel.Store.tblSupplier" Multiplicity="1" />
+    <End Role="tblSupplierAddress" Type="LILI_CRMModel.Store.tblSupplierAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSupplier">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSupplierAddress">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSupplierContact_tblSupplier">
+    <End Role="tblSupplier" Type="LILI_CRMModel.Store.tblSupplier" Multiplicity="1" />
+    <End Role="tblSupplierContact" Type="LILI_CRMModel.Store.tblSupplierContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSupplier">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSupplierContact">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

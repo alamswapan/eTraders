@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+     @*<nav>
+            @Html.Partial("_Menu")       
+    </nav>*@
+    @{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+        ViewBag.Area = "PCV";
+        ViewBag.ModuleName = "PCV";
+        ViewBag.Title = "Trading Intelligent";  
+    }
+</head>
+<body>
+    <div> 
+        @RenderBody()
+    </div>
+</body>
+</html>

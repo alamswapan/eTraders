@@ -1,0 +1,61 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.DivisionModel
+@using (Ajax.BeginForm("Create", "Division", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddDivisionSuccess",
+        }, new { @id = "addDivisionForm" }))
+{
+    
+    <div class="row-fluid form-horizontal">
+        <div class="popup-widget-box clearfix">
+            <div class="content">
+                @Html.ValidationSummary(true)
+                <div id="updateTargetId" class="alert alert-info" style="display: none;">
+                </div>
+            </div>
+
+            
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.DivisionName)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.DivisionName, new { @style = "text-align: left !important;" })
+                    @Html.ValidationMessageFor(model => model.DivisionName)
+                </div>
+            </div>
+
+            <div class="row-fluid Margin">
+                <div class = "span12">
+                    <div class = "span12">
+                        <span class="span2">
+                            @Html.LabelFor(model => model.Descriptions)
+                        </span>
+                        <span class="span10">
+                            @Html.TextAreaFor(model => model.Descriptions, new { @style = "text-align: left !important; margin-left:-2Px; width:100.2% !important" })
+                            @Html.ValidationMessageFor(model => model.Descriptions)
+                        </span>
+                    </div>
+                </div>
+            </div>            
+
+
+
+            <div class="hr">
+            </div>
+            <div class="content pull-right">
+                <button type="submit" class="btn btn-mini btn-primary" id="btnAddDivision" name="btnAddDivision">
+                    <i class="icon-save bigger-125"></i>Add</button>
+                &nbsp;&nbsp;
+                <button type="button" class="btn btn-mini btn-primary" id="btnCancelDivision" name="btnCancelDivision"
+                    value="Cancel" onclick=" $($('#addDivisionDialog').dialog('close'));">
+                    <i class="icon-remove bigger-125"></i>Cancel</button>
+            </div>
+        </div>
+    </div>
+}
+

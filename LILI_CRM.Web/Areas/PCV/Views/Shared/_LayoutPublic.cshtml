@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+     @*<nav>
+            @Html.Partial("_Menu")       
+    </nav>*@
+    @{
+        Layout = "~/Views/Shared/_LayoutPublic.cshtml";
+        ViewBag.Area = "AIMS";
+        ViewBag.ModuleName = "AIMS";
+        ViewBag.Title = "Aid Information Management System";  
+    }
+</head>
+<body>
+    <div> 
+        @RenderBody()
+    </div>
+</body>
+</html>

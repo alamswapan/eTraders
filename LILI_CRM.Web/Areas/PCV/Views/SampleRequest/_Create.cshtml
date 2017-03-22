@@ -1,0 +1,422 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.SampleRequestModel
+@using (Ajax.BeginForm("Create", "SampleRequest", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddSampleRequestSuccess",
+        }, new { @id = "addSampleRequestForm" }))
+{
+
+    <div class="row-fluid form-horizontal">
+        <div class="content">
+            @Html.ValidationSummary(true)
+            <div id="updateTargetId" class="alert alert-info" style="display: none;">
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            <div class="span6 pull-left">
+                <span class="span3">
+                    @Html.LabelFor(model => model.RequestDate)
+                </span>
+                <span class="span9 pull-left">
+                    @Html.EditorFor(model => model.RequestDate)
+                    @Html.ValidationMessageFor(model => model.RequestDate)
+                </span>
+            </div>
+            <div class="span6 pull-left">
+                <span class="span3">
+                    @Html.LabelFor(model => model.SupplierId)
+                </span>
+                <span class="span9 pull-left">
+                    @Html.DropDownList("SupplierId", Model.ddlSupplier, new { @class = "clsSupplier" })
+                    @Html.TextBoxFor(model => model.SupplierAddress, new { Style = "background:#FFDAB9", @disabled = "disabled" })  
+                    @Html.ValidationMessageFor(model => model.SupplierId)
+                </span>
+            </div> 
+        </div>
+
+        <div class="row-fluid">
+            <div class="span6 pull-left">
+                <span class="span3">
+                    @Html.LabelFor(model => model.Product)
+                </span>
+                <span class="span4 pull-left">
+                    @Html.TextBoxFor(model => model.Product, new { @style = "text-align: left !important;" })
+                    @Html.ValidationMessageFor(model => model.Product)
+                </span>
+                <span class="span5 pull-left">
+                    @*<div id="SampleRequestAddItemButtonZone" class="row-fluid">*@
+                        <button type="button" class="btn btn-mini btn-primary" id="btnAddArticle" name="btnAddArticle"
+                        value="Cancel" onclick="AddRow()">
+                        <i class="icon-edit bigger-125"></i>Add to List</button>
+                    @*</div>*@
+                </span>
+            </div>
+            <div class="span6 pull-left">
+                <span class="span3">
+                    @Html.LabelFor(model => model.OrganizationId)
+                </span>
+                <span class="span9 pull-left">
+                    @Html.DropDownList("OrganizationId", Model.ddlOrganization, new { @class = "clsOrganization" ,Style = "background:#FFDAB9"})
+                    @Html.ValidationMessageFor(model => model.OrganizationId)
+                </span>
+            </div> 
+        </div> 
+
+        <div class="row-fluid">
+            <div id="SampleRequestDetailsGridZone">
+                <div id="SampleRequestDetailsKendoGrid">
+                </div>
+            </div>
+        </div>
+            
+        <div class="hr"></div>
+        &nbsp;
+        <div class="row-fluid">
+            <div class="span6 pull-left">
+                <span class="span3">
+                    @Html.LabelFor(model => model.TransporterId)
+                    @Html.LabelFor(model => model.DocTrackingNo)
+                </span> 
+                <span class="span8 pull-left">
+                        @Html.DropDownList("TransporterId", Model.ddlTransporter)
+                        @Html.TextBoxFor(model => model.DocTrackingNo)  
+                </span>
+            </div>
+
+            <div class="span6 ">
+                <span class="span3">
+                        @Html.LabelFor(model => model.DeliveryStateId)
+                </span>
+                <span class="span6">
+                    @Html.DropDownList("DeliveryStateId", Model.ddlDeliveryState, new { @class = "clsDeliveryState" })
+                </span>
+            </div> 
+        </div>
+
+        <div class="hr"></div>
+        &nbsp
+        <div class="row-fluid">
+        <table>
+        @using (Html.BeginForm())
+        { 
+            for (int i = 0; i < Model.sampleDocumentModels.Count; i++)
+            { 
+                <tr>
+                    <td>
+                        @Html.CheckBoxFor(m => Model.sampleDocumentModels[i].IsSelected)
+                        @Model.sampleDocumentModels[i].DocName
+                        @Html.HiddenFor(m => Model.sampleDocumentModels[i].Id)
+                        @Html.HiddenFor(m => Model.sampleDocumentModels[i].DocName)
+                    </td>                
+                </tr>
+            }
+        }
+        </table>  
+        </div>
+
+        <div class="hr">
+        </div>
+        <div class="content pull-right">
+            <button type="button" class="btn btn-mini btn-primary" id="btnPrepsreSampleRequestDetailList" name="btnPrepsreSampleRequestDetailList"
+            onclick="PreSaveSampleRequestDetails()">
+            <i class="icon-save bigger-125"></i>Prepare List</button>
+
+            <button type="submit" class="btn btn-mini btn-primary" id="btnAddSampleRequest" name="btnAddSampleRequest">
+                <i class="icon-save bigger-125"></i>Save</button>
+            &nbsp;&nbsp;
+            <button type="button" class="btn btn-mini btn-primary" id="btnCancelInvoice" name="btnCancelSampleRequest"
+                value="Cancel" onclick=" $($('#addSampleRequestDialog').dialog('close'));">
+                <i class="icon-remove bigger-125"></i>Cancel</button>
+        </div>
+    </div>
+}
+
+
+@*  SampleRequest Detail Kendo Grid start *@
+<script type="text/javascript">
+
+    var dataSource = new kendo.data.DataSource({
+        pageSize: 20,
+        height: 400,
+        autoSync: true,
+        schema: {
+            model: {
+            id: "Id",
+            fields: {
+                Id: { type: "number", editable: false },
+                RequestId: { type: "number", editable: false },
+                ProductId: { type: "number", editable: false },
+                ProductName: { type: "string", editable: false },
+                SamplingUnit: { type: "string", editable: false },
+                RequestQuantity: { type: "number", editable: true, validation: { required: true, min: 1, max: 9999999999} },
+                CustomerId: { type: "number", editable: true },
+                CustomerName: { defaultValue: { CustomerId: 0, CustomerName: "- Select One -"} },
+                Purpose: { type: "string", editable: true },
+                ReceivedQuantity: { type: "number", editable: true, validation: { min: 0, max: 9999999999} },
+                ReceivedDate: { type: "date", editable: true },
+                DetailText: { type: "string", editable: true }
+                //ActionLink: { type: "string" }
+                 }
+                }
+            }
+});
+//"Please Select Customer"
+
+$("#SampleRequestDetailsKendoGrid").kendoGrid({
+    dataSource: dataSource,
+//    resizable: true,
+    height: 350,
+    scrollable: true,
+    filterable: false,
+    groupable: true,
+    sortable: true,
+    resizable: true,
+    height: 350,
+//    editable: "incell",
+    columnMenu: false,
+    scrollable: true,
+    columns: [
+                { field: "Id", title: "Id", width: 100, hidden: true, filterable: false, sortable: false, locked: true },
+                { field: "RequestId", title: "Request Id", width: 100, hidden: true, filterable: false, sortable: false, locked: true },
+                { field: "ProductId", title: "Product Id", width: 100, hidden: true, filterable: false, sortable: false, locked: true },
+                { field: "ProductName", title: "Product Name", width: 200, filterable: false, sortable: false, locked: true },
+                { field: "SamplingUnit", title: "Unit", width: 80, filterable: false, sortable: false, locked: true },
+                { field: "RequestQuantity", title: "Request Quantity", format: "{0:n}", width: 120, sortable: false, locked: false, groupable: false, attributes: { style: "text-align:right;"} },
+                { field: "CustomerId", title: "CustomerId", width: 200, hidden:true, filterable: false, sortable: false, locked: true },
+                { field: "CustomerName", title: "Customer", width: 400, editor: customerDropDownEditor },
+                { field: "Purpose", title: "Purpose", width: 200, filterable: false, sortable: false, locked: true },
+                { field: "ReceivedQuantity", title: "Received Qty", format: "{0:n}", width: 120, sortable: false, locked: false, groupable: false, attributes: { style: "text-align:right;"} },
+                { field: "ReceivedDate", title: "Received Date", format: "{0: dd/MM/yyyy}", width: 120, filterable: false, sortable: false, locked: true },
+                { field: "DetailText", title: "Remarks", width: 300, filterable: false, sortable: false, locked: true },
+                { command: "destroy", title: " ", width: 100 }],
+    
+      navigatable: false,
+     editable: true
+    });               
+
+
+
+     // Customer DropDown In Grid
+ function customerDropDownEditor(container, options) {
+
+     $('<input required data-text-field="CustomerName" data-value-field="CustomerId" data-bind="value:' + options.field + '"/>')
+           .appendTo(container)
+           .kendoDropDownList({
+               autoBind: false,
+               optionLabel: "...Select...",
+               dataTextField: "CustomerName",
+               dataValueField: "CustomerId",
+               dataSource: {
+                   type: "json",
+                   transport: {
+                       read: "/PCV/SampleRequest/ReadCustomerList"
+                   }
+               },
+               change: function (e) {
+                   var dataItem = e.sender.dataItem();
+                   options.model.set("CustomerName", dataItem.CustomerName);
+                   options.model.set("CustomerId", dataItem.CustomerId);
+               }
+           });
+    }
+
+//SampleRequest Detail Kendo Grid End Here 
+
+//-----------------------------------------------------
+</script>
+
+@*Add New Row to Grid*@
+<script type="text/javascript">
+    // Add New Row To Grid
+    function AddRow()
+        {
+        var sampleRequestDetGrid = $('#SampleRequestDetailsKendoGrid').data('kendoGrid');
+        var dataSource = sampleRequestDetGrid.dataSource;
+
+        var product = $('#Product').val();
+
+        $.get(
+                "@Url.Action("AddProductToGrid")",
+                {'product':product},
+                function(jresult){
+                    if(jresult != '')
+                    {
+                        if (Find_Grid_Item(jresult[0].Id))
+                        {
+                            alert('This Element is Allready Exists');
+                            return;
+                        }
+                        //ProductCode: jresult[0].ProductCode, 
+                        dataSource.add({ ProductId: jresult[0].Id, 
+                            ProductName: jresult[0].ProductName, SamplingUnit: jresult[0].SamplingUnit,
+                            RequestQuantity: 1,
+                            ReceivedQuantity: 0,
+                            //CustomerId: "- Select One -", 
+                            CustomerName: "- Select One -",
+                            Discontinued: false 
+                            });
+                        }
+                        else{
+                            $("#message").show();
+                            $('#message').text(data).css({ 'color':'red' });
+                            $("#message").delay(3000).hide();
+                        }
+                        $('#Product').val('');
+                    }
+                );
+        }
+    // Add New Row To Grid End Here 
+
+    function Find_Grid_Item(itemId)
+    {
+            //alert (itemId);
+        var rowNo =0;
+        var gridData = $("#SampleRequestDetailsKendoGrid").data("kendoGrid").dataSource.data();
+
+        for (var index = 0; index < gridData.length; index++) 
+        {
+            
+            var currentDataItem = gridData[index];
+            if (itemId==currentDataItem.ProductId)
+            {
+                rowNo=index;
+                return true;
+            }
+        }
+//        if (rowNo>0)
+//        {return true;}
+//        else{
+//        return false;
+        //}
+    }
+</script>
+
+@*Save Grid Data*@
+<script type="text/javascript">
+
+    function SaveSampleRequestDetails() 
+    {
+        //getting json data from kendo Grid
+        var gridData = $("#SampleRequestDetailsKendoGrid").data("kendoGrid").dataSource.data();
+        var sampleReqDetailList = [];
+        //loop through each json data from kendo Grid
+        for (var i = 0; i < gridData.length; i++) {
+
+            var currentDataItem = gridData[i];
+
+            var sampleRequestDetailViewModel = {};
+            sampleRequestDetailViewModel.Id = currentDataItem.Id;
+            sampleRequestDetailViewModel.RequestId = currentDataItem.RequestId;
+            sampleRequestDetailViewModel.ProductId = currentDataItem.ProductId;
+            sampleRequestDetailViewModel.RequestQuantity = currentDataItem.RequestQuantity;
+            sampleRequestDetailViewModel.CustomerId = currentDataItem.CustomerId;
+            sampleRequestDetailViewModel.Purpose = currentDataItem.Purpose;
+            sampleRequestDetailViewModel.ReceivedQuantity = currentDataItem.ReceivedQuantity;
+            sampleRequestDetailViewModel.ReceivedDate = currentDataItem.ReceivedDate;
+            sampleRequestDetailViewModel.DetailText = currentDataItem.DetailText;   
+            sampleReqDetailList.push(sampleRequestDetailViewModel);
+        }
+
+        var postUrl = '@Url.Content("~/PCV/SampleRequest/SetSampleRequestDetailsListForSave")';
+        //alert(postUrl);
+        var paramValue = JSON.stringify({ lstSampleRequestDetails: sampleReqDetailList });
+        //alert("Test");
+        alert(paramValue);
+
+     //Post json data from kendo Grid to Controller
+        $.ajax({
+            url: postUrl,
+            type: 'POST',
+            dataType: 'json',
+            data: paramValue,
+            contentType: 'application/json; charset=utf-8',
+            success: function (result) {
+                    //if (result !='') 
+                    //    {
+                    //        alert(jresult[0].TP);
+                    //        //TP= jresult[0].TP;
+                    //        $('#TP').val(result[0].TP);
+                    //    }
+                    //        alert(result);
+
+                console.log(result);
+            },
+            error: function (objAjaxRequest, strError) {
+                var respText = objAjaxRequest.responseText;
+                console.log(respText);
+            }
+        });
+    }
+
+    function PreSaveSampleRequestDetails() {
+
+        SaveSampleRequestDetails();
+
+    }
+</script>
+
+@*On Document Ready*@
+<script type="text/javascript">
+$(document).ready(function () {
+
+    $("#Product").kendoAutoComplete({
+        dataTextField: "ProductCode",
+            dataSource: {
+                transport: {
+                    read: {
+                        url: "/PCV/SampleRequest/PopulateProductAutoComplete/",
+                        serverPaging: true,
+                        type: "POST",
+                        data: {
+                        // json: JSON.stringify([{"ProductCode": "A001"}, {"ProductCode": "A002"}] )
+                    }
+                }
+            }
+        }
+    });
+
+//    $("input:submit, input:button, button", ".jqUI").button();
+//    $('.date').datepicker({ dateFormat: "dd/mm/yy" });
+
+});
+
+</script>
+
+
+<script type="text/javascript">
+
+
+    $(function () {
+        $('#SupplierId').on('change',function(){
+            
+            $('#SupplierAddress').val("");
+
+            var suppId = $(this).val();
+
+            if(suppId == "0")
+            {
+               return;
+            }
+            $.get(
+                    "@Url.Action("GetSupplierDetails")",
+                    {'id':suppId},
+                    function(jresult){
+                        if(jresult != ''){
+                             $('#SupplierAddress').val(jresult[0].Address);
+                        }
+                        else{
+                            $("#message").show();
+                            $('#message').text(data).css({ 'color':'red' });
+                            $("#message").delay(3000).hide();
+                        }
+                    }
+                );
+
+        });
+    });
+
+</script>

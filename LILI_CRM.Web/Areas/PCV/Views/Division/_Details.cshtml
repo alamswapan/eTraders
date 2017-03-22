@@ -1,0 +1,44 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.DivisionModel
+           
+    <div class="row-fluid form-horizontal">
+        <div class="popup-widget-box clearfix">
+            <div class="content">
+                @Html.ValidationSummary(true)
+                <div id="updateTargetId" class="alert alert-info" style="display: none;">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.DivisionName)
+                </span>
+                <span class="span6">
+                    @Html.TextBoxFor(model => model.DivisionName, new { @style = "text-align: left !important;" })
+                    @Html.ValidationMessageFor(model => model.DivisionName)
+                </span>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Descriptions)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.Descriptions, new { @style = "text-align: left !important;" })
+                    @Html.ValidationMessageFor(model => model.Descriptions)
+                </div>
+            </div>           
+
+            
+
+
+            <div class="hr">
+            </div>
+            <div class="content pull-right">
+                <button type="button" class="btn btn-mini btn-primary" id="btnCancelDivision" name="btnCancelDivision"
+                    value="Cancel" onclick=" $($('#detailsDivisionDialog').dialog('close'));">
+                    <i class="icon-remove bigger-125"></i>Cancel</button>
+            </div>
+        </div>
+    </div>
+
+

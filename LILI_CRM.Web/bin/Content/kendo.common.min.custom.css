@@ -1,0 +1,10 @@
+﻿.k-grid .k-grid-content td
+{
+    border-bottom: 1px solid #94C0D2 !important;
+    padding: 3px 8px !important;
+}
+
+.k-grid-column-number
+{
+    text-align: right;
+}

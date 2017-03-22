@@ -1,0 +1,32 @@
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.UnitTests\bin\Release\LILI_CRM.UnitTests.dll.config
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.UnitTests\bin\Release\LILI_CRM.UnitTests.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.UnitTests\bin\Release\LILI_CRM.UnitTests.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.UnitTests\bin\Release\Moq.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.UnitTests\obj\Release\LILI_CRM.UnitTests.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code\LILI_CRM.UnitTests\obj\Release\LILI_CRM.UnitTests.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.UnitTests\bin\Release\LILI_CRM.UnitTests.dll.config
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.UnitTests\bin\Release\LILI_CRM.UnitTests.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.UnitTests\bin\Release\LILI_CRM.UnitTests.pdb
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.UnitTests\bin\Release\Moq.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.UnitTests\obj\Release\LILI_CRM.UnitTests.dll
+D:\Rasel\Projects\Petty Cash Voucher\Source Code BigInt RD\LILI_CRM.UnitTests\obj\Release\LILI_CRM.UnitTests.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.UnitTests\bin\Release\LILI_CRM.UnitTests.dll.config
+E:\Web Application\Trading Intelligent\LILI_CRM.UnitTests\bin\Release\LILI_CRM.UnitTests.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.UnitTests\bin\Release\LILI_CRM.UnitTests.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.UnitTests\bin\Release\Moq.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.UnitTests\obj\Release\LILI_CRM.UnitTests.dll
+E:\Web Application\Trading Intelligent\LILI_CRM.UnitTests\obj\Release\LILI_CRM.UnitTests.pdb
+E:\Web Application\Trading Intelligent\LILI_CRM.UnitTests\obj\Release\LILI_CRM.UnitTests.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.UnitTests\bin\Release\LILI_CRM.UnitTests.dll.config
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.UnitTests\bin\Release\LILI_CRM.UnitTests.dll
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.UnitTests\bin\Release\LILI_CRM.UnitTests.pdb
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.UnitTests\bin\Release\Moq.dll
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.UnitTests\obj\Release\LILI_CRM.UnitTests.dll
+D:\Rasel\Projects\Chemical\SOURCE CODE\Trading Intelligent\LILI_CRM.UnitTests\obj\Release\LILI_CRM.UnitTests.pdb
+D:\ASP\Trading Intelligent\LILI_CRM.UnitTests\bin\Release\LILI_CRM.UnitTests.dll.config
+D:\ASP\Trading Intelligent\LILI_CRM.UnitTests\bin\Release\LILI_CRM.UnitTests.dll
+D:\ASP\Trading Intelligent\LILI_CRM.UnitTests\bin\Release\LILI_CRM.UnitTests.pdb
+D:\ASP\Trading Intelligent\LILI_CRM.UnitTests\bin\Release\Moq.dll
+D:\ASP\Trading Intelligent\LILI_CRM.UnitTests\obj\Release\ResolveAssemblyReference.cache
+D:\ASP\Trading Intelligent\LILI_CRM.UnitTests\obj\Release\LILI_CRM.UnitTests.dll
+D:\ASP\Trading Intelligent\LILI_CRM.UnitTests\obj\Release\LILI_CRM.UnitTests.pdb

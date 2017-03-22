@@ -1,0 +1,454 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.SalesBudgetModel
+@using (Ajax.BeginForm("Edit", "SalesBudget", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "EditSalesBudgetSuccess",
+        }, new { @id = "editSalesBudgetForm" }))
+{
+    <div class="row-fluid form-horizontal">
+        <div class="popup-widget-box clearfix">
+            <div class="content">
+                @Html.ValidationSummary(true)
+                <div id="updateTargetEditId" class="alert alert-info" style="display: none;">
+                </div>
+                @Html.HiddenFor(model => model.Id)
+            </div>           
+            @Html.HiddenFor(model => model.SalesPersonId)
+            <div class="row-fluid">
+                <div class="span6 pull-left">
+                    <span class="span3">
+                        @Html.LabelFor(model => model.SalesPersonName)
+                    </span>
+                    <span class="span9 pull-left">
+                        @Html.EditorFor(model => model.SalesPersonName)
+                        @Html.ValidationMessageFor(model => model.SalesPersonName)
+                    </span>
+                </div>
+                <div class="span6 pull-left">
+                    <span class="span3">
+                        @Html.LabelFor(model => model.ProductId)
+                    </span>
+                    <span class="span9 pull-left">
+                        @Html.DropDownList("ProductId", Model.ddlProduct, new { @class = "clsProductId js_product_val" })
+                        @Html.ValidationMessageFor(model => model.ProductId)
+                    </span>
+                </div>
+                 
+            </div>
+
+            <div class="row-fluid">
+
+			<div class="span6 pull-left">
+                <span class="span3">
+                    @Html.LabelFor(model => model.BudgetYear)
+                </span>
+                <span class="span9 pull-left">
+                    @Html.EditorFor(model => model.BudgetYear)
+                    @Html.ValidationMessageFor(model => model.BudgetYear)
+                </span>
+            </div>
+			
+			
+			
+			<div class="span6 pull-left">
+                <span class="span3">
+                    @Html.LabelFor(model => model.SBUId)
+                </span>
+                <span class="span9 pull-left">
+                    @Html.DropDownList("SBUId", Model.ddlSBU, new { @class = "clsSUB js_SUB_val" ,Style = "background:#FFFFFF"})
+                    @Html.ValidationMessageFor(model => model.SBUId)
+                </span>
+            </div>             
+        </div>
+
+        <div class="row-fluid">
+
+			<div class="span6 pull-left">
+                <span class="span3">
+                    @Html.LabelFor(model => model.DivisionName)
+                </span>
+                <span class="span9 pull-left">
+                    @Html.EditorFor(model => model.DivisionName)
+                    @Html.ValidationMessageFor(model => model.DivisionName)
+                </span>
+            </div>
+       </div>
+
+            <div class="row-fluid">
+			<span class="span5 pull-left">
+                @*<div id="SampleRequestAddItemButtonZone" class="row-fluid">*@
+                    <button type="button" class="btn btn-mini btn-primary" id="btnAddCustomer" name="btnAddCustomer"
+                    value="Cancel" onclick="AddRow()">
+                    <i class="icon-edit bigger-125"></i>Add to List</button>
+                @*</div>*@
+            </span>
+		</div>
+
+        <div class="row-fluid">
+            <div id="SalesBudgetDetailsGridZone">
+                <div id="SalesBudgetDetailsEditKendoGrid">
+                </div>
+            </div>
+        </div>
+
+        <div class="hr"></div>	
+
+        
+        <div class="content pull-right"> 
+		
+		<button type="button" onclick="UpdateSalesBudget()" class="btn btn-mini btn-primary" id="btnSalesBudgetSubmissionDetailList" name="btnSalesBudgetSubmissionDetailList">
+            <i class="icon-save bigger-125"></i>Save</button>
+            &nbsp;&nbsp;
+            <button type="button" class="btn btn-mini btn-primary" id="btnCancelSalesBudget" name="btnCancelSalesBudget"
+                value="Cancel" onclick=" $($('#editSalesBudgetDialog').dialog('close'));">
+                <i class="icon-remove bigger-125"></i>Cancel</button>
+        </div>
+
+
+      </div>
+        
+    </div>
+}
+
+
+@*  SampleSubmission Detail Kendo Grid start *@
+<script type="text/javascript">
+
+//    var modalId = @Model.Id;
+//    alert(modalId);
+
+    var html = "<tr id='trParentHeaderEdit'>  <th colspan='1' class='k-header'><strong></strong></th> <th colspan='1' class='k-header'><strong></strong></th>  <th colspan='3' class='k-header'><strong>January</strong></th> <th colspan='3' class='k-header'><strong>February</strong></th> <th colspan='3' class='k-header'><strong>March</strong></th> <th colspan='3' class='k-header'><strong>April</strong></th> <th colspan='3' class='k-header'><strong>May</strong></th><th colspan='3' class='k-header'><strong>Jun</strong></th><th colspan='3' class='k-header'><strong>July</strong></th><th colspan='3' class='k-header'><strong>Augest</strong></th><th colspan='3' class='k-header'><strong>September</strong></th><th colspan='3' class='k-header'><strong>October</strong></th><th colspan='3' class='k-header'><strong>November</strong></th><th colspan='3' class='k-header'><strong>December</strong></th> </tr>";
+
+  function onDataBoundEdit(arg) {
+    var myElem = document.getElementById('trParentHeaderEdit');
+    if (myElem == null){
+        $("#SalesBudgetDetailsEditKendoGrid").find("th.k-header").parent().before(html);
+        }
+      }
+
+    var dataSource = new kendo.data.DataSource({
+        pageSize: 20,
+        height: 400,
+        update: function (e) { return true; },
+        type: "json",
+        transport: {
+            read: "/PCV/SalesBudget/GetSalesBudgetDetails"
+        },
+
+        schema: {
+            model: {
+                id: "Id",
+                fields: {
+                CustomerId: { type: "number", editable: true },
+                CustomerName: { defaultValue: { CustomerId: 0, CustomerName: "- Select One -"} },
+                SupplierId: { type: "number", editable: true },
+                SupplierName: { defaultValue: { SupplierId: 0, SupplierName : "- Select One -"} },                
+				JanQty: { type: "string", editable: true },
+				JanVal: { type: "string", editable: true },
+				JanCom: { type: "string", editable: true },
+				FebQty: { type: "string", editable: true },
+				FebVal: { type: "string", editable: true },
+				FebCom: { type: "string", editable: true },
+				MarQty: { type: "string", editable: true },
+				MarVal: { type: "string", editable: true },
+				MarCom: { type: "string", editable: true },
+				AprQty: { type: "string", editable: true },
+				AprVal: { type: "string", editable: true },
+				AprCom: { type: "string", editable: true },
+				MayQty: { type: "string", editable: true },
+				MayVal: { type: "string", editable: true },
+				MayCom: { type: "string", editable: true },
+				JunQty: { type: "string", editable: true },
+				JunVal: { type: "string", editable: true },
+				JunCom: { type: "string", editable: true },
+				JulyQty: { type: "string", editable: true },
+				JulyVal: { type: "string", editable: true },
+				JulyCom: { type: "string", editable: true },
+				AugQty: { type: "string", editable: true },
+				AugVal: { type: "string", editable: true },
+				AugCom: { type: "string", editable: true },
+				SepQty: { type: "string", editable: true },
+				SepVal: { type: "string", editable: true },
+				SepCom: { type: "string", editable: true },
+				OctQty: { type: "string", editable: true },
+				OctVal: { type: "string", editable: true },
+				OctCom: { type: "string", editable: true },
+				NovQty: { type: "string", editable: true },
+				NovVal: { type: "string", editable: true },
+				NovCom: { type: "string", editable: true },
+				DecQty: { type: "string", editable: true },
+				DecVal: { type: "string", editable: true },
+				DecCom: { type: "string", editable: true }
+                }
+            }
+        }
+    });
+
+
+    $("#SalesBudgetDetailsEditKendoGrid").kendoGrid({
+        dataSource: dataSource,
+        resizable: true,
+        height: 350,
+        dataBound: onDataBoundEdit,
+        scrollable: true,
+        //  toolbar: ["create"],
+        filterable: false,
+        groupable: true,
+        sortable: true,
+        resizable: true,
+        height: 350,
+        //editable: true,
+        editable: "incell",
+        columnMenu: false,
+        scrollable: true,
+        columns: [
+                { field: "CustomerId", title: "CustomerId", width: 200, hidden: true, filterable: false, sortable: false, locked: true },
+                { field: "SupplierId", title: "SupplierId", width: 200, hidden: true, filterable: false, sortable: false, locked: true },
+                { field: "CustomerName", title: "Customer", width: 120, editor: customerDropDownEditor },
+				{ field: "SupplierName", title: "Supplier", width: 120, editor: supplierDropDownEditor },
+				{ field: "JanQty", title: "JanQty", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "JanVal", title: "JanVal", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "JanCom", title: "JanCom", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "FebQty", title: "FebQty", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "FebVal", title: "FebVal", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "FebCom", title: "FebCom", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "MarQty", title: "MarQty", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "MarVal", title: "MarVal", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "MarCom", title: "MarCom", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "AprQty", title: "AprQty", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "AprVal", title: "AprVal", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "AprCom", title: "AprCom", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "MayQty", title: "MayQty", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "MayVal", title: "MayVal", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "MayCom", title: "MayCom", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "JunQty", title: "JunQty", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "JunVal", title: "JunVal", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "JunCom", title: "JunCom", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "JulyQty", title: "JulyQty", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "JulyVal", title: "JulyVal", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "JulyCom", title: "JulyCom", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "AugQty", title: "AugQty", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "AugVal", title: "AugVal", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "AugCom", title: "AugCom", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "SepQty", title: "SepQty", width: 120, filterable: false, sortable: false, locked: true },
+				{ field: "SepVal", title: "SepVal", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "SepCom", title: "SepCom", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "OctQty", title: "OctQty", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "OctVal", title: "OctVal", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "OctCom", title: "OctCom", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "NovQty", title: "NovQty", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "NovVal", title: "NovVal", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "NovCom", title: "NovCom", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "DecQty", title: "DecQty", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "DecVal", title: "DecVal", width: 100, filterable: false, sortable: false, locked: true },
+				{ field: "DecCom", title: "DecCom", width: 100, filterable: false, sortable: false, locked: true },
+                { command: "destroy", title: " ", width: 100}],
+        navigatable: false,
+        editable: true
+    });
+
+
+    function AddRow() {
+        var sampleRequestDetGrid = $('#SalesBudgetDetailsEditKendoGrid').data('kendoGrid');
+        var dataSource = sampleRequestDetGrid.dataSource;
+
+        var articleCode = 'addrow';
+        if (articleCode != '') {
+            dataSource.add({
+                //CustomerId: "- Select One -", 
+                CustomerName: "- Select One -",
+                SupplierName: "- Select One -"
+            });
+        }
+        else {
+            $("#message").show();
+            $('#message').text(data).css({ 'color': 'red' });
+            $("#message").delay(3000).hide();
+        }
+    }
+    // Add New Row To Grid End Here 
+
+
+    // Customer DropDown In Grid
+    function customerDropDownEditor(container, options) {
+
+        $('<input required data-text-field="CustomerName" data-value-field="Id" data-bind="value:' + options.field + '"/>')
+           .appendTo(container)
+           .kendoDropDownList({
+               autoBind: false,
+               optionLabel: "...Select...",
+               dataTextField: "CustomerName",
+               dataValueField: "CustomerId",
+               dataSource: {
+                   type: "json",
+                   transport: {
+                       read: "/PCV/SalesBudget/ReadCustomerList"
+                   }
+               },
+               change: function (e) {
+                   var dataItem = e.sender.dataItem();
+                   options.model.set("CustomerName", dataItem.CustomerName);
+                   options.model.set("CustomerId", dataItem.CustomerId);
+               }
+           });
+    }
+
+    // Supplier DropDown In Grid
+    function supplierDropDownEditor(container, options) {
+
+        $('<input required data-text-field="SupplierName" data-value-field="Id" data-bind="value:' + options.field + '"/>')
+           .appendTo(container)
+           .kendoDropDownList({
+               autoBind: false,
+               optionLabel: "...Select...",
+               dataTextField: "SupplierName",
+               dataValueField: "SupplierId",
+               dataSource: {
+                   type: "json",
+                   transport: {
+                       read: "/PCV/SalesBudget/ReadSupplierList"
+                   }
+               },
+               change: function (e) {
+                   var dataItem = e.sender.dataItem();
+                   options.model.set("SupplierName", dataItem.SupplierName);
+                   options.model.set("SupplierId", dataItem.SupplierId);
+               }
+           });
+       }
+
+       //Update Sales Budget
+
+       function UpdateSalesBudget() {
+           //getting json data from kendo Grid
+           var gridData = $("#SalesBudgetDetailsEditKendoGrid").data("kendoGrid").dataSource.data();
+           var salesMasterList = [];
+           var salesDetailList = [];
+            
+           //alert($('.js_SUB_val').val());
+           var SalesBudgetMasterViewModel = {};
+           var id = @Model.Id;
+           SalesBudgetMasterViewModel.SalesPersonId = $('#SalesPersonId').val();
+           SalesBudgetMasterViewModel.BudgetYear = $('#BudgetYear').val();
+           SalesBudgetMasterViewModel.ProductId = $('.js_product_val').val();
+           SalesBudgetMasterViewModel.SBUId = $('.js_SUB_val').val();
+           salesMasterList.push(SalesBudgetMasterViewModel);
+
+
+
+           //loop through each json data from kendo Grid		
+           for (var i = 0; i < gridData.length; i++) {
+
+               var currentDataItem = gridData[i];
+
+               console.log(currentDataItem);
+
+               var SalesBudgetDetailViewModel = {};
+               SalesBudgetDetailViewModel.CustomerId = currentDataItem.CustomerId;
+               SalesBudgetDetailViewModel.SupplierId = currentDataItem.SupplierId;
+
+               SalesBudgetDetailViewModel.JanQty = currentDataItem.JanQty;
+               SalesBudgetDetailViewModel.JanVal = currentDataItem.JanVal;
+               SalesBudgetDetailViewModel.JanCom = currentDataItem.JanCom;
+
+               SalesBudgetDetailViewModel.FebQty = currentDataItem.FebQty;
+               SalesBudgetDetailViewModel.FebVal = currentDataItem.FebVal;
+               SalesBudgetDetailViewModel.FebCom = currentDataItem.FebCom;
+
+               SalesBudgetDetailViewModel.MarQty = currentDataItem.MarQty;
+               SalesBudgetDetailViewModel.MarVal = currentDataItem.MarVal;
+               SalesBudgetDetailViewModel.MarCom = currentDataItem.MarCom;
+
+               SalesBudgetDetailViewModel.AprQty = currentDataItem.AprQty;
+               SalesBudgetDetailViewModel.AprVal = currentDataItem.AprVal;
+               SalesBudgetDetailViewModel.AprCom = currentDataItem.AprCom;
+
+               SalesBudgetDetailViewModel.MayQty = currentDataItem.MayQty;
+               SalesBudgetDetailViewModel.MayVal = currentDataItem.MayVal;
+               SalesBudgetDetailViewModel.MayCom = currentDataItem.MayCom;
+
+               SalesBudgetDetailViewModel.JunQty = currentDataItem.JunQty;
+               SalesBudgetDetailViewModel.JunVal = currentDataItem.JunVal;
+               SalesBudgetDetailViewModel.JunCom = currentDataItem.JunCom;
+
+               SalesBudgetDetailViewModel.JulyQty = currentDataItem.JulyQty;
+               SalesBudgetDetailViewModel.JulyVal = currentDataItem.JulyVal;
+               SalesBudgetDetailViewModel.JulyCom = currentDataItem.JulyCom;
+
+               SalesBudgetDetailViewModel.AugQty = currentDataItem.AugQty;
+               SalesBudgetDetailViewModel.AugVal = currentDataItem.AugVal;
+               SalesBudgetDetailViewModel.AugCom = currentDataItem.AugCom;
+
+               SalesBudgetDetailViewModel.SepQty = currentDataItem.SepQty;
+               SalesBudgetDetailViewModel.SepVal = currentDataItem.SepVal;
+               SalesBudgetDetailViewModel.SepCom = currentDataItem.SepCom;
+
+               SalesBudgetDetailViewModel.OctQty = currentDataItem.OctQty;
+               SalesBudgetDetailViewModel.OctVal = currentDataItem.OctVal;
+               SalesBudgetDetailViewModel.OctCom = currentDataItem.OctCom;
+
+               SalesBudgetDetailViewModel.NovQty = currentDataItem.NovQty;
+               SalesBudgetDetailViewModel.NovVal = currentDataItem.NovVal;
+               SalesBudgetDetailViewModel.NovCom = currentDataItem.NovCom;
+
+               SalesBudgetDetailViewModel.DecQty = currentDataItem.DecQty;
+               SalesBudgetDetailViewModel.DecVal = currentDataItem.DecVal;
+               SalesBudgetDetailViewModel.DecCom = currentDataItem.DecCom;
+
+               salesDetailList.push(SalesBudgetDetailViewModel);
+           }
+
+           //url
+           var postUrl = '@Url.Content("~/PCV/SalesBudget/SetSalesBudgetForUpdate")';
+
+           
+
+           //Post json data from kendo Grid to Controller
+           $.ajax({
+               url: postUrl,
+               type: 'POST',
+               dataType: 'json',
+               data: JSON.stringify({ 'lstSampleSubmissionMaster': salesMasterList, 'lstSampleSubmissionDetails': salesDetailList,'UpdateId':id }),
+               contentType: 'application/json; charset=utf-8',
+               success: function (result) {
+                   //if (result !='') 
+                   //    {
+                   //        alert(jresult[0].TP);
+                   //        //TP= jresult[0].TP;
+                   //        $('#TP').val(result[0].TP);
+                   //    }
+                           
+                   if (result != '') {
+                           //alert(JSON.stringify(result));
+                           //alert(result.strMessage);
+                           $("#updateTargetEditId").html(result.strMessage).show();
+                           //$('#SalesBudgetKendoGrid').data('kendoGrid').refresh();  
+                           var dGrid = $('#SalesBudgetKendoGrid').data('kendoGrid');
+                           dGrid.dataSource.read();                         
+                   }
+
+
+                   console.log(result);
+               },
+               error: function (objAjaxRequest, strError) {
+                   var respText = objAjaxRequest.responseText;
+                   console.log(respText);
+               }
+           });
+       }
+
+
+
+ 
+</script>
+
+
+
+
+
+
+
+

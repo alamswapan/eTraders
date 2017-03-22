@@ -1,0 +1,28 @@
+﻿@*@model IEnumerable<LILI_CRM.Web.Areas.BMS.ViewModel.DailyBreakdownDetailsViewModel>*@
+           
+
+
+@(Html.Kendo().MultiSelect()
+            .Name("CauseList")
+            .DataTextField("BreakdownCause")
+            .DataValueField("BreakdownCauseId")
+            //.Filter(FilterType.Contains)                
+        //.BindTo((IEnumerable<LILI_CRM.Web.Areas.BMS.ViewModel.CauseViewModel>)ViewData["causesvd"])
+            .Placeholder("No role selected")
+            
+                .DataSource(source =>
+                {
+                    
+                    source.Read(read =>
+                    {
+                        read.Action("GetBreakdownCauseDropDown", "DailyBreakdown")
+                            .Data("bmachineId");
+                    })
+                    
+                    .ServerFiltering(false);
+                    
+
+                })
+                    
+)
+

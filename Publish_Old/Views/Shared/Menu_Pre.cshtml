@@ -1,0 +1,37 @@
+﻿@model LILI_CRM.Web.Models.MenuModels
+<link href="@Url.Content("~/MenuControl/CSS/superfish.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/MenuControl/JS/hoverIntent.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/MenuControl/JS/superfish.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery('ul.sf-menu').superfish();
+    });
+</script>
+@{     
+
+    List<LILI_BMS.DAL.BMS.CustomEntities.MenuList> list = Model.MenuList.Where(m => string.IsNullOrEmpty(m.ParentMenuName)).ToList<LILI_BMS.DAL.BMS.CustomEntities.MenuList>();
+    
+    <ul class="sf-menu">
+        @ShowSubItems(list)
+    </ul>
+}
+
+@helper ShowSubItems(List<LILI_BMS.DAL.BMS.CustomEntities.MenuList> list)
+    {
+        foreach (var item in list)
+        {
+    <li>
+        @{ 
+           @Html.ActionLink(@item.MenuName, @item.ActionName, @item.ModuleName + "/" + @item.ControllerName)
+            List<LILI_BMS.DAL.BMS.CustomEntities.MenuList> subItem = Model.MenuList.Where(m => m.ParentMenuName == item.MenuName).ToList<LILI_BMS.DAL.BMS.CustomEntities.MenuList>();
+           if (subItem.Count > 0)
+           {
+                    <ul>
+                        @ShowSubItems(subItem)
+                    </ul>
+           }
+           
+       }
+    </li>
+        }    
+}

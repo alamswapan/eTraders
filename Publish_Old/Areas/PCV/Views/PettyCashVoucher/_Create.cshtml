@@ -1,0 +1,303 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.VoucherViewModel
+@using (Ajax.BeginForm("Create", "PettyCashVoucher", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddVoucherInfoSuccess",
+        }, new { @id = "addVoucherInfoForm" }))
+{
+    <div class="row-fluid form-horizontal">
+        <div class="popup-widget-box clearfix">
+            <div class="content">
+                @Html.ValidationSummary(true)
+                <div id="updateTargetId" class="alert alert-info" style="display: none;">
+                </div>
+
+                @Html.HiddenFor(model => model.CompanyCode)
+                @Html.HiddenFor(model => model.UserId)
+
+            </div>
+
+            @*<div class="row-fluid">
+                <div class="span4">
+                    <span class="span6">
+                        @Html.LabelFor(model => model.VoucherNo)
+                    </span>
+                    <span class="span6">
+                        @Html.TextBoxFor(model => model.VoucherNo, new { @style = "text-align: left !important;" })
+                        @Html.ValidationMessageFor(model => model.VoucherNo)
+                    </span>
+                </div>
+
+                <div class="span4">
+                </div>
+
+                <div class="span4">
+                    <span class="span6">
+                        @Html.LabelFor(model => model.PayTo)
+                    </span>
+                    <span class="span6">
+                        @Html.TextBoxFor(model => model.PayTo, new { @style = "text-align: left !important; background-color:#FFF8DC !important;" })
+                        @Html.ValidationMessageFor(model => model.PayTo)
+                    </span>
+                </div>
+            </div>*@
+
+            <div class="row-fluid">
+                <div class="span4 pull-left">
+                    <span class="span6">
+                        @Html.LabelFor(model => model.VoucherDate)
+                    </span><span class="span6">
+                        @Html.EditorFor(model => model.VoucherDate)
+                        @Html.ValidationMessageFor(model => model.VoucherDate)
+                    </span>
+                </div>
+
+                 <div class="span4">
+                    <span class="span6">
+                        @Html.LabelFor(model => model.PayTo)
+                    </span>
+                    <span class="span6">
+                        @Html.TextBoxFor(model => model.PayTo, new { @style = "text-align: left !important; background-color:#FFF8DC !important;" })
+                        @Html.ValidationMessageFor(model => model.PayTo)
+                    </span>
+                </div>
+
+                <div class="span4">
+                    <span class="span6">
+                        @Html.LabelFor(model => model.StaffID)
+                    </span>
+                    <span class="span6">
+                        @Html.TextBoxFor(model => model.StaffID, new { @style = "text-align: left !important; background-color:#FFF8DC !important;" })
+                        @Html.ValidationMessageFor(model => model.StaffID)
+                    </span>
+                </div>
+
+            </div>
+
+            @*<button type="button" class="btn btn-mini btn-primary" id="btnLoadProductInfo" name="btnLoadProductInfo"
+                    value="Cancel" onclick="insertItem()">
+                    <i class="icon-edit bigger-125"></i>Load Product</button>*@
+            
+            <div class="row-fluid">
+                <div id="DailyWastageDetailsGridZone" >
+                    <div id="VoucherDetailsForAddKendoGrid">
+                    </div>
+                </div>                
+            </div>
+            
+
+            <div class="hr">
+            </div>
+            <div class="content pull-right">
+                <button type="button" class="btn btn-mini btn-primary" id="btnPrepsreInvoiceDetailList" name="btnPrepsreInvoiceDetailList"
+                onclick="PreSaveVoucherDetails()">
+                <i class="icon-save bigger-125"></i>Prepare Voucher</button>
+
+                <button type="submit" class="btn btn-mini btn-primary" id="btnAddPettyCashVoucher" name="btnAddPettyCashVoucher">
+                    <i class="icon-save bigger-125"></i>Add</button>
+                &nbsp;&nbsp;
+                <button type="button" class="btn btn-mini btn-primary" id="btnCancelVoucherInfo" name="btnCancelVoucherInfo"
+                    value="Cancel" onclick=" $($('#addVoucherInfoDialog').dialog('close'));">
+                    <i class="icon-remove bigger-125"></i>Cancel</button>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+
+
+
+            <script>
+
+                $(document).ready(function () {
+
+                    $('#btnAddPettyCashVoucher').attr('disabled', true);
+                    $('#VoucherNo').val('');
+                    $('#PayTo').attr('readonly', true);
+                    $('#StaffID').attr('readonly', true);
+                    var dataSource = new kendo.data.DataSource({
+                        pageSize: 20,
+                        data: '',
+                        autoSync: true,
+                        schema: {
+                            model: {
+                                id: "ProductID",
+                                fields: {
+                                    Id: { type: "number" },
+                                    VoucherNo: { type: "number" },
+                                    Narration: { type: "string" },
+                                    AMCode: { defaultValue: { AMCode: 0, AMDetails: "Please Select A/C"} },
+                                    ASCode: { type: "string" },
+                                    Debit: { type: "number", validation: { max: 9999999999} },
+                                    Credit: { type: "string" }
+                                }
+                            }
+                        },
+
+                        aggregate: [
+                                        { field: "Debit", aggregate: "sum" }
+                                   ]
+                    });
+
+                    $("#VoucherDetailsForAddKendoGrid").kendoGrid({
+                        dataSource: dataSource,
+                        //pageable: true,
+                        height: 350,
+                        toolbar: ["create"],
+                        columns: [
+                            { field: "Id", title: "Id", width: 100, hidden: true, filterable: false, sortable: false, locked: true },
+                            { field: "VoucherNo", title: "Voucher No", width: 100, hidden: true, filterable: false, sortable: false, locked: true },
+                            { field: "Narration", title: "Particulars", width: 300, filterable: false, sortable: false, locked: true },
+                            { field: "AMCode", title: "Debit A/C", width: 400, editor: categoryDropDownEditor, template: "#=AMCode.AMDetails#" },
+                            { field: "ASCode", title: "AS Code", width: 100, hidden: true, filterable: false, sortable: false, locked: true },
+                            { field: "Debit", title: "Debit", width: 100, filterable: false, locked: true, attributes: { style: "text-align:right" }, footerTemplate: "<div style='float: right'>#= sum #</div>" },
+                            { field: "Credit", title: "Credit", width: 100, hidden: true, filterable: false, locked: true },
+
+                           { command: "destroy", title: " ", width: 70}],
+                        editable: true,
+                        save: function (data) {
+                            if (data.values.Debit) {
+
+                                //Calculate Total on Cell Change
+                                var dataSource = this.dataSource;
+                                data.model.one("change", function () {
+                                    dataSource.one("change", function () {
+                                        dataSource.aggregates().Debit.sum
+                                    });
+                                    dataSource.fetch();
+                                });
+                            }
+                        }
+                    });
+                });
+
+
+
+
+                function categoryDropDownEditor(container, options) {
+                    $('<input required data-text-field="AMDetails" data-value-field="AMCode" data-bind="value:' + options.field + '"/>')
+                        .appendTo(container)
+                        .kendoDropDownList({
+                            autoBind: false,
+                            dataSource: {
+                                type: "json",
+                                transport: {
+                                            read: "/PCV/PettyCashVoucher/ReadDebitACList"
+                                }
+                            }
+                        });
+                }
+
+
+
+            </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+    function insertItem(){
+        var grid = $("#VoucherDetailsForAddKendoGrid").data("kendoGrid");
+                grid.addRow();
+                $(".k-grid-edit-row").appendTo("#VoucherDetailsForAddKendoGrid tbody");
+
+        //grid.dataSource.add( { Id: "", VoucherNo: "", Narration: "", AMCode: "", ASCode:"0", Debit: "", Credit: "0"  } );
+    }
+    
+
+    function SaveVoucherDetails() {
+
+        //getting json data from kendo Grid
+        var gridData = $("#VoucherDetailsForAddKendoGrid").data("kendoGrid").dataSource.data();
+        var voucherDetailViewModelList = [];
+
+        if (gridData.length <= 0) {
+            alert('Please Enter Particular Details');
+            return;
+        }
+
+        //loop through each json data from kendo Grid
+        for (var i = 0; i < gridData.length; i++) {
+
+            var currentDataItem = gridData[i];
+            
+            var voucherDetailViewModel = {};
+            voucherDetailViewModel.Id = currentDataItem.Id;
+            voucherDetailViewModel.VoucherNo = currentDataItem.VoucherNo;
+            voucherDetailViewModel.AMCode = currentDataItem.AMCode.AMCode;
+            voucherDetailViewModel.ASCode = currentDataItem.ASCode;
+            voucherDetailViewModel.Narration = currentDataItem.Narration;            
+            voucherDetailViewModel.Debit = currentDataItem.Debit;    
+            voucherDetailViewModel.Credit = currentDataItem.Credit;
+
+            //----Check Grid Validation
+            if (voucherDetailViewModel.Narration == '') {
+                alert('Please Enter Particulars');
+                return;
+            }
+            if (voucherDetailViewModel.AMCode == 0) {
+                alert('Please Select Debit A/C');
+                return;
+            }
+            if (voucherDetailViewModel.Debit <= 0 || voucherDetailViewModel.Debit == '') {
+                alert('Please Enter Debit Amount');
+                return;
+            }
+
+
+            voucherDetailViewModelList.push(voucherDetailViewModel);
+        }
+
+        var postUrl = '@Url.Content("~/PCV/PettyCashVoucher/SetVoucherDetailsListForSave")';
+        //alert(postUrl);
+        var paramValue = JSON.stringify({ lstPettyCashVoucherDetails: voucherDetailViewModelList });
+
+        //Post json data from kendo Grid to Controller
+        $.ajax({
+            url: postUrl,
+            type: 'POST',
+            dataType: 'json',
+            data: paramValue,
+            contentType: 'application/json; charset=utf-8',
+            success: function (result) {
+                console.log(result);
+                $('#btnAddPettyCashVoucher').attr('disabled', false);
+            },
+            error: function (objAjaxRequest, strError) {
+                var respText = objAjaxRequest.responseText;
+                console.log(respText);
+            }
+        });
+    }
+
+
+    function PreSaveVoucherDetails() {
+        
+        SaveVoucherDetails();
+
+    }
+
+
+</script>

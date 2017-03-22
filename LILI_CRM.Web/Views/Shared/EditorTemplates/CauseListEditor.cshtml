@@ -1,0 +1,24 @@
+﻿@*@model IEnumerable<LILI_CRM.Web.Areas.BMS.ViewModel.DailyBreakdownDetailsViewModel>*@
+           
+
+
+@(Html.Kendo().DropDownList()
+                        .Name("StageId")
+                .DataTextField("StageName")
+                .DataValueField("StageId")
+            //.Filter(FilterType.Contains)                
+        //.BindTo((IEnumerable<LILI_CRM.Web.Areas.BMS.ViewModel.CauseViewModel>)ViewData["causesvd"])
+            //.Placeholder("No role selected")
+            
+                .DataSource(source =>
+                {                    
+                    source.Read(read =>
+                    {
+                        read.Action("ReadCurrentStageList", "CallReport");
+                    })
+                    
+                    .ServerFiltering(false);
+                })
+                .Events(e => e.Change("selectedIndexChanged"))                    
+)
+

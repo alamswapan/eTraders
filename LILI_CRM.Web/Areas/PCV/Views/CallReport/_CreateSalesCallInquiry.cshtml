@@ -1,0 +1,311 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.CallReportSalesCallInquiryInfoModel
+
+@using (Ajax.BeginForm("CreateSalesCallInquiry", "CallReport", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddSalesCallInquirySuccess",
+        }, new { @id = "addSalesCallInquiryForm" }))
+{
+    <div class="row-fluid form-horizontal">
+        <div class="popup-widget-box clearfix">
+            <div class="content">
+                @Html.ValidationSummary(true)
+                <div id="updateTargetId" class="alert alert-info" style="display: none;">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.CustomerId)
+                </span>
+                <div class="controls">
+                    @Html.DropDownList("CustomerId", Model.ddlCustomer, new { @class = "clsProject" })
+                    @Html.ValidationMessageFor(model => model.CustomerId)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.SupplierId)
+                </span>
+                <div class="controls">
+                    @Html.DropDownList("SupplierId", Model.ddlSupplier, new { @class = "clsProject" })
+                    @Html.ValidationMessageFor(model => model.SupplierId)
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.DateOfUpdate)
+                </span>
+                <div class="controls">
+                    @Html.EditorFor(model => model.DateOfUpdate)
+                    @Html.ValidationMessageFor(model => model.DateOfUpdate)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model=> model.SalesPerson)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.SalesPerson, new { Style = "background:#4E6693", @readonly = "true" })
+                    @Html.ValidationMessageFor(model=>model.SalesPerson)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.ProductName)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.ProductName, new { @style = "text-align: left !important;" })
+                    @Html.ValidationMessageFor(model => model.ProductName)
+
+                    <button type="button" class="btn btn-mini btn-primary" id="btnAddProduct" name="btnAddProduct"
+                        value="Cancel" onclick="AddRow()">
+                        <i class="icon-edit bigger-125"></i>Add to List</button>
+                </div>
+            </div>
+
+
+            @*<div class="row-fluid">
+                <div id="SalesCallInquiryDetailsGridZone" >
+                    <div id="SalesCallInquiryDetailsForAddKendoGrid">
+                    </div>
+                </div>                
+            </div>*@
+
+            <br />
+
+            @(Html.Kendo().Grid(Model.salesCallInquiryDetailViewModel)
+              .Name("SalesCallInquiryDetailsForAddKendoGrid")
+              //.Events(events => events.Change("Grid_OnRowSelect()"))
+              //.ToolBar(tools => tools.Create().Text("Add new product"))
+              .Editable(editable => editable.Mode(GridEditMode.InCell).CreateAt(GridInsertRowPosition.Bottom))
+              .Columns(columns =>
+              {
+                  
+                  columns.Bound(p => p.ProductId).Hidden(true).ClientTemplate("#= ProductId #" +
+                    "<input type='hidden' name='salesCallInquiryDetailViewModel[#= index(data)#].ProductId' value='#= ProductId #' />"
+                  );
+
+                  columns.Bound(p => p.ProductName).ClientTemplate("#= ProductName #" +
+                    "<input type='hidden' name='salesCallInquiryDetailViewModel[#= index(data)#].ProductName' value='#= ProductName #' />"
+                  );
+
+                  columns.Bound(p => p.Quantity).ClientTemplate("#= Quantity #" +
+                    "<input type='hidden' name='salesCallInquiryDetailViewModel[#= index(data)#].Quantity' value='#= Quantity #' />"
+                  );
+
+                  columns.Bound(p => p.Unit).ClientTemplate("#= Unit #" +
+                    "<input type='hidden' name='salesCallInquiryDetailViewModel[#= index(data)#].Unit' value='#= Unit #' />"
+                  );
+                  
+                  columns.Bound(p => p.OfferedAmountPerUnit).ClientTemplate("#= OfferedAmountPerUnit #" +
+                    "<input type='hidden' name='salesCallInquiryDetailViewModel[#= index(data)#].OfferedAmountPerUnit' value='#= OfferedAmountPerUnit #' />"
+                  );
+                  
+                  columns.Bound(p => p.PriceValidity).ClientTemplate("#= PriceValidity #" +
+                    "<input type='hidden' name='salesCallInquiryDetailViewModel[#= index(data)#].PriceValidity' value='#= PriceValidity #' />"
+                  );
+                  
+                  columns.Bound(p => p.BidPrice).ClientTemplate("#= BidPrice #" +
+                    "<input type='hidden' name='salesCallInquiryDetailViewModel[#= index(data)#].BidPrice' value='#= BidPrice #' />"
+                  );
+
+                  columns.Bound(p => p.StageIdTemp).Hidden(true).ClientTemplate("#= StageIdTemp #" +
+                    "<input type='hidden' name='salesCallInquiryDetailViewModel[#= index(data)#].StageIdTemp' value='#= StageIdTemp #' />"
+                  );
+
+                  //columns.Bound(e => e.StageId).Width(350).EditorTemplateName("CauseListEditor").ClientTemplate("#= StageName #").Title("Current Stage"); 
+
+                  columns.Bound(e => e.StageId).Width(350).EditorTemplateName("CauseListEditor").ClientTemplate("#= StageId #" +
+                    "<input type='hidden' name='salesCallInquiryDetailViewModel[#= index(data)#].StageId' value='#= StageId #' />").Title("Current Stage"); 
+                  
+                  
+                  columns.Bound(p => p.Remarks).ClientTemplate("#= Remarks #" +
+                    "<input type='hidden' name='salesCallInquiryDetailViewModel[#= index(data)#].Remarks' value='#= Remarks #' />"
+                  );
+                  
+                  columns.Command(command => command.Destroy()).Width(110);
+              })
+                //.Selectable()
+                .Events(events => events
+                .Change("onChange")
+                )
+              .DataSource(dataSource => dataSource.Ajax()
+                   .Model(model => 
+                       {
+                           model.Id(p => p.ProductId);
+                           model.Field(p => p.ProductName).Editable(false);
+                           model.Field(p => p.Quantity).Editable(true);
+                           model.Field(p => p.Unit).Editable(false);
+                           model.Field(p => p.OfferedAmountPerUnit).Editable(false);
+                           model.Field(p => p.PriceValidity).Editable(true);
+                           model.Field(p => p.BidPrice).Editable(false);
+                           model.Field(p => p.StageIdTemp).Editable(true);
+                           model.Field(p => p.StageId).Editable(true);
+                           //model.Field(p => p.CauseList).Editable(true);
+                           model.Field(p => p.Remarks).Editable(true);
+                       })
+                   .ServerOperation(false)
+               
+              )
+          
+             
+    )
+
+
+
+            <div class="hr">
+            </div>
+            <div class="content pull-right">
+                <button type="submit" class="btn btn-mini btn-primary" id="btnAddSalesCallInquiry" name="btnAddSalesCallInquiry">
+                    <i class="icon-save bigger-125"></i>Add</button>
+                &nbsp;&nbsp;
+                <button type="button" class="btn btn-mini btn-primary" id="btnCancelSalesCallInquiry" name="btnCancelSalesCallInquiry"
+                    value="Cancel" onclick=" $($('#addSalesCallInquiryDialog').dialog('close'));">
+                    <i class="icon-remove bigger-125"></i>Cancel</button>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+<script type="text/javascript">
+
+    var dataItem; //This should be Global variable
+
+
+    
+
+
+//    function selectedIndexChanged(e) {
+//        alert(this.dataItem(this.select()).StageId);
+//        var selectedValue = this.dataItem(this.select()).StageId;
+//        alert(selectedValue);
+//        ddlStageId = selectedValue;
+//    }
+
+    function renderMultiSelectText(selectListArray) {
+        alert(selectListArray);
+        if (selectListArray != undefined && selectListArray[0] != undefined) {
+            var displayText;
+            $.each(selectListArray, function (index) {
+                if (displayText == undefined)
+                    displayText = selectListArray[index].BreakdownCause + ', ';
+                else
+                    displayText = displayText + selectListArray[index].BreakdownCause + ', ';
+            });
+
+            return displayText.slice(0, -2);
+        }
+        else
+            return "";
+    }
+
+
+    function index(dataItem) {
+        var data = $("#SalesCallInquiryDetailsForAddKendoGrid").data("kendoGrid").dataSource.data();
+        return data.indexOf(dataItem);
+    }
+
+    $(document).ready(function () {
+
+        function Grid_OnRowSelect (e) {
+            var data = this.dataItem(this.select());
+            YourRowID = data.id; //IMP
+            alert(data.Unit);
+        }
+
+        $("#ProductName").kendoAutoComplete({
+            dataTextField: "ProductName",
+            dataSource: {
+                transport: {
+                    read: {
+                        url: "/PCV/CallReport/PopulateProductAutoComplete/",
+                        serverPaging: true,
+                        type: "POST",
+                        data: {
+                            //json: JSON.stringify([{ "ProductName": "A001" }, { "ProductName": "A002"}])
+                        }
+                    }
+                }
+            }
+        });
+
+        //    $("input:submit, input:button, button", ".jqUI").button();
+        //    $('.date').datepicker({ dateFormat: "dd/mm/yy" });
+
+    });
+
+</script>
+
+<script type="text/javascript">
+
+    function AddRow()
+        {
+        var salesInquiryDetGrid = $('#SalesCallInquiryDetailsForAddKendoGrid').data('kendoGrid');
+        var dataSource = salesInquiryDetGrid.dataSource;
+
+        var productName = $('#ProductName').val();
+
+        $.get(
+                "@Url.Action("AddArticleToGrid")",
+                {'productName':productName},
+                function(jresult){
+                    if(jresult != '')
+                    {
+//                        if (Find_Grid_Item(jresult[0].Id))
+//                        {
+//                            alert('This Element is Allready Exists');
+//                            return;
+//                        }
+                        dataSource.add({ ProductId: jresult[0].Id, //ProductCode: jresult[0].ProductCode, 
+                            ProductName: jresult[0].ProductName, Quantity: 0, Unit: jresult[0].SamplingUnit, OfferedAmountPerUnit: jresult[0].OfferedAmountPerUnit, 
+                            PriceValidity: "", BidPrice: jresult[0].BidPrice, StageIdTemp: 0, StageId:0,
+                            //StageId: "- Select One -", 
+                            StageName: "- Select One -",
+                            Remarks: "" 
+                            });
+                        }
+                        else{
+                            $("#message").show();
+                            $('#message').text(data).css({ 'color':'red' });
+                            $("#message").delay(3000).hide();
+                        }
+                    }
+                );
+        }
+    // Add New Row To Grid End Here 
+
+    function Find_Grid_Item(itemId)
+    {
+            //alert (itemId);
+        var rowNo =0;
+        var gridData = $("#SalesCallInquiryDetailsForAddKendoGrid").data("kendoGrid").dataSource.data();
+
+        for (var index = 0; index < gridData.length; index++) 
+        {
+            
+            var currentDataItem = gridData[index];
+            if (itemId==currentDataItem.ArticleId)
+            {
+                rowNo=index;
+                return true;
+            }
+        }
+//        if (rowNo>0)
+//        {return true;}
+//        else{
+//        return false;
+        //}
+    }
+
+</script>

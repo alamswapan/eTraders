@@ -1,0 +1,387 @@
+﻿@*<div >
+    <table id="jqGrid" cellpadding="0" cellspacing="0" class="ui-jqgrid-view">
+    </table>
+    <div id="jqGridPager" style="text-align: center;">
+    </div>
+</div>*@
+
+<div class="widget-box">
+    @*<div class="widget-header">
+        Common Configuration Item List
+    </div>*@
+
+    <div class="widget-body">
+        <table id="jqGrid" cellpadding="0" cellspacing="0" class="ui-jqgrid-view"></table>
+        <div id="jqGridPager" style="text-align: center;"></div>
+     </div>
+</div>
+
+@*<script src="@Url.Content("~/Scripts/jquery.jqGrid.addons-4.1.2.js")" type="text/javascript"></script>*@
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#SortOrder").keydown(function (event) {
+
+            if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 ||
+                (event.keyCode == 65 && event.ctrlKey === true) ||
+                    (event.keyCode >= 35 && event.keyCode <= 39)) {
+                return;
+            }
+            else {
+                if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+                    event.preventDefault();
+                }
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+
+    $(function () {
+        $('#Name').css({ 'border-color': '#C8C8D4', 'background-color': '#FFFFFF' });
+        //$('#SortOrder').css({ 'border-color': '#C8C8D4', 'background-color': '#FFFFFF' });
+
+        $('#btnUpdate').hide();
+        $('#btnSave').hide();
+
+        $('#Remarks').keypress(function () {
+            if (this.value.length >= 100)
+                return false;
+        });
+
+        $('#Name').blur(function (event) { //$('#Name, #SortOrder').blur(function (event) {
+            var name = $('#Name').val();
+
+            if (name != '') {
+                $('#Name').css({ 'border-color': '#C8C8D4', 'background-color': '#FFFFFF' });
+            }
+            else {
+                if (name == '') {
+                    $('#Name').css({ 'border-color': '#FF0000', 'background-color': '#FFF2F2' });
+                }
+                else {
+                    $('#Name').css({ 'border-color': '#C8C8D4', 'background-color': '#FFFFFF' });
+                }
+            }
+        });
+
+        $('#btnSave').on('click', function (event) {
+            event.preventDefault();
+            $.validator.unobtrusive.parse($('#frm'));
+
+            var name = $('#Name').val();
+            //var sortOrder = $('#SortOrder').val();
+
+            if (name != '') {
+                if ($('#frm').valid()) {
+
+                    var url = '@Url.Action("Create", "CommonConfig")';
+                    var form = $('#frm');
+                    var serializedForm = form.serialize();
+                    $.post(url, serializedForm, function (obj) { //Post to action
+                        if (obj.Success == 1) {
+                            $("#message").html("<b>" + obj.Message + "</b>").css("color", "green");
+                            ResetForm();
+                            jQuery("#jqGrid").trigger("reloadGrid");
+                        } else {
+                            $("#message").html("<b>" + obj.Message + "</b>").css("color", "red");
+                        }
+                    });
+                }
+                $('#Name').css({ 'border-color': '#C8C8D4', 'background-color': '#FFFFFF' });
+            } else {
+                if (name == '') {
+                    $("#message").html("Please fill up the red marked field(s)").css("color", "red");
+                    $('#Name').css({ 'border-color': '#FF0000', 'background-color': '#FFF2F2' });
+                } else {
+                    $('#Name').css({ 'border-color': '#C8C8D4', 'background-color': '#FFFFFF' });
+                }
+            }
+        });
+
+        $('#btnUpdate').on('click', function (event) {
+            event.preventDefault();
+            $.validator.unobtrusive.parse($('#frm'));
+
+            var name = $('#Name').val();
+            //var sortOrder = $('#SortOrder').val();
+
+            if (name != '') {
+
+                if ($('#frm').valid()) {
+                    var url = '@Url.Action("Edit", "CommonConfig")';
+                    var form = $('#frm');
+                    var serializedForm = form.serialize();
+                    $.post(url, serializedForm, function (obj) { //Post to action
+                        if (obj.Success == 1) {
+                            $("#message").html("<b>" + obj.Message + "</b>").css("color", "green");
+                            ResetForm();
+                            jQuery("#jqGrid").trigger("reloadGrid");
+                            $('#btnSave').show();
+                            $('#btnUpdate').hide();
+                        } else {
+                            $("#message").html("<b>" + obj.Message + "</b>").css("color", "red");
+                        }
+                    });
+                }
+                $('#Name').css({ 'border-color': '#C8C8D4', 'background-color': '#FFFFFF' });
+            } else {
+                if (name == '') {
+                    $("#message").html("Please fill up the red marked field(s)").css("color", "red");
+                    $('#Name').css({ 'border-color': '#FF0000', 'background-color': '#FFF2F2' });
+                } else {
+                    $('#Name').css({ 'border-color': '#C8C8D4', 'background-color': '#FFFFFF' });
+                }
+            }
+        });
+
+        $("#btnClear").click(
+         function () {
+             ResetForm();
+
+             $('#btnSave').show();
+             $('#btnUpdate').hide();
+         });
+
+        $("a.editItem").live("click", function () {
+            editLinkObj = $(this);
+            $.get(editLinkObj[0].href, function (obj) {
+                $("#Code").val(obj.code);
+                $("#Name").val(obj.name);
+                $("#SortOrder").val(obj.sortOrder);
+                $("#Description").val(obj.description);
+                if (obj.isActive == true) {
+                    $("#IsActive").attr('checked', true);
+                }
+                else {
+                    $("#IsActive").attr('checked', false);
+                }
+                $("#Id").val(obj.id);
+            });
+            $('#btnSave').hide();
+            $('#btnUpdate').show();
+            $('#message').html('');
+
+            return false;
+        });
+
+        //$("a.deleteItem").live("click", function () {
+        //    deleteLinkObj = $(this);
+        //    $('#delete-dialog').dialog('open');
+        //    return false;
+        //});
+    });
+
+    function ClearMSG() {
+        $("#message").html('');
+        $(".validation-summary-errors ").html('');
+        clearValidationSummary();
+    }
+
+    function ResetForm() {
+        $("#Id").val("0");
+        $("#Code").val("");
+        $("#Name").val('');
+        $("#SortOrder").val("");
+        $("#Description").val('');        
+        $("#IsActive").attr('checked', true);
+
+        ClearMSG();
+    }
+
+    
+    $(document).ready(function () {
+
+        //Shows the breadcrumbs title for firsttime click in common config menu.
+        var breadcrumbsTitle = '@ViewBag.TitleName';
+        $('.ccSiteMap').html(breadcrumbsTitle);
+
+        ResetForm();
+        $('#btnSave').show();
+        $('#btnUpdate').hide();
+
+        $('#jqGrid').jqGrid({
+
+            beforeRequest: function () {
+                var newUrl = '@Url.Action("GetCommonConfigList")';
+                $('#jqGrid').jqGrid().setGridParam({ url: newUrl });
+            },
+            url: '',
+            datatype: 'json',
+            mtype: 'GET',
+            ajaxGridOptions: { contentType: 'application/json' },
+
+            autowidth: true,
+            colNames: ['ID', 'Code', 'Name', 'Sort Order', 'Description', 'Active', 'Delete'],
+            colModel: [
+                        { name: 'Id', index: 'Id', align: 'left', search: true, hidden: true, edittype: 'text' },
+                        { name: 'Code', index: 'Code', align: 'left', width: '100px', search: true, edittype: 'text', formatter: ViewformateadorLink },
+                        { name: 'Name', index: 'Name', align: 'left', width: '100px', search: true, sortable: true, formatter: ViewformateadorLink },
+                        { name: 'SortOrder', index: 'SortOrder', align: 'center', width: '40px', search: false, edittype: 'text' },
+                        { name: 'Description', index: 'Description', align: 'left', search: false, sortable: false },
+                        { name: 'IsActive', index: 'IsActive', align: 'center', search: false, width: '30px', edittype: 'select', surl: '@Url.Action("IsActive")', formatter: 'checkbox' },
+                        { name: 'Delete', index: 'Delete', align: 'center', width: '30px', edittype: 'image', formatter: deleteformateadorLink }
+                        ],
+            caption: "Common Configuration",
+            rowList: [20, 30, 40, 50, 100],
+            pager: $('#jqGridPager'),
+            rowNum: 20,
+            sortname: 'Code',
+            sortorder: 'asc',
+            viewrecords: true,
+            height: '100%',
+            width: '100%'
+        });
+
+
+        //delete CommonConfig
+        $("#deleteCommonConfigDialog").dialog({
+            autoOpen: false,
+            width: 600,
+            resizable: false,
+            modal: true,
+            buttons: {
+                "Yes": function () {
+                    //make sure there is nothing on the message before we continue                         
+                    $("#updateTargetId").html('');
+                    $("#deleteCommonConfigForm").submit();
+                },
+                "Cancel": function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
+
+        $('a.deleteItem').live('click', function () {
+
+            //change the title of the dialog
+            var linkObj = $(this);
+            var dialogDiv = $('#deleteCommonConfigDialog');
+            var viewUrl = linkObj.attr('href');
+            $.get(viewUrl, function (data) {
+                dialogDiv.html(data);
+                //validation
+                var $form = $("#deleteCommonConfigForm");
+                // Unbind existing validation
+                $form.unbind();
+                $form.data("validator", null);
+                // Check document for changes
+                $.validator.unobtrusive.parse(document);
+                // Re add validation with changes
+                $form.validate($form.data("unobtrusiveValidation").options);
+                //open dialog
+                dialogDiv.dialog('open');
+            });
+            return false;
+        });
+
+    });
+
+    //Executes after Delete Confirmed
+    function DeleteCommonConfigSuccess() {
+
+        if ($("#updateTargetId").html() == "True") {
+
+            //now we can close the dialog
+            $('#deleteCommonConfigDialog').dialog('close');
+
+            $("#message").html("<b> Information has been deleted successfully</b>").css("color", "green");
+            ResetForm();
+            jQuery("#jqGrid").trigger("reloadGrid");
+
+        }
+        else {
+            //show message in popup
+            $("#updateTargetId").show();
+        }
+    }
+
+    function ViewformateadorLink(cellvalue, options, rowObject) {
+        var url = '@Ajax.ActionLink("_CellValue_", "Edit", new { id = "_ID_" }, new AjaxOptions { }, new { @class = "editItem commonConfigLinkText" })';
+        url = url.replace( /_CellValue_/ , cellvalue);
+        url = url.replace( /_ID_/ , rowObject[0]);
+        return url;
+    }
+
+    function deleteformateadorLink(cellvalue, options, rowObject) {
+        var url = '@Html.ActionLink(" ", "Delete", new { id = "_ID_" }, new { @class = "deleteItem", @style = "text-decoration: none;" })';
+        url = url.replace( /_ID_/ , rowObject[0]);
+        return url;
+    }
+
+    //Manage SiteMap & Active Menu Selection
+    $("#selectable").selectable({
+        selected: function (event, ui) {
+            
+            ClearMSG();
+            var text = $('.ui-selected:first a').text().trim();
+
+            $(".ui-selectee").removeClass("active");
+            $(".ui-selectee").removeClass("open");
+            if (text == "Shift Information") {
+                $('.ccSiteMap').html("Shift Information");
+
+                $(".mnuShiftInformation").addClass("active");
+                $(".mnuShiftInformation").parent().parent().addClass("active").addClass("open");
+                $(".mnuShiftInformation").parent().parent().addClass("open");
+            }
+            else if (text == "Unit/Plant Information") {
+                $('.ccSiteMap').html("Unit/Plant Information");
+
+                $(".mnuUnitPlantInformation").addClass("active");
+                $(".mnuUnitPlantInformation").parent().parent().addClass("active");
+                $(".mnuUnitPlantInformation").parent().parent().addClass("open");
+            }
+            else if (text == "Product/Flavor Information") {
+                $('.ccSiteMap').html("Product/Flavor Information");
+
+                $(".mnuFlavorInformation").addClass("active");
+                $(".mnuFlavorInformation").parent().parent().addClass("active");
+                $(".mnuFlavorInformation").parent().parent().addClass("open");
+            }
+            else if (text == "Pack Size Information") {
+                $('.ccSiteMap').html("Pack Size Information");
+
+                $(".mnuPackSizeInformation").addClass("active");
+                $(".mnuPackSizeInformation").parent().parent().addClass("active");
+                $(".mnuPackSizeInformation").parent().parent().addClass("open");
+            }
+            else if (text == "Breakdown Component Information") {
+                $('.ccSiteMap').html("Breakdown Component Information");
+
+                $(".mnuBreakdownComponentInformation").addClass("active");
+                $(".mnuBreakdownComponentInformation").parent().parent().addClass("active");
+                $(".mnuBreakdownComponentInformation").parent().parent().addClass("open");
+            }
+            else if (text == "Rejection Component Information") {
+                $('.ccSiteMap').html("Rejection Component Information");
+
+                $(".mnuRejectionComponentInformation").addClass("active");
+                $(".mnuRejectionComponentInformation").parent().parent().addClass("active");
+                $(".mnuRejectionComponentInformation").parent().parent().addClass("open");
+            }
+            else if (text == "Product Type") {
+                $('.ccSiteMap').html("Product Type");
+
+                $(".mnuProductType").addClass("active");
+                $(".mnuProductType").parent().parent().addClass("active");
+                $(".mnuProductType").parent().parent().addClass("open");
+            }
+            
+            ResetForm();
+            $('#btnSave').show();
+            $('#btnUpdate').hide();
+
+            var url = '@Url.Action("Index")';
+            $.get(url, { name: text }, function () {
+                jQuery("#jqGrid").trigger("reloadGrid");
+                $('#Name').css({ 'border-color': '#C8C8D4', 'background-color': '#FFFFFF' });
+                $('#SortOrder').css({ 'border-color': '#C8C8D4', 'background-color': '#FFFFFF' });
+                return false;
+            });
+        }
+    });
+
+
+</script>

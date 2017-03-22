@@ -1,0 +1,243 @@
+﻿@model LILI_CRM.Web.Models.UserRegistrationModel
+
+@using (Ajax.BeginForm("Create", null, new AjaxOptions { HttpMethod = "POST", OnSuccess= "OnCompleteReg", OnComplete = "OnCompleteReg" }, new { id = "frm", action = Url.Action(Model.Mode == "Create" ? "Create" : "Edit") }))
+{
+
+    @Html.HiddenFor(m => m.Id)   
+
+    <div class="widget-main" style="margin-left:300px;  width:600px; height:500px;">
+             
+        <h4 class="header green lighter bigger">
+            <i class="icon-group blue"></i>New User Registration
+        </h4>
+
+        <div class="GroupBox" style="max-height: 20px;" id="message" >
+            @Html.ValidationSummary(false, LILI_CRM.Web.Utility.Common.ValidationSummaryHead)
+        </div>
+        <form>
+        <fieldset>
+            <label></label>
+
+            <div class="row-fluid span12">
+                <div class="span6">
+                    <label>
+                        <span >
+                            @Html.TextBoxFor(m => m.UserFullName, new { @placeholder = "User Full Name", @class = "span11" })
+                        </span>
+                    </label>                                                    
+                </div> 
+                    
+                <div class="span6">
+                    <label>
+                        <span>                                                            
+                            @Html.TextBoxFor(m => m.UserId, new { @placeholder = "User Id", @class = "span10" })
+                        </span>
+                    </label>
+                </div>                                                   
+            </div>
+                                                
+
+            <div class="row-fluid span12">
+                <div class="span6">
+                    <label>
+                        <span class="block input-icon input-icon-right">
+                            @Html.DropDownList("OrganizationTypeId", Model.ddlOrganizationTypeList, new { @placeholder = "Organization Type", @class = "span10" })
+                        </span>
+                    </label>
+                </div>
+
+                <div class="span6">
+                    <label>
+                        <span class="block input-icon input-icon-right ">
+                            @Html.DropDownList("OrgTypeFundSourceMinistryId", Model.ddlOrgTypeFundSourceMinistryList, new { @placeholder = "Organization", @class = " span10 classOrgTypeName" })
+                        </span>
+                    </label>
+                </div>
+            </div>    
+                
+            <div class="row-fluid span12">
+                <div class="span12">
+                <label>
+                    <span >
+                        @Html.TextBoxFor(m => m.OrganizationName, new { @placeholder = "Organization Name", @class = "span11" })
+                        </span>
+                </label>     
+                </div>
+            </div>                                    
+
+            <div class="row-fluid span12">
+                <div class="span6">
+                    <label>
+                        <span>
+                            @Html.TextBoxFor(m => m.EMail, new { @placeholder = "Email", @class = "span10" })
+                        </span>
+                    </label>
+                </div>
+                <div class="span6">
+                    <label>
+                        <span>
+                            @Html.TextBoxFor(m => m.Telephone, new { @placeholder = "Telephone", @class = "span10" })
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="row-fluid span12">
+                <div class="span12">
+                    <label>
+                        <span>
+                            @Html.TextAreaFor(m => m.Address, new { @placeholder = "Address", @class = "span11" })
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span4 btn btn-small">
+                    @Ajax.ActionLink("Back to Login", "LogOn", new AjaxOptions { OnComplete = "OnCompleteAddnew" }, null, htmlAttributes: new { @class = "whiteText" }) 
+                </div>               
+                @*@Ajax.ActionLink("Back to Login", "LogOn", new AjaxOptions { OnComplete = "OnCompleteAddnew" }) *@                   
+                    
+                <button type="submit" value="Register" class="span4 btn btn-small btn-primary">
+                    Register
+                </button>
+                <button type="reset" class="span4 btn btn-small">
+                    Reset
+                </button>
+                @*<button onclick="return false;" class="span6 btn btn-small btn-success">
+                    Register <i class="icon-arrow-right icon-on-right"></i>
+                </button>*@
+            </div>
+
+            <div class="row-fluid"></div>
+
+        </fieldset>
+        </form>
+    </div>
+        
+    <div class="clear"></div>
+}
+
+<script type="text/javascript">
+    
+    $('#OrganizationTypeId').live('change', function(){
+        var organizationType = $('#OrganizationTypeId option:selected').text();
+        $.get(
+                "@Url.Action("PopulateOrganizationTypeWiseName")",
+                {'organizationType':organizationType},
+                function(r){
+                    if(r != ''){
+                        //alert(r);
+                        $('.classOrgTypeName').html(r);
+                    }
+                    else{
+                        //$('.search-content').hide();
+                        $("#message").show();
+                        $('#message').text(data).css({ 'color':'red' });
+                        $("#message").delay(3000).hide();
+                    }
+                }
+            );
+    });
+
+    $(function() {
+        var mode = '@Model.Mode';
+        var sMessage = '@Model.strMessage';
+        $.validator.unobtrusive.parse('#frm');
+
+        if (mode == 'Create') {
+            $('#btnSave').show();
+            //$('#btnUpdate').Hide();
+        } else {
+            $('#btnUpdate').show();
+            //$('#btnSave').Hide();
+        }
+
+        $("#message").show();
+        $('#message').text(sMessage).css({ 'color': 'green' });
+
+        $("p").hide();
+    });
+
+    function OnCompleteBacktoList(content) {
+        if (content.statusText == 'OK') {
+            $('.search-content').hide();
+            $('.frm-content').html(content.responseText);
+        } else {
+            $('#message').text('An error has occoured. Please try again.').css({ 'color': 'red' });
+        }
+    }
+
+    function OnCompleteAddnew(content){
+        alert(content);
+        var data = content.responseText;
+        if (data.toLowerCase().indexOf("successfully") >= 0) {
+            alert('1');
+            $("#message").show();
+            $('#message').text(data).css({ 'color':'green' });
+            $("#message").delay(3000).hide('slow');
+        }
+    }
+
+    function OnCompleteReg(content) {
+        alert('1');
+        var data = content.responseText;
+        alert(data);
+        if (data.toLowerCase().indexOf("updated") >= 0) {
+            alert('1');
+            $("#message").show();
+            $('#message').text(data).css({ 'color':'green' });
+            $("#message").delay(3000).hide('slow');
+
+            $.get(
+                "@Url.Action("BackToList")",
+                {},
+                function(r){
+                    if(r != ''){
+                        alert('2');
+                        //$('.search-content').show();
+                        $('.frm-content').html(r);
+                    }
+                    else{
+                        alert('3');
+                        //$('.search-content').hide();
+                        $("#message").show();
+                        $('#message').text(data).css({ 'color':'red' });
+                        $("#message").delay(3000).hide();
+                    }
+                }
+            );
+        }
+        else if (data.toLowerCase().indexOf("saved") >= 0) {
+        
+            alert('10');
+            $("#message").show();
+            $('#message').text(data).css({ 'color':'green' });
+            $("#message").delay(3000).hide('slow');
+
+            $.get(
+                "@Url.Action("BackToList")",
+                {},
+                function(r){
+                    if(r != ''){
+                        //$('.search-content').show();
+                        $('.frm-content').html(r);
+                    }
+                    else{
+                        //$('.search-content').hide();
+                        $("#message").show();
+                        $('#message').text(data).css({ 'color':'red' });
+                        $("#message").delay(3000).hide();
+                    }
+                }
+            );
+        }
+        else {
+            alert('11');
+            //$('.search-content').hide();
+            $("#message").show();
+            $('#message').text(data).css({ 'color':'red' });
+            $("#message").delay(3000).hide('slow');
+        }
+    }
+</script>

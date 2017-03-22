@@ -1,0 +1,1613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LILI_BMSModelStoreContainer" CdmEntityContainer="AIMS_UNDPEntities">
+    <FunctionImportMapping FunctionImportName="CommonCongifGet" FunctionName="LILI_BMSModel.Store.CommonConfigGet">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.CommonConfigGetResult">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CommonConfigTypeDML" FunctionName="LILI_BMSModel.Store.CommonConfigTypeDML" />
+    <EntitySetMapping Name="CommonConfigType">
+      <EntityTypeMapping TypeName="LILI_BMSModel.CommonConfigType">
+        <MappingFragment StoreEntitySet="CommonConfigType">
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAidCategory">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblAidCategory">
+        <MappingFragment StoreEntitySet="tblAidCategory">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblApprovalStatus">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblApprovalStatus">
+        <MappingFragment StoreEntitySet="tblApprovalStatus">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAssistanceType">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblAssistanceType">
+        <MappingFragment StoreEntitySet="tblAssistanceType">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCurrency">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblCurrency">
+        <MappingFragment StoreEntitySet="tblCurrency">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDistrict">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblDistrict">
+        <MappingFragment StoreEntitySet="tblDistrict">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="GPSLongitude" ColumnName="GPSLongitude" />
+          <ScalarProperty Name="GPSLatitude" ColumnName="GPSLatitude" />
+          <ScalarProperty Name="StandardCode" ColumnName="StandardCode" />
+          <ScalarProperty Name="DivisionId" ColumnName="DivisionId" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDivision">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblDivision">
+        <MappingFragment StoreEntitySet="tblDivision">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="GPSLongitude" ColumnName="GPSLongitude" />
+          <ScalarProperty Name="GPSLatitude" ColumnName="GPSLatitude" />
+          <ScalarProperty Name="StandardCode" ColumnName="StandardCode" />
+          <ScalarProperty Name="DivisionName" ColumnName="DivisionName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDocumentCategory">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblDocumentCategory">
+        <MappingFragment StoreEntitySet="tblDocumentCategory">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFinancialYear">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblFinancialYear">
+        <MappingFragment StoreEntitySet="tblFinancialYear">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="FinancialYearEndDate" ColumnName="FinancialYearEndDate" />
+          <ScalarProperty Name="FinancialYearStartDate" ColumnName="FinancialYearStartDate" />
+          <ScalarProperty Name="FinancialYearName" ColumnName="FinancialYearName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFundSourceCategory">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblFundSourceCategory">
+        <MappingFragment StoreEntitySet="tblFundSourceCategory">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblImplementationStatus">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblImplementationStatus">
+        <MappingFragment StoreEntitySet="tblImplementationStatus">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblNGOCSO">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblNGOCSO">
+        <MappingFragment StoreEntitySet="tblNGOCSO">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="ContactPersonEMail" ColumnName="ContactPersonEMail" />
+          <ScalarProperty Name="ContactPersonTelephone" ColumnName="ContactPersonTelephone" />
+          <ScalarProperty Name="ContactPersonName" ColumnName="ContactPersonName" />
+          <ScalarProperty Name="WebURL" ColumnName="WebURL" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="TelephoneNo" ColumnName="TelephoneNo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="NGOOrganizationTypeId" ColumnName="NGOOrganizationTypeId" />
+          <ScalarProperty Name="NGOOrganizationName" ColumnName="NGOOrganizationName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblNGOOrganizationType">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblNGOOrganizationType">
+        <MappingFragment StoreEntitySet="tblNGOOrganizationType">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrganizationType">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblOrganizationType">
+        <MappingFragment StoreEntitySet="tblOrganizationType">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProjectSectoralAllocation">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblProjectSectoralAllocation">
+        <MappingFragment StoreEntitySet="tblProjectSectoralAllocation">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="TotalCommitmentPercent" ColumnName="TotalCommitmentPercent" />
+          <ScalarProperty Name="SubSectorId" ColumnName="SubSectorId" />
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProjectType">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblProjectType">
+        <MappingFragment StoreEntitySet="tblProjectType">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRevisionStatus">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblRevisionStatus">
+        <MappingFragment StoreEntitySet="tblRevisionStatus">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSector">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblSector">
+        <MappingFragment StoreEntitySet="tblSector">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblThematicMarker">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblThematicMarker">
+        <MappingFragment StoreEntitySet="tblThematicMarker">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblVerificationStatus">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblVerificationStatus">
+        <MappingFragment StoreEntitySet="tblVerificationStatus">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserRegistrationStatus">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblUserRegistrationStatus">
+        <MappingFragment StoreEntitySet="tblUserRegistrationStatus">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProjectFundingActualDisbursement">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblProjectFundingActualDisbursement">
+        <MappingFragment StoreEntitySet="tblProjectFundingActualDisbursement">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="VerificationRemarks" ColumnName="VerificationRemarks" />
+          <ScalarProperty Name="VerifiedBy" ColumnName="VerifiedBy" />
+          <ScalarProperty Name="VerificationId" ColumnName="VerificationId" />
+          <ScalarProperty Name="DisbursedAmountInBDT" ColumnName="DisbursedAmountInBDT" />
+          <ScalarProperty Name="DisbursedExchangeRateToBDT" ColumnName="DisbursedExchangeRateToBDT" />
+          <ScalarProperty Name="DisbursedAmountInUSD" ColumnName="DisbursedAmountInUSD" />
+          <ScalarProperty Name="DisbursedExchangeRateToUSD" ColumnName="DisbursedExchangeRateToUSD" />
+          <ScalarProperty Name="DisbursedAmount" ColumnName="DisbursedAmount" />
+          <ScalarProperty Name="DisbursedCurrencyId" ColumnName="DisbursedCurrencyId" />
+          <ScalarProperty Name="AidCategoryId" ColumnName="AidCategoryId" />
+          <ScalarProperty Name="DisbursementDate" ColumnName="DisbursementDate" />
+          <ScalarProperty Name="FundSourceId" ColumnName="FundSourceId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProjectFundingPlannedDisbursement">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblProjectFundingPlannedDisbursement">
+        <MappingFragment StoreEntitySet="tblProjectFundingPlannedDisbursement">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsLocked" ColumnName="IsLocked" />
+          <ScalarProperty Name="PlannedDisburseAmountInBDT" ColumnName="PlannedDisburseAmountInBDT" />
+          <ScalarProperty Name="PlannedDisburseExchangeRateToBDT" ColumnName="PlannedDisburseExchangeRateToBDT" />
+          <ScalarProperty Name="PlannedDisburseAmountInUSD" ColumnName="PlannedDisburseAmountInUSD" />
+          <ScalarProperty Name="PlannedDisburseExchangeRateToUSD" ColumnName="PlannedDisburseExchangeRateToUSD" />
+          <ScalarProperty Name="PlannedDisburseAmount" ColumnName="PlannedDisburseAmount" />
+          <ScalarProperty Name="PlannedDisbursementCurrencyId" ColumnName="PlannedDisbursementCurrencyId" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="AidCategoryId" ColumnName="AidCategoryId" />
+          <ScalarProperty Name="FundSourceId" ColumnName="FundSourceId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProjectFundingExpenditure">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblProjectFundingExpenditure">
+        <MappingFragment StoreEntitySet="tblProjectFundingExpenditure">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="ExpenditureAmountInBDT" ColumnName="ExpenditureAmountInBDT" />
+          <ScalarProperty Name="ExpenditureExchangeRateToBDT" ColumnName="ExpenditureExchangeRateToBDT" />
+          <ScalarProperty Name="ExpenditureAmountInUSD" ColumnName="ExpenditureAmountInUSD" />
+          <ScalarProperty Name="ExpenditureExchangeRateToUSD" ColumnName="ExpenditureExchangeRateToUSD" />
+          <ScalarProperty Name="ExpenditureAmount" ColumnName="ExpenditureAmount" />
+          <ScalarProperty Name="ExpenditureCurrencyId" ColumnName="ExpenditureCurrencyId" />
+          <ScalarProperty Name="ExpenditureReportingPeriodToDate" ColumnName="ExpenditureReportingPeriodToDate" />
+          <ScalarProperty Name="ExpenditureReportingPeriodFromDate" ColumnName="ExpenditureReportingPeriodFromDate" />
+          <ScalarProperty Name="ExpenditureReportingDate" ColumnName="ExpenditureReportingDate" />
+          <ScalarProperty Name="AidCategoryId" ColumnName="AidCategoryId" />
+          <ScalarProperty Name="FundSourceId" ColumnName="FundSourceId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Dashboard_ChartOnOffBudget" FunctionName="LILI_BMSModel.Store.sp_Dashboard_ChartOnOffBudget">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Dashboard_ChartOnOffBudget_Result">
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="ActualProjectStartDate" ColumnName="ActualProjectStartDate" />
+          <ScalarProperty Name="FiscalYear" ColumnName="FiscalYear" />
+          <ScalarProperty Name="IsUnderADP" ColumnName="IsUnderADP" />
+          <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+          <ScalarProperty Name="CommittedAmountInUSD" ColumnName="CommittedAmountInUSD" />
+          <ScalarProperty Name="ActualDisbursedAmountInUSD" ColumnName="ActualDisbursedAmountInUSD" />
+          <ScalarProperty Name="PlannedDisbursedAmountInUSD" ColumnName="PlannedDisbursedAmountInUSD" />
+          <ScalarProperty Name="ExpendedAmountInUSD" ColumnName="ExpendedAmountInUSD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tblProjectThematicMarker">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblProjectThematicMarker">
+        <MappingFragment StoreEntitySet="tblProjectThematicMarker">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="TotalCommitmentPercent" ColumnName="TotalCommitmentPercent" />
+          <ScalarProperty Name="SelectedThematicMarkerId" ColumnName="SelectedThematicMarkerId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAIDEffectivenessPIUType">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblAIDEffectivenessPIUType">
+        <MappingFragment StoreEntitySet="tblAIDEffectivenessPIUType">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAIDEffectivenessResourceTiedType">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblAIDEffectivenessResourceTiedType">
+        <MappingFragment StoreEntitySet="tblAIDEffectivenessResourceTiedType">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAIDEffectivenessIndicators">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblAIDEffectivenessIndicators">
+        <MappingFragment StoreEntitySet="tblAIDEffectivenessIndicators">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="AEIResourceTiedTypeId" ColumnName="AEIResourceTiedTypeId" />
+          <ScalarProperty Name="AEITypeOfPIU" ColumnName="AEITypeOfPIU" />
+          <ScalarProperty Name="AEIIsUsePIU" ColumnName="AEIIsUsePIU" />
+          <ScalarProperty Name="AEIDisbursementByNPSAmountUSD" ColumnName="AEIDisbursementByNPSAmountUSD" />
+          <ScalarProperty Name="AEIDisbursementByNPSPercentage" ColumnName="AEIDisbursementByNPSPercentage" />
+          <ScalarProperty Name="AEIIsUseGobProcementSystem" ColumnName="AEIIsUseGobProcementSystem" />
+          <ScalarProperty Name="AEIDisbursementByNAPAmountUSD" ColumnName="AEIDisbursementByNAPAmountUSD" />
+          <ScalarProperty Name="AEIDisbursementByNAPPercentage" ColumnName="AEIDisbursementByNAPPercentage" />
+          <ScalarProperty Name="AEIDisbursementByNFRPAmountUSD" ColumnName="AEIDisbursementByNFRPAmountUSD" />
+          <ScalarProperty Name="AEIDisbursementByNFRPPercentage" ColumnName="AEIDisbursementByNFRPPercentage" />
+          <ScalarProperty Name="AEIDisbursementByNBEPAmountUSD" ColumnName="AEIDisbursementByNBEPAmountUSD" />
+          <ScalarProperty Name="AEIDisbursementByNBEPPercentage" ColumnName="AEIDisbursementByNBEPPercentage" />
+          <ScalarProperty Name="AEIIsUseGobPublicFinancialManagementSystem" ColumnName="AEIIsUseGobPublicFinancialManagementSystem" />
+          <ScalarProperty Name="AEIIsPartOfProgramBasesApproach" ColumnName="AEIIsPartOfProgramBasesApproach" />
+          <ScalarProperty Name="AEIIsAssociatedToGOBResultFramework" ColumnName="AEIIsAssociatedToGOBResultFramework" />
+          <ScalarProperty Name="AEIDisbursementForGobSectorAmountUSD" ColumnName="AEIDisbursementForGobSectorAmountUSD" />
+          <ScalarProperty Name="AEIDisbursementForGobSectorPercentage" ColumnName="AEIDisbursementForGobSectorPercentage" />
+          <ScalarProperty Name="AEIPointOfDeliveryFundSourceId" ColumnName="AEIPointOfDeliveryFundSourceId" />
+          <ScalarProperty Name="AEISurveyYear" ColumnName="AEISurveyYear" />
+          <ScalarProperty Name="AEITotalCommitmentAmountUSD" ColumnName="AEITotalCommitmentAmountUSD" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProjectNote">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblProjectNote">
+        <MappingFragment StoreEntitySet="tblProjectNote">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="ProjectNote" ColumnName="ProjectNote" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProjectAttachment">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblProjectAttachment">
+        <MappingFragment StoreEntitySet="tblProjectAttachment">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="AttachmentFilePath" ColumnName="AttachmentFilePath" />
+          <ScalarProperty Name="AttachmentMetaData" ColumnName="AttachmentMetaData" />
+          <ScalarProperty Name="AttachmentFileName" ColumnName="AttachmentFileName" />
+          <ScalarProperty Name="AttachmentTitle" ColumnName="AttachmentTitle" />
+          <ScalarProperty Name="DocumentCategoryId" ColumnName="DocumentCategoryId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Rpt_ProjectProfileAidEffectivenessIndicators" FunctionName="LILI_BMSModel.Store.sp_Rpt_ProjectProfileAidEffectivenessIndicators">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Rpt_ProjectProfileAidEffectivenessIndicators_Result">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="AEITotalCommitmentAmountUSD" ColumnName="AEITotalCommitmentAmountUSD" />
+          <ScalarProperty Name="AEISurveyYear" ColumnName="AEISurveyYear" />
+          <ScalarProperty Name="AEIPointOfDeliveryFundSourceId" ColumnName="AEIPointOfDeliveryFundSourceId" />
+          <ScalarProperty Name="AEIPointOfDeliveryFundSourceValue" ColumnName="AEIPointOfDeliveryFundSourceValue" />
+          <ScalarProperty Name="AEIDisbursementForGobSectorPercentage" ColumnName="AEIDisbursementForGobSectorPercentage" />
+          <ScalarProperty Name="AEIDisbursementForGobSectorAmountUSD" ColumnName="AEIDisbursementForGobSectorAmountUSD" />
+          <ScalarProperty Name="AEIIsAssociatedToGOBResultFramework" ColumnName="AEIIsAssociatedToGOBResultFramework" />
+          <ScalarProperty Name="AEIAssociatedToGOBResultFrameworkValue" ColumnName="AEIAssociatedToGOBResultFrameworkValue" />
+          <ScalarProperty Name="AEIIsPartOfProgramBasesApproach" ColumnName="AEIIsPartOfProgramBasesApproach" />
+          <ScalarProperty Name="AEIPartOfProgramBasesApproachValue" ColumnName="AEIPartOfProgramBasesApproachValue" />
+          <ScalarProperty Name="AEIIsUseGobPublicFinancialManagementSystem" ColumnName="AEIIsUseGobPublicFinancialManagementSystem" />
+          <ScalarProperty Name="AEIUseGobPublicFinancialManagementSystemValue" ColumnName="AEIUseGobPublicFinancialManagementSystemValue" />
+          <ScalarProperty Name="AEIDisbursementByNBEPPercentage" ColumnName="AEIDisbursementByNBEPPercentage" />
+          <ScalarProperty Name="AEIDisbursementByNBEPAmountUSD" ColumnName="AEIDisbursementByNBEPAmountUSD" />
+          <ScalarProperty Name="AEIDisbursementByNFRPPercentage" ColumnName="AEIDisbursementByNFRPPercentage" />
+          <ScalarProperty Name="AEIDisbursementByNFRPAmountUSD" ColumnName="AEIDisbursementByNFRPAmountUSD" />
+          <ScalarProperty Name="AEIDisbursementByNAPPercentage" ColumnName="AEIDisbursementByNAPPercentage" />
+          <ScalarProperty Name="AEIDisbursementByNAPAmountUSD" ColumnName="AEIDisbursementByNAPAmountUSD" />
+          <ScalarProperty Name="AEIIsUseGobProcementSystem" ColumnName="AEIIsUseGobProcementSystem" />
+          <ScalarProperty Name="AEIUseGobProcementSystemValue" ColumnName="AEIUseGobProcementSystemValue" />
+          <ScalarProperty Name="AEIDisbursementByNPSPercentage" ColumnName="AEIDisbursementByNPSPercentage" />
+          <ScalarProperty Name="AEIDisbursementByNPSAmountUSD" ColumnName="AEIDisbursementByNPSAmountUSD" />
+          <ScalarProperty Name="AEIIsUsePIU" ColumnName="AEIIsUsePIU" />
+          <ScalarProperty Name="AEIUsePIUValue" ColumnName="AEIUsePIUValue" />
+          <ScalarProperty Name="AEITypeOfPIU" ColumnName="AEITypeOfPIU" />
+          <ScalarProperty Name="AEITypeOfPIUName" ColumnName="AEITypeOfPIUName" />
+          <ScalarProperty Name="AEIResourceTiedTypeId" ColumnName="AEIResourceTiedTypeId" />
+          <ScalarProperty Name="AEIResourceTiedTypeName" ColumnName="AEIResourceTiedTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Rpt_ProjectProfileCommitment" FunctionName="LILI_BMSModel.Store.sp_Rpt_ProjectProfileCommitment">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Rpt_ProjectProfileCommitment_Result">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="CommitmentFundSource" ColumnName="CommitmentFundSource" />
+          <ScalarProperty Name="CommitmentAidCategory" ColumnName="CommitmentAidCategory" />
+          <ScalarProperty Name="CommitmentDateOfCommitment" ColumnName="CommitmentDateOfCommitment" />
+          <ScalarProperty Name="CommitmentCurrencyOfCommitment" ColumnName="CommitmentCurrencyOfCommitment" />
+          <ScalarProperty Name="CommitmentAmount" ColumnName="CommitmentAmount" />
+          <ScalarProperty Name="CommitmentAmountUSD" ColumnName="CommitmentAmountUSD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Rpt_ProjectProfileExpenditure" FunctionName="LILI_BMSModel.Store.sp_Rpt_ProjectProfileExpenditure">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Rpt_ProjectProfileExpenditure_Result">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ExpenditureFundSource" ColumnName="ExpenditureFundSource" />
+          <ScalarProperty Name="ExpenditureReportingDate" ColumnName="ExpenditureReportingDate" />
+          <ScalarProperty Name="ExpenditureReportingPeriodFromDate" ColumnName="ExpenditureReportingPeriodFromDate" />
+          <ScalarProperty Name="ExpenditureReportingPeriodToDate" ColumnName="ExpenditureReportingPeriodToDate" />
+          <ScalarProperty Name="ExpenditureAmountDPCurrency" ColumnName="ExpenditureAmountDPCurrency" />
+          <ScalarProperty Name="ExpenditureAmountUSD" ColumnName="ExpenditureAmountUSD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Rpt_ProjectProfileGeographicAllocation" FunctionName="LILI_BMSModel.Store.sp_Rpt_ProjectProfileGeographicAllocation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Rpt_ProjectProfileGeographicAllocation_Result">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="GeographicAllocationId" ColumnName="GeographicAllocationId" />
+          <ScalarProperty Name="DivisionName" ColumnName="DivisionName" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="TotalCommitmentPercentForDistrict" ColumnName="TotalCommitmentPercentForDistrict" />
+          <ScalarProperty Name="ProjectCostAmountUSD" ColumnName="ProjectCostAmountUSD" />
+          <ScalarProperty Name="ExpenditureAmountUSD" ColumnName="ExpenditureAmountUSD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Rpt_ProjectProfilePlannedDisbursement" FunctionName="LILI_BMSModel.Store.sp_Rpt_ProjectProfilePlannedDisbursement">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Rpt_ProjectProfilePlannedDisbursement_Result">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="PlannedDisbursementFundSource" ColumnName="PlannedDisbursementFundSource" />
+          <ScalarProperty Name="PlannedDisbursementQuarterYear" ColumnName="PlannedDisbursementQuarterYear" />
+          <ScalarProperty Name="PlannedDisbursementCurrencyOfDisbursement" ColumnName="PlannedDisbursementCurrencyOfDisbursement" />
+          <ScalarProperty Name="PlannedDisbursementAmount" ColumnName="PlannedDisbursementAmount" />
+          <ScalarProperty Name="PlannedDisbursementAmountUSD" ColumnName="PlannedDisbursementAmountUSD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Rpt_ProjectProfileSectoralAllocation" FunctionName="LILI_BMSModel.Store.sp_Rpt_ProjectProfileSectoralAllocation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Rpt_ProjectProfileSectoralAllocation_Result">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="SectorName" ColumnName="SectorName" />
+          <ScalarProperty Name="SubSectorName" ColumnName="SubSectorName" />
+          <ScalarProperty Name="TotalCommitmentPercent" ColumnName="TotalCommitmentPercent" />
+          <ScalarProperty Name="ProjectCostAmountUSD" ColumnName="ProjectCostAmountUSD" />
+          <ScalarProperty Name="ExpenditureAmountUSD" ColumnName="ExpenditureAmountUSD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Rpt_ProjectProfileActualDisbursement" FunctionName="LILI_BMSModel.Store.sp_Rpt_ProjectProfileActualDisbursement">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Rpt_ProjectProfileActualDisbursement_Result">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ActualDisbursementFundSource" ColumnName="ActualDisbursementFundSource" />
+          <ScalarProperty Name="ActualDisbursementDateOfDisbursement" ColumnName="ActualDisbursementDateOfDisbursement" />
+          <ScalarProperty Name="ActualDisbursementCurrencyOfDisbursement" ColumnName="ActualDisbursementCurrencyOfDisbursement" />
+          <ScalarProperty Name="ActualDisbursementAmount" ColumnName="ActualDisbursementAmount" />
+          <ScalarProperty Name="ActualDisbursementAmountUSD" ColumnName="ActualDisbursementAmountUSD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Rpt_ProjectProfileThematicMarker" FunctionName="LILI_BMSModel.Store.sp_Rpt_ProjectProfileThematicMarker">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Rpt_ProjectProfileThematicMarker_Result">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ThematicMarkerId" ColumnName="ThematicMarkerId" />
+          <ScalarProperty Name="ThematicMarkerName" ColumnName="ThematicMarkerName" />
+          <ScalarProperty Name="IsThematicMarker" ColumnName="IsThematicMarker" />
+          <ScalarProperty Name="TotalCommitmentPercent" ColumnName="TotalCommitmentPercent" />
+          <ScalarProperty Name="ProjectCostAmountUSD" ColumnName="ProjectCostAmountUSD" />
+          <ScalarProperty Name="ExpenditureAmountUSD" ColumnName="ExpenditureAmountUSD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptSectorProfileParameter" FunctionName="LILI_BMSModel.Store.spRptSectorProfileParameter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptSectorProfileParameter_Result">
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="FinancialYear" ColumnName="FinancialYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tblLoanAgreement">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblLoanAgreement">
+        <MappingFragment StoreEntitySet="tblLoanAgreement">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="LoanAgreementCode" ColumnName="LoanAgreementCode" />
+          <ScalarProperty Name="LoanAgreementTitle" ColumnName="LoanAgreementTitle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUpazila">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblUpazila">
+        <MappingFragment StoreEntitySet="tblUpazila">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="GPSLongitude" ColumnName="GPSLongitude" />
+          <ScalarProperty Name="GPSLatitude" ColumnName="GPSLatitude" />
+          <ScalarProperty Name="StandardCode" ColumnName="StandardCode" />
+          <ScalarProperty Name="UpazilaName" ColumnName="UpazilaName" />
+          <ScalarProperty Name="AreaType" ColumnName="AreaType" />
+          <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+          <ScalarProperty Name="DivisionId" ColumnName="DivisionId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Rpt_ProjectProfileGovExecuteAgency" FunctionName="LILI_BMSModel.Store.sp_Rpt_ProjectProfileGovExecuteAgency">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Rpt_ProjectProfileGovExecuteAgency_Result">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="MinistryName" ColumnName="MinistryName" />
+          <ScalarProperty Name="AgencyName" ColumnName="AgencyName" />
+          <ScalarProperty Name="LeadAgency" ColumnName="LeadAgency" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tblProjectGoBExecutingAgency">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblProjectGoBExecutingAgency">
+        <MappingFragment StoreEntitySet="tblProjectGoBExecutingAgency">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsLeadAgency" ColumnName="IsLeadAgency" />
+          <ScalarProperty Name="GOBExeAgencyMinistryAgencyId" ColumnName="GOBExeAgencyMinistryAgencyId" />
+          <ScalarProperty Name="GOBExeAgencyMinistryId" ColumnName="GOBExeAgencyMinistryId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAIDPlanning">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblAIDPlanning">
+        <MappingFragment StoreEntitySet="tblAIDPlanning">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="AIDPlanAmount" ColumnName="AIDPlanAmount" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="FundSourceId" ColumnName="FundSourceId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_ProjectUserActivity" FunctionName="LILI_BMSModel.Store.sp_ProjectUserActivity">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_ProjectUserActivity_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="ActivityDate" ColumnName="ActivityDate" />
+          <ScalarProperty Name="ActivityType" ColumnName="ActivityType" />
+          <ScalarProperty Name="Activity" ColumnName="Activity" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptGetProjectInfo" FunctionName="LILI_BMSModel.Store.spRptGetProjectInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptGetProjectInfo_Result">
+          <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="FundSourceName" ColumnName="FundSourceName" />
+          <ScalarProperty Name="DPProjectNo" ColumnName="DPProjectNo" />
+          <ScalarProperty Name="ExecutingAgency" ColumnName="ExecutingAgency" />
+          <ScalarProperty Name="ProjectType" ColumnName="ProjectType" />
+          <ScalarProperty Name="AssistanceType" ColumnName="AssistanceType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tblSubSector">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblSubSector">
+        <MappingFragment StoreEntitySet="tblSubSector">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="SubSectorName" ColumnName="SubSectorName" />
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMinistryAgency">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblMinistryAgency">
+        <MappingFragment StoreEntitySet="tblMinistryAgency">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="AgencyName" ColumnName="AgencyName" />
+          <ScalarProperty Name="MinistryId" ColumnName="MinistryId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAIDEffectivenessInfo">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblAIDEffectivenessInfo">
+        <MappingFragment StoreEntitySet="tblAIDEffectivenessInfo">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="AEIAttachmentFilePath" ColumnName="AEIAttachmentFilePath" />
+          <ScalarProperty Name="AEIAttachmentMetaData" ColumnName="AEIAttachmentMetaData" />
+          <ScalarProperty Name="AEIAttachmentFileName" ColumnName="AEIAttachmentFileName" />
+          <ScalarProperty Name="AEIAttachmentTitle" ColumnName="AEIAttachmentTitle" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="FocalPointContactAddress" ColumnName="FocalPointContactAddress" />
+          <ScalarProperty Name="FocalPointContactEmail" ColumnName="FocalPointContactEmail" />
+          <ScalarProperty Name="FocalPointContactFax" ColumnName="FocalPointContactFax" />
+          <ScalarProperty Name="FocalPointContactTelephone" ColumnName="FocalPointContactTelephone" />
+          <ScalarProperty Name="FocalPointContactDesignation" ColumnName="FocalPointContactDesignation" />
+          <ScalarProperty Name="FocalPointContactTitle" ColumnName="FocalPointContactTitle" />
+          <ScalarProperty Name="FocalPointContactName" ColumnName="FocalPointContactName" />
+          <ScalarProperty Name="GoBLeadMinistryAgencyId" ColumnName="GoBLeadMinistryAgencyId" />
+          <ScalarProperty Name="OtherDPFundSourceId" ColumnName="OtherDPFundSourceId" />
+          <ScalarProperty Name="IsJoint" ColumnName="IsJoint" />
+          <ScalarProperty Name="DurationCompletionDate" ColumnName="DurationCompletionDate" />
+          <ScalarProperty Name="DurationStartDate" ColumnName="DurationStartDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAgreementType">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblAgreementType">
+        <MappingFragment StoreEntitySet="tblAgreementType">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProjectGeographicAllocation">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblProjectGeographicAllocation">
+        <MappingFragment StoreEntitySet="tblProjectGeographicAllocation">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="TotalCommitmentPercentForDistrict" ColumnName="TotalCommitmentPercentForDistrict" />
+          <ScalarProperty Name="UpazilaId" ColumnName="UpazilaId" />
+          <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+          <ScalarProperty Name="DivisionId" ColumnName="DivisionId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAIDPlanningDetail">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblAIDPlanningDetail">
+        <MappingFragment StoreEntitySet="tblAIDPlanningDetail">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="AIDPlanAmount" ColumnName="AIDPlanAmount" />
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="AIDPlanningId" ColumnName="AIDPlanningId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Dashboard_ChartCategoryWise" FunctionName="LILI_BMSModel.Store.sp_Dashboard_ChartCategoryWise">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Dashboard_ChartCategoryWise_Result">
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+          <ScalarProperty Name="CommittedAmountInUSD" ColumnName="CommittedAmountInUSD" />
+          <ScalarProperty Name="ActualDisbursedAmountInUSD" ColumnName="ActualDisbursedAmountInUSD" />
+          <ScalarProperty Name="PlannedDisbursedAmountInUSD" ColumnName="PlannedDisbursedAmountInUSD" />
+          <ScalarProperty Name="ExpendedAmountInUSD" ColumnName="ExpendedAmountInUSD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tblMinistry">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblMinistry">
+        <MappingFragment StoreEntitySet="tblMinistry">
+          <ScalarProperty Name="IMEDCode" ColumnName="IMEDCode" />
+          <ScalarProperty Name="StandardCode" ColumnName="StandardCode" />
+          <ScalarProperty Name="MinistryName" ColumnName="MinistryName" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFundSource">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblFundSource">
+        <MappingFragment StoreEntitySet="tblFundSource">
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="ContactPersonEMail" ColumnName="ContactPersonEMail" />
+          <ScalarProperty Name="ContactPersonTelephone" ColumnName="ContactPersonTelephone" />
+          <ScalarProperty Name="ContactPersonName" ColumnName="ContactPersonName" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="WebURL" ColumnName="WebURL" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="TelephoneNo" ColumnName="TelephoneNo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="FundSourceGroup" ColumnName="FundSourceGroup" />
+          <ScalarProperty Name="FundSourceCategoryId" ColumnName="FundSourceCategoryId" />
+          <ScalarProperty Name="FundSourceName" ColumnName="FundSourceName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spRptDPProfile" FunctionName="LILI_BMSModel.Store.spRptDPProfile">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptDPProfile_Result">
+          <ScalarProperty Name="FundSourceName" ColumnName="FundSourceName" />
+          <ScalarProperty Name="OfficeAddress" ColumnName="OfficeAddress" />
+          <ScalarProperty Name="TelephoneNo" ColumnName="TelephoneNo" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="WebURL" ColumnName="WebURL" />
+          <ScalarProperty Name="ContactPersonName" ColumnName="ContactPersonName" />
+          <ScalarProperty Name="ContactPersonTelephone" ColumnName="ContactPersonTelephone" />
+          <ScalarProperty Name="ContactPersonEMail" ColumnName="ContactPersonEMail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptDPProfile_FundFlowSummary" FunctionName="LILI_BMSModel.Store.spRptDPProfile_FundFlowSummary">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptDPProfile_FundFlowSummary_Result">
+          <ScalarProperty Name="AssistanceTypeId" ColumnName="AssistanceTypeId" />
+          <ScalarProperty Name="AssistanceType" ColumnName="AssistanceType" />
+          <ScalarProperty Name="CALoan" ColumnName="CALoan" />
+          <ScalarProperty Name="CAGrant" ColumnName="CAGrant" />
+          <ScalarProperty Name="DALoan" ColumnName="DALoan" />
+          <ScalarProperty Name="DAGrant" ColumnName="DAGrant" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptDPProfile_ProjectsinPrioritySectors" FunctionName="LILI_BMSModel.Store.spRptDPProfile_ProjectsinPrioritySectors">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptDPProfile_ProjectsinPrioritySectors_Result">
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="NoOfOngoingProject" ColumnName="NoOfOngoingProject" />
+          <ScalarProperty Name="NoOfCompletedProject" ColumnName="NoOfCompletedProject" />
+          <ScalarProperty Name="TotalNoOfProject" ColumnName="TotalNoOfProject" />
+          <ScalarProperty Name="TotalCA" ColumnName="TotalCA" />
+          <ScalarProperty Name="TotalDA" ColumnName="TotalDA" />
+          <ScalarProperty Name="TotPlanPDANextYr" ColumnName="TotPlanPDANextYr" />
+          <ScalarProperty Name="TotPlanPDA1stNextYr" ColumnName="TotPlanPDA1stNextYr" />
+          <ScalarProperty Name="TotPlanPDA2ndNextYr" ColumnName="TotPlanPDA2ndNextYr" />
+          <ScalarProperty Name="NextYr" ColumnName="NextYr" />
+          <ScalarProperty Name="NextYr1st" ColumnName="NextYr1st" />
+          <ScalarProperty Name="NextYr2nd" ColumnName="NextYr2nd" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptDPProfile_Last10YrsDisburseTend" FunctionName="LILI_BMSModel.Store.spRptDPProfile_Last10YrsDisburseTend">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptDPProfile_Last10YrsDisburseTend_Result">
+          <ScalarProperty Name="FundSourceId" ColumnName="FundSourceId" />
+          <ScalarProperty Name="TotalDALastYr" ColumnName="TotalDALastYr" />
+          <ScalarProperty Name="TotalDA1stLastYr" ColumnName="TotalDA1stLastYr" />
+          <ScalarProperty Name="TotalDA2ndLastYr" ColumnName="TotalDA2ndLastYr" />
+          <ScalarProperty Name="TotalDA3rdLastYr" ColumnName="TotalDA3rdLastYr" />
+          <ScalarProperty Name="Total4thDALastYr" ColumnName="Total4thDALastYr" />
+          <ScalarProperty Name="Total5thDALastYr" ColumnName="Total5thDALastYr" />
+          <ScalarProperty Name="TotalDA6thLastYr" ColumnName="TotalDA6thLastYr" />
+          <ScalarProperty Name="TotalDA7thLastYr" ColumnName="TotalDA7thLastYr" />
+          <ScalarProperty Name="TotalDA8thLastYr" ColumnName="TotalDA8thLastYr" />
+          <ScalarProperty Name="TotalDA9thLastYr" ColumnName="TotalDA9thLastYr" />
+          <ScalarProperty Name="LastYr" ColumnName="LastYr" />
+          <ScalarProperty Name="LastYr1st" ColumnName="LastYr1st" />
+          <ScalarProperty Name="LastYr2nd" ColumnName="LastYr2nd" />
+          <ScalarProperty Name="LastYr3rd" ColumnName="LastYr3rd" />
+          <ScalarProperty Name="LastYr4th" ColumnName="LastYr4th" />
+          <ScalarProperty Name="LastYr5th" ColumnName="LastYr5th" />
+          <ScalarProperty Name="LastYr6th" ColumnName="LastYr6th" />
+          <ScalarProperty Name="LastYr7th" ColumnName="LastYr7th" />
+          <ScalarProperty Name="LastYr8th" ColumnName="LastYr8th" />
+          <ScalarProperty Name="LastYr9th" ColumnName="LastYr9th" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptHighestDisbursementStatusDPWise" FunctionName="LILI_BMSModel.Store.spRptHighestDisbursementStatusDPWise">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptHighestDisbursementStatusDPWise_Result">
+          <ScalarProperty Name="FundSourceName" ColumnName="FundSourceName" />
+          <ScalarProperty Name="PlannedDisburseAmount" ColumnName="PlannedDisburseAmount" />
+          <ScalarProperty Name="ActualDisburseAmount" ColumnName="ActualDisburseAmount" />
+          <ScalarProperty Name="DiffInPercent" ColumnName="DiffInPercent" />
+          <ScalarProperty Name="BudgetCategory" ColumnName="BudgetCategory" />
+          <ScalarProperty Name="SelectedYear" ColumnName="SelectedYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptNewlySignedAidAgreements" FunctionName="LILI_BMSModel.Store.spRptNewlySignedAidAgreements">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptNewlySignedAidAgreements_Result">
+          <ScalarProperty Name="DonorName" ColumnName="DonorName" />
+          <ScalarProperty Name="ProjectTitle" ColumnName="ProjectTitle" />
+          <ScalarProperty Name="ExecutiveAgency" ColumnName="ExecutiveAgency" />
+          <ScalarProperty Name="AidCategoryName" ColumnName="AidCategoryName" />
+          <ScalarProperty Name="AidAgreementTitle" ColumnName="AidAgreementTitle" />
+          <ScalarProperty Name="AgreementSignDate" ColumnName="AgreementSignDate" />
+          <ScalarProperty Name="CommittedAmountInUSD" ColumnName="CommittedAmountInUSD" />
+          <ScalarProperty Name="ApprovalStatus" ColumnName="ApprovalStatus" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptSectorWisePlannedDisbrusement" FunctionName="LILI_BMSModel.Store.spRptSectorWisePlannedDisbrusement">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptSectorWisePlannedDisbrusement_Result">
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="DisburseYear" ColumnName="DisburseYear" />
+          <ScalarProperty Name="DisbursedAmount" ColumnName="DisbursedAmount" />
+          <ScalarProperty Name="startYear" ColumnName="startYear" />
+          <ScalarProperty Name="EndYear" ColumnName="EndYear" />
+          <ScalarProperty Name="PDA" ColumnName="PDA" />
+          <ScalarProperty Name="BudgetCategory" ColumnName="BudgetCategory" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptSummaryofProject" FunctionName="LILI_BMSModel.Store.spRptSummaryofProject">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptSummaryofProject_Result">
+          <ScalarProperty Name="FundSourceId" ColumnName="FundSourceId" />
+          <ScalarProperty Name="ProjectTitle" ColumnName="ProjectTitle" />
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="DPName" ColumnName="DPName" />
+          <ScalarProperty Name="ExecutingAgency" ColumnName="ExecutingAgency" />
+          <ScalarProperty Name="ImplementationStatus" ColumnName="ImplementationStatus" />
+          <ScalarProperty Name="AidCategory" ColumnName="AidCategory" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="TotalProjectCost" ColumnName="TotalProjectCost" />
+          <ScalarProperty Name="CommitmentBytheDP" ColumnName="CommitmentBytheDP" />
+          <ScalarProperty Name="DisburseALastYear" ColumnName="DisburseALastYear" />
+          <ScalarProperty Name="PDACurrentYear" ColumnName="PDACurrentYear" />
+          <ScalarProperty Name="PDANextYear" ColumnName="PDANextYear" />
+          <ScalarProperty Name="PDA1stNextYear" ColumnName="PDA1stNextYear" />
+          <ScalarProperty Name="PDA2ndNextYear" ColumnName="PDA2ndNextYear" />
+          <ScalarProperty Name="LastYear" ColumnName="LastYear" />
+          <ScalarProperty Name="CurrentYear" ColumnName="CurrentYear" />
+          <ScalarProperty Name="NextYear" ColumnName="NextYear" />
+          <ScalarProperty Name="NextYear1st" ColumnName="NextYear1st" />
+          <ScalarProperty Name="NextYear2nd" ColumnName="NextYear2nd" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptSectorProfile" FunctionName="LILI_BMSModel.Store.spRptSectorProfile">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptSectorProfile_Result">
+          <ScalarProperty Name="SectorName" ColumnName="SectorName" />
+          <ScalarProperty Name="SubSectorName" ColumnName="SubSectorName" />
+          <ScalarProperty Name="TotalUSD" ColumnName="TotalUSD" />
+          <ScalarProperty Name="IndivisualUSD" ColumnName="IndivisualUSD" />
+          <ScalarProperty Name="ProjectCount" ColumnName="ProjectCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptSectorProfileDisByFundSource" FunctionName="LILI_BMSModel.Store.spRptSectorProfileDisByFundSource">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptSectorProfileDisByFundSource_Result">
+          <ScalarProperty Name="FundSourceName" ColumnName="FundSourceName" />
+          <ScalarProperty Name="SubSectorName" ColumnName="SubSectorName" />
+          <ScalarProperty Name="IndivisualUSD" ColumnName="IndivisualUSD" />
+          <ScalarProperty Name="totalForPer" ColumnName="totalForPer" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptTop10BiggestActualDisbrusement" FunctionName="LILI_BMSModel.Store.spRptTop10BiggestActualDisbrusement">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptTop10BiggestActualDisbrusement_Result">
+          <ScalarProperty Name="FundSourceName" ColumnName="FundSourceName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="DisbursedAmountInUSD" ColumnName="DisbursedAmountInUSD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptTop10BiggestGeographicAllocation" FunctionName="LILI_BMSModel.Store.spRptTop10BiggestGeographicAllocation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptTop10BiggestGeographicAllocation_Result">
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="DisbursedAmountInUSD" ColumnName="DisbursedAmountInUSD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Rpt_DashboardReportWithFilter" FunctionName="LILI_BMSModel.Store.sp_Rpt_DashboardReportWithFilter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Rpt_DashboardReportWithFilter_Result">
+          <ScalarProperty Name="FundSourceName" ColumnName="FundSourceName" />
+          <ScalarProperty Name="DPProjectNo" ColumnName="DPProjectNo" />
+          <ScalarProperty Name="ProjectTitle" ColumnName="ProjectTitle" />
+          <ScalarProperty Name="ADPProjectCode" ColumnName="ADPProjectCode" />
+          <ScalarProperty Name="ADPProjectName" ColumnName="ADPProjectName" />
+          <ScalarProperty Name="MoFProjectCodePart" ColumnName="MoFProjectCodePart" />
+          <ScalarProperty Name="ProjectObjective" ColumnName="ProjectObjective" />
+          <ScalarProperty Name="ProgramBasedApproach" ColumnName="ProgramBasedApproach" />
+          <ScalarProperty Name="UnderADP" ColumnName="UnderADP" />
+          <ScalarProperty Name="CofundedProjectName" ColumnName="CofundedProjectName" />
+          <ScalarProperty Name="AidCategoryName" ColumnName="AidCategoryName" />
+          <ScalarProperty Name="ApprovalStatusName" ColumnName="ApprovalStatusName" />
+          <ScalarProperty Name="AssistanceTypeName" ColumnName="AssistanceTypeName" />
+          <ScalarProperty Name="ProjectTypeName" ColumnName="ProjectTypeName" />
+          <ScalarProperty Name="ImplementationStatusName" ColumnName="ImplementationStatusName" />
+          <ScalarProperty Name="RevisionStatusName" ColumnName="RevisionStatusName" />
+          <ScalarProperty Name="AgreementSignDate" ColumnName="AgreementSignDate" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ProjectApprovalDate" ColumnName="ProjectApprovalDate" />
+          <ScalarProperty Name="PlannedProjectStartDate" ColumnName="PlannedProjectStartDate" />
+          <ScalarProperty Name="PlannedProjectCompletionDate" ColumnName="PlannedProjectCompletionDate" />
+          <ScalarProperty Name="ActualProjectStartDate" ColumnName="ActualProjectStartDate" />
+          <ScalarProperty Name="RevisedProjectCompletionDate" ColumnName="RevisedProjectCompletionDate" />
+          <ScalarProperty Name="ExecutingAgencyName" ColumnName="ExecutingAgencyName" />
+          <ScalarProperty Name="CountryWide" ColumnName="CountryWide" />
+          <ScalarProperty Name="GeographicDivisionName" ColumnName="GeographicDivisionName" />
+          <ScalarProperty Name="GeographicDistrictName" ColumnName="GeographicDistrictName" />
+          <ScalarProperty Name="GeographicUpazilaName" ColumnName="GeographicUpazilaName" />
+          <ScalarProperty Name="SectorName" ColumnName="SectorName" />
+          <ScalarProperty Name="SubSectorName" ColumnName="SubSectorName" />
+          <ScalarProperty Name="ThematicMarkerName" ColumnName="ThematicMarkerName" />
+          <ScalarProperty Name="CommitmentUSD" ColumnName="CommitmentUSD" />
+          <ScalarProperty Name="ActualDisbursementUSD" ColumnName="ActualDisbursementUSD" />
+          <ScalarProperty Name="PlannedDisbursementUSD" ColumnName="PlannedDisbursementUSD" />
+          <ScalarProperty Name="ExpenditureUSD" ColumnName="ExpenditureUSD" />
+          <ScalarProperty Name="DPInformation" ColumnName="DPInformation" />
+          <ScalarProperty Name="GoBInformation" ColumnName="GoBInformation" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptAidAllocationBySector" FunctionName="LILI_BMSModel.Store.spRptAidAllocationBySector">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptAidAllocationBySector_Result">
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="NoOfProject" ColumnName="NoOfProject" />
+          <ScalarProperty Name="SUMofDALoan" ColumnName="SUMofDALoan" />
+          <ScalarProperty Name="SUMofDAGrant" ColumnName="SUMofDAGrant" />
+          <ScalarProperty Name="TotalDA" ColumnName="TotalDA" />
+          <ScalarProperty Name="PercentOfODA" ColumnName="PercentOfODA" />
+          <ScalarProperty Name="SelectedYear" ColumnName="SelectedYear" />
+          <ScalarProperty Name="BudgetCategory" ColumnName="BudgetCategory" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptSectoralTrendsNAidAllocation" FunctionName="LILI_BMSModel.Store.spRptSectoralTrendsNAidAllocation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptSectoralTrendsNAidAllocation_Result">
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="DisburseYear" ColumnName="DisburseYear" />
+          <ScalarProperty Name="DisbursedAmount" ColumnName="DisbursedAmount" />
+          <ScalarProperty Name="startYear" ColumnName="startYear" />
+          <ScalarProperty Name="EndYear" ColumnName="EndYear" />
+          <ScalarProperty Name="DAUSD" ColumnName="DAUSD" />
+          <ScalarProperty Name="BudgetCategory" ColumnName="BudgetCategory" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tblApprovalAuthority">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblApprovalAuthority">
+        <MappingFragment StoreEntitySet="tblApprovalAuthority">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spRptTotalDisbursementofTop10DP" FunctionName="LILI_BMSModel.Store.spRptTotalDisbursementofTop10DP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptTotalDisbursementofTop10DP_Result">
+          <ScalarProperty Name="FundSourceName" ColumnName="FundSourceName" />
+          <ScalarProperty Name="PreYearDisburseAmount" ColumnName="PreYearDisburseAmount" />
+          <ScalarProperty Name="CurYearDisburseAmount" ColumnName="CurYearDisburseAmount" />
+          <ScalarProperty Name="IncORDecPercent" ColumnName="IncORDecPercent" />
+          <ScalarProperty Name="BudgetCategory" ColumnName="BudgetCategory" />
+          <ScalarProperty Name="CurrentYear" ColumnName="CurrentYear" />
+          <ScalarProperty Name="PreYear" ColumnName="PreYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptAidAllocationByNationalPriority" FunctionName="LILI_BMSModel.Store.spRptAidAllocationByNationalPriority">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptAidAllocationByNationalPriority_Result">
+          <ScalarProperty Name="ThematicMarker" ColumnName="ThematicMarker" />
+          <ScalarProperty Name="Distribution" ColumnName="Distribution" />
+          <ScalarProperty Name="SelectedYear" ColumnName="SelectedYear" />
+          <ScalarProperty Name="BudgetCategory" ColumnName="BudgetCategory" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Dashboard_GridList" FunctionName="LILI_BMSModel.Store.sp_Dashboard_GridList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Dashboard_GridList_Result">
+          <ScalarProperty Name="FundSourceId" ColumnName="FundSourceId" />
+          <ScalarProperty Name="FundSourceName" ColumnName="FundSourceName" />
+          <ScalarProperty Name="ExecutingAgencyId" ColumnName="ExecutingAgencyId" />
+          <ScalarProperty Name="ExecutingAgencyName" ColumnName="ExecutingAgencyName" />
+          <ScalarProperty Name="ExecutingAgencyType" ColumnName="ExecutingAgencyType" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectTitle" ColumnName="ProjectTitle" />
+          <ScalarProperty Name="CommittedAmountInUSD" ColumnName="CommittedAmountInUSD" />
+          <ScalarProperty Name="PlanDisbursementAmount" ColumnName="PlanDisbursementAmount" />
+          <ScalarProperty Name="DisbursedAmountInUSD" ColumnName="DisbursedAmountInUSD" />
+          <ScalarProperty Name="ExpendedAmountInUSD" ColumnName="ExpendedAmountInUSD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Dashboard_GridListWithFilter" FunctionName="LILI_BMSModel.Store.sp_Dashboard_GridListWithFilter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Dashboard_GridListWithFilter_Result">
+          <ScalarProperty Name="FundSourceId" ColumnName="FundSourceId" />
+          <ScalarProperty Name="FundSourceName" ColumnName="FundSourceName" />
+          <ScalarProperty Name="ExecutingAgencyType" ColumnName="ExecutingAgencyType" />
+          <ScalarProperty Name="ExecutingAgencyId" ColumnName="ExecutingAgencyId" />
+          <ScalarProperty Name="ExecutingAgencyName" ColumnName="ExecutingAgencyName" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectTitle" ColumnName="ProjectTitle" />
+          <ScalarProperty Name="CommittedAmountInUSD" ColumnName="CommittedAmountInUSD" />
+          <ScalarProperty Name="PlanDisbursementAmount" ColumnName="PlanDisbursementAmount" />
+          <ScalarProperty Name="DisbursedAmountInUSD" ColumnName="DisbursedAmountInUSD" />
+          <ScalarProperty Name="ExpendedAmountInUSD" ColumnName="ExpendedAmountInUSD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRptTrendsInDevelopmentCooperation" FunctionName="LILI_BMSModel.Store.spRptTrendsInDevelopmentCooperation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spRptTrendsInDevelopmentCooperation_Result">
+          <ScalarProperty Name="FinancialYear" ColumnName="FinancialYear" />
+          <ScalarProperty Name="LoanAmount" ColumnName="LoanAmount" />
+          <ScalarProperty Name="GrantAmount" ColumnName="GrantAmount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="StartFY" ColumnName="StartFY" />
+          <ScalarProperty Name="EndFY" ColumnName="EndFY" />
+          <ScalarProperty Name="BudgetCategory" ColumnName="BudgetCategory" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spChartODAHistoricalTrend" FunctionName="LILI_BMSModel.Store.spChartODAHistoricalTrend">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.spChartODAHistoricalTrend_Result">
+          <ScalarProperty Name="FinancialYear" ColumnName="FinancialYear" />
+          <ScalarProperty Name="TotalActualDisbursement" ColumnName="TotalActualDisbursement" />
+          <ScalarProperty Name="TotalPlanDisbursement" ColumnName="TotalPlanDisbursement" />
+          <ScalarProperty Name="TotalCommittedAmount" ColumnName="TotalCommittedAmount" />
+          <ScalarProperty Name="TotalExpenditureAmount" ColumnName="TotalExpenditureAmount" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="StartFY" ColumnName="StartFY" />
+          <ScalarProperty Name="EndFY" ColumnName="EndFY" />
+          <ScalarProperty Name="BudgetCategory" ColumnName="BudgetCategory" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tblUserProject">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblUserProject">
+        <MappingFragment StoreEntitySet="tblUserProject">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_AidAllocationBySector" FunctionName="LILI_BMSModel.Store.sp_AidAllocationBySector">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_AidAllocationBySector_Result">
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="NoOfProject" ColumnName="NoOfProject" />
+          <ScalarProperty Name="SUMofCALoan" ColumnName="SUMofCALoan" />
+          <ScalarProperty Name="SUMofCAGrant" ColumnName="SUMofCAGrant" />
+          <ScalarProperty Name="TotalCA" ColumnName="TotalCA" />
+          <ScalarProperty Name="PercentOfOCA" ColumnName="PercentOfOCA" />
+          <ScalarProperty Name="SUMofPALoan" ColumnName="SUMofPALoan" />
+          <ScalarProperty Name="SUMofPAGrant" ColumnName="SUMofPAGrant" />
+          <ScalarProperty Name="TotalPA" ColumnName="TotalPA" />
+          <ScalarProperty Name="PercentOfOPA" ColumnName="PercentOfOPA" />
+          <ScalarProperty Name="SUMofDALoan" ColumnName="SUMofDALoan" />
+          <ScalarProperty Name="SUMofDAGrant" ColumnName="SUMofDAGrant" />
+          <ScalarProperty Name="TotalDA" ColumnName="TotalDA" />
+          <ScalarProperty Name="PercentOfODA" ColumnName="PercentOfODA" />
+          <ScalarProperty Name="SUMofEALoan" ColumnName="SUMofEALoan" />
+          <ScalarProperty Name="SUMofEAGrant" ColumnName="SUMofEAGrant" />
+          <ScalarProperty Name="TotalEA" ColumnName="TotalEA" />
+          <ScalarProperty Name="PercentOfOEA" ColumnName="PercentOfOEA" />
+          <ScalarProperty Name="SelectedYear" ColumnName="SelectedYear" />
+          <ScalarProperty Name="BudgetCategory" ColumnName="BudgetCategory" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_AidAllocationByThematicArea" FunctionName="LILI_BMSModel.Store.sp_AidAllocationByThematicArea">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_AidAllocationByThematicArea_Result">
+          <ScalarProperty Name="ThematicArea" ColumnName="ThematicArea" />
+          <ScalarProperty Name="NoOfProject" ColumnName="NoOfProject" />
+          <ScalarProperty Name="SUMofCALoan" ColumnName="SUMofCALoan" />
+          <ScalarProperty Name="SUMofCAGrant" ColumnName="SUMofCAGrant" />
+          <ScalarProperty Name="TotalCA" ColumnName="TotalCA" />
+          <ScalarProperty Name="PercentOfOCA" ColumnName="PercentOfOCA" />
+          <ScalarProperty Name="SUMofPALoan" ColumnName="SUMofPALoan" />
+          <ScalarProperty Name="SUMofPAGrant" ColumnName="SUMofPAGrant" />
+          <ScalarProperty Name="TotalPA" ColumnName="TotalPA" />
+          <ScalarProperty Name="PercentOfOPA" ColumnName="PercentOfOPA" />
+          <ScalarProperty Name="SUMofDALoan" ColumnName="SUMofDALoan" />
+          <ScalarProperty Name="SUMofDAGrant" ColumnName="SUMofDAGrant" />
+          <ScalarProperty Name="TotalDA" ColumnName="TotalDA" />
+          <ScalarProperty Name="PercentOfODA" ColumnName="PercentOfODA" />
+          <ScalarProperty Name="SUMofEALoan" ColumnName="SUMofEALoan" />
+          <ScalarProperty Name="SUMofEAGrant" ColumnName="SUMofEAGrant" />
+          <ScalarProperty Name="TotalEA" ColumnName="TotalEA" />
+          <ScalarProperty Name="PercentOfOEA" ColumnName="PercentOfOEA" />
+          <ScalarProperty Name="SelectedYear" ColumnName="SelectedYear" />
+          <ScalarProperty Name="BudgetCategory" ColumnName="BudgetCategory" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Dashboard_GridDetailsListWithFilter" FunctionName="LILI_BMSModel.Store.sp_Dashboard_GridDetailsListWithFilter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Dashboard_GridDetailsListWithFilter_Result">
+          <ScalarProperty Name="FundSourceId" ColumnName="FundSourceId" />
+          <ScalarProperty Name="FundSourceName" ColumnName="FundSourceName" />
+          <ScalarProperty Name="ExecutingAgencyId" ColumnName="ExecutingAgencyId" />
+          <ScalarProperty Name="ExecutingAgencyName" ColumnName="ExecutingAgencyName" />
+          <ScalarProperty Name="ExecutingAgencyType" ColumnName="ExecutingAgencyType" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectTitle" ColumnName="ProjectTitle" />
+          <ScalarProperty Name="DPProjectNo" ColumnName="DPProjectNo" />
+          <ScalarProperty Name="IsUnderADP" ColumnName="IsUnderADP" />
+          <ScalarProperty Name="IsProgramBasedApproach" ColumnName="IsProgramBasedApproach" />
+          <ScalarProperty Name="SectorName" ColumnName="SectorName" />
+          <ScalarProperty Name="ApprovalStatusName" ColumnName="ApprovalStatusName" />
+          <ScalarProperty Name="ApprovalAuthorityName" ColumnName="ApprovalAuthorityName" />
+          <ScalarProperty Name="ADPProjectCode" ColumnName="ADPProjectCode" />
+          <ScalarProperty Name="ADPProjectName" ColumnName="ADPProjectName" />
+          <ScalarProperty Name="Objective" ColumnName="Objective" />
+          <ScalarProperty Name="MoFProjectCodePart1" ColumnName="MoFProjectCodePart1" />
+          <ScalarProperty Name="MoFProjectCodePart2" ColumnName="MoFProjectCodePart2" />
+          <ScalarProperty Name="AssistanceTypeName" ColumnName="AssistanceTypeName" />
+          <ScalarProperty Name="ProjectTypeName" ColumnName="ProjectTypeName" />
+          <ScalarProperty Name="ImplementionStatusName" ColumnName="ImplementionStatusName" />
+          <ScalarProperty Name="RevisionStatusName" ColumnName="RevisionStatusName" />
+          <ScalarProperty Name="AgreementSignDate" ColumnName="AgreementSignDate" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ProjectApprovalDate" ColumnName="ProjectApprovalDate" />
+          <ScalarProperty Name="PlannedProjectStartDate" ColumnName="PlannedProjectStartDate" />
+          <ScalarProperty Name="PlannedProjectCompletionDate" ColumnName="PlannedProjectCompletionDate" />
+          <ScalarProperty Name="ActualProjectStartDate" ColumnName="ActualProjectStartDate" />
+          <ScalarProperty Name="RevisedProjectCompletionDate" ColumnName="RevisedProjectCompletionDate" />
+          <ScalarProperty Name="AgreementType" ColumnName="AgreementType" />
+          <ScalarProperty Name="AidAgreementTitle" ColumnName="AidAgreementTitle" />
+          <ScalarProperty Name="IsCofundedProject" ColumnName="IsCofundedProject" />
+          <ScalarProperty Name="DPAssistanceUSD" ColumnName="DPAssistanceUSD" />
+          <ScalarProperty Name="GoBSharingBDT" ColumnName="GoBSharingBDT" />
+          <ScalarProperty Name="ProjectCostUSD" ColumnName="ProjectCostUSD" />
+          <ScalarProperty Name="ExchangeRate" ColumnName="ExchangeRate" />
+          <ScalarProperty Name="DateOfExchangeRate" ColumnName="DateOfExchangeRate" />
+          <ScalarProperty Name="CommittedAmountInUSD" ColumnName="CommittedAmountInUSD" />
+          <ScalarProperty Name="PlanDisbursementAmount" ColumnName="PlanDisbursementAmount" />
+          <ScalarProperty Name="DisbursedAmountInUSD" ColumnName="DisbursedAmountInUSD" />
+          <ScalarProperty Name="ExpendedAmountInUSD" ColumnName="ExpendedAmountInUSD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tblLoanRepaymentType">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblLoanRepaymentType">
+        <MappingFragment StoreEntitySet="tblLoanRepaymentType">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IATICode" ColumnName="IATICode" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProjectFundingCommitment">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblProjectFundingCommitment">
+        <MappingFragment StoreEntitySet="tblProjectFundingCommitment">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="VerificationRemarks" ColumnName="VerificationRemarks" />
+          <ScalarProperty Name="VerifiedBy" ColumnName="VerifiedBy" />
+          <ScalarProperty Name="VerificationId" ColumnName="VerificationId" />
+          <ScalarProperty Name="RepaymentType" ColumnName="RepaymentType" />
+          <ScalarProperty Name="NoOfRepaymentPerYear" ColumnName="NoOfRepaymentPerYear" />
+          <ScalarProperty Name="CommittedAmountInBDT" ColumnName="CommittedAmountInBDT" />
+          <ScalarProperty Name="ExchangeRateToBDT" ColumnName="ExchangeRateToBDT" />
+          <ScalarProperty Name="CommittedAmountInUSD" ColumnName="CommittedAmountInUSD" />
+          <ScalarProperty Name="DateOfExchangeRateCommitment" ColumnName="DateOfExchangeRateCommitment" />
+          <ScalarProperty Name="ExchangeRateToUSD" ColumnName="ExchangeRateToUSD" />
+          <ScalarProperty Name="CommittedAmount" ColumnName="CommittedAmount" />
+          <ScalarProperty Name="CommitmentMaidCurrencyId" ColumnName="CommitmentMaidCurrencyId" />
+          <ScalarProperty Name="MaturityPeriod" ColumnName="MaturityPeriod" />
+          <ScalarProperty Name="GracePeriod" ColumnName="GracePeriod" />
+          <ScalarProperty Name="CommitmentFee" ColumnName="CommitmentFee" />
+          <ScalarProperty Name="ManagementFee" ColumnName="ManagementFee" />
+          <ScalarProperty Name="InterestRate" ColumnName="InterestRate" />
+          <ScalarProperty Name="LoanNumber" ColumnName="LoanNumber" />
+          <ScalarProperty Name="AidCategoryId" ColumnName="AidCategoryId" />
+          <ScalarProperty Name="FundSourceId" ColumnName="FundSourceId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserFundSource">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblUserFundSource">
+        <MappingFragment StoreEntitySet="tblUserFundSource">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="FundSourceId" ColumnName="FundSourceId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserRegistrationInfo">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblUserRegistrationInfo">
+        <MappingFragment StoreEntitySet="tblUserRegistrationInfo">
+          <ScalarProperty Name="ProjectPermissionType" ColumnName="ProjectPermissionType" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+          <ScalarProperty Name="OrgTypeFundSourceMinistryId" ColumnName="OrgTypeFundSourceMinistryId" />
+          <ScalarProperty Name="OrganizationTypeId" ColumnName="OrganizationTypeId" />
+          <ScalarProperty Name="UserFullName" ColumnName="UserFullName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProjectADPInfo">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblProjectADPInfo">
+        <MappingFragment StoreEntitySet="tblProjectADPInfo">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="ADPInfoMoFProjectCodePart2" ColumnName="ADPInfoMoFProjectCodePart2" />
+          <ScalarProperty Name="ADPInfoMoFProjectCodePart1" ColumnName="ADPInfoMoFProjectCodePart1" />
+          <ScalarProperty Name="ADPInfoProjectName" ColumnName="ADPInfoProjectName" />
+          <ScalarProperty Name="ADPInfoProjectCode" ColumnName="ADPInfoProjectCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProjectInfo">
+      <EntityTypeMapping TypeName="LILI_BMSModel.tblProjectInfo">
+        <MappingFragment StoreEntitySet="tblProjectInfo">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="FocalPointGoBContactAddress" ColumnName="FocalPointGoBContactAddress" />
+          <ScalarProperty Name="FocalPointGoBContactEmail" ColumnName="FocalPointGoBContactEmail" />
+          <ScalarProperty Name="FocalPointGoBContactFax" ColumnName="FocalPointGoBContactFax" />
+          <ScalarProperty Name="FocalPointGoBContactTelephone" ColumnName="FocalPointGoBContactTelephone" />
+          <ScalarProperty Name="FocalPointGoBContactDesignation" ColumnName="FocalPointGoBContactDesignation" />
+          <ScalarProperty Name="FocalPointGoBContactTitle" ColumnName="FocalPointGoBContactTitle" />
+          <ScalarProperty Name="FocalPointGoBContactName" ColumnName="FocalPointGoBContactName" />
+          <ScalarProperty Name="FocalPointDPContactAddress" ColumnName="FocalPointDPContactAddress" />
+          <ScalarProperty Name="FocalPointDPContactEmail" ColumnName="FocalPointDPContactEmail" />
+          <ScalarProperty Name="FocalPointDPContactFax" ColumnName="FocalPointDPContactFax" />
+          <ScalarProperty Name="FocalPointDPContactTelephone" ColumnName="FocalPointDPContactTelephone" />
+          <ScalarProperty Name="FocalPointDPContactDesignation" ColumnName="FocalPointDPContactDesignation" />
+          <ScalarProperty Name="FocalPointDPContactTitle" ColumnName="FocalPointDPContactTitle" />
+          <ScalarProperty Name="FocalPointDPContactName" ColumnName="FocalPointDPContactName" />
+          <ScalarProperty Name="ExecutingAgencyId" ColumnName="ExecutingAgencyId" />
+          <ScalarProperty Name="ExecutingAgencyType" ColumnName="ExecutingAgencyType" />
+          <ScalarProperty Name="RevisionStatusId" ColumnName="RevisionStatusId" />
+          <ScalarProperty Name="ImplementationStatusId" ColumnName="ImplementationStatusId" />
+          <ScalarProperty Name="RevisedProjectCompletionDate" ColumnName="RevisedProjectCompletionDate" />
+          <ScalarProperty Name="ActualProjectStartDate" ColumnName="ActualProjectStartDate" />
+          <ScalarProperty Name="PlannedProjectCompletionDate" ColumnName="PlannedProjectCompletionDate" />
+          <ScalarProperty Name="PlannedProjectStartDate" ColumnName="PlannedProjectStartDate" />
+          <ScalarProperty Name="ProjectApprovalDate" ColumnName="ProjectApprovalDate" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="AgreementSignDate" ColumnName="AgreementSignDate" />
+          <ScalarProperty Name="DateOfExchangeRate" ColumnName="DateOfExchangeRate" />
+          <ScalarProperty Name="ExchangeRate" ColumnName="ExchangeRate" />
+          <ScalarProperty Name="GoBSharingUSD" ColumnName="GoBSharingUSD" />
+          <ScalarProperty Name="DPAssistanceUSD" ColumnName="DPAssistanceUSD" />
+          <ScalarProperty Name="ProjectCostUSD" ColumnName="ProjectCostUSD" />
+          <ScalarProperty Name="AidAgreementTitle" ColumnName="AidAgreementTitle" />
+          <ScalarProperty Name="AidAgreementId" ColumnName="AidAgreementId" />
+          <ScalarProperty Name="AgreementTypeId" ColumnName="AgreementTypeId" />
+          <ScalarProperty Name="LeadDPFundSourceId" ColumnName="LeadDPFundSourceId" />
+          <ScalarProperty Name="IsCofundedProject" ColumnName="IsCofundedProject" />
+          <ScalarProperty Name="ProjectTypeId" ColumnName="ProjectTypeId" />
+          <ScalarProperty Name="AssistanceTypeId" ColumnName="AssistanceTypeId" />
+          <ScalarProperty Name="ADPProjectName" ColumnName="ADPProjectName" />
+          <ScalarProperty Name="ADPProjectCode" ColumnName="ADPProjectCode" />
+          <ScalarProperty Name="MoFProjectCodePart2" ColumnName="MoFProjectCodePart2" />
+          <ScalarProperty Name="MoFProjectCodePart1" ColumnName="MoFProjectCodePart1" />
+          <ScalarProperty Name="DPProjectNo" ColumnName="DPProjectNo" />
+          <ScalarProperty Name="ApprovalAuthorityId" ColumnName="ApprovalAuthorityId" />
+          <ScalarProperty Name="ApprovalStatusId" ColumnName="ApprovalStatusId" />
+          <ScalarProperty Name="IsCountryWide" ColumnName="IsCountryWide" />
+          <ScalarProperty Name="IsUnderADP" ColumnName="IsUnderADP" />
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="IsProgramBasedApproach" ColumnName="IsProgramBasedApproach" />
+          <ScalarProperty Name="FundSourceId" ColumnName="FundSourceId" />
+          <ScalarProperty Name="Objective" ColumnName="Objective" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Rpt_ProjectProfile" FunctionName="LILI_BMSModel.Store.sp_Rpt_ProjectProfile">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LILI_BMSModel.sp_Rpt_ProjectProfile_Result">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="DPProjectNo" ColumnName="DPProjectNo" />
+          <ScalarProperty Name="ApprovalStatusId" ColumnName="ApprovalStatusId" />
+          <ScalarProperty Name="ApprovalStatusName" ColumnName="ApprovalStatusName" />
+          <ScalarProperty Name="IsProgramBasedApproach" ColumnName="IsProgramBasedApproach" />
+          <ScalarProperty Name="ProgramBasedApproach" ColumnName="ProgramBasedApproach" />
+          <ScalarProperty Name="IsUnderADP" ColumnName="IsUnderADP" />
+          <ScalarProperty Name="UnderADP" ColumnName="UnderADP" />
+          <ScalarProperty Name="MoFProjectCodePart1" ColumnName="MoFProjectCodePart1" />
+          <ScalarProperty Name="MoFProjectCodePart2" ColumnName="MoFProjectCodePart2" />
+          <ScalarProperty Name="ADPProjectName" ColumnName="ADPProjectName" />
+          <ScalarProperty Name="Objective" ColumnName="Objective" />
+          <ScalarProperty Name="AssistanceTypeId" ColumnName="AssistanceTypeId" />
+          <ScalarProperty Name="AssistanceTypeName" ColumnName="AssistanceTypeName" />
+          <ScalarProperty Name="ProjectTypeId" ColumnName="ProjectTypeId" />
+          <ScalarProperty Name="ProjectTypeName" ColumnName="ProjectTypeName" />
+          <ScalarProperty Name="AgreementSignDate" ColumnName="AgreementSignDate" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ProjectApprovalDate" ColumnName="ProjectApprovalDate" />
+          <ScalarProperty Name="RevisionStatusId" ColumnName="RevisionStatusId" />
+          <ScalarProperty Name="RevisionStatusName" ColumnName="RevisionStatusName" />
+          <ScalarProperty Name="PlannedProjectStartDate" ColumnName="PlannedProjectStartDate" />
+          <ScalarProperty Name="PlannedProjectCompletionDate" ColumnName="PlannedProjectCompletionDate" />
+          <ScalarProperty Name="ActualProjectStartDate" ColumnName="ActualProjectStartDate" />
+          <ScalarProperty Name="RevisedProjectCompletionDate" ColumnName="RevisedProjectCompletionDate" />
+          <ScalarProperty Name="ImplementationStatusId" ColumnName="ImplementationStatusId" />
+          <ScalarProperty Name="ImplementationStatusName" ColumnName="ImplementationStatusName" />
+          <ScalarProperty Name="ExecutingAgencyType" ColumnName="ExecutingAgencyType" />
+          <ScalarProperty Name="ExecutingAgencyName" ColumnName="ExecutingAgencyName" />
+          <ScalarProperty Name="IsCofundedProject" ColumnName="IsCofundedProject" />
+          <ScalarProperty Name="CofundedProjectName" ColumnName="CofundedProjectName" />
+          <ScalarProperty Name="LeadDPFundSourceId" ColumnName="LeadDPFundSourceId" />
+          <ScalarProperty Name="LeadDPFundSourceName" ColumnName="LeadDPFundSourceName" />
+          <ScalarProperty Name="ProjectCostDPAmountBDT" ColumnName="ProjectCostDPAmountBDT" />
+          <ScalarProperty Name="ProjectCostDPExchangeRate" ColumnName="ProjectCostDPExchangeRate" />
+          <ScalarProperty Name="ProjectCostDPExchangeDate" ColumnName="ProjectCostDPExchangeDate" />
+          <ScalarProperty Name="ProjectCostDPAmountUSD" ColumnName="ProjectCostDPAmountUSD" />
+          <ScalarProperty Name="ProjectCostGovShareAmountBDT" ColumnName="ProjectCostGovShareAmountBDT" />
+          <ScalarProperty Name="ProjectCostGovShareExchangeRate" ColumnName="ProjectCostGovShareExchangeRate" />
+          <ScalarProperty Name="ProjectCostGovShareExchangeDate" ColumnName="ProjectCostGovShareExchangeDate" />
+          <ScalarProperty Name="ProjectCostGovShareAmountUSD" ColumnName="ProjectCostGovShareAmountUSD" />
+          <ScalarProperty Name="ProjectCostTotalAmountBDT" ColumnName="ProjectCostTotalAmountBDT" />
+          <ScalarProperty Name="ProjectCostTotalAmountUSD" ColumnName="ProjectCostTotalAmountUSD" />
+          <ScalarProperty Name="IsCountryWide" ColumnName="IsCountryWide" />
+          <ScalarProperty Name="CountryWide" ColumnName="CountryWide" />
+          <ScalarProperty Name="DPContactPerson" ColumnName="DPContactPerson" />
+          <ScalarProperty Name="DPDesignation" ColumnName="DPDesignation" />
+          <ScalarProperty Name="DPEmail" ColumnName="DPEmail" />
+          <ScalarProperty Name="DPTelephone" ColumnName="DPTelephone" />
+          <ScalarProperty Name="DPFax" ColumnName="DPFax" />
+          <ScalarProperty Name="DPAddress" ColumnName="DPAddress" />
+          <ScalarProperty Name="GoBContactPerson" ColumnName="GoBContactPerson" />
+          <ScalarProperty Name="GoBDesignation" ColumnName="GoBDesignation" />
+          <ScalarProperty Name="GoBEmail" ColumnName="GoBEmail" />
+          <ScalarProperty Name="GoBTelephone" ColumnName="GoBTelephone" />
+          <ScalarProperty Name="GoBFax" ColumnName="GoBFax" />
+          <ScalarProperty Name="GoBAddress" ColumnName="GoBAddress" />
+          <ScalarProperty Name="GoBNotesComments" ColumnName="GoBNotesComments" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

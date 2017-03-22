@@ -1,0 +1,33 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.ArticleModel
+@using (Ajax.BeginForm("Delete", "Article", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "DeleteArticleSuccess",
+        }, new { @id = "deleteArticleForm" }))
+{  
+    
+    <div class="row-fluid">
+        <div class="content">
+            @Html.ValidationSummary(true)
+            <div id="updateTargetId" class="alert alert-error" style="display: none;">
+            </div>
+        </div>
+        <div class="content">
+            <div class="alert alert-block">
+                @Html.HiddenFor(model => model.Id)
+                Do you want delete this record?
+            </div>
+        </div>
+        <div class="content pull-right">
+            <button type="submit" class="btn btn-mini btn-primary" id="btnDeleteArticle" name="btnDeleteArticle">
+                <i class="icon-danger bigger-125"></i>Yes</button>
+            &nbsp;&nbsp;
+            <button type="button" class="btn btn-mini btn-primary" id="btnCancelArticle" name="btnCancelArticle"
+                value="Cancel" onclick=" $($('#deleteArticleDialog').dialog('close'));">
+                <i class="icon-remove bigger-125"></i>Cancel</button>
+        </div>
+    </div>
+}

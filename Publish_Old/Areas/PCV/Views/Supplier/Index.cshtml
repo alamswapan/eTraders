@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Supplier";
+    Layout = "~/Areas/PCV/Views/Shared/_Layout.cshtml";
+}
+
+<div id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li><i class="icon-home"></i>Setup <span class="divider"><i class="icon-angle-right"></i></span></li>
+        <li class="active"><a href="#">Supplier</a></li>
+    </ul>
+    <!--.breadcrumb-->
+</div>
+
+<div id="page-content" class="clearfix">
+    <!--/#page-content-->
+    <div class="row-fluid">
+        <div id="indexPageSupplier">
+            <div id="SupplierMessageZone">
+                <div id="message" class="alert alert-success" style="display: none;"></div>
+            </div>
+            <div id="SupplierAddButtonZone" class="row-fluid">
+                @*if ((new AIMS_UNDP.Web.Utility.AppConstant()).IsAddAssigned)
+                {*@
+                    <a class="btn btn-mini btn-primary" id="lnkAddSupplier" href='@Url.Content("~/PCV/Supplier/Create")'>
+                        <i class="icon-plus"></i>Add
+                    </a>
+                @*}*@
+            </div>
+            <br />
+            <div id="SupplierGridZone" class="row-fluid">
+                <div id="SupplierKendoGrid"></div>
+            </div>
+            <div id="SupplierPopUpZone">
+                <div id="addSupplierDialog" title="Add Supplier"></div>
+                <div id="editSupplierDialog" title="Edit Supplier"></div>
+                <div id="deleteSupplierDialog" title="Delete Supplier"></div>
+                <div id="detailsSupplierDialog" title="View Supplier"></div>
+            </div>
+        </div>
+        <script src="@Url.Content("~/Scripts/App/Supplier.js")" type="text/javascript"></script>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".ui-selectee").removeClass("active");
+        $(".ui-selectee").removeClass("open");
+
+        $(".mnuSupplier").addClass("active");
+        $(".mnuSupplier").parent().parent().addClass("active").addClass("open");
+        $(".mnuSupplier").parent().parent().addClass("open");
+    });
+</script>

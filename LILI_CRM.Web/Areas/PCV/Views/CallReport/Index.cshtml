@@ -1,0 +1,146 @@
+﻿@{
+    ViewBag.Title = "Call Report";
+    Layout = "~/Areas/PCV/Views/Shared/_Layout.cshtml";
+}
+
+<div id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li><i class="icon-home"></i>Task <span class="divider"><i class="icon-angle-right"></i></span></li>
+        <li class="active"><a href="#">Call Report</a></li>
+    </ul>
+    <!--.breadcrumb-->
+</div>
+
+<div id="page-content" class="clearfix">
+    <!--/#page-content-->
+    <div class="row-fluid">
+
+        <div id="indexPageProject">
+            <div id="ProjectMessageZone">
+                <div id="message" class="alert alert-success" style="display: none;"></div>
+            </div>
+            <fieldset>
+                <legend>Projects:</legend>
+
+                <div id="ProjectAddButtonZone" class="row-fluid">
+                    @*if ((new AIMS_UNDP.Web.Utility.AppConstant()).IsAddAssigned)
+                    {*@
+                        <a class="btn btn-mini btn-primary" id="lnkAddProject" href='@Url.Content("~/PCV/CallReport/CreateProject")'>
+                            <i class="icon-plus"></i>Add Project
+                        </a>
+                    @*}*@
+                </div>
+                <div id="ProjectGridZone" class="row-fluid">                
+                        <div id="ProjectKendoGrid"></div>
+                </div>
+            </fieldset>
+            <div id="ProjectPopUpZone">
+                <div id="addProjectDialog" title="Add Project"></div>
+                <div id="editProjectDialogNew" title="Edit Project"></div>
+                <div id="deleteProjectDialog" title="Delete Project"></div>
+                <div id="detailsProjectDialog" title="View Project"></div>
+            </div>
+        </div>
+
+        <br />
+
+        <div id="indexPageSalesCallInquiry">
+            <div id="SalesCallInquiryMessageZone">
+                <div id="messageSalesCallInquiry" class="alert alert-success" style="display: none;"></div>
+            </div>
+            <fieldset>
+                <legend>Sales Call Inquiries</legend>
+                <div id="SalesCallInquiryAddButtonZone" class="row-fluid">
+                    @*if ((new AIMS_UNDP.Web.Utility.AppConstant()).IsAddAssigned)
+                    {*@
+                        <a class="btn btn-mini btn-primary" id="lnkAddSalesCallInquiry" href='@Url.Content("~/PCV/CallReport/CreateSalesCallInquiry")'>
+                            <i class="icon-plus"></i>Add Sales Call Inquiry
+                        </a>
+                    @*}*@
+                </div>
+                <div id="SalesCallInquiryGridZone" class="row-fluid">                
+                    <div id="SalesCallInquiryKendoGrid"></div>                    
+                </div>
+            </fieldset>
+            <div id="SalesCallInquiryPopUpZone">
+                <div id="addSalesCallInquiryDialog" title="Add Sales Call Inquiry"></div>
+                <div id="editSalesCallInquiryDialog" title="Edit Sales Call Inquiry"></div>
+                <div id="deleteSalesCallInquiryDialog" title="Delete Sales Call Inquiry"></div>
+                <div id="detailsSalesCallInquiryDialog" title="View Sales Call Inquiry"></div>
+            </div>
+        </div>
+
+
+        <br />
+
+        <div id="indexPageOrderReceived">
+            <div id="OrderReceivedMessageZone">
+                <div id="messageOrderReceived" class="alert alert-success" style="display: none;"></div>
+            </div>
+            <fieldset>
+                <legend>Order Received</legend>
+                <div id="OrderReceivedAddButtonZone" class="row-fluid">
+                    @*if ((new AIMS_UNDP.Web.Utility.AppConstant()).IsAddAssigned)
+                    {*@
+                        @*<a class="btn btn-mini btn-primary" id="lnkAddOrderReceived" href='@Url.Content("~/PCV/CallReport/Create")'>
+                            <i class="icon-plus"></i>Add Sales Call Inquiry
+                        </a>*@
+                    @*}*@
+                </div>
+                <div id="OrderReceivedGridZone" class="row-fluid">
+                    <div id="OrderReceivedKendoGrid"></div>
+                </div>
+            </fieldset>
+            <div id="OrderReceivedPopUpZone">
+                <div id="addOrderReceivedDialog" title="Add Order Received"></div>
+                @*<div id="editOrderReceivedDialog" title="Edit Order Received"></div>*@
+                <div id="deleteOrderReceivedDialog" title="Delete Order Received"></div>
+                <div id="detailsOrderReceivedDialog" title="View Order Received"></div>
+            </div>
+        </div>  
+
+
+        <br />
+
+        <div id="indexPageOrderLost">
+            <div id="OrderLostMessageZone">
+                <div id="messageOrderLost" class="alert alert-success" style="display: none;"></div>
+            </div>
+            <fieldset>
+                <legend>Order Lost</legend>
+                <div id="OrderLostAddButtonZone" class="row-fluid">
+                    @*if ((new AIMS_UNDP.Web.Utility.AppConstant()).IsAddAssigned)
+                    {*@
+                        @*<a class="btn btn-mini btn-primary" id="lnkAddOrderLost" href='@Url.Content("~/PCV/CallReport/Create")'>
+                            <i class="icon-plus"></i>Add Sales Call Inquiry
+                        </a>*@
+                    @*}*@
+                </div>
+                <div id="OrderLostGridZone" class="row-fluid">
+                    <div id="OrderLostKendoGrid"></div>
+                </div>
+            </fieldset>
+            <div id="OrderLostPopUpZone">
+                <div id="addOrderLostDialog" title="Add Order Lost"></div>
+                @*<div id="editOrderLostDialog" title="Edit Order Lost"></div>*@
+                <div id="deleteOrderLostDialog" title="Delete Order Lost"></div>
+                <div id="detailsOrderLostDialog" title="View Order Lost"></div>
+            </div>
+        </div>
+
+
+
+        <script src="@Url.Content("~/Scripts/App/CallReport.js")" type="text/javascript"></script>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".ui-selectee").removeClass("active");
+        $(".ui-selectee").removeClass("open");
+
+        $(".mnuProject").addClass("active");
+        $(".mnuProject").parent().parent().addClass("active").addClass("open");
+        $(".mnuProject").parent().parent().addClass("open");
+    });
+</script>

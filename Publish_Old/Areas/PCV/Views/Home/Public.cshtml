@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "../Shared/_LayoutPublic.cshtml";
+    ViewBag.Title = "Dashboard"; 
+}
+<div id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li><i class="icon-home"></i>Dashboard <span class="divider"><i class="icon-angle-right">
+        </i></span></li>
+        <li class="active"><a href="#">Public View</a></li>
+    </ul>
+    <!--.breadcrumb-->
+</div>
+<div id="page-content" class="clearfix">
+    <!--/#page-content-->
+    <div class="row-fluid">
+        <div class="span12">
+            <div id="dashBoardTabStrip">
+                <ul class="nav nav-tabs">
+                    <li class="k-state-active"><i class="icon-signal"></i> Home</li>
+                    <li><i class="icon-signal"></i> List</li>
+                    <li><i class="icon-bar-chart"></i> Chart</li>
+                    <li><i class="icon-table"></i> Dynamic Report</li>
+                </ul>
+            </div>
+        </div>
+        <!--/span-->
+    </div>
+</div>
+<script src="@Url.Content("~/Scripts/App/dashboard-jq.js")" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#dashBoardTabStrip").kendoTabStrip({
+            animation: { open: { effects: "fadeIn"} },
+            contentUrls: [
+                '/AIMS/Dashboard/List',
+                '/AIMS/Dashboard/DetailsList',
+                '/AIMS/Dashboard/Chart', //'/AIMS/Charts/_ChartAidAllocationBySector',
+                '/AIMS/Dashboard/Report'
+            ]
+        });
+    });
+</script>
+

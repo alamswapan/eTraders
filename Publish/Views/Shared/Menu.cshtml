@@ -1,0 +1,93 @@
+﻿@model LILI_CRM.Web.Models.MenuModels
+<div id="sidebar" class="menu-min">
+     @*-----------------------Dynamic Menu---------------------------*@
+    @{     
+        //List<LILI_CRM.Web.Models.Menu> list = Model.MenuList.Where(m => string.IsNullOrEmpty(m.ParentMenuName)).ToList<LILI_CRM.Web.Models.Menu>();
+        List<LILI_CRM.DAL.CRM.CustomEntities.MenuList> list = Model.MenuList.Where(m => string.IsNullOrEmpty(m.ParentMenuName)).ToList<LILI_CRM.DAL.CRM.CustomEntities.MenuList>();
+        <ul class="nav nav-list">
+            @ShowSubItems(list)
+            
+        </ul>
+    }
+    @helper ShowSubItems(List<LILI_CRM.DAL.CRM.CustomEntities.MenuList> list)
+    {
+        foreach (var item in list)
+        {
+        <li class="ui-selectee @item.MenuName">
+            @{
+                //ParentMenu    
+                if ((string.IsNullOrWhiteSpace(item.ActionName) && string.IsNullOrWhiteSpace(item.ControllerName)))
+
+                {
+
+                    if (item.MenuName == "Configuration")
+                    {
+                        //CommonConfig
+                        <a href='@item.PageUrl'><i class="icon-book"></i><span>@item.MenuName</span></a>
+                    <ul class="submenu" id="selectable">
+                        <li class="ui-selectee mnuShiftInformation"><a href='@Url.Content("~/BMS/CommonConfig/Index?name=Shift Information")'>
+                            <i class="icon-double-angle-right"></i>Shift Information </a></li>
+                        <li class="ui-selectee mnuProductType"><a href='@Url.Content("~/BMS/CommonConfig/Index?name=Product Type")'>
+                            <i class="icon-double-angle-right"></i>Product Type </a></li> 
+                        <li class="ui-selectee mnuRejectionCategory"><a href='@Url.Content("~/BMS/CommonConfig/Index?name=Rejection Category")'>
+                            <i class="icon-double-angle-right"></i>Rejection Category </a></li>
+                        @*<li class="ui-selectee mnuBreakdownComponentInformation"><a href='@Url.Content("~/BMS/CommonConfig/Index?name=Breakdown Component Information")'>
+                            <i class="icon-double-angle-right"></i>Breakdown Component Information </a></li>*@
+
+                        @*<li class="ui-selectee mnuUnitPlantInformation"><a href='@Url.Content("~/BMS/CommonConfig/Index?name=Unit/Plant Information")'>
+                            <i class="icon-double-angle-right"></i>Unit/Plant Information </a></li>
+                        <li class="ui-selectee mnuFlavorInformation"><a href='@Url.Content("~/BMS/CommonConfig/Index?name=Product/Flavor Information")'>
+                            <i class="icon-double-angle-right"></i>Product/Flavor Information </a></li>
+                        <li class="ui-selectee mnuPackSizeInformation"><a href='@Url.Content("~/BMS/CommonConfig/Index?name=Pack Size Information")'>
+                            <i class="icon-double-angle-right"></i>Pack Size Information </a></li>                        
+                        <li class="ui-selectee mnuRejectionComponentInformation"><a href='@Url.Content("~/BMS/CommonConfig/Index?name=Rejection Component Information")'>
+                            <i class="icon-double-angle-right"></i>Rejection Component Information </a></li>*@
+                                               
+                    </ul>
+                    }
+                    else if(item.MenuName=="Setup")
+                    {
+                        <a href='@item.PageUrl'><i class="icon-book"></i><span>@item.MenuName</span></a>
+                    }
+                    else if (item.MenuName == "Task")
+                    {
+                        <a href='@item.PageUrl'><i class="icon-credit-card"></i><span>@item.MenuName</span></a>
+                    }
+                    else if (item.MenuName == "Report")
+                    {
+                        <a href='@item.PageUrl'><i class="icon-dashboard"></i><span>@item.MenuName</span></a>
+                    }
+
+                }
+                else
+                {
+                    //ChildMenu
+                    @Html.ActionLink(@item.MenuName, @item.ActionName, @item.ModuleName + "/" + @item.ControllerName)
+
+                   @* if (item.PageUrl != null && item.PageUrl.ToLower().Contains(".aspx") || item.ParentMenuName == "Task")
+                    {
+                        <a href='@item.PageUrl' target="_blank"><i class="icon-double-angle-right"></i><span>@item.MenuName</span></a>
+                    }
+                    else
+                    {
+                        <a href='@item.PageUrl'><i class="icon-double-angle-right"></i><span>@item.MenuName</span></a>
+                    }*@
+                }
+
+
+
+                List<LILI_CRM.DAL.CRM.CustomEntities.MenuList> subItem = Model.MenuList.Where(m => m.ParentMenuName == item.MenuName).ToList<LILI_CRM.DAL.CRM.CustomEntities.MenuList>();
+                if (subItem.Count > 0)
+                {
+                    <ul class="submenu">
+                        @ShowSubItems(subItem)
+                    </ul>
+                }
+            }
+        </li>
+        }
+    }
+    <div id="sidebar-collapse">
+        <i class="icon-double-angle-left"></i>
+    </div>
+</div>

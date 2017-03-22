@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LILI_BMSModelStoreContainer" CdmEntityContainer="LILI_BMSEntities1">
+    <EntitySetMapping Name="BMS_tblMenuList">
+      <EntityTypeMapping TypeName="LILI_BMSModel.BMS_tblMenuList">
+        <MappingFragment StoreEntitySet="BMS_tblMenuList">
+          <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+          <ScalarProperty Name="ControllerName" ColumnName="ControllerName" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="ParentMenuName" ColumnName="ParentMenuName" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BMS_tblUserWiseMenuAssign">
+      <EntityTypeMapping TypeName="LILI_BMSModel.BMS_tblUserWiseMenuAssign">
+        <MappingFragment StoreEntitySet="BMS_tblUserWiseMenuAssign">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BMS_tblUserInfo">
+      <EntityTypeMapping TypeName="LILI_BMSModel.BMS_tblUserInfo">
+        <MappingFragment StoreEntitySet="BMS_tblUserInfo">
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommonConfigType">
+      <EntityTypeMapping TypeName="LILI_BMSModel.CommonConfigType">
+        <MappingFragment StoreEntitySet="CommonConfigType">
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusinessSumGroup">
+      <EntityTypeMapping TypeName="LILI_BMSModel.BusinessSumGroup">
+        <MappingFragment StoreEntitySet="BusinessSumGroup">
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ReportOrder" ColumnName="ReportOrder" />
+          <ScalarProperty Name="SubGroupCode" ColumnName="SubGroupCode" />
+          <ScalarProperty Name="BusiSumGroupName" ColumnName="BusiSumGroupName" />
+          <ScalarProperty Name="BusiSumGroupCode" ColumnName="BusiSumGroupCode" />
+          <ScalarProperty Name="Business" ColumnName="Business" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Level1">
+      <EntityTypeMapping TypeName="LILI_BMSModel.Level1">
+        <MappingFragment StoreEntitySet="Level1">
+          <ScalarProperty Name="SubBusinessCode" ColumnName="SubBusinessCode" />
+          <ScalarProperty Name="Institution" ColumnName="Institution" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="DepotCode" ColumnName="DepotCode" />
+          <ScalarProperty Name="Business" ColumnName="Business" />
+          <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+          <ScalarProperty Name="Level2" ColumnName="Level2" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Base" ColumnName="Base" />
+          <ScalarProperty Name="Level1Name" ColumnName="Level1Name" />
+          <ScalarProperty Name="Level11" ColumnName="Level1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Level2">
+      <EntityTypeMapping TypeName="LILI_BMSModel.Level2">
+        <MappingFragment StoreEntitySet="Level2">
+          <ScalarProperty Name="base" ColumnName="base" />
+          <ScalarProperty Name="SubBusinessCode" ColumnName="SubBusinessCode" />
+          <ScalarProperty Name="Institution" ColumnName="Institution" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+          <ScalarProperty Name="Business" ColumnName="Business" />
+          <ScalarProperty Name="DepotCode" ColumnName="DepotCode" />
+          <ScalarProperty Name="Level3" ColumnName="Level3" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Level2Name" ColumnName="Level2Name" />
+          <ScalarProperty Name="Level21" ColumnName="Level2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Level3">
+      <EntityTypeMapping TypeName="LILI_BMSModel.Level3">
+        <MappingFragment StoreEntitySet="Level3">
+          <ScalarProperty Name="DCRCode" ColumnName="DCRCode" />
+          <ScalarProperty Name="SubBusinessCode" ColumnName="SubBusinessCode" />
+          <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+          <ScalarProperty Name="Level4" ColumnName="Level4" />
+          <ScalarProperty Name="Business" ColumnName="Business" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Level3Name" ColumnName="Level3Name" />
+          <ScalarProperty Name="Level31" ColumnName="Level3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Level4">
+      <EntityTypeMapping TypeName="LILI_BMSModel.Level4">
+        <MappingFragment StoreEntitySet="Level4">
+          <ScalarProperty Name="DCRCode" ColumnName="DCRCode" />
+          <ScalarProperty Name="Business" ColumnName="Business" />
+          <ScalarProperty Name="Level5" ColumnName="Level5" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Level4Name" ColumnName="Level4Name" />
+          <ScalarProperty Name="Level41" ColumnName="Level4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Level5">
+      <EntityTypeMapping TypeName="LILI_BMSModel.Level5">
+        <MappingFragment StoreEntitySet="Level5">
+          <ScalarProperty Name="Business" ColumnName="Business" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Level5Name" ColumnName="Level5Name" />
+          <ScalarProperty Name="Level51" ColumnName="Level5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="LILI_BMSModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ReportGroupCode" ColumnName="ReportGroupCode" />
+          <ScalarProperty Name="PrincipalCode" ColumnName="PrincipalCode" />
+          <ScalarProperty Name="Show" ColumnName="Show" />
+          <ScalarProperty Name="ProductName1" ColumnName="ProductName1" />
+          <ScalarProperty Name="SubBusinessCode" ColumnName="SubBusinessCode" />
+          <ScalarProperty Name="EffectedDate" ColumnName="EffectedDate" />
+          <ScalarProperty Name="RatePerCarton" ColumnName="RatePerCarton" />
+          <ScalarProperty Name="Carton" ColumnName="Carton" />
+          <ScalarProperty Name="BusiSumGroupCode" ColumnName="BusiSumGroupCode" />
+          <ScalarProperty Name="DiscountStatus" ColumnName="DiscountStatus" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Business" ColumnName="Business" />
+          <ScalarProperty Name="MRP" ColumnName="MRP" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="DistDiscount" ColumnName="DistDiscount" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="PCCC" ColumnName="PCCC" />
+          <ScalarProperty Name="GroupCode" ColumnName="GroupCode" />
+          <ScalarProperty Name="ProductCategory" ColumnName="ProductCategory" />
+          <ScalarProperty Name="BrandCode" ColumnName="BrandCode" />
+          <ScalarProperty Name="PackSize" ColumnName="PackSize" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="SMSCODE" ColumnName="SMSCODE" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserBusiness">
+      <EntityTypeMapping TypeName="LILI_BMSModel.UserBusiness">
+        <MappingFragment StoreEntitySet="UserBusiness">
+          <ScalarProperty Name="Business" ColumnName="Business" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserManager">
+      <EntityTypeMapping TypeName="LILI_BMSModel.UserManager">
+        <MappingFragment StoreEntitySet="UserManager">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserLevelMKT" ColumnName="UserLevelMKT" />
+          <ScalarProperty Name="UserLocation" ColumnName="UserLocation" />
+          <ScalarProperty Name="staffid" ColumnName="staffid" />
+          <ScalarProperty Name="Subbusinesscode" ColumnName="Subbusinesscode" />
+          <ScalarProperty Name="LevelCode" ColumnName="LevelCode" />
+          <ScalarProperty Name="UserLevel" ColumnName="UserLevel" />
+          <ScalarProperty Name="DefaultBusiness" ColumnName="DefaultBusiness" />
+          <ScalarProperty Name="InvoiceFormat" ColumnName="InvoiceFormat" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="grpUser" ColumnName="grpUser" />
+          <ScalarProperty Name="grpISup" ColumnName="grpISup" />
+          <ScalarProperty Name="grpSup" ColumnName="grpSup" />
+          <ScalarProperty Name="grpAdd" ColumnName="grpAdd" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

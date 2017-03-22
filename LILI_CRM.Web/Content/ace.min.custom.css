@@ -1,0 +1,91 @@
+﻿input[type="checkbox"], input[type="radio"]
+{
+    opacity: 1 !important;
+    position: relative !important;
+    height: 10px !important;
+    width: 10px !important;
+    z-index:0 !important;
+}
+
+.login-layout
+{
+    background-color: White !important;
+}
+
+.widget-box
+{
+    background-color: cadetblue !important;
+}
+
+.toolbar
+{
+    /*background: #84BE6A !important;*/
+    background: url(images/header-fill.png) !important;
+    /*background-color: cadetblue !important;*/
+}
+
+a:link
+{
+    outline-color: White !important;    
+    
+}
+a
+{
+    font-weight: bold;
+}
+
+
+.btn-primary
+{
+    background-color:#84BE6A !important;
+    border-color:#f0f0f0 !important;
+    
+}
+
+.btn-primary:hover
+{
+    background-color:#84BE6A !important;
+    border-color:#f0f0f0 !important;
+}
+
+.btn
+{
+    /*background-color:#84BE6A !important;
+    border-color:#f0f0f0 !important;*/
+    
+    background-color: Navy !important;
+    border-color:#f0f0f0 !important;
+    
+}
+.btn:hover
+{
+    background-color:#267801 !important;
+}
+.btn-default
+{
+    background-color:#84BE6A !important;
+    border-color:#f0f0f0 !important;
+}
+.btn-default:hover
+{
+    background-color:#84BE6A !important;
+    border-color:#f0f0f0 !important;
+}
+
+.nav-list > li.active:after {
+    border-right: 1px dotted #E4E4E4;
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -2px;
+    top: -1px;
+}
+
+/*.accordion-toggle:after {
+    color: #267801 !important;
+}
+.accordion-heading .accordion-toggle {
+    background-color: #84BE6A !important;
+    color: #267801 !important;
+}*/

@@ -1,0 +1,68 @@
+﻿@model LILI_CRM.Web.Models.LogOnModel
+
+
+
+
+
+
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    
+
+      <link href="../../Content/LogIn/style.css" rel="stylesheet" type="text/css" />
+    
+    
+    
+  </head>
+
+  <body>
+
+
+
+            @using (Html.BeginForm())
+            { 
+	            <div class="login">
+
+                    
+                    <div class="login-screen" style="text-align:center; color:#777777;">
+                    Advanced Trading Intelligent
+                    </div>
+                    <br />
+		            <div class="login-screen">
+                        
+			            <div class="app-title">
+				            <h1>Login</h1>
+			            </div>
+
+			            <div class="login-form">
+                            
+				            <div class="control-group">
+                            @Html.TextBoxFor(m => m.UserName, new { @placeholder = "User Id", @class = "span12" })
+				            @*<input type="text" class="login-field" value="" placeholder="username" id="login-name">
+				            <label class="login-field-icon fui-user" for="login-name"></label>*@
+				            </div>
+
+				            <div class="control-group">
+                            @Html.PasswordFor(m => m.Password, new { @placeholder = "Password", @class = "span12" })
+				            @*<input type="password" class="login-field" value="" placeholder="password" id="login-pass">
+				            <label class="login-field-icon fui-lock" for="login-pass"></label>*@
+				            </div>
+
+                            <button type="submit" name="submit" value="Log On" class="span4 btn btn-small btn-primary">
+                                                                        <i class="icon-key"></i>Login
+                                                                    </button>
+				            @*<a class="btn btn-primary btn-large btn-block" href="#">login</a>*@
+
+			            </div>
+		            </div>
+                    
+	            </div>
+            }
+    </body>
+    
+    
+
+</html>

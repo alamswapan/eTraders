@@ -1,0 +1,70 @@
+E:\LILI_BMS\Source\LILI_BMS.Service\bin\Release\MFS_IWM.Service.exe.config
+E:\LILI_BMS\Source\LILI_BMS.Service\bin\Release\MFS_IWM.Service.exe
+E:\LILI_BMS\Source\LILI_BMS.Service\bin\Release\MFS_IWM.Service.pdb
+E:\LILI_BMS\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.BMS.dll
+E:\LILI_BMS\Source\LILI_BMS.Service\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\LILI_BMS\Source\LILI_BMS.Service\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+E:\LILI_BMS\Source\LILI_BMS.Service\bin\Release\Microsoft.Practices.ServiceLocation.dll
+E:\LILI_BMS\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.infrastructure.dll
+E:\LILI_BMS\Source\LILI_BMS.Service\bin\Release\LinqKit.dll
+E:\LILI_BMS\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.BMS.pdb
+E:\LILI_BMS\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.infrastructure.pdb
+E:\LILI_BMS\Source\LILI_BMS.Service\obj\x86\Release\LILI_BMS.Service.csprojResolveAssemblyReference.cache
+E:\LILI_BMS\Source\LILI_BMS.Service\obj\x86\Release\MFS_IWM.Service.exe
+E:\LILI_BMS\Source\LILI_BMS.Service\obj\x86\Release\MFS_IWM.Service.pdb
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.Service\bin\Release\MFS_IWM.Service.exe.config
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.Service\bin\Release\MFS_IWM.Service.exe
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.Service\bin\Release\MFS_IWM.Service.pdb
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.BMS.dll
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.Service\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.Service\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.Service\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.infrastructure.dll
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.Service\bin\Release\LinqKit.dll
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.BMS.pdb
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.infrastructure.pdb
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.Service\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.Service\obj\x86\Release\MFS_IWM.Service.exe
+D:\Rasel\Projects\LILI_BMS\Source\LILI_BMS.Service\obj\x86\Release\MFS_IWM.Service.pdb
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Service\bin\Release\MFS_IWM.Service.exe.config
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Service\bin\Release\MFS_IWM.Service.exe
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Service\bin\Release\MFS_IWM.Service.pdb
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.BMS.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Service\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Service\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Service\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.infrastructure.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Service\bin\Release\LinqKit.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.BMS.pdb
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.infrastructure.pdb
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Service\obj\x86\Release\MFS_IWM.Service.exe
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Service\obj\x86\Release\MFS_IWM.Service.pdb
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.Service\bin\Release\MFS_IWM.Service.exe.config
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.Service\bin\Release\MFS_IWM.Service.exe
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.Service\bin\Release\MFS_IWM.Service.pdb
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.BMS.dll
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.Service\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.Service\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.Service\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.infrastructure.dll
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.Service\bin\Release\LinqKit.dll
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.BMS.pdb
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.infrastructure.pdb
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.Service\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.Service\obj\x86\Release\MFS_IWM.Service.exe
+D:\Rasel\Projects\Budget\Source - Copy\LILI_BMS.Service\obj\x86\Release\MFS_IWM.Service.pdb
+D:\Rasel\Projects\Budget\Source\LILI_BMS.Service\obj\x86\Release\LILI_BMS.Service.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.Service\bin\Release\MFS_IWM.Service.exe.config
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.Service\bin\Release\MFS_IWM.Service.exe
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.Service\bin\Release\MFS_IWM.Service.pdb
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.BMS.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.Service\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.Service\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.Service\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.infrastructure.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.Service\bin\Release\LinqKit.dll
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.BMS.pdb
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.Service\bin\Release\LILI_BMS.DAL.infrastructure.pdb
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.Service\obj\x86\Release\LILI_BMS.Service.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.Service\obj\x86\Release\MFS_IWM.Service.exe
+D:\Rasel\Projects\CRM\Source Code\Source\LILI_BMS.Service\obj\x86\Release\MFS_IWM.Service.pdb

@@ -1,0 +1,1094 @@
+﻿
+/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+html, body
+{
+    font-size: 12px;
+    font-family: Cambria, Verdana, Tahoma, Arial, Helvetica, sans-serif !important;
+    margin: 0;
+    padding: 0;
+    color: #696969;
+    height: 100%;
+}
+
+a:link
+{
+    color: #034af3; /*text-decoration: underline;*/
+}
+
+a:visited
+{
+    color: #505abc;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #12eb87;
+}
+
+.delete
+{
+    color: Red;
+    border: 1px solid red;
+    background: url(images/delete.png) no-repeat;
+}
+
+.headerImage
+{
+    padding-bottom: 5px;
+    background: url(images/header-left.png) no-repeat !important;
+}
+
+.headerFillColor
+{
+    background: url(images/header-fill.png) !important;
+}
+
+.loginInfoBackColor
+{
+    background-color: #32810e !important;
+}
+
+.search
+{
+    color: Red;
+    border: 1px solid red;
+    background: url(images/btn_search.gif) no-repeat;
+}
+
+p, ul
+{
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+header, footer, section
+{
+    display: block;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #000; /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+}
+
+h1
+{
+    font-size: 16px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 3px;
+    font-weight: bold;
+    color: Black;
+    text-align: center;
+}
+
+h2
+{
+    padding: 0 0 10px 0;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+
+.page
+{
+    height: auto;
+    min-height: 100%;
+}
+
+.pageLogin
+{
+    height: auto;
+    min-height: 80%;
+}
+.pageLoginNotes
+{
+    height: auto;
+    margin-bottom: 35px;
+    text-align: center;
+}
+header, #header
+{
+    position: relative;
+    margin-bottom: 0px;
+    color: #000;
+    padding: 0;
+}
+
+header h1, #header h1
+{
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 0;
+    color: #fff;
+    border: none;
+    line-height: 2em;
+    font-size: 32px !important;
+    text-shadow: 1px 1px 2px #111;
+}
+
+.project-headline
+{
+    /*color: #0066FF;*/
+    color: #FFFFFF;
+    font-size: 24px; /*font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;*/
+    text-decoration: none;
+    line-height: 1.5em;
+}
+.module-headline
+{
+    /*color: #3399FF;*/
+    color: #D0D0D0;
+    font-size: 18px; /*font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;*/
+    text-decoration: none;
+    font: smallcaption;
+}
+
+nav
+{
+    display: block; /*    background-color: #BDD2FF; */
+    background-color: #bbd0e5; /*background-color: #bbd0e5;*/
+    min-height: 30px;
+    text-align: left;
+}
+
+nav, #menucontainer
+{
+    margin-top: 20px;
+}
+
+div#title
+{
+    display: block;
+    float: left;
+    text-align: left;
+}
+
+#logindisplay
+{
+    font-size: 1.0em;
+    display: block;
+    text-align: right;
+    color: White;
+}
+
+#logindisplay a:link
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+#main
+{
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    height: auto;
+    min-height: 100%;
+}
+
+footer, #footer
+{
+    clear: both;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 5px;
+    margin-top: -3em;
+    position: relative;
+    width: 100%;
+    height: 2.5em;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1; /*padding: 10px 0;     margin: 10px 0 0 0;          line-height: normal;          font-size: .9em;          border-radius: 0px 0px 0px 0px;          -webkit-border-radius: 0px 0px 0px 0px;          -moz-border-radius: 0px 0px 0px 0px;          width: 100%;          z-index: -1;*/
+}
+
+.footerLogo
+{
+    /*position:absolute; margin-top: 5;*/
+    background-color: transparent !important;
+    background: url(images/footer-fill.png) !important;
+}
+.techno
+{
+    display: inline;
+    color: Red;
+    font-size: 12px;
+    font-weight: bold;
+}
+.vista
+{
+    color: Green;
+    display: inline; /*margin-left: -3px;*/
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.footerA
+{
+    text-align: center;
+    width: 100%;
+    min-width: 0px; /* font-family: "Arial", "Trebuchet MS", Verdana, Helvetica, Sans-Serif; */
+    color: White;
+    background-color: #fff;
+    height: 0px;
+    min-height: 0px;
+    border: 0px;
+    padding-top: 0px;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+ul#menu
+{
+    border-bottom: 1px #5C87B2 solid;
+    padding: 0 0 2px;
+    position: relative;
+    margin: 0;
+    text-align: right;
+}
+
+ul#menu li
+{
+    display: inline;
+    list-style: none;
+}
+
+ul#menu li#greeting
+{
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    color: #fff;
+}
+
+ul#menu li a
+{
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    background-color: #e8eef4;
+    color: #034af3;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+}
+
+ul#menu li a:hover
+{
+    background-color: #fff;
+    text-decoration: none;
+}
+
+ul#menu li a:active
+{
+    background-color: #a6e2a6;
+    text-decoration: none;
+}
+
+ul#menu li.selected a
+{
+    background-color: #fff;
+    color: #000;
+}
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    border: 1px solid #bbd0e5;
+    padding: 5px;
+    margin: 0 0 .5em 0; /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+    font-size: 12px;
+}
+
+legend
+{
+    font-size: 13px;
+    color: #3C78B5;
+    border-color: #bbd0e5;
+    outline-color: #bbd0e5;
+    font-weight: bold;
+}
+
+textarea
+{
+    min-height: 50px;
+    border: 1px solid #ccc;
+    padding: 2px; /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+    font-size: small;
+    color: #444;
+    width: 99%;
+}
+
+input[type="checkbox"]
+{
+    margin: 0;
+}
+
+input[type="text"], input[type="password"]
+{
+    border: 1px solid #ccc;
+    padding: 2px;
+    color: #444;
+    width: 99%; /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+    font-size: small;
+}
+
+input[type="submit"]
+{
+    font-size: 1em;
+    padding: 3px;
+    height: 27px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+select
+{
+    border: 1px solid #ccc;
+    padding: 2px;
+    color: #444;
+    width: 99%; /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+    font-size: small;
+}
+/*
+.AddNew
+{
+	font-size: 1em;
+	padding:0px 3px 3px 3px;
+	height: 20px;
+	margin-top:-5px;
+}*/
+
+/* TABLE
+----------------------------------------------------------*/
+
+.filtertable
+{
+    /* border: 1px solid #E8EEF4;*/
+    border-collapse: collapse;
+    color: black; /*font-size: small;*/
+}
+
+.filtertable td
+{
+    /*border: 1px solid #E8EEF4;*/ /* padding: 3px;*/
+    padding: 3px 3px 3px 10px; /* width:120px;*/
+    white-space: nowrap;
+}
+
+#grid th, .custom-grid th
+{
+    padding: 6px 5px;
+    text-align: left;
+    background-color: #CAD0D6; /*border: solid 1px #bbd0e5;*/
+}
+
+
+#grid th, .custom-grid th
+{
+    color: White;
+    font-size: 11px; /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+    text-align: center;
+}
+
+#grid tr td, .custom-grid tr td
+{
+    text-align: center;
+    background-color:White;
+}
+#grid tr td input, .custom-grid tr td input
+{
+    width: 98%;
+}
+
+
+#gridTable th, .custom-grid th
+{
+    padding: 6px 5px;
+    text-align: left;
+    background-color: #bbd0e5; /*border: solid 1px #bbd0e5;*/
+}
+
+#gridTable th, .custom-grid th
+{
+    color: #555555;
+    font-size: 11px; /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+    text-align: center;
+}
+
+#gridTable tr td, .custom-grid tr td
+{
+    text-align: center;
+}
+#gridTable tr td input, .custom-grid tr td input
+{
+    width: 98%;
+}
+
+.grid
+{
+    margin: 5px 0;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.clear
+{
+    clear: both;
+}
+
+.error
+{
+    color: Red;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+    display: inline-block;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+input.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+select.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    /*font-weight: bold;*/
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+
+.display-label, .editor-label
+{
+    margin: 1em 0 0 0;
+}
+
+.display-field, .editor-field
+{
+    margin: 0.5em 0 0 0;
+}
+
+.text-box
+{
+    width: 30em;
+}
+
+.text-box.multi-line
+{
+    height: 3.5em;
+    width: 14em;
+}
+
+.tri-state
+{
+    width: 6em;
+}
+
+.label
+{
+    top: 2.5px;
+    width: 150px;
+    float: left;
+    text-align: left;
+    position: relative;
+    vertical-align: middle;
+    overflow: visible;
+    color: #3C78B5;
+}
+.label-right
+{
+    color: #3C78B5;
+    float: left;
+    overflow: visible;
+    position: relative;
+    text-align: left;
+    top: 2.5px;
+    vertical-align: middle;
+    width: 150px;
+    margin: 0 0 0 50px;
+}
+
+.field
+{
+    float: left; /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif; 	     font-size: small;*/
+    width: 99%;
+    white-space: nowrap;
+}
+
+.row
+{
+    margin: 2px 2px 5px 2px;
+    overflow: visible;
+    width: auto !important;
+    width: 100%;
+    min-height: 25px;
+    clear: both;
+}
+.GroupBox
+{
+    border: 1px solid #d2dde7;
+    padding: 5px;
+    margin: 0 0 .5em 0;
+    min-height: 15px;
+    clear: both;
+}
+
+.rowSmall
+{
+    margin: 2px 2px 5px 2px;
+    overflow: visible;
+    width: auto !important;
+    width: 100%;
+    min-height: 25px;
+    clear: both;
+}
+
+.GroupBoxSmall
+{
+    float: left;
+    border: 1px solid #d2dde7;
+    padding: 5px;
+    margin: 0 .5em .5em 0;
+    min-height: 15px;
+    clear: both;
+    width: 65%;
+}
+
+.GroupBoxSmallRight
+{
+    float: left;
+    border: 1px solid #d2dde7;
+    padding: 5px;
+    margin: 0 0 .5em .5em;
+    min-height: 15px;
+    width: 30%;
+}
+
+.leftColumn
+{
+    top: 2.5px;
+    width: 48%;
+    float: left;
+    text-align: left;
+    position: relative;
+    vertical-align: middle;
+    overflow: visible;
+}
+.rightColumn
+{
+    top: 2.5px;
+    width: 48%;
+    float: left;
+    text-align: left;
+    position: relative;
+    vertical-align: middle;
+    overflow: visible;
+    margin-left: 5px;
+}
+
+.buttonArea
+{
+    background-color: #ddd;
+    display: block;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 6px 0px 3px 0px;
+}
+
+.spacer
+{
+    clear: both;
+    height: 3px;
+}
+
+.contenttable
+{
+    border: solid 0px #e8eef4;
+    border-collapse: collapse;
+    color: black;
+    font-size: small;
+    width: 100%;
+}
+.contenttable td
+{
+    /*padding: 3px 5px 3px 3px;*/
+    padding: 1px 1px 2px 1px;
+    border: solid 1px #e8eef4;
+    font-size: small; /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+}
+
+.contenttabletdlarge
+{
+    padding: 5px;
+    border: solid 0px #e8eef4; /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+}
+
+.contenttable th
+{
+    padding: 6px 5px;
+    text-align: center; /*background-color: #e8eef4;*/
+    border: solid 1px #e8eef4;
+}
+
+.deleteItem
+{
+    background: url(images/delete.png) no-repeat;
+    height: 14px;
+    width: 16px;
+    display: block;
+    overflow: hidden;
+    margin-left: 30%;
+    text-decoration: none;
+}
+.refreshIcon
+{
+    background: url(images/refresh.png) no-repeat;
+    height: 16px;
+    width: 16px;
+    display: block;
+    overflow: hidden;
+    margin-left: 30%;
+    text-decoration: none;
+}
+
+.ui-jqgrid .ui-pg-input
+{
+    width: 45px;
+}
+
+.ui-jqgrid .ui-pg-selbox
+{
+    width: 55px;
+}
+
+.contenttext
+{
+    /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+    font-size: small;
+    text-align: left;
+}
+.filterbutton
+{
+    background-color: #e6e6e6;
+}
+
+/* Jq grid css*/
+
+
+
+#loginCaption
+{
+    /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+    font-size: 18px;
+    font-weight: bold;
+    color: #003466;
+    padding-left: 5px;
+}
+
+.UserName
+{
+    /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+    font-size: 12px;
+    font-weight: bold;
+    color: #3c78b5;
+}
+.form-body, td label
+{
+    /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+    font-size: 12px; /*font-weight:bold;*/
+    color: #3c78b5;
+    display: inline;
+    margin-left: 1px;
+}
+
+/* Start fancy button */
+
+div.button-crude
+{
+    text-align: center;
+}
+
+
+div.button-crude input, div.button-crude span, div.button-crude a, div.buttonSubmit input
+{
+    background-image: url(images/button-submit10.gif); /* change button and path to correct customer partition */
+    background-position: right 0px;
+    background-repeat: no-repeat;
+    border: 0px none;
+    color: #003466;
+    cursor: pointer;
+    height: 23px;
+    margin: 0px;
+    padding: 0px 15px 1px;
+    position: relative; /*z-index: 5; overlap with datepicker problem */
+    text-decoration: none;
+}
+div.button-left
+{
+    float: left;
+    margin: 5px 0 0 0;
+}
+
+div.buttonSubmit
+{
+    float: left;
+}
+
+div.buttonSubmit input
+{
+    border-radius: 4px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+div.button-crude a
+{
+    height: 15px;
+    padding: 5px 10px 3px 10px;
+    border-radius: 4px 4px 4px 4px; /*font-weight: normal;          font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;     font-size: 1.1em;          display: inline-block;          overflow: visible;          text-align: center;          text-decoration: none !important;*/
+}
+
+div.button-crude span
+{
+    background-position: left -23px;
+    width: 4px;
+    padding: 0px; /*left:0px;     position:absolute;   top:0px;   z-index:10;*/
+}
+div.button-crude input
+{
+    width: auto;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+div.button-center
+{
+    float: none;
+    margin: 0 auto;
+    position: inherit; /*width: 160px;*/
+    width: 260px;
+}
+#mktFrmSubmit
+{
+    color: #FFFFFF !important;
+}
+div.button-crude a:hover
+{
+    background-position: right -46px;
+}
+div.button-crude input:hover, div.buttonSubmit input:hover
+{
+    background-position: right -46px;
+}
+div.button-crude span:hover
+{
+    background-position: left -69px;
+}
+
+#mktFrmReset
+{
+    display: none;
+}
+
+.btn-back-list
+{
+    margin: 0 0 0 15px;
+}
+
+
+#welcomeMsg
+{
+    background: url("images/welcome.png") no-repeat scroll center center transparent;
+    display: block;
+    height: 252px;
+    text-align: center;
+    width: 853px;
+}
+#welcomeMsg p
+{
+    color: White; /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    top: 100px;
+}
+#delete-dialog p
+{
+    /*font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+}
+/* end fancy button */
+
+
+
+/* Header footer contenet*/
+
+/*Left sidebar and form content style*/
+.left-sidebar
+{
+    width: 20%;
+    float: left;
+    border: 1px solid #BBD0E5;
+}
+.form-content
+{
+    width: 79%;
+    float: right;
+}
+.left-sidebar ul
+{
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.left-sidebar ul li
+{
+    border-bottom: 1px solid #eeeeee;
+    padding: 3px;
+}
+.left-sidebar ul li a
+{
+    text-decoration: none;
+    color: #3C78B5;
+    font-size: 13px;
+}
+.left-sidebar ul li a:hover
+{
+    text-decoration: none;
+    color: #000000;
+}
+.left-sidebar .selected
+{
+    font-weight: bold;
+    color: #000000;
+    background: #c6def6;
+}
+
+.success
+{
+    text-align: left;
+    color: Green;
+    font-weight: bold; /*background-color: #c6def6;*/
+}
+.failed
+{
+    text-align: left;
+    color: Red;
+    font-weight: bold;
+}
+.error
+{
+    color: Red;
+    border: 1px solid red;
+}
+.unauthorize-access
+{
+    color: Red;
+}
+.whiteText
+{
+    color: White !important;
+}
+.yellowText
+{
+    color: yellow !important;
+}
+.infoText
+{
+    color: green !important;
+    font-size: 10px;
+}
+.required-field
+{
+    color: Red;
+}
+.read-only
+{
+    background-color: #F2F5F8;
+    cursor: not-allowed;
+}
+
+.message
+{
+    border: 1px solid #D2DDE7;
+    font-size: 12px;
+    min-height: 15px; /* height: 15px;*/
+    margin: 0 0 0.5em;
+    padding: 5px;
+}
+
+.Photo-Top
+{
+    margin: 0px;
+    padding: 2px 2px 0px 2px;
+    border: 1px solid gray;
+}
+.rpt-style tr td
+{
+    border: 0.1px solid gray;
+}
+
+.tblDisplayEmployee
+{
+    /* border: 1px solid #E8EEF4;*/
+    border-collapse: collapse;
+    color: black;
+    border-spacing: 1px;
+    width: 100%;
+}
+
+.tblDisplayEmployee td
+{
+    border: 1px solid #d2dde7;
+    margin: 0 0 .5em 0;
+    padding: 5px;
+    white-space: nowrap;
+    min-height: 15px;
+}
+
+.normal-widget-box
+{
+    padding: 10px !important;
+    border: 1px solid #CCC !important;
+}
+
+.popup-widget-box
+{
+    padding: 10px;
+    border: 1px solid #CCC;
+}
+
+.input-width
+{
+    width: 99%;
+}
+
+.popup-widget-box input[type="text"]
+{
+    width: 99%;
+}
+
+.popup-widget-box input[type="password"]
+{
+    width: 99%;
+}
+
+.popup-widget-box select
+{
+    width: 99%;
+}
+
+.popup-widget-box textarea
+{
+    width: 99%;
+}
+
+.enterAsPublicUserIcon
+{
+    background: url(images/ico-public.png) no-repeat;
+    height: 16px;
+    width: 16px;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.label-message
+{
+    display: inline-block;
+    width: 90%;
+    margin: 20px 10px;
+}
+
+.label-report
+{
+    display: inline !important;
+    margin: 0px 0px 0px 4px !important;
+}
+
+.commonConfigLinkText
+{
+    color: Blue !important;
+    font-weight: bold;
+    border-bottom: 1px solid blue;
+}
+
+#breadcrumbs
+{
+    line-height: 38px !important;
+    min-height: 38px !important;
+}
+
+

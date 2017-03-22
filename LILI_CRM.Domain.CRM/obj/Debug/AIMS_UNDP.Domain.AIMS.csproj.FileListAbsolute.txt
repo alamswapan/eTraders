@@ -1,0 +1,40 @@
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.Domain.AIMS.dll
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.Domain.AIMS.pdb
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.DAL.AIMS.dll
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.Domain.AIMS\bin\Debug\MFS_IWM.DAL.infrastructure.dll
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.Domain.AIMS\bin\Debug\LinqKit.dll
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.DAL.AIMS.pdb
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.Domain.AIMS\bin\Debug\MFS_IWM.DAL.infrastructure.pdb
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.Domain.AIMS\obj\Debug\ResolveAssemblyReference.cache
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.Domain.AIMS\obj\Debug\AIMS_UNDP.Domain.AIMS.dll
+D:\Rassel\Projects\AIMS_UNDP\04. Codes\AIMS_UNDP.Domain.AIMS\obj\Debug\AIMS_UNDP.Domain.AIMS.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.Domain.AIMS.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.Domain.AIMS.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.DAL.AIMS.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.Domain.AIMS\bin\Debug\MFS_IWM.DAL.infrastructure.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.Domain.AIMS\bin\Debug\LinqKit.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.DAL.AIMS.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.Domain.AIMS\bin\Debug\MFS_IWM.DAL.infrastructure.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.Domain.AIMS\obj\Debug\ResolveAssemblyReference.cache
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.Domain.AIMS\obj\Debug\AIMS_UNDP.Domain.AIMS.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes\AIMS_UNDP.Domain.AIMS\obj\Debug\AIMS_UNDP.Domain.AIMS.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.Domain.AIMS.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.Domain.AIMS.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.DAL.AIMS.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.Domain.AIMS\bin\Debug\MFS_IWM.DAL.infrastructure.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.Domain.AIMS\bin\Debug\LinqKit.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.DAL.AIMS.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.Domain.AIMS\bin\Debug\MFS_IWM.DAL.infrastructure.pdb
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.Domain.AIMS\obj\Debug\ResolveAssemblyReference.cache
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.Domain.AIMS\obj\Debug\AIMS_UNDP.Domain.AIMS.dll
+E:\TRY CATCH\AIMS_06Mar2014\04. Codes_Modified for BMS\AIMS_UNDP.Domain.AIMS\obj\Debug\AIMS_UNDP.Domain.AIMS.pdb
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.Domain.AIMS.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.Domain.AIMS.pdb
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.DAL.AIMS.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.Domain.AIMS\bin\Debug\MFS_IWM.DAL.infrastructure.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.Domain.AIMS\bin\Debug\LinqKit.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.Domain.AIMS\bin\Debug\AIMS_UNDP.DAL.AIMS.pdb
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.Domain.AIMS\bin\Debug\MFS_IWM.DAL.infrastructure.pdb
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.Domain.AIMS\obj\Debug\ResolveAssemblyReference.cache
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.Domain.AIMS\obj\Debug\AIMS_UNDP.Domain.AIMS.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.Domain.AIMS\obj\Debug\AIMS_UNDP.Domain.AIMS.pdb

@@ -1,0 +1,36 @@
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.DAL.infrastructure\bin\Debug\MFS_IWM.DAL.infrastructure.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.DAL.infrastructure\bin\Debug\MFS_IWM.DAL.infrastructure.pdb
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.DAL.infrastructure\bin\Debug\LinqKit.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.DAL.infrastructure\obj\Debug\ResolveAssemblyReference.cache
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.DAL.infrastructure\obj\Debug\MFS_IWM.DAL.infrastructure.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\AIMS_UNDP.DAL.infrastructure\obj\Debug\MFS_IWM.DAL.infrastructure.pdb
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\bin\Debug\LinqKit.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\obj\Debug\ResolveAssemblyReference.cache
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\bin\Debug\LILI_BMS.DAL.infrastructure.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\bin\Debug\LILI_BMS.DAL.infrastructure.pdb
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\obj\Debug\LILI_BMS.DAL.infrastructure.dll
+E:\TRY CATCH\RASEL SOFT\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\obj\Debug\LILI_BMS.DAL.infrastructure.pdb
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.DAL.infrastructure\bin\Debug\LILI_BMS.DAL.infrastructure.dll
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.DAL.infrastructure\bin\Debug\LILI_BMS.DAL.infrastructure.pdb
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.DAL.infrastructure\bin\Debug\LinqKit.dll
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.DAL.infrastructure\obj\Debug\ResolveAssemblyReference.cache
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.DAL.infrastructure\obj\Debug\LILI_BMS.DAL.infrastructure.dll
+E:\Sumon\LILI_BMS\Code\Source\LILI_BMS.DAL.infrastructure\obj\Debug\LILI_BMS.DAL.infrastructure.pdb
+E:\Sumon\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\bin\Debug\LILI_BMS.DAL.infrastructure.dll
+E:\Sumon\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\bin\Debug\LILI_BMS.DAL.infrastructure.pdb
+E:\Sumon\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\bin\Debug\LinqKit.dll
+E:\Sumon\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\obj\Debug\ResolveAssemblyReference.cache
+E:\Sumon\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\obj\Debug\LILI_BMS.DAL.infrastructure.dll
+E:\Sumon\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\obj\Debug\LILI_BMS.DAL.infrastructure.pdb
+E:\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\bin\Debug\LILI_BMS.DAL.infrastructure.dll
+E:\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\bin\Debug\LILI_BMS.DAL.infrastructure.pdb
+E:\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\bin\Debug\LinqKit.dll
+E:\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\obj\Debug\LILI_BMS.DAL.infrastructure.dll
+E:\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\obj\Debug\LILI_BMS.DAL.infrastructure.pdb
+E:\LILI_BMS\Source\LILI_BMS.DAL.infrastructure\obj\Debug\LILI_BMS.DAL.Infrastructure.csprojResolveAssemblyReference.cache
+D:\Rasel\Projects\Budget\Source\LILI_BMS.DAL.infrastructure\bin\Debug\LILI_BMS.DAL.infrastructure.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.DAL.infrastructure\bin\Debug\LILI_BMS.DAL.infrastructure.pdb
+D:\Rasel\Projects\Budget\Source\LILI_BMS.DAL.infrastructure\bin\Debug\LinqKit.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.DAL.infrastructure\obj\Debug\ResolveAssemblyReference.cache
+D:\Rasel\Projects\Budget\Source\LILI_BMS.DAL.infrastructure\obj\Debug\LILI_BMS.DAL.infrastructure.dll
+D:\Rasel\Projects\Budget\Source\LILI_BMS.DAL.infrastructure\obj\Debug\LILI_BMS.DAL.infrastructure.pdb

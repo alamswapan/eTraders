@@ -1,0 +1,121 @@
+﻿@model LILI_CRM.Web.Areas.PCV.ViewModel.SupplierInfoModel
+@using (Ajax.BeginForm("Create", "Supplier", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "updateTargetId",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            OnSuccess = "AddSupplierSuccess",
+        }, new { @id = "addSupplierForm" }))
+{
+    <div class="row-fluid form-horizontal">
+        <div class="popup-widget-box clearfix">
+            <div class="content">
+                @Html.ValidationSummary(true)
+                <div id="updateTargetId" class="alert alert-info" style="display: none;">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.SupplierId)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.SupplierId, new { @style = "text-align: left !important;" })
+                    @Html.ValidationMessageFor(model => model.SupplierId)
+                </div>
+            </div>
+                        
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.SupplierName)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.SupplierName, new { @style = "text-align: left !important;" })
+                    @Html.ValidationMessageFor(model => model.SupplierName)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Address)
+                </span>
+                <div class="controls">
+                    @Html.TextAreaFor(model => model.Address)
+                    @Html.ValidationMessageFor(model => model.Address)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Country)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.Country)
+                    @Html.ValidationMessageFor(model => model.Country)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Phone)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.Phone)
+                    @Html.ValidationMessageFor(model => model.Phone)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Fax)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.Fax)
+                    @Html.ValidationMessageFor(model => model.Fax)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Email)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.Email)
+                    @Html.ValidationMessageFor(model => model.Email)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.WebAddress)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.WebAddress)
+                    @Html.ValidationMessageFor(model => model.WebAddress)
+                </div>
+            </div>
+
+            <div class="control-group">
+                <span class="control-label">
+                    @Html.LabelFor(model => model.Industry)
+                </span>
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.Industry)
+                    @Html.ValidationMessageFor(model => model.Industry)
+                </div>
+            </div>
+
+            <div class="hr">
+            </div>
+            <div class="content pull-right">
+                <button type="submit" class="btn btn-mini btn-primary" id="btnAddSupplier" name="btnAddSupplier">
+                    <i class="icon-save bigger-125"></i>Add</button>
+                &nbsp;&nbsp;
+                <button type="button" class="btn btn-mini btn-primary" id="btnCancelSupplier" name="btnCancelSupplier"
+                    value="Cancel" onclick=" $($('#addSupplierDialog').dialog('close'));">
+                    <i class="icon-remove bigger-125"></i>Cancel</button>
+            </div>
+        </div>
+    </div>
+}
